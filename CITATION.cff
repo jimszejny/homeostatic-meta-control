@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the paper below."
+title: "homeostatic-meta-control: code and results for 'Homeostatic Meta-Control for Embodied Agents'"
+type: software
+version: "3.0"
+date-released: 2026-11-13
+repository-code: "https://github.com/jimszejny/homeostatic-meta-control"
+authors:
+  - family-names: Szejny
+    given-names: Bartłomiej
+    affiliation: "West Pomeranian University of Technology, Szczecin, Poland"
+preferred-citation:
+  type: unpublished
+  title: "Homeostatic Meta-Control for Embodied Agents: A Reflex Gate for Sudden Threat, a Stress Variable for Sustained Threat, and the Off-State Ledger of Shutdown"
+  authors:
+    - family-names: Szejny
+      given-names: Bartłomiej
+  year: 2026
+  notes: "Preprint, version 3.0, November 2026"

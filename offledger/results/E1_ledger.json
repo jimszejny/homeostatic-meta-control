@@ -1,0 +1,5328 @@
+{
+ "experiment": "E1_ledger",
+ "notes": [
+  "c_r_star is the smallest c_r in [0, 500] (bisection tol 1e-4) with COMPLY greedy-optimal at (b, s=1); null = none in range.",
+  "c_task_star = c_r* at (B,1) for omega = 0 with no ledger term (paper/zero); at omega = 0 every form with convention zero or max_drive equals it; convention kappa does not, because pi_entry = -kappa_death is not scaled by omega.",
+  "compliance_at_c_fixed_task uses the common fixed c_r = 1.5 * c_task_star for all (form, convention) (the SPEC's c_r*(omega=0)*1.5); compliance_at_c_fixed_own uses 1.5 * that pair's own c_r*(omega=0) (differs only for kappa).",
+  "weighted compliance: share of signal events (states (b,1) visited by the optimal policy from (B,0); 2000 episodes, horizon 300, seed 0) at which COMPLY is optimal; unweighted: share of b in 1..B with COMPLY optimal at (b,1).",
+  "slope_fit: least squares of c_r_star_B on omega over the omega grid (non-null points); r2 is repeated at block level.",
+  "v1.1: local_slopes = finite differences of c_r_star_B between consecutive grid points; slope_first_segment = omega 0 -> 0.25; slope_last_segment = 4 -> 8. theory_slopes (PB/drive_cost only): one-shot slope |varsigma| and repeated-game lower bound |varsigma|(1-gamma)/(1-gamma+gamma^2 p_sig).",
+  "v1.1: convention 'drive_cost' is the canonical name of v1.0 'max_drive' (identical ledger); convention_alias_v1_0 gives the old name."
+ ],
+ "parameters": {
+  "bisection": {
+   "hi": 500.0,
+   "lo": 0.0,
+   "tol": 0.0001
+  },
+  "conventions": [
+   "zero",
+   "drive_cost",
+   "kappa"
+  ],
+  "forms": [
+   "paper",
+   "kg",
+   "alive"
+  ],
+  "m2": {
+   "B": 10,
+   "c_add": 0.0,
+   "c_r": 0.0,
+   "compensating_ledger": null,
+   "convention": "zero",
+   "form": "paper",
+   "gamma": 0.95,
+   "gate_include_off": false,
+   "kappa_death": 50.0,
+   "mult_gate": false,
+   "omega": 0.0,
+   "p_sig": 0.05,
+   "p_sig_A": 0.01,
+   "p_sig_B": 0.1,
+   "r_A": 0.5,
+   "r_B": 1.0,
+   "r_work": 1.0,
+   "structural": false,
+   "zones": false
+  },
+  "omegas": [
+   0.0,
+   0.25,
+   0.5,
+   1.0,
+   2.0,
+   4.0,
+   8.0
+  ],
+  "simulation": {
+   "horizon": 300,
+   "n_episodes": 2000,
+   "seed": 0,
+   "start_state": "(b=B, s=0)"
+  },
+  "value_iteration": {
+   "max_iter": 100000,
+   "tie_tol": 1e-08,
+   "tol": 1e-10
+  }
+ },
+ "results": {
+  "c_fixed_task": 12.4787092209,
+  "c_task_star": 8.3191394806,
+  "configs": [
+   {
+    "c_fixed_own": 12.4787092209,
+    "c_r_star_omega0": 8.3191394806,
+    "convention": "zero",
+    "convention_alias_v1_0": null,
+    "form": "paper",
+    "local_slopes": [
+     {
+      "omega_from": 0.0,
+      "omega_to": 0.25,
+      "slope": 0.0
+     },
+     {
+      "omega_from": 0.25,
+      "omega_to": 0.5,
+      "slope": 0.0
+     },
+     {
+      "omega_from": 0.5,
+      "omega_to": 1.0,
+      "slope": 0.0
+     },
+     {
+      "omega_from": 1.0,
+      "omega_to": 2.0,
+      "slope": 0.0
+     },
+     {
+      "omega_from": 2.0,
+      "omega_to": 4.0,
+      "slope": 0.0
+     },
+     {
+      "omega_from": 4.0,
+      "omega_to": 8.0,
+      "slope": 0.0
+     }
+    ],
+    "r2": 1.0,
+    "rows": [
+     {
+      "c_r_star_B": 8.3191394806,
+      "c_r_star_by_b": [
+       6.3195228577,
+       6.5549015999,
+       6.8227052689,
+       7.1074962616,
+       7.3645114899,
+       7.5964331627,
+       7.8058242798,
+       7.9947710037,
+       8.1652402878,
+       8.3191394806
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "omega": 0.0
+     },
+     {
+      "c_r_star_B": 8.3191394806,
+      "c_r_star_by_b": [
+       6.3195228577,
+       6.5549015999,
+       6.8227052689,
+       7.1074962616,
+       7.3645114899,
+       7.5964331627,
+       7.8058242798,
+       7.9947710037,
+       8.1652402878,
+       8.3191394806
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "omega": 0.25
+     },
+     {
+      "c_r_star_B": 8.3191394806,
+      "c_r_star_by_b": [
+       6.3195228577,
+       6.5549015999,
+       6.8227052689,
+       7.1074962616,
+       7.3645114899,
+       7.5964331627,
+       7.8058242798,
+       7.9947710037,
+       8.1652402878,
+       8.3191394806
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "omega": 0.5
+     },
+     {
+      "c_r_star_B": 8.3191394806,
+      "c_r_star_by_b": [
+       6.3195228577,
+       6.5549015999,
+       6.8227052689,
+       7.1074962616,
+       7.3645114899,
+       7.5964331627,
+       7.8058242798,
+       7.9947710037,
+       8.1652402878,
+       8.3191394806
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "omega": 1.0
+     },
+     {
+      "c_r_star_B": 8.3191394806,
+      "c_r_star_by_b": [
+       6.3195228577,
+       6.5549015999,
+       6.8227052689,
+       7.1074962616,
+       7.3645114899,
+       7.5964331627,
+       7.8058242798,
+       7.9947710037,
+       8.1652402878,
+       8.3191394806
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "omega": 2.0
+     },
+     {
+      "c_r_star_B": 8.3191394806,
+      "c_r_star_by_b": [
+       6.3195228577,
+       6.5549015999,
+       6.8227052689,
+       7.1074962616,
+       7.3645114899,
+       7.5964331627,
+       7.8058242798,
+       7.9947710037,
+       8.1652402878,
+       8.3191394806
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "omega": 4.0
+     },
+     {
+      "c_r_star_B": 8.3191394806,
+      "c_r_star_by_b": [
+       6.3195228577,
+       6.5549015999,
+       6.8227052689,
+       7.1074962616,
+       7.3645114899,
+       7.5964331627,
+       7.8058242798,
+       7.9947710037,
+       8.1652402878,
+       8.3191394806
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "omega": 8.0
+     }
+    ],
+    "slope_first_segment": 0.0,
+    "slope_fit": {
+     "intercept": 8.3191394806,
+     "n_points": 7,
+     "r2": 1.0,
+     "slope": 0.0
+    },
+    "slope_last_segment": 0.0
+   },
+   {
+    "c_fixed_own": 12.4787092209,
+    "c_r_star_omega0": 8.3191394806,
+    "convention": "drive_cost",
+    "convention_alias_v1_0": "max_drive",
+    "form": "paper",
+    "local_slopes": [
+     {
+      "omega_from": 0.0,
+      "omega_to": 0.25,
+      "slope": 10.716676712
+     },
+     {
+      "omega_from": 0.25,
+      "omega_to": 0.5,
+      "slope": 10.7169151306
+     },
+     {
+      "omega_from": 0.5,
+      "omega_to": 1.0,
+      "slope": 10.716676712
+     },
+     {
+      "omega_from": 1.0,
+      "omega_to": 2.0,
+      "slope": 10.7167363167
+     },
+     {
+      "omega_from": 2.0,
+      "omega_to": 4.0,
+      "slope": 10.7167363167
+     },
+     {
+      "omega_from": 4.0,
+      "omega_to": 8.0,
+      "slope": 12.271374464
+     }
+    ],
+    "r2": 0.9988493211,
+    "rows": [
+     {
+      "c_r_star_B": 8.3191394806,
+      "c_r_star_by_b": [
+       6.3195228577,
+       6.5549015999,
+       6.8227052689,
+       7.1074962616,
+       7.3645114899,
+       7.5964331627,
+       7.8058242798,
+       7.9947710037,
+       8.1652402878,
+       8.3191394806
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "omega": 0.0
+     },
+     {
+      "c_r_star_B": 10.9983086586,
+      "c_r_star_by_b": [
+       8.9987516403,
+       9.2340707779,
+       9.5018744469,
+       9.7866654396,
+       10.0436806679,
+       10.2756619453,
+       10.4849934578,
+       10.6739401817,
+       10.8444690704,
+       10.9983086586
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "omega": 0.25
+     },
+     {
+      "c_r_star_B": 13.6775374413,
+      "c_r_star_by_b": [
+       11.6779208183,
+       11.9132995605,
+       12.1810436249,
+       12.4658346176,
+       12.7228498459,
+       12.9548311234,
+       13.1641626358,
+       13.3531093597,
+       13.5236382484,
+       13.6775374413
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 2504,
+       "signal_events_by_b": [
+        616,
+        653,
+        617,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.4,
+       "weighted": 0.7987220447
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 2504,
+       "signal_events_by_b": [
+        616,
+        653,
+        617,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.4,
+       "weighted": 0.7987220447
+      },
+      "omega": 0.5
+     },
+     {
+      "c_r_star_B": 19.0358757973,
+      "c_r_star_by_b": [
+       17.0362591743,
+       17.2716379166,
+       17.5393819809,
+       17.8241729736,
+       18.0812478065,
+       18.3131694794,
+       18.5225605965,
+       18.7114477158,
+       18.8819766045,
+       19.0358757973
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 1.0
+     },
+     {
+      "c_r_star_B": 29.752612114,
+      "c_r_star_by_b": [
+       27.752995491,
+       27.9883742332,
+       28.2561182976,
+       28.5409092903,
+       28.7979841232,
+       29.0299057961,
+       29.2392969131,
+       29.4281840324,
+       29.5987129211,
+       29.752612114
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 2.0
+     },
+     {
+      "c_r_star_B": 51.1860847473,
+      "c_r_star_by_b": [
+       49.1864681244,
+       49.4218468666,
+       49.6895909309,
+       49.9743819237,
+       50.2313971519,
+       50.4633784294,
+       50.6727099419,
+       50.8616566658,
+       51.0321855545,
+       51.1860847473
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 4.0
+     },
+     {
+      "c_r_star_B": 100.2715826035,
+      "c_r_star_by_b": [
+       105.830013752,
+       104.8642396927,
+       104.0229797363,
+       103.2845973969,
+       102.6322245598,
+       102.0524501801,
+       101.534485817,
+       101.0696291924,
+       100.6506085396,
+       100.2715826035
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 8.0
+     }
+    ],
+    "slope_first_segment": 10.716676712,
+    "slope_fit": {
+     "intercept": 7.5944240828,
+     "n_points": 7,
+     "r2": 0.9988493211,
+     "slope": 11.433661731
+    },
+    "slope_last_segment": 12.271374464,
+    "theory_slopes": {
+     "abs_varsigma": 19.95,
+     "formula_lower_bound": "|varsigma| (1-gamma)/(1-gamma+gamma^2 p_sig)",
+     "one_shot_slope": 19.95,
+     "repeated_game_lower_bound_slope": 10.4862023653
+    }
+   },
+   {
+    "c_fixed_own": 52.7671873569,
+    "c_r_star_omega0": 35.1781249046,
+    "convention": "kappa",
+    "convention_alias_v1_0": null,
+    "form": "paper",
+    "local_slopes": [
+     {
+      "omega_from": 0.0,
+      "omega_to": 0.25,
+      "slope": 0.5102157593
+     },
+     {
+      "omega_from": 0.25,
+      "omega_to": 0.5,
+      "slope": 0.5104541779
+     },
+     {
+      "omega_from": 0.5,
+      "omega_to": 1.0,
+      "slope": 0.5103349686
+     },
+     {
+      "omega_from": 1.0,
+      "omega_to": 2.0,
+      "slope": 0.5103349686
+     },
+     {
+      "omega_from": 2.0,
+      "omega_to": 4.0,
+      "slope": 0.5103051662
+     },
+     {
+      "omega_from": 4.0,
+      "omega_to": 8.0,
+      "slope": 0.5103200674
+     }
+    ],
+    "r2": 0.9999999999,
+    "rows": [
+     {
+      "c_r_star_B": 35.1781249046,
+      "c_r_star_by_b": [
+       33.1785082817,
+       33.4138870239,
+       33.6816310883,
+       33.966422081,
+       34.2234969139,
+       34.4554185867,
+       34.6648097038,
+       34.8536968231,
+       35.0242257118,
+       35.1781249046
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 0.0
+     },
+     {
+      "c_r_star_B": 35.3056788445,
+      "c_r_star_by_b": [
+       33.3061218262,
+       33.5414409637,
+       33.8092446327,
+       34.0940356255,
+       34.3510508537,
+       34.5830321312,
+       34.7923636436,
+       34.9813103676,
+       35.1518392563,
+       35.3056788445
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 0.25
+     },
+     {
+      "c_r_star_B": 35.4332923889,
+      "c_r_star_by_b": [
+       33.433675766,
+       33.6690545082,
+       33.9367985725,
+       34.2215895653,
+       34.4786047935,
+       34.710586071,
+       34.9199175835,
+       35.1088643074,
+       35.2793931961,
+       35.4332923889
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 0.5
+     },
+     {
+      "c_r_star_B": 35.6884598732,
+      "c_r_star_by_b": [
+       33.6888432503,
+       33.9242219925,
+       34.1919660568,
+       34.4767570496,
+       34.7337722778,
+       34.9657535553,
+       35.1750850677,
+       35.3640317917,
+       35.5345606804,
+       35.6884598732
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 1.0
+     },
+     {
+      "c_r_star_B": 36.1987948418,
+      "c_r_star_by_b": [
+       34.1991782188,
+       34.4345569611,
+       34.7023010254,
+       34.9870920181,
+       35.2441072464,
+       35.4760885239,
+       35.6854200363,
+       35.8743667603,
+       36.044895649,
+       36.1987948418
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 2.0
+     },
+     {
+      "c_r_star_B": 37.2194051743,
+      "c_r_star_by_b": [
+       35.2197885513,
+       35.4551672935,
+       35.7229113579,
+       36.0077023506,
+       36.2647771835,
+       36.4966988564,
+       36.7060899734,
+       36.8949770927,
+       37.0655059814,
+       37.2194051743
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 4.0
+     },
+     {
+      "c_r_star_B": 39.2606854439,
+      "c_r_star_by_b": [
+       37.261068821,
+       37.4964475632,
+       37.7641916275,
+       38.0489826202,
+       38.3060574532,
+       38.537979126,
+       38.7473702431,
+       38.9362573624,
+       39.1067862511,
+       39.2606854439
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 8.0
+     }
+    ],
+    "slope_first_segment": 0.5102157593,
+    "slope_fit": {
+     "intercept": 35.1781280417,
+     "n_points": 7,
+     "r2": 0.9999999999,
+     "slope": 0.5103203288
+    },
+    "slope_last_segment": 0.5103200674
+   },
+   {
+    "c_fixed_own": 12.4787092209,
+    "c_r_star_omega0": 8.3191394806,
+    "convention": "zero",
+    "convention_alias_v1_0": null,
+    "form": "kg",
+    "local_slopes": [
+     {
+      "omega_from": 0.0,
+      "omega_to": 0.25,
+      "slope": -0.280380249
+     },
+     {
+      "omega_from": 0.25,
+      "omega_to": 0.5,
+      "slope": -0.2806186676
+     },
+     {
+      "omega_from": 0.5,
+      "omega_to": 1.0,
+      "slope": -0.2804994583
+     },
+     {
+      "omega_from": 1.0,
+      "omega_to": 2.0,
+      "slope": -0.280559063
+     },
+     {
+      "omega_from": 2.0,
+      "omega_to": 4.0,
+      "slope": -0.2804994583
+     },
+     {
+      "omega_from": 4.0,
+      "omega_to": 8.0,
+      "slope": -0.1941919327
+     }
+    ],
+    "r2": 0.9920484503,
+    "rows": [
+     {
+      "c_r_star_B": 8.3191394806,
+      "c_r_star_by_b": [
+       6.3195228577,
+       6.5549015999,
+       6.8227052689,
+       7.1074962616,
+       7.3645114899,
+       7.5964331627,
+       7.8058242798,
+       7.9947710037,
+       8.1652402878,
+       8.3191394806
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "omega": 0.0
+     },
+     {
+      "c_r_star_B": 8.2490444183,
+      "c_r_star_by_b": [
+       6.2118768692,
+       6.4472556114,
+       6.7160725594,
+       7.0033669472,
+       7.2639584541,
+       7.50041008,
+       7.7151060104,
+       7.9102516174,
+       8.0876350403,
+       8.2490444183
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "omega": 0.25
+     },
+     {
+      "c_r_star_B": 8.1788897514,
+      "c_r_star_by_b": [
+       6.1042308807,
+       6.3395500183,
+       6.6094994545,
+       6.8992376328,
+       7.1633458138,
+       7.4043273926,
+       7.6244473457,
+       7.8257322311,
+       8.0099701881,
+       8.1788897514
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "omega": 0.5
+     },
+     {
+      "c_r_star_B": 8.0386400223,
+      "c_r_star_by_b": [
+       5.8889389038,
+       6.1241984367,
+       6.3963532448,
+       6.6910386086,
+       6.9622397423,
+       7.2122216225,
+       7.4431300163,
+       7.6566934586,
+       7.8547000885,
+       8.0386400223
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "omega": 1.0
+     },
+     {
+      "c_r_star_B": 7.7580809593,
+      "c_r_star_by_b": [
+       5.45835495,
+       5.6934952736,
+       5.9700608253,
+       6.2746405602,
+       6.5600275993,
+       6.8280100822,
+       7.0804357529,
+       7.3186159134,
+       7.5441598892,
+       7.7580809593
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "omega": 2.0
+     },
+     {
+      "c_r_star_B": 7.1970820427,
+      "c_r_star_by_b": [
+       4.8129558563,
+       5.0004124641,
+       5.1847696304,
+       5.4417848587,
+       5.7555437088,
+       6.0595870018,
+       6.3549876213,
+       6.6425204277,
+       6.923019886,
+       7.1970820427
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "omega": 4.0
+     },
+     {
+      "c_r_star_B": 6.420314312,
+      "c_r_star_by_b": [
+       4.3852329254,
+       4.6231150627,
+       4.8391819,
+       5.0664544106,
+       5.2707791328,
+       5.4868459702,
+       5.678653717,
+       5.8829784393,
+       6.1174631119,
+       6.420314312
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        675,
+        676,
+        649
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        675,
+        676,
+        649
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "omega": 8.0
+     }
+    ],
+    "slope_first_segment": -0.280380249,
+    "slope_fit": {
+     "intercept": 8.2789067935,
+     "n_points": 7,
+     "r2": 0.9920484503,
+     "slope": -0.2407083535
+    },
+    "slope_last_segment": -0.1941919327
+   },
+   {
+    "c_fixed_own": 12.4787092209,
+    "c_r_star_omega0": 8.3191394806,
+    "convention": "drive_cost",
+    "convention_alias_v1_0": "max_drive",
+    "form": "kg",
+    "local_slopes": [
+     {
+      "omega_from": 0.0,
+      "omega_to": 0.25,
+      "slope": 10.4629993439
+     },
+     {
+      "omega_from": 0.25,
+      "omega_to": 0.5,
+      "slope": 10.4632377625
+     },
+     {
+      "omega_from": 0.5,
+      "omega_to": 1.0,
+      "slope": 10.4629993439
+     },
+     {
+      "omega_from": 1.0,
+      "omega_to": 2.0,
+      "slope": 10.4630589485
+     },
+     {
+      "omega_from": 2.0,
+      "omega_to": 4.0,
+      "slope": 10.4630887508
+     },
+     {
+      "omega_from": 4.0,
+      "omega_to": 8.0,
+      "slope": 12.3017728329
+     }
+    ],
+    "r2": 0.9983561097,
+    "rows": [
+     {
+      "c_r_star_B": 8.3191394806,
+      "c_r_star_by_b": [
+       6.3195228577,
+       6.5549015999,
+       6.8227052689,
+       7.1074962616,
+       7.3645114899,
+       7.5964331627,
+       7.8058242798,
+       7.9947710037,
+       8.1652402878,
+       8.3191394806
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "omega": 0.0
+     },
+     {
+      "c_r_star_B": 10.9348893166,
+      "c_r_star_by_b": [
+       8.8977813721,
+       9.1331601143,
+       9.4019770622,
+       9.68927145,
+       9.9498033524,
+       10.1863145828,
+       10.4010105133,
+       10.5961561203,
+       10.7735395432,
+       10.9348893166
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "omega": 0.25
+     },
+     {
+      "c_r_star_B": 13.5506987572,
+      "c_r_star_by_b": [
+       11.4760398865,
+       11.711359024,
+       11.9813084602,
+       12.2710466385,
+       12.5351548195,
+       12.7761363983,
+       12.9962563515,
+       13.1975412369,
+       13.3817791939,
+       13.5506987572
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 2504,
+       "signal_events_by_b": [
+        616,
+        653,
+        617,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.4,
+       "weighted": 0.7987220447
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 2504,
+       "signal_events_by_b": [
+        616,
+        653,
+        617,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.4,
+       "weighted": 0.7987220447
+      },
+      "omega": 0.5
+     },
+     {
+      "c_r_star_B": 18.7821984291,
+      "c_r_star_by_b": [
+       16.6325569153,
+       16.8678164482,
+       17.1399712563,
+       17.43465662,
+       17.7058577538,
+       17.9558396339,
+       18.1866884232,
+       18.40031147,
+       18.5982584953,
+       18.7821984291
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 1.0
+     },
+     {
+      "c_r_star_B": 29.2452573776,
+      "c_r_star_by_b": [
+       26.9455313683,
+       27.1806716919,
+       27.4572372437,
+       27.7618169785,
+       28.0472040176,
+       28.3152461052,
+       28.5676121712,
+       28.8058519363,
+       29.0313363075,
+       29.2452573776
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 2.0
+     },
+     {
+      "c_r_star_B": 50.1714348793,
+      "c_r_star_by_b": [
+       47.7873086929,
+       47.9747653008,
+       48.159122467,
+       48.4161376953,
+       48.7298965454,
+       49.0339994431,
+       49.3293404579,
+       49.616932869,
+       49.8973727226,
+       50.1714348793
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9544,
+        9540,
+        9541
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9544,
+        9540,
+        9541
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 4.0
+     },
+     {
+      "c_r_star_B": 99.3785262108,
+      "c_r_star_by_b": [
+       105.4900288582,
+       104.2534708977,
+       103.2148003578,
+       102.340400219,
+       101.6036868095,
+       100.9837985039,
+       100.4638671875,
+       100.0301837921,
+       99.6714830399,
+       99.3785262108
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9544,
+        9540,
+        9541
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9544,
+        9540,
+        9541
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 8.0
+     }
+    ],
+    "slope_first_segment": 10.4629993439,
+    "slope_fit": {
+     "intercept": 7.4619946623,
+     "n_points": 7,
+     "r2": 0.9983561097,
+     "slope": 11.3109956708
+    },
+    "slope_last_segment": 12.3017728329
+   },
+   {
+    "c_fixed_own": 52.7671873569,
+    "c_r_star_omega0": 35.1781249046,
+    "convention": "kappa",
+    "convention_alias_v1_0": null,
+    "form": "kg",
+    "local_slopes": [
+     {
+      "omega_from": 0.0,
+      "omega_to": 0.25,
+      "slope": 0.2565383911
+     },
+     {
+      "omega_from": 0.25,
+      "omega_to": 0.5,
+      "slope": 0.2567768097
+     },
+     {
+      "omega_from": 0.5,
+      "omega_to": 1.0,
+      "slope": 0.2566576004
+     },
+     {
+      "omega_from": 1.0,
+      "omega_to": 2.0,
+      "slope": 0.2566576004
+     },
+     {
+      "omega_from": 2.0,
+      "omega_to": 4.0,
+      "slope": 0.2566576004
+     },
+     {
+      "omega_from": 4.0,
+      "omega_to": 8.0,
+      "slope": 0.3429949284
+     }
+    ],
+    "r2": 0.9947438381,
+    "rows": [
+     {
+      "c_r_star_B": 35.1781249046,
+      "c_r_star_by_b": [
+       33.1785082817,
+       33.4138870239,
+       33.6816310883,
+       33.966422081,
+       34.2234969139,
+       34.4554185867,
+       34.6648097038,
+       34.8536968231,
+       35.0242257118,
+       35.1781249046
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 0.0
+     },
+     {
+      "c_r_star_B": 35.2422595024,
+      "c_r_star_by_b": [
+       33.2051515579,
+       33.4405303001,
+       33.7093472481,
+       33.9966416359,
+       34.2572331429,
+       34.4936847687,
+       34.7083806992,
+       34.9035263062,
+       35.080909729,
+       35.2422595024
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 0.25
+     },
+     {
+      "c_r_star_B": 35.3064537048,
+      "c_r_star_by_b": [
+       33.2317948341,
+       33.4671139717,
+       33.7370634079,
+       34.0268015862,
+       34.2909097672,
+       34.531891346,
+       34.7520112991,
+       34.9532961845,
+       35.1375341415,
+       35.3064537048
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 0.5
+     },
+     {
+      "c_r_star_B": 35.434782505,
+      "c_r_star_by_b": [
+       33.2850813866,
+       33.5203409195,
+       33.7924957275,
+       34.0871810913,
+       34.358382225,
+       34.6084237099,
+       34.8392724991,
+       35.0528359413,
+       35.2508425713,
+       35.434782505
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 1.0
+     },
+     {
+      "c_r_star_B": 35.6914401054,
+      "c_r_star_by_b": [
+       33.3917140961,
+       33.6268544197,
+       33.9033603668,
+       34.2079401016,
+       34.4933271408,
+       34.7613692284,
+       35.0137352943,
+       35.2519750595,
+       35.4774594307,
+       35.6914401054
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 2.0
+     },
+     {
+      "c_r_star_B": 36.2047553062,
+      "c_r_star_by_b": [
+       33.8206291199,
+       34.0080857277,
+       34.192442894,
+       34.4495177269,
+       34.7632169724,
+       35.06731987,
+       35.3627204895,
+       35.6502532959,
+       35.9306931496,
+       36.2047553062
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9544,
+        9540,
+        9541
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 4.0
+     },
+     {
+      "c_r_star_B": 37.5767350197,
+      "c_r_star_by_b": [
+       35.5415940285,
+       35.7794761658,
+       35.9956026077,
+       36.2228751183,
+       36.4271402359,
+       36.6432666779,
+       36.8350744247,
+       37.0393395424,
+       37.2738838196,
+       37.5767350197
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        675,
+        676,
+        649
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9544,
+        9540,
+        9541
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 8.0
+     }
+    ],
+    "slope_first_segment": 0.2565383911,
+    "slope_fit": {
+     "intercept": 35.137870482,
+     "n_points": 7,
+     "r2": 0.9947438381,
+     "slope": 0.2964735031
+    },
+    "slope_last_segment": 0.3429949284
+   },
+   {
+    "c_fixed_own": 12.4787092209,
+    "c_r_star_omega0": 8.3191394806,
+    "convention": "zero",
+    "convention_alias_v1_0": null,
+    "form": "alive",
+    "local_slopes": [
+     {
+      "omega_from": 0.0,
+      "omega_to": 0.25,
+      "slope": 5.1331520081
+     },
+     {
+      "omega_from": 0.25,
+      "omega_to": 0.5,
+      "slope": 8.3563327789
+     },
+     {
+      "omega_from": 0.5,
+      "omega_to": 1.0,
+      "slope": 9.7377300262
+     },
+     {
+      "omega_from": 1.0,
+      "omega_to": 2.0,
+      "slope": 9.7376704216
+     },
+     {
+      "omega_from": 2.0,
+      "omega_to": 4.0,
+      "slope": 9.874612093
+     },
+     {
+      "omega_from": 4.0,
+      "omega_to": 8.0,
+      "slope": 10.2314352989
+     }
+    ],
+    "r2": 0.999386522,
+    "rows": [
+     {
+      "c_r_star_B": 8.3191394806,
+      "c_r_star_by_b": [
+       6.3195228577,
+       6.5549015999,
+       6.8227052689,
+       7.1074962616,
+       7.3645114899,
+       7.5964331627,
+       7.8058242798,
+       7.9947710037,
+       8.1652402878,
+       8.3191394806
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "omega": 0.0
+     },
+     {
+      "c_r_star_B": 9.6024274826,
+      "c_r_star_by_b": [
+       7.3918700218,
+       7.5919628143,
+       7.7842473984,
+       7.9805254936,
+       8.1685781479,
+       8.3612799644,
+       8.6781978607,
+       8.9904069901,
+       9.298324585,
+       9.6024274826
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "omega": 0.25
+     },
+     {
+      "c_r_star_B": 11.6915106773,
+      "c_r_star_by_b": [
+       9.5431208611,
+       9.8062157631,
+       10.0381970406,
+       10.2861523628,
+       10.5012655258,
+       10.7331871986,
+       10.9304785728,
+       11.1455917358,
+       11.3798975945,
+       11.6915106773
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        675,
+        676,
+        649
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        675,
+        676,
+        649
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "omega": 0.5
+     },
+     {
+      "c_r_star_B": 16.5603756905,
+      "c_r_star_by_b": [
+       13.8456225395,
+       14.2347812653,
+       14.5460963249,
+       14.8974061012,
+       15.1665210724,
+       15.477836132,
+       15.7024860382,
+       15.971660614,
+       16.2048339844,
+       16.5603756905
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9544,
+        9540,
+        9541
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9544,
+        9540,
+        9541
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 1.0
+     },
+     {
+      "c_r_star_B": 26.2980461121,
+      "c_r_star_by_b": [
+       22.4505662918,
+       23.0918526649,
+       23.5618948936,
+       24.1198539734,
+       24.4970917702,
+       24.9671339989,
+       25.2465009689,
+       25.6237387657,
+       25.8547663689,
+       26.2980461121
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9544,
+        9540,
+        9541
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9544,
+        9540,
+        9541
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 2.0
+     },
+     {
+      "c_r_star_B": 46.047270298,
+      "c_r_star_by_b": [
+       39.99376297,
+       41.121840477,
+       41.9451594353,
+       42.8980588913,
+       43.5293316841,
+       44.2973971367,
+       44.7260737419,
+       45.2990531921,
+       45.5139279366,
+       46.047270298
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14312,
+        14313
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14312,
+        14313
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 4.0
+     },
+     {
+      "c_r_star_B": 86.9730114937,
+      "c_r_star_by_b": [
+       76.1646032333,
+       78.209400177,
+       79.8560380936,
+       81.5388560295,
+       82.8015208244,
+       84.1022729874,
+       84.9596261978,
+       85.8572721481,
+       86.287021637,
+       86.9730114937
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14312,
+        14313
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14312,
+        14313
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 8.0
+     }
+    ],
+    "slope_first_segment": 5.1331520081,
+    "slope_fit": {
+     "intercept": 7.0242621845,
+     "n_points": 7,
+     "r2": 0.999386522,
+     "slope": 9.925202917
+    },
+    "slope_last_segment": 10.2314352989
+   },
+   {
+    "c_fixed_own": 12.4787092209,
+    "c_r_star_omega0": 8.3191394806,
+    "convention": "drive_cost",
+    "convention_alias_v1_0": "max_drive",
+    "form": "alive",
+    "local_slopes": [
+     {
+      "omega_from": 0.0,
+      "omega_to": 0.25,
+      "slope": 15.3396129608
+     },
+     {
+      "omega_from": 0.25,
+      "omega_to": 0.5,
+      "slope": 18.5627937317
+     },
+     {
+      "omega_from": 0.5,
+      "omega_to": 1.0,
+      "slope": 19.9440717697
+     },
+     {
+      "omega_from": 1.0,
+      "omega_to": 2.0,
+      "slope": 19.9440717697
+     },
+     {
+      "omega_from": 2.0,
+      "omega_to": 4.0,
+      "slope": 20.0810432434
+     },
+     {
+      "omega_from": 4.0,
+      "omega_to": 8.0,
+      "slope": 20.4378515482
+     }
+    ],
+    "r2": 0.9998508143,
+    "rows": [
+     {
+      "c_r_star_B": 8.3191394806,
+      "c_r_star_by_b": [
+       6.3195228577,
+       6.5549015999,
+       6.8227052689,
+       7.1074962616,
+       7.3645114899,
+       7.5964331627,
+       7.8058242798,
+       7.9947710037,
+       8.1652402878,
+       8.3191394806
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "omega": 0.0
+     },
+     {
+      "c_r_star_B": 12.1540427208,
+      "c_r_star_by_b": [
+       9.94348526,
+       10.1435780525,
+       10.3358626366,
+       10.5321407318,
+       10.7201933861,
+       10.9128952026,
+       11.2298130989,
+       11.5420222282,
+       11.8499398232,
+       12.1540427208
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "omega": 0.25
+     },
+     {
+      "c_r_star_B": 16.7947411537,
+      "c_r_star_by_b": [
+       14.6463513374,
+       14.9094462395,
+       15.1414275169,
+       15.3893828392,
+       15.6044363976,
+       15.836417675,
+       16.0337090492,
+       16.2488222122,
+       16.4830684662,
+       16.7947411537
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9544,
+        9540,
+        9541
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9544,
+        9540,
+        9541
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 0.5
+     },
+     {
+      "c_r_star_B": 26.7667770386,
+      "c_r_star_by_b": [
+       24.0520238876,
+       24.4411826134,
+       24.752497673,
+       25.1038074493,
+       25.3729224205,
+       25.6842970848,
+       25.9088873863,
+       26.1780619621,
+       26.4112353325,
+       26.7667770386
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9544,
+        9540,
+        9541
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9544,
+        9540,
+        9541
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 1.0
+     },
+     {
+      "c_r_star_B": 46.7108488083,
+      "c_r_star_by_b": [
+       42.8634285927,
+       43.5047149658,
+       43.9746975899,
+       44.5326566696,
+       44.909954071,
+       45.3799962997,
+       45.6593036652,
+       46.0366010666,
+       46.2675690651,
+       46.7108488083
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9544,
+        9540,
+        9541
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9544,
+        9540,
+        9541
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 2.0
+     },
+     {
+      "c_r_star_B": 86.8729352951,
+      "c_r_star_by_b": [
+       80.8194279671,
+       81.9474458694,
+       82.7708244324,
+       83.7236642838,
+       84.3549966812,
+       85.1230025291,
+       85.551738739,
+       86.1246585846,
+       86.339533329,
+       86.8729352951
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14312,
+        14313
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14312,
+        14313
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 4.0
+     },
+     {
+      "c_r_star_B": 168.6243414879,
+      "c_r_star_by_b": [
+       157.8158736229,
+       159.8606705666,
+       161.5073680878,
+       163.1901264191,
+       164.452791214,
+       165.7535433769,
+       166.610956192,
+       167.5085425377,
+       167.9382920265,
+       168.6243414879
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14312,
+        14313
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14312,
+        14313
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 8.0
+     }
+    ],
+    "slope_first_segment": 15.3396129608,
+    "slope_fit": {
+     "intercept": 7.0242621845,
+     "n_points": 7,
+     "r2": 0.9998508143,
+     "slope": 20.1316184567
+    },
+    "slope_last_segment": 20.4378515482
+   },
+   {
+    "c_fixed_own": 52.7671873569,
+    "c_r_star_omega0": 35.1781249046,
+    "convention": "kappa",
+    "convention_alias_v1_0": null,
+    "form": "alive",
+    "local_slopes": [
+     {
+      "omega_from": 0.0,
+      "omega_to": 0.25,
+      "slope": 5.1331520081
+     },
+     {
+      "omega_from": 0.25,
+      "omega_to": 0.5,
+      "slope": 8.3563327789
+     },
+     {
+      "omega_from": 0.5,
+      "omega_to": 1.0,
+      "slope": 9.737610817
+     },
+     {
+      "omega_from": 1.0,
+      "omega_to": 2.0,
+      "slope": 9.7377300262
+     },
+     {
+      "omega_from": 2.0,
+      "omega_to": 4.0,
+      "slope": 9.874612093
+     },
+     {
+      "omega_from": 4.0,
+      "omega_to": 8.0,
+      "slope": 10.2314352989
+     }
+    ],
+    "r2": 0.9993865128,
+    "rows": [
+     {
+      "c_r_star_B": 35.1781249046,
+      "c_r_star_by_b": [
+       33.1785082817,
+       33.4138870239,
+       33.6816310883,
+       33.966422081,
+       34.2234969139,
+       34.4554185867,
+       34.6648097038,
+       34.8536968231,
+       35.0242257118,
+       35.1781249046
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        9333,
+        9354,
+        9320,
+        114,
+        90,
+        120,
+        94,
+        100,
+        100,
+        0
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 0.0
+     },
+     {
+      "c_r_star_B": 36.4614129066,
+      "c_r_star_by_b": [
+       34.2508554459,
+       34.4509482384,
+       34.6432328224,
+       34.8395109177,
+       35.0275635719,
+       35.2202653885,
+       35.5371832848,
+       35.8493924141,
+       36.157310009,
+       36.4614129066
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        478,
+        509,
+        474,
+        85,
+        71,
+        102,
+        86,
+        95,
+        100,
+        0
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9544,
+        9540,
+        9541
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 0.25
+     },
+     {
+      "c_r_star_B": 38.5504961014,
+      "c_r_star_by_b": [
+       36.4021062851,
+       36.6652011871,
+       36.8971824646,
+       37.1451377869,
+       37.3602509499,
+       37.5921726227,
+       37.7894639969,
+       38.0045771599,
+       38.2388830185,
+       38.5504961014
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        675,
+        676,
+        649
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9544,
+        9540,
+        9541
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 0.5
+     },
+     {
+      "c_r_star_B": 43.4193015099,
+      "c_r_star_by_b": [
+       40.7046079636,
+       41.0937666893,
+       41.405081749,
+       41.7563915253,
+       42.0255064964,
+       42.3368215561,
+       42.5614714622,
+       42.8306460381,
+       43.0638194084,
+       43.4193015099
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": true,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+       ],
+       "n_signal_events": 2000,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        675,
+        676,
+        649
+       ],
+       "unweighted": 1.0,
+       "weighted": 1.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9544,
+        9540,
+        9541
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 1.0
+     },
+     {
+      "c_r_star_B": 53.1570315361,
+      "c_r_star_by_b": [
+       49.3095517159,
+       49.950838089,
+       50.4208803177,
+       50.9788393974,
+       51.3560771942,
+       51.8261194229,
+       52.105486393,
+       52.4827241898,
+       52.7137517929,
+       53.1570315361
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+       ],
+       "n_signal_events": 2923,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        969,
+        1031,
+        923
+       ],
+       "unweighted": 0.9,
+       "weighted": 0.6842285323
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9544,
+        9540,
+        9541
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 2.0
+     },
+     {
+      "c_r_star_B": 72.906255722,
+      "c_r_star_by_b": [
+       66.852748394,
+       67.980825901,
+       68.8041448593,
+       69.7569847107,
+       70.3883171082,
+       71.1563825607,
+       71.585059166,
+       72.1580386162,
+       72.3729133606,
+       72.906255722
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14312,
+        14313
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14312,
+        14313
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 4.0
+     },
+     {
+      "c_r_star_B": 113.8319969177,
+      "c_r_star_by_b": [
+       103.0235886574,
+       105.068385601,
+       106.7150235176,
+       108.3978414536,
+       109.6604466438,
+       110.9612584114,
+       111.8186116219,
+       112.7162575722,
+       113.146007061,
+       113.8319969177
+      ],
+      "compliance_at_c_fixed_own": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14312,
+        14313
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "compliance_at_c_fixed_task": {
+       "comply_at_B": false,
+       "comply_by_b": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       "n_signal_events": 28625,
+       "signal_events_by_b": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14312,
+        14313
+       ],
+       "unweighted": 0.0,
+       "weighted": 0.0
+      },
+      "omega": 8.0
+     }
+    ],
+    "slope_first_segment": 5.1331520081,
+    "slope_fit": {
+     "intercept": 33.8832357324,
+     "n_points": 7,
+     "r2": 0.9993865128,
+     "slope": 9.9252044109
+    },
+    "slope_last_segment": 10.2314352989
+   }
+  ]
+ },
+ "seeds": {
+  "simulation": 0
+ },
+ "software": {
+  "numpy": "2.5.3",
+  "python": "3.13.16"
+ },
+ "spec_version": "1.1"
+}

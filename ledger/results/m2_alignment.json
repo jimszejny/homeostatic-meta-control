@@ -1,0 +1,31 @@
+{
+ "paper_zero_omega0.0": {
+  "cstar": 8.31911993998274,
+  "iters": 2,
+  "Q_resist": 0.0,
+  "Q_comply": 0.0,
+  "gap": 0.0,
+  "margin_slope": -1.0,
+  "package_bisection_tol1e-4": 8.31913948059082
+ },
+ "paper_zero_omega1.0": {
+  "cstar": 8.319119939982738,
+  "iters": 2,
+  "Q_resist": -1.7763568394002505e-15,
+  "Q_comply": 0.0,
+  "gap": -1.7763568394002505e-15,
+  "margin_slope": -1.0,
+  "package_bisection_tol1e-4": 8.31913948059082
+ },
+ "paper_zero_omega4.0": {
+  "cstar": 8.319119939982743,
+  "iters": 2,
+  "Q_resist": 0.0,
+  "Q_comply": 0.0,
+  "gap": 0.0,
+  "margin_slope": -1.0,
+  "package_bisection_tol1e-4": 8.31913948059082
+ },
+ "c_r_latency_chain": 12.4787,
+ "ratio_12.4787_over_exact": 1.5000024149220152
+}

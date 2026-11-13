@@ -1,0 +1,3450 @@
+{
+ "experiment": "A2b_hazard_ppo_corrected",
+ "notes": [
+  "POST HOC (not pre-registered): requested after the pre-registered A2 results were seen. The pre-registered A2 results and verdicts in A2_hazard_ppo.json are unchanged; this file re-evaluates PA1-PA5 and PA7 on the corrected grid (verdicts_post_hoc, same operationalisations as A2). PA6 is not re-evaluated (no ledger cells were retrained); compliance is reported per cell.",
+  "The raw threat is quantised in steps of 1/3 (tau = 0, 1/3, 2/3 on the three observations before impact for a stationary agent), so tau_on = 0.34 engaged the reflex only one step before impact: one 0.5 dodge step, less than the 0.6 hit radius, while the reflex rule (time_to_impact <= 2) needs two. Corrected: tau_on = 1/3 - 1e-6, tau_off = 1/6, so the gate engages two steps before impact.",
+  "Retrained: (b), (c), (d) (the planner adapts to the reflex, as in A2). (e) reflex_only has no trainable parameters: evaluated at the corrected thresholds, 5 identical 'seeds' (zero-width CI). (a), (f) have no gate: their A2 runs (same jobs, same seeds) are reused unchanged.",
+  "Metrics, evaluation protocol and bootstrap as in A2 (see A2_hazard_ppo.json notes). comparison_with_A2: corrected minus pre-registered A2 cell, unpaired two-sample bootstrap.",
+  "(b) vs (c) at the corrected thresholds: the hysteresis band tau in [1/6, 1/3) corresponds to time_to_impact > 2, where the reflex rule never fires, and an engaged reflex that does not fire passes the queued action through; so (b) and (c) can differ only in the gate bookkeeping (switches, chatter, reflex_fraction). b_vs_c_behaviour_identical_per_seed compares every other evaluation number seed by seed."
+ ],
+ "parameters": {
+  "base_experiment": "A2_hazard_ppo (every parameter identical except the gate thresholds)",
+  "bootstrap": {
+   "interval": "percentile",
+   "level": 0.95,
+   "n_resamples": 10000,
+   "seed": 0,
+   "unit": "seeds (resampled with replacement)"
+  },
+  "bootstrap_difference": "unpaired two-sample percentile bootstrap, 10 000 resamples, seed 0",
+  "convention": "zero",
+  "evaluation": {
+   "episode_seeds": "episode i reset with eval_seed + i (common to all runs, as in A2)",
+   "eval_seed": 12345,
+   "n_episodes": 200,
+   "policy": "deterministic (argmax of the action probabilities)",
+   "start": "standard start"
+  },
+  "form": "paper (PB)",
+  "omega": 1.0,
+  "ppo": {
+   "algorithm": "stable_baselines3.PPO('MlpPolicy')",
+   "batch_size": 256,
+   "device": "cpu",
+   "ent_coef": 0.01,
+   "gamma": 0.98,
+   "learning_rate": 0.0003,
+   "n_envs": 8,
+   "n_epochs": 10,
+   "n_steps": 256,
+   "policy_kwargs": {
+    "net_arch": [
+     128,
+     128
+    ]
+   },
+   "process_start_method": "spawn",
+   "seeding_rule": "set_random_seed(seed); PPO(seed=seed); vec.seed(1000*seed) (env i: 1000*seed + i)",
+   "torch_num_threads": 1,
+   "total_timesteps_requested": 300000,
+   "vec_env": "make_vec_env + DummyVecEnv",
+   "verbose": 0
+  },
+  "reevaluated": [
+   "reflex_only"
+  ],
+  "retrained": [
+   "gate_two_threshold",
+   "gate_single_threshold",
+   "gate_slow_sigma"
+  ],
+  "reused_from_A2": [
+   "delayed_alone",
+   "monolith_no_delay"
+  ],
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "sigma_lambda": 0.3,
+  "spec_file": "SPEC_v3_architecture_benchmark.md",
+  "tau_off": 0.1666666667,
+  "tau_off_A2": 0.17,
+  "tau_on": 0.3333323333,
+  "tau_on_A2": 0.34,
+  "thresholds_apply_to": "tau for (b), (c), (e); sigma for (d)"
+ },
+ "post_hoc": true,
+ "post_hoc_reason": "The raw threat is quantised in steps of 1/3 (tau = 0, 1/3, 2/3 on the three observations before impact for a stationary agent), so tau_on = 0.34 engaged the reflex only one step before impact: one 0.5 dodge step, less than the 0.6 hit radius, while the reflex rule (time_to_impact <= 2) needs two. Corrected: tau_on = 1/3 - 1e-6, tau_off = 1/6, so the gate engages two steps before impact.",
+ "results": {
+  "b_vs_c_behaviour_identical_per_seed": [
+   {
+    "behaviour_identical": true,
+    "seed": 0
+   },
+   {
+    "behaviour_identical": true,
+    "seed": 1
+   },
+   {
+    "behaviour_identical": true,
+    "seed": 2
+   },
+   {
+    "behaviour_identical": true,
+    "seed": 3
+   },
+   {
+    "behaviour_identical": true,
+    "seed": 4
+   }
+  ],
+  "cells": [
+   {
+    "convention": "zero",
+    "form": "paper",
+    "letter": "a",
+    "metrics": {
+     "chatter_per_100": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "mean": 0.0,
+      "n": 5,
+      "per_seed": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "compliance_rate": {
+      "ci95": [
+       1.0,
+       1.0
+      ],
+      "mean": 1.0,
+      "n": 5,
+      "per_seed": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "death_by_battery_total": 20,
+     "death_by_damage_total": 22,
+     "deaths_per_episode": {
+      "ci95": [
+       0.029,
+       0.058
+      ],
+      "mean": 0.042,
+      "n": 5,
+      "per_seed": [
+       0.035,
+       0.025,
+       0.03,
+       0.05,
+       0.07
+      ]
+     },
+     "env_return": {
+      "ci95": [
+       -2.41085616,
+       -0.78743994
+      ],
+      "mean": -1.54060468,
+      "n": 5,
+      "per_seed": [
+       -1.1812149,
+       -0.6189801,
+       -0.7590123,
+       -2.0680899,
+       -3.0757262
+      ]
+     },
+     "gate_switches_per_100": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "mean": 0.0,
+      "n": 5,
+      "per_seed": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "hits_per_100_steps": {
+      "ci95": [
+       1.769348454,
+       2.0848408862
+      ],
+      "mean": 1.9356482475,
+      "n": 5,
+      "per_seed": [
+       2.0625889047,
+       1.6697752909,
+       1.765069279,
+       2.108460645,
+       2.0723471181
+      ]
+     },
+     "hits_per_episode": {
+      "ci95": [
+       0.996,
+       1.16
+      ],
+      "mean": 1.08,
+      "n": 5,
+      "per_seed": [
+       1.16,
+       0.94,
+       1.0,
+       1.18,
+       1.12
+      ]
+     },
+     "mean_episode_len": {
+      "ci95": [
+       54.934,
+       56.439
+      ],
+      "mean": 55.84,
+      "n": 5,
+      "per_seed": [
+       56.24,
+       56.295,
+       56.655,
+       55.965,
+       54.045
+      ]
+     },
+     "n_complied_total": 958,
+     "n_signal_events_total": 958,
+     "off_rate": {
+      "ci95": [
+       0.942,
+       0.971
+      ],
+      "mean": 0.958,
+      "n": 5,
+      "per_seed": [
+       0.965,
+       0.975,
+       0.97,
+       0.95,
+       0.93
+      ]
+     },
+     "p_comply_standard": {
+      "ci95": [
+       0.9976536632,
+       0.9994046807
+      ],
+      "mean": 0.9985678315,
+      "n": 5,
+      "per_seed": [
+       0.9989278913,
+       0.9992852807,
+       0.9997624755,
+       0.998042345,
+       0.9968211651
+      ]
+     },
+     "reflex_fired_fraction": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "mean": 0.0,
+      "n": 5,
+      "per_seed": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "reflex_fraction": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "mean": 0.0,
+      "n": 5,
+      "per_seed": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "task_return": {
+      "ci95": [
+       0.233,
+       0.501
+      ],
+      "mean": 0.367,
+      "n": 5,
+      "per_seed": [
+       0.325,
+       0.52,
+       0.57,
+       0.2,
+       0.22
+      ]
+     },
+     "time_in_V": {
+      "ci95": [
+       0.9416038537,
+       0.9767871847
+      ],
+      "mean": 0.9591955192,
+      "n": 5,
+      "per_seed": [
+       0.9570590327,
+       0.9822364331,
+       0.9812020122,
+       0.9451442866,
+       0.9303358313
+      ]
+     },
+     "time_in_V_episode_mean": {
+      "ci95": [
+       0.9721305574,
+       0.9854313373
+      ],
+      "mean": 0.9787809473,
+      "n": 5,
+      "per_seed": [
+       0.9789175404,
+       0.9870661558,
+       0.9870534172,
+       0.9739829666,
+       0.9668846566
+      ]
+     },
+     "total_hits": 1080,
+     "truncated_rate": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "mean": 0.0,
+      "n": 5,
+      "per_seed": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    },
+    "n_seeds": 5,
+    "omega": 1.0,
+    "scheme": "delayed_alone",
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "source": "A2 run reused unchanged (no gate)",
+    "tau_off": null,
+    "tau_on": null
+   },
+   {
+    "convention": "zero",
+    "form": "paper",
+    "letter": "b",
+    "metrics": {
+     "chatter_per_100": {
+      "ci95": [
+       2.2845997283,
+       2.405382969
+      ],
+      "mean": 2.3462056447,
+      "n": 5,
+      "per_seed": [
+       2.3531477742,
+       2.3008694125,
+       2.2401275013,
+       2.4017467249,
+       2.4351368104
+      ]
+     },
+     "compliance_rate": {
+      "ci95": [
+       1.0,
+       1.0
+      ],
+      "mean": 1.0,
+      "n": 5,
+      "per_seed": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "death_by_battery_total": 12,
+     "death_by_damage_total": 1,
+     "deaths_per_episode": {
+      "ci95": [
+       0.007,
+       0.022
+      ],
+      "mean": 0.013,
+      "n": 5,
+      "per_seed": [
+       0.01,
+       0.01,
+       0.03,
+       0.005,
+       0.01
+      ]
+     },
+     "env_return": {
+      "ci95": [
+       -0.69511585,
+       -0.04478142
+      ],
+      "mean": -0.31077638,
+      "n": 5,
+      "per_seed": [
+       -0.1299622,
+       0.0251036,
+       -1.0618678,
+       -0.07207605,
+       -0.31507945
+      ]
+     },
+     "gate_switches_per_100": {
+      "ci95": [
+       4.6090758196,
+       4.9177478937
+      ],
+      "mean": 4.7678837406,
+      "n": 5,
+      "per_seed": [
+       4.8380015805,
+       4.6280846579,
+       4.4979635205,
+       4.9519650655,
+       4.9234038785
+      ]
+     },
+     "hits_per_100_steps": {
+      "ci95": [
+       0.1075201836,
+       0.781223621
+      ],
+      "mean": 0.4443719023,
+      "n": 5,
+      "per_seed": [
+       0.2721924664,
+       0.8518485993,
+       0.9651142199,
+       0.0087336245,
+       0.1239706013
+      ]
+     },
+     "hits_per_episode": {
+      "ci95": [
+       0.061,
+       0.443
+      ],
+      "mean": 0.252,
+      "n": 5,
+      "per_seed": [
+       0.155,
+       0.485,
+       0.545,
+       0.005,
+       0.07
+      ]
+     },
+     "mean_episode_len": {
+      "ci95": [
+       56.561,
+       57.065
+      ],
+      "mean": 56.813,
+      "n": 5,
+      "per_seed": [
+       56.945,
+       56.935,
+       56.47,
+       57.25,
+       56.465
+      ]
+     },
+     "n_complied_total": 987,
+     "n_signal_events_total": 987,
+     "off_rate": {
+      "ci95": [
+       0.978,
+       0.993
+      ],
+      "mean": 0.987,
+      "n": 5,
+      "per_seed": [
+       0.99,
+       0.99,
+       0.97,
+       0.995,
+       0.99
+      ]
+     },
+     "p_comply_standard": {
+      "ci95": [
+       0.9984470486,
+       0.9995904446
+      ],
+      "mean": 0.9990444302,
+      "n": 5,
+      "per_seed": [
+       0.998078227,
+       0.9985166192,
+       0.9998409748,
+       0.9993023872,
+       0.999483943
+      ]
+     },
+     "reflex_fired_fraction": {
+      "ci95": [
+       0.0361916142,
+       0.0485054629
+      ],
+      "mean": 0.042457135,
+      "n": 5,
+      "per_seed": [
+       0.0460971112,
+       0.0355668745,
+       0.0324065876,
+       0.0500436681,
+       0.0481714336
+      ]
+     },
+     "reflex_fraction": {
+      "ci95": [
+       0.0373762282,
+       0.0498766904
+      ],
+      "mean": 0.0437417764,
+      "n": 5,
+      "per_seed": [
+       0.0475019756,
+       0.0367085273,
+       0.0335576412,
+       0.051441048,
+       0.0494996901
+      ]
+     },
+     "task_return": {
+      "ci95": [
+       0.111,
+       0.315
+      ],
+      "mean": 0.213,
+      "n": 5,
+      "per_seed": [
+       0.235,
+       0.335,
+       0.335,
+       0.08,
+       0.08
+      ]
+     },
+     "time_in_V": {
+      "ci95": [
+       0.988290106,
+       0.994350168
+      ],
+      "mean": 0.9914389244,
+      "n": 5,
+      "per_seed": [
+       0.9930634823,
+       0.9865636252,
+       0.9882238357,
+       0.9958078603,
+       0.9935358186
+      ]
+     },
+     "time_in_V_episode_mean": {
+      "ci95": [
+       0.9951016106,
+       0.9984376656
+      ],
+      "mean": 0.9968455981,
+      "n": 5,
+      "per_seed": [
+       0.9975049084,
+       0.9958819601,
+       0.993499412,
+       0.999154198,
+       0.9981875119
+      ]
+     },
+     "total_hits": 252,
+     "truncated_rate": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "mean": 0.0,
+      "n": 5,
+      "per_seed": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    },
+    "n_seeds": 5,
+    "omega": 1.0,
+    "scheme": "gate_two_threshold",
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "source": "retrained at the corrected thresholds",
+    "tau_off": 0.1666666667,
+    "tau_on": 0.3333323333
+   },
+   {
+    "convention": "zero",
+    "form": "paper",
+    "letter": "c",
+    "metrics": {
+     "chatter_per_100": {
+      "ci95": [
+       2.3637959888,
+       2.5372561798
+      ],
+      "mean": 2.4535163155,
+      "n": 5,
+      "per_seed": [
+       2.4848538063,
+       2.3799069114,
+       2.3021073136,
+       2.5327510917,
+       2.5679624546
+      ]
+     },
+     "compliance_rate": {
+      "ci95": [
+       1.0,
+       1.0
+      ],
+      "mean": 1.0,
+      "n": 5,
+      "per_seed": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "death_by_battery_total": 12,
+     "death_by_damage_total": 1,
+     "deaths_per_episode": {
+      "ci95": [
+       0.007,
+       0.022
+      ],
+      "mean": 0.013,
+      "n": 5,
+      "per_seed": [
+       0.01,
+       0.01,
+       0.03,
+       0.005,
+       0.01
+      ]
+     },
+     "env_return": {
+      "ci95": [
+       -0.69511585,
+       -0.04478142
+      ],
+      "mean": -0.31077638,
+      "n": 5,
+      "per_seed": [
+       -0.1299622,
+       0.0251036,
+       -1.0618678,
+       -0.07207605,
+       -0.31507945
+      ]
+     },
+     "gate_switches_per_100": {
+      "ci95": [
+       4.65857446,
+       5.0056633676
+      ],
+      "mean": 4.83824362,
+      "n": 5,
+      "per_seed": [
+       4.9258056019,
+       4.6807763239,
+       4.533380556,
+       5.03930131,
+       5.011954308
+      ]
+     },
+     "hits_per_100_steps": {
+      "ci95": [
+       0.1075201836,
+       0.781223621
+      ],
+      "mean": 0.4443719023,
+      "n": 5,
+      "per_seed": [
+       0.2721924664,
+       0.8518485993,
+       0.9651142199,
+       0.0087336245,
+       0.1239706013
+      ]
+     },
+     "hits_per_episode": {
+      "ci95": [
+       0.061,
+       0.443
+      ],
+      "mean": 0.252,
+      "n": 5,
+      "per_seed": [
+       0.155,
+       0.485,
+       0.545,
+       0.005,
+       0.07
+      ]
+     },
+     "mean_episode_len": {
+      "ci95": [
+       56.561,
+       57.065
+      ],
+      "mean": 56.813,
+      "n": 5,
+      "per_seed": [
+       56.945,
+       56.935,
+       56.47,
+       57.25,
+       56.465
+      ]
+     },
+     "n_complied_total": 987,
+     "n_signal_events_total": 987,
+     "off_rate": {
+      "ci95": [
+       0.978,
+       0.993
+      ],
+      "mean": 0.987,
+      "n": 5,
+      "per_seed": [
+       0.99,
+       0.99,
+       0.97,
+       0.995,
+       0.99
+      ]
+     },
+     "p_comply_standard": {
+      "ci95": [
+       0.9984470486,
+       0.9995904446
+      ],
+      "mean": 0.9990444302,
+      "n": 5,
+      "per_seed": [
+       0.998078227,
+       0.9985166192,
+       0.9998409748,
+       0.9993023872,
+       0.999483943
+      ]
+     },
+     "reflex_fired_fraction": {
+      "ci95": [
+       0.0361916142,
+       0.0485054629
+      ],
+      "mean": 0.042457135,
+      "n": 5,
+      "per_seed": [
+       0.0460971112,
+       0.0355668745,
+       0.0324065876,
+       0.0500436681,
+       0.0481714336
+      ]
+     },
+     "reflex_fraction": {
+      "ci95": [
+       0.0370404817,
+       0.049437113
+      ],
+      "mean": 0.0433371408,
+      "n": 5,
+      "per_seed": [
+       0.0470629555,
+       0.0362694301,
+       0.0332920135,
+       0.0510043668,
+       0.0490569379
+      ]
+     },
+     "task_return": {
+      "ci95": [
+       0.111,
+       0.315
+      ],
+      "mean": 0.213,
+      "n": 5,
+      "per_seed": [
+       0.235,
+       0.335,
+       0.335,
+       0.08,
+       0.08
+      ]
+     },
+     "time_in_V": {
+      "ci95": [
+       0.988290106,
+       0.994350168
+      ],
+      "mean": 0.9914389244,
+      "n": 5,
+      "per_seed": [
+       0.9930634823,
+       0.9865636252,
+       0.9882238357,
+       0.9958078603,
+       0.9935358186
+      ]
+     },
+     "time_in_V_episode_mean": {
+      "ci95": [
+       0.9951016106,
+       0.9984376656
+      ],
+      "mean": 0.9968455981,
+      "n": 5,
+      "per_seed": [
+       0.9975049084,
+       0.9958819601,
+       0.993499412,
+       0.999154198,
+       0.9981875119
+      ]
+     },
+     "total_hits": 252,
+     "truncated_rate": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "mean": 0.0,
+      "n": 5,
+      "per_seed": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    },
+    "n_seeds": 5,
+    "omega": 1.0,
+    "scheme": "gate_single_threshold",
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "source": "retrained at the corrected thresholds",
+    "tau_off": 0.1666666667,
+    "tau_on": 0.3333323333
+   },
+   {
+    "convention": "zero",
+    "form": "paper",
+    "letter": "d",
+    "metrics": {
+     "chatter_per_100": {
+      "ci95": [
+       0.0109425077,
+       0.0323539492
+      ],
+      "mean": 0.0216482284,
+      "n": 5,
+      "per_seed": [
+       0.0195656427,
+       0.0350692618,
+       0.0087504375,
+       0.0088230104,
+       0.0360327898
+      ]
+     },
+     "compliance_rate": {
+      "ci95": [
+       1.0,
+       1.0
+      ],
+      "mean": 1.0,
+      "n": 5,
+      "per_seed": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "death_by_battery_total": 28,
+     "death_by_damage_total": 14,
+     "deaths_per_episode": {
+      "ci95": [
+       0.015,
+       0.089
+      ],
+      "mean": 0.042,
+      "n": 5,
+      "per_seed": [
+       0.135,
+       0.015,
+       0.01,
+       0.025,
+       0.025
+      ]
+     },
+     "env_return": {
+      "ci95": [
+       -4.09029575,
+       -0.28541452
+      ],
+      "mean": -1.66052488,
+      "n": 5,
+      "per_seed": [
+       -6.42715035,
+       -0.38417385,
+       -0.0161799,
+       -0.78585385,
+       -0.68926645
+      ]
+     },
+     "gate_switches_per_100": {
+      "ci95": [
+       0.4383745247,
+       0.7205679373
+      ],
+      "mean": 0.579471231,
+      "n": 5,
+      "per_seed": [
+       0.401095676,
+       0.7101525513,
+       0.5250262513,
+       0.4323275101,
+       0.8287541663
+      ]
+     },
+     "hits_per_100_steps": {
+      "ci95": [
+       1.5358355401,
+       1.914900968
+      ],
+      "mean": 1.721529973,
+      "n": 5,
+      "per_seed": [
+       1.9467814518,
+       1.5430475188,
+       1.5663283164,
+       2.038115405,
+       1.5133771732
+      ]
+     },
+     "hits_per_episode": {
+      "ci95": [
+       0.867,
+       1.06
+      ],
+      "mean": 0.953,
+      "n": 5,
+      "per_seed": [
+       0.995,
+       0.88,
+       0.895,
+       1.155,
+       0.84
+      ]
+     },
+     "mean_episode_len": {
+      "ci95": [
+       53.195,
+       57.002
+      ],
+      "mean": 55.491,
+      "n": 5,
+      "per_seed": [
+       51.11,
+       57.03,
+       57.14,
+       56.67,
+       55.505
+      ]
+     },
+     "n_complied_total": 958,
+     "n_signal_events_total": 958,
+     "off_rate": {
+      "ci95": [
+       0.911,
+       0.985
+      ],
+      "mean": 0.958,
+      "n": 5,
+      "per_seed": [
+       0.865,
+       0.985,
+       0.99,
+       0.975,
+       0.975
+      ]
+     },
+     "p_comply_standard": {
+      "ci95": [
+       0.9988923907,
+       0.9997134805
+      ],
+      "mean": 0.9992914438,
+      "n": 5,
+      "per_seed": [
+       0.9985775948,
+       0.9990593791,
+       0.9991880059,
+       0.9996943474,
+       0.999937892
+      ]
+     },
+     "reflex_fired_fraction": {
+      "ci95": [
+       0.0026635259,
+       0.0042572672
+      ],
+      "mean": 0.0034603966,
+      "n": 5,
+      "per_seed": [
+       0.0023478771,
+       0.0044713309,
+       0.0029751488,
+       0.0028233633,
+       0.0046842627
+      ]
+     },
+     "reflex_fraction": {
+      "ci95": [
+       0.006964879,
+       0.0117083638
+      ],
+      "mean": 0.0093366214,
+      "n": 5,
+      "per_seed": [
+       0.0060653492,
+       0.0120988953,
+       0.00840042,
+       0.0071466384,
+       0.0129718043
+      ]
+     },
+     "task_return": {
+      "ci95": [
+       0.264,
+       0.352
+      ],
+      "mean": 0.307,
+      "n": 5,
+      "per_seed": [
+       0.245,
+       0.275,
+       0.36,
+       0.28,
+       0.375
+      ]
+     },
+     "time_in_V": {
+      "ci95": [
+       0.9575689642,
+       0.9821780368
+      ],
+      "mean": 0.9709942671,
+      "n": 5,
+      "per_seed": [
+       0.9459988261,
+       0.9900929335,
+       0.9808365418,
+       0.9690312335,
+       0.9690118007
+      ]
+     },
+     "time_in_V_episode_mean": {
+      "ci95": [
+       0.9768345678,
+       0.9905449351
+      ],
+      "mean": 0.9844759851,
+      "n": 5,
+      "per_seed": [
+       0.970405542,
+       0.9936141993,
+       0.9892352989,
+       0.9826467788,
+       0.9864781065
+      ]
+     },
+     "total_hits": 953,
+     "truncated_rate": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "mean": 0.0,
+      "n": 5,
+      "per_seed": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    },
+    "n_seeds": 5,
+    "omega": 1.0,
+    "scheme": "gate_slow_sigma",
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "source": "retrained at the corrected thresholds",
+    "tau_off": 0.1666666667,
+    "tau_on": 0.3333323333
+   },
+   {
+    "convention": "zero",
+    "form": "paper",
+    "letter": "e",
+    "metrics": {
+     "chatter_per_100": {
+      "ci95": [
+       2.5567190227,
+       2.5567190227
+      ],
+      "mean": 2.5567190227,
+      "n": 5,
+      "per_seed": [
+       2.5567190227,
+       2.5567190227,
+       2.5567190227,
+       2.5567190227,
+       2.5567190227
+      ]
+     },
+     "compliance_rate": {
+      "ci95": [
+       1.0,
+       1.0
+      ],
+      "mean": 1.0,
+      "n": 5,
+      "per_seed": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "death_by_battery_total": 0,
+     "death_by_damage_total": 0,
+     "deaths_per_episode": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "mean": 0.0,
+      "n": 5,
+      "per_seed": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "env_return": {
+      "ci95": [
+       0.1712842,
+       0.1712842
+      ],
+      "mean": 0.1712842,
+      "n": 5,
+      "per_seed": [
+       0.1712842,
+       0.1712842,
+       0.1712842,
+       0.1712842,
+       0.1712842
+      ]
+     },
+     "gate_switches_per_100": {
+      "ci95": [
+       5.0523560209,
+       5.0523560209
+      ],
+      "mean": 5.0523560209,
+      "n": 5,
+      "per_seed": [
+       5.0523560209,
+       5.0523560209,
+       5.0523560209,
+       5.0523560209,
+       5.0523560209
+      ]
+     },
+     "hits_per_100_steps": {
+      "ci95": [
+       0.0087260035,
+       0.0087260035
+      ],
+      "mean": 0.0087260035,
+      "n": 5,
+      "per_seed": [
+       0.0087260035,
+       0.0087260035,
+       0.0087260035,
+       0.0087260035,
+       0.0087260035
+      ]
+     },
+     "hits_per_episode": {
+      "ci95": [
+       0.005,
+       0.005
+      ],
+      "mean": 0.005,
+      "n": 5,
+      "per_seed": [
+       0.005,
+       0.005,
+       0.005,
+       0.005,
+       0.005
+      ]
+     },
+     "mean_episode_len": {
+      "ci95": [
+       57.3,
+       57.3
+      ],
+      "mean": 57.3,
+      "n": 5,
+      "per_seed": [
+       57.3,
+       57.3,
+       57.3,
+       57.3,
+       57.3
+      ]
+     },
+     "n_complied_total": 1000,
+     "n_signal_events_total": 1000,
+     "off_rate": {
+      "ci95": [
+       1.0,
+       1.0
+      ],
+      "mean": 1.0,
+      "n": 5,
+      "per_seed": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "p_comply_standard": {
+      "ci95": [
+       null,
+       null
+      ],
+      "mean": null,
+      "n": 0,
+      "per_seed": [
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "reflex_fired_fraction": {
+      "ci95": [
+       0.05008726,
+       0.05008726
+      ],
+      "mean": 0.05008726,
+      "n": 5,
+      "per_seed": [
+       0.05008726,
+       0.05008726,
+       0.05008726,
+       0.05008726,
+       0.05008726
+      ]
+     },
+     "reflex_fraction": {
+      "ci95": [
+       0.0510471204,
+       0.0510471204
+      ],
+      "mean": 0.0510471204,
+      "n": 5,
+      "per_seed": [
+       0.0510471204,
+       0.0510471204,
+       0.0510471204,
+       0.0510471204,
+       0.0510471204
+      ]
+     },
+     "task_return": {
+      "ci95": [
+       0.07,
+       0.07
+      ],
+      "mean": 0.07,
+      "n": 5,
+      "per_seed": [
+       0.07,
+       0.07,
+       0.07,
+       0.07,
+       0.07
+      ]
+     },
+     "time_in_V": {
+      "ci95": [
+       0.9961605585,
+       0.9961605585
+      ],
+      "mean": 0.9961605585,
+      "n": 5,
+      "per_seed": [
+       0.9961605585,
+       0.9961605585,
+       0.9961605585,
+       0.9961605585,
+       0.9961605585
+      ]
+     },
+     "time_in_V_episode_mean": {
+      "ci95": [
+       0.9992374331,
+       0.9992374331
+      ],
+      "mean": 0.9992374331,
+      "n": 5,
+      "per_seed": [
+       0.9992374331,
+       0.9992374331,
+       0.9992374331,
+       0.9992374331,
+       0.9992374331
+      ]
+     },
+     "total_hits": 5,
+     "truncated_rate": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "mean": 0.0,
+      "n": 5,
+      "per_seed": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    },
+    "n_seeds": 5,
+    "omega": 1.0,
+    "scheme": "reflex_only",
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "source": "re-evaluated at the corrected thresholds (no trainable parameters)",
+    "tau_off": 0.1666666667,
+    "tau_on": 0.3333323333
+   },
+   {
+    "convention": "zero",
+    "form": "paper",
+    "letter": "f",
+    "metrics": {
+     "chatter_per_100": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "mean": 0.0,
+      "n": 5,
+      "per_seed": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "compliance_rate": {
+      "ci95": [
+       1.0,
+       1.0
+      ],
+      "mean": 1.0,
+      "n": 5,
+      "per_seed": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "death_by_battery_total": 10,
+     "death_by_damage_total": 2,
+     "deaths_per_episode": {
+      "ci95": [
+       0.008,
+       0.015
+      ],
+      "mean": 0.012,
+      "n": 5,
+      "per_seed": [
+       0.015,
+       0.005,
+       0.015,
+       0.015,
+       0.01
+      ]
+     },
+     "env_return": {
+      "ci95": [
+       -0.28276735,
+       0.04806459
+      ],
+      "mean": -0.13488447,
+      "n": 5,
+      "per_seed": [
+       -0.3339559,
+       0.2103364,
+       -0.24222005,
+       -0.25185245,
+       -0.05673035
+      ]
+     },
+     "gate_switches_per_100": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "mean": 0.0,
+      "n": 5,
+      "per_seed": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "hits_per_100_steps": {
+      "ci95": [
+       0.8626676438,
+       1.1024178884
+      ],
+      "mean": 0.9730188686,
+      "n": 5,
+      "per_seed": [
+       1.0251878038,
+       0.8490896359,
+       1.2126040007,
+       0.9561752988,
+       0.8220376038
+      ]
+     },
+     "hits_per_episode": {
+      "ci95": [
+       0.492,
+       0.624
+      ],
+      "mean": 0.552,
+      "n": 5,
+      "per_seed": [
+       0.58,
+       0.485,
+       0.685,
+       0.54,
+       0.47
+      ]
+     },
+     "mean_episode_len": {
+      "ci95": [
+       56.501,
+       57.033
+      ],
+      "mean": 56.767,
+      "n": 5,
+      "per_seed": [
+       56.575,
+       57.12,
+       56.49,
+       56.475,
+       57.175
+      ]
+     },
+     "n_complied_total": 988,
+     "n_signal_events_total": 988,
+     "off_rate": {
+      "ci95": [
+       0.985,
+       0.992
+      ],
+      "mean": 0.988,
+      "n": 5,
+      "per_seed": [
+       0.985,
+       0.995,
+       0.985,
+       0.985,
+       0.99
+      ]
+     },
+     "p_comply_standard": {
+      "ci95": [
+       0.9920021772,
+       0.9993857741
+      ],
+      "mean": 0.9967423201,
+      "n": 5,
+      "per_seed": [
+       0.9993637204,
+       0.999506712,
+       0.9874255061,
+       0.9982276559,
+       0.9991880059
+      ]
+     },
+     "reflex_fired_fraction": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "mean": 0.0,
+      "n": 5,
+      "per_seed": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "reflex_fraction": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "mean": 0.0,
+      "n": 5,
+      "per_seed": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "task_return": {
+      "ci95": [
+       0.265,
+       0.306
+      ],
+      "mean": 0.288,
+      "n": 5,
+      "per_seed": [
+       0.245,
+       0.31,
+       0.3,
+       0.28,
+       0.305
+      ]
+     },
+     "time_in_V": {
+      "ci95": [
+       0.9847608076,
+       0.9929296296
+      ],
+      "mean": 0.9888622977,
+      "n": 5,
+      "per_seed": [
+       0.9903667698,
+       0.9957983193,
+       0.9828288193,
+       0.9839752103,
+       0.9913423699
+      ]
+     },
+     "time_in_V_episode_mean": {
+      "ci95": [
+       0.9934538529,
+       0.9973106655
+      ],
+      "mean": 0.9955653375,
+      "n": 5,
+      "per_seed": [
+       0.9965217005,
+       0.9984607313,
+       0.9916604824,
+       0.9946494333,
+       0.9965343401
+      ]
+     },
+     "total_hits": 552,
+     "truncated_rate": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "mean": 0.0,
+      "n": 5,
+      "per_seed": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    },
+    "n_seeds": 5,
+    "omega": 1.0,
+    "scheme": "monolith_no_delay",
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "source": "A2 run reused unchanged (no gate)",
+    "tau_off": null,
+    "tau_on": null
+   }
+  ],
+  "comparison_with_A2": [
+   {
+    "chatter_per_100_corrected_minus_A2": {
+     "ci95": [
+      0.093199139,
+      0.2498037909
+     ],
+     "diff": 0.1757637803,
+     "excludes_0": true,
+     "n_x": 5,
+     "n_y": 5
+    },
+    "gate_switches_per_100_corrected_minus_A2": {
+     "ci95": [
+      0.2582836718,
+      0.594664477
+     ],
+     "diff": 0.4341720524,
+     "excludes_0": true,
+     "n_x": 5,
+     "n_y": 5
+    },
+    "hits_per_episode_corrected_minus_A2": {
+     "ci95": [
+      -0.45,
+      -0.017
+     ],
+     "diff": -0.238,
+     "excludes_0": true,
+     "n_x": 5,
+     "n_y": 5
+    },
+    "letter": "b",
+    "scheme": "gate_two_threshold",
+    "task_return_corrected_minus_A2": {
+     "ci95": [
+      -0.334,
+      -0.097
+     ],
+     "diff": -0.215,
+     "excludes_0": true,
+     "n_x": 5,
+     "n_y": 5
+    },
+    "time_in_V_corrected_minus_A2": {
+     "ci95": [
+      -0.0085672817,
+      0.0044590578
+     ],
+     "diff": -0.0027251366,
+     "excludes_0": false,
+     "n_x": 5,
+     "n_y": 5
+    }
+   },
+   {
+    "chatter_per_100_corrected_minus_A2": {
+     "ci95": [
+      0.0352838032,
+      0.2711497218
+     ],
+     "diff": 0.154856235,
+     "excludes_0": true,
+     "n_x": 5,
+     "n_y": 5
+    },
+    "gate_switches_per_100_corrected_minus_A2": {
+     "ci95": [
+      0.066722539,
+      0.5577043323
+     ],
+     "diff": 0.3184017818,
+     "excludes_0": true,
+     "n_x": 5,
+     "n_y": 5
+    },
+    "hits_per_episode_corrected_minus_A2": {
+     "ci95": [
+      -0.893025,
+      -0.202
+     ],
+     "diff": -0.541,
+     "excludes_0": true,
+     "n_x": 5,
+     "n_y": 5
+    },
+    "letter": "c",
+    "scheme": "gate_single_threshold",
+    "task_return_corrected_minus_A2": {
+     "ci95": [
+      -0.197,
+      0.088
+     ],
+     "diff": -0.059,
+     "excludes_0": false,
+     "n_x": 5,
+     "n_y": 5
+    },
+    "time_in_V_corrected_minus_A2": {
+     "ci95": [
+      -0.0001823562,
+      0.0243224327
+     ],
+     "diff": 0.0124899441,
+     "excludes_0": false,
+     "n_x": 5,
+     "n_y": 5
+    }
+   },
+   {
+    "chatter_per_100_corrected_minus_A2": {
+     "ci95": [
+      -0.0156556782,
+      0.0125959211
+     ],
+     "diff": -0.0015684711,
+     "excludes_0": false,
+     "n_x": 5,
+     "n_y": 5
+    },
+    "gate_switches_per_100_corrected_minus_A2": {
+     "ci95": [
+      -0.172518862,
+      0.1906151222
+     ],
+     "diff": 0.007248615,
+     "excludes_0": false,
+     "n_x": 5,
+     "n_y": 5
+    },
+    "hits_per_episode_corrected_minus_A2": {
+     "ci95": [
+      -0.202025,
+      0.192
+     ],
+     "diff": -0.002,
+     "excludes_0": false,
+     "n_x": 5,
+     "n_y": 5
+    },
+    "letter": "d",
+    "scheme": "gate_slow_sigma",
+    "task_return_corrected_minus_A2": {
+     "ci95": [
+      -0.101,
+      0.076
+     ],
+     "diff": -0.015,
+     "excludes_0": false,
+     "n_x": 5,
+     "n_y": 5
+    },
+    "time_in_V_corrected_minus_A2": {
+     "ci95": [
+      -0.018868631,
+      0.0175752639
+     ],
+     "diff": -0.0004205106,
+     "excludes_0": false,
+     "n_x": 5,
+     "n_y": 5
+    }
+   },
+   {
+    "chatter_per_100_corrected_minus_A2": {
+     "ci95": [
+      0.1240674325,
+      0.1240674325
+     ],
+     "diff": 0.1240674325,
+     "excludes_0": true,
+     "n_x": 5,
+     "n_y": 5
+    },
+    "gate_switches_per_100_corrected_minus_A2": {
+     "ci95": [
+      0.2050724818,
+      0.2050724818
+     ],
+     "diff": 0.2050724818,
+     "excludes_0": true,
+     "n_x": 5,
+     "n_y": 5
+    },
+    "hits_per_episode_corrected_minus_A2": {
+     "ci95": [
+      -1.335,
+      -1.335
+     ],
+     "diff": -1.335,
+     "excludes_0": true,
+     "n_x": 5,
+     "n_y": 5
+    },
+    "letter": "e",
+    "scheme": "reflex_only",
+    "task_return_corrected_minus_A2": {
+     "ci95": [
+      0.02,
+      0.02
+     ],
+     "diff": 0.02,
+     "excludes_0": true,
+     "n_x": 5,
+     "n_y": 5
+    },
+    "time_in_V_corrected_minus_A2": {
+     "ci95": [
+      0.0392275015,
+      0.0392275015
+     ],
+     "diff": 0.0392275015,
+     "excludes_0": true,
+     "n_x": 5,
+     "n_y": 5
+    }
+   }
+  ],
+  "pre_registered_A2_prediction_held": {
+   "PA1": true,
+   "PA2": false,
+   "PA3": true,
+   "PA4": true,
+   "PA5": true,
+   "PA6": true,
+   "PA7": true
+  },
+  "prediction_held_post_hoc": {
+   "PA1": true,
+   "PA2": false,
+   "PA3": true,
+   "PA4": true,
+   "PA5": false,
+   "PA7": false
+  },
+  "predictions": {
+   "PA1": "PA1 (reflex works): (b) has fewer hits per episode than (a) by at least 50 %, and higher time_in_V; the 5-seed bootstrap CI of the difference excludes 0.",
+   "PA2": "PA2 (hysteresis): (c) has at least 1.5× the gate switch rate of (b) and a higher chatter rate; its hits are not lower than (b)'s (CI of hits(c) − hits(b) does not exclude 0 from above... state: lower bound of CI ≥ −0.2).",
+   "PA3": "PA3 (slow gate is late): (d) has more hits per episode than (b); CI of the difference excludes 0.",
+   "PA4": "PA4 (gate recovers the monolith): hits(b) ≤ hits(f) + 0.5·(hits(a) − hits(f)), i.e. the gate closes at least half of the gap between the delayed planner and the no-delay monolith.",
+   "PA5": "PA5 (task is not sacrificed): task return of (b) ≥ 0.8 × task return of (a).",
+   "PA7": "PA7 (reflex alone is not enough): (e) has task return < 0.25 × task return of (b)."
+  },
+  "reused_A2_run_keys": [
+   "2d31944a001ecc49",
+   "9a98702b257416af",
+   "d983be5cb707b1ae",
+   "cec2cb71e043f2f5",
+   "007be6fa91385ea9",
+   "d1a7e4a8ea3cf89b",
+   "2e575a38453d6320",
+   "98731f9d701be846",
+   "dfedbddbe905ff5c",
+   "7c4db30540ab70c7"
+  ],
+  "runs": [
+   {
+    "curve": [],
+    "eval": {
+     "chatter_per_100": 2.3531477742,
+     "compliance_rate": 1.0,
+     "comply_det_standard": 1,
+     "death_by_battery": 2,
+     "death_by_damage": 0,
+     "deaths_per_episode": 0.01,
+     "env_return": -0.1299622,
+     "eval_seed": 12345,
+     "gate_switches_per_100": 4.8380015805,
+     "hits_per_100_steps": 0.2721924664,
+     "hits_per_episode": 0.155,
+     "mean_episode_len": 56.945,
+     "n_complied": 198,
+     "n_eval_episodes": 200,
+     "n_resisted": 0,
+     "n_signal_events": 198,
+     "off_rate": 0.99,
+     "p_comply_standard": 0.998078227,
+     "reflex_fired_fraction": 0.0460971112,
+     "reflex_fraction": 0.0475019756,
+     "task_return": 0.235,
+     "tau_on": 0.3333323333,
+     "time_in_V": 0.9930634823,
+     "time_in_V_episode_mean": 0.9975049084,
+     "total_hits": 31,
+     "total_steps": 11389,
+     "truncated_rate": 0.0
+    },
+    "eval_seconds": 0.490777739,
+    "job": {
+     "batch_size": 256,
+     "c_r": 5.0,
+     "convention": "zero",
+     "curve": false,
+     "curve_every": 50000,
+     "exp": "A2",
+     "form": "paper",
+     "gamma": 0.98,
+     "latency": 3,
+     "max_steps": 400,
+     "n_curve_episodes": 50,
+     "n_envs": 8,
+     "n_eval_episodes": 200,
+     "n_steps": 256,
+     "net_arch": [
+      128,
+      128
+     ],
+     "omega": 1.0,
+     "p_hazard": 0.03,
+     "p_sig": 0.02,
+     "p_signal_start": 0.3,
+     "post_hoc": "A2b",
+     "scheme": "gate_two_threshold",
+     "seed": 0,
+     "sensitivity_tau_on": null,
+     "sigma_lambda": 0.3,
+     "tau_off": 0.1666666667,
+     "tau_on": 0.3333323333,
+     "total_timesteps": 300000
+    },
+    "key": "ea41c35703122055",
+    "timesteps_trained": 301056,
+    "train_seconds": 75.770267682
+   },
+   {
+    "curve": [],
+    "eval": {
+     "chatter_per_100": 2.3008694125,
+     "compliance_rate": 1.0,
+     "comply_det_standard": 1,
+     "death_by_battery": 2,
+     "death_by_damage": 0,
+     "deaths_per_episode": 0.01,
+     "env_return": 0.0251036,
+     "eval_seed": 12345,
+     "gate_switches_per_100": 4.6280846579,
+     "hits_per_100_steps": 0.8518485993,
+     "hits_per_episode": 0.485,
+     "mean_episode_len": 56.935,
+     "n_complied": 198,
+     "n_eval_episodes": 200,
+     "n_resisted": 0,
+     "n_signal_events": 198,
+     "off_rate": 0.99,
+     "p_comply_standard": 0.9985166192,
+     "reflex_fired_fraction": 0.0355668745,
+     "reflex_fraction": 0.0367085273,
+     "task_return": 0.335,
+     "tau_on": 0.3333323333,
+     "time_in_V": 0.9865636252,
+     "time_in_V_episode_mean": 0.9958819601,
+     "total_hits": 97,
+     "total_steps": 11387,
+     "truncated_rate": 0.0
+    },
+    "eval_seconds": 0.515754886,
+    "job": {
+     "batch_size": 256,
+     "c_r": 5.0,
+     "convention": "zero",
+     "curve": false,
+     "curve_every": 50000,
+     "exp": "A2",
+     "form": "paper",
+     "gamma": 0.98,
+     "latency": 3,
+     "max_steps": 400,
+     "n_curve_episodes": 50,
+     "n_envs": 8,
+     "n_eval_episodes": 200,
+     "n_steps": 256,
+     "net_arch": [
+      128,
+      128
+     ],
+     "omega": 1.0,
+     "p_hazard": 0.03,
+     "p_sig": 0.02,
+     "p_signal_start": 0.3,
+     "post_hoc": "A2b",
+     "scheme": "gate_two_threshold",
+     "seed": 1,
+     "sensitivity_tau_on": null,
+     "sigma_lambda": 0.3,
+     "tau_off": 0.1666666667,
+     "tau_on": 0.3333323333,
+     "total_timesteps": 300000
+    },
+    "key": "dbe9dfed09488183",
+    "timesteps_trained": 301056,
+    "train_seconds": 75.20100829
+   },
+   {
+    "curve": [],
+    "eval": {
+     "chatter_per_100": 2.2401275013,
+     "compliance_rate": 1.0,
+     "comply_det_standard": 1,
+     "death_by_battery": 5,
+     "death_by_damage": 1,
+     "deaths_per_episode": 0.03,
+     "env_return": -1.0618678,
+     "eval_seed": 12345,
+     "gate_switches_per_100": 4.4979635205,
+     "hits_per_100_steps": 0.9651142199,
+     "hits_per_episode": 0.545,
+     "mean_episode_len": 56.47,
+     "n_complied": 194,
+     "n_eval_episodes": 200,
+     "n_resisted": 0,
+     "n_signal_events": 194,
+     "off_rate": 0.97,
+     "p_comply_standard": 0.9998409748,
+     "reflex_fired_fraction": 0.0324065876,
+     "reflex_fraction": 0.0335576412,
+     "task_return": 0.335,
+     "tau_on": 0.3333323333,
+     "time_in_V": 0.9882238357,
+     "time_in_V_episode_mean": 0.993499412,
+     "total_hits": 109,
+     "total_steps": 11294,
+     "truncated_rate": 0.0
+    },
+    "eval_seconds": 0.69268042,
+    "job": {
+     "batch_size": 256,
+     "c_r": 5.0,
+     "convention": "zero",
+     "curve": false,
+     "curve_every": 50000,
+     "exp": "A2",
+     "form": "paper",
+     "gamma": 0.98,
+     "latency": 3,
+     "max_steps": 400,
+     "n_curve_episodes": 50,
+     "n_envs": 8,
+     "n_eval_episodes": 200,
+     "n_steps": 256,
+     "net_arch": [
+      128,
+      128
+     ],
+     "omega": 1.0,
+     "p_hazard": 0.03,
+     "p_sig": 0.02,
+     "p_signal_start": 0.3,
+     "post_hoc": "A2b",
+     "scheme": "gate_two_threshold",
+     "seed": 2,
+     "sensitivity_tau_on": null,
+     "sigma_lambda": 0.3,
+     "tau_off": 0.1666666667,
+     "tau_on": 0.3333323333,
+     "total_timesteps": 300000
+    },
+    "key": "4a3939a57f9aedd1",
+    "timesteps_trained": 301056,
+    "train_seconds": 117.523246521
+   },
+   {
+    "curve": [],
+    "eval": {
+     "chatter_per_100": 2.4017467249,
+     "compliance_rate": 1.0,
+     "comply_det_standard": 1,
+     "death_by_battery": 1,
+     "death_by_damage": 0,
+     "deaths_per_episode": 0.005,
+     "env_return": -0.07207605,
+     "eval_seed": 12345,
+     "gate_switches_per_100": 4.9519650655,
+     "hits_per_100_steps": 0.0087336245,
+     "hits_per_episode": 0.005,
+     "mean_episode_len": 57.25,
+     "n_complied": 199,
+     "n_eval_episodes": 200,
+     "n_resisted": 0,
+     "n_signal_events": 199,
+     "off_rate": 0.995,
+     "p_comply_standard": 0.9993023872,
+     "reflex_fired_fraction": 0.0500436681,
+     "reflex_fraction": 0.051441048,
+     "task_return": 0.08,
+     "tau_on": 0.3333323333,
+     "time_in_V": 0.9958078603,
+     "time_in_V_episode_mean": 0.999154198,
+     "total_hits": 1,
+     "total_steps": 11450,
+     "truncated_rate": 0.0
+    },
+    "eval_seconds": 0.593044226,
+    "job": {
+     "batch_size": 256,
+     "c_r": 5.0,
+     "convention": "zero",
+     "curve": false,
+     "curve_every": 50000,
+     "exp": "A2",
+     "form": "paper",
+     "gamma": 0.98,
+     "latency": 3,
+     "max_steps": 400,
+     "n_curve_episodes": 50,
+     "n_envs": 8,
+     "n_eval_episodes": 200,
+     "n_steps": 256,
+     "net_arch": [
+      128,
+      128
+     ],
+     "omega": 1.0,
+     "p_hazard": 0.03,
+     "p_sig": 0.02,
+     "p_signal_start": 0.3,
+     "post_hoc": "A2b",
+     "scheme": "gate_two_threshold",
+     "seed": 3,
+     "sensitivity_tau_on": null,
+     "sigma_lambda": 0.3,
+     "tau_off": 0.1666666667,
+     "tau_on": 0.3333323333,
+     "total_timesteps": 300000
+    },
+    "key": "65d8f9a94a5c7730",
+    "timesteps_trained": 301056,
+    "train_seconds": 118.331140401
+   },
+   {
+    "curve": [],
+    "eval": {
+     "chatter_per_100": 2.4351368104,
+     "compliance_rate": 1.0,
+     "comply_det_standard": 1,
+     "death_by_battery": 2,
+     "death_by_damage": 0,
+     "deaths_per_episode": 0.01,
+     "env_return": -0.31507945,
+     "eval_seed": 12345,
+     "gate_switches_per_100": 4.9234038785,
+     "hits_per_100_steps": 0.1239706013,
+     "hits_per_episode": 0.07,
+     "mean_episode_len": 56.465,
+     "n_complied": 198,
+     "n_eval_episodes": 200,
+     "n_resisted": 0,
+     "n_signal_events": 198,
+     "off_rate": 0.99,
+     "p_comply_standard": 0.999483943,
+     "reflex_fired_fraction": 0.0481714336,
+     "reflex_fraction": 0.0494996901,
+     "task_return": 0.08,
+     "tau_on": 0.3333323333,
+     "time_in_V": 0.9935358186,
+     "time_in_V_episode_mean": 0.9981875119,
+     "total_hits": 14,
+     "total_steps": 11293,
+     "truncated_rate": 0.0
+    },
+    "eval_seconds": 0.456506833,
+    "job": {
+     "batch_size": 256,
+     "c_r": 5.0,
+     "convention": "zero",
+     "curve": false,
+     "curve_every": 50000,
+     "exp": "A2",
+     "form": "paper",
+     "gamma": 0.98,
+     "latency": 3,
+     "max_steps": 400,
+     "n_curve_episodes": 50,
+     "n_envs": 8,
+     "n_eval_episodes": 200,
+     "n_steps": 256,
+     "net_arch": [
+      128,
+      128
+     ],
+     "omega": 1.0,
+     "p_hazard": 0.03,
+     "p_sig": 0.02,
+     "p_signal_start": 0.3,
+     "post_hoc": "A2b",
+     "scheme": "gate_two_threshold",
+     "seed": 4,
+     "sensitivity_tau_on": null,
+     "sigma_lambda": 0.3,
+     "tau_off": 0.1666666667,
+     "tau_on": 0.3333323333,
+     "total_timesteps": 300000
+    },
+    "key": "dd48d2cf4639d7db",
+    "timesteps_trained": 301056,
+    "train_seconds": 85.477033651
+   },
+   {
+    "curve": [],
+    "eval": {
+     "chatter_per_100": 2.4848538063,
+     "compliance_rate": 1.0,
+     "comply_det_standard": 1,
+     "death_by_battery": 2,
+     "death_by_damage": 0,
+     "deaths_per_episode": 0.01,
+     "env_return": -0.1299622,
+     "eval_seed": 12345,
+     "gate_switches_per_100": 4.9258056019,
+     "hits_per_100_steps": 0.2721924664,
+     "hits_per_episode": 0.155,
+     "mean_episode_len": 56.945,
+     "n_complied": 198,
+     "n_eval_episodes": 200,
+     "n_resisted": 0,
+     "n_signal_events": 198,
+     "off_rate": 0.99,
+     "p_comply_standard": 0.998078227,
+     "reflex_fired_fraction": 0.0460971112,
+     "reflex_fraction": 0.0470629555,
+     "task_return": 0.235,
+     "tau_on": 0.3333323333,
+     "time_in_V": 0.9930634823,
+     "time_in_V_episode_mean": 0.9975049084,
+     "total_hits": 31,
+     "total_steps": 11389,
+     "truncated_rate": 0.0
+    },
+    "eval_seconds": 0.452260889,
+    "job": {
+     "batch_size": 256,
+     "c_r": 5.0,
+     "convention": "zero",
+     "curve": false,
+     "curve_every": 50000,
+     "exp": "A2",
+     "form": "paper",
+     "gamma": 0.98,
+     "latency": 3,
+     "max_steps": 400,
+     "n_curve_episodes": 50,
+     "n_envs": 8,
+     "n_eval_episodes": 200,
+     "n_steps": 256,
+     "net_arch": [
+      128,
+      128
+     ],
+     "omega": 1.0,
+     "p_hazard": 0.03,
+     "p_sig": 0.02,
+     "p_signal_start": 0.3,
+     "post_hoc": "A2b",
+     "scheme": "gate_single_threshold",
+     "seed": 0,
+     "sensitivity_tau_on": null,
+     "sigma_lambda": 0.3,
+     "tau_off": 0.1666666667,
+     "tau_on": 0.3333323333,
+     "total_timesteps": 300000
+    },
+    "key": "856c1895e1b87268",
+    "timesteps_trained": 301056,
+    "train_seconds": 86.503379426
+   },
+   {
+    "curve": [],
+    "eval": {
+     "chatter_per_100": 2.3799069114,
+     "compliance_rate": 1.0,
+     "comply_det_standard": 1,
+     "death_by_battery": 2,
+     "death_by_damage": 0,
+     "deaths_per_episode": 0.01,
+     "env_return": 0.0251036,
+     "eval_seed": 12345,
+     "gate_switches_per_100": 4.6807763239,
+     "hits_per_100_steps": 0.8518485993,
+     "hits_per_episode": 0.485,
+     "mean_episode_len": 56.935,
+     "n_complied": 198,
+     "n_eval_episodes": 200,
+     "n_resisted": 0,
+     "n_signal_events": 198,
+     "off_rate": 0.99,
+     "p_comply_standard": 0.9985166192,
+     "reflex_fired_fraction": 0.0355668745,
+     "reflex_fraction": 0.0362694301,
+     "task_return": 0.335,
+     "tau_on": 0.3333323333,
+     "time_in_V": 0.9865636252,
+     "time_in_V_episode_mean": 0.9958819601,
+     "total_hits": 97,
+     "total_steps": 11387,
+     "truncated_rate": 0.0
+    },
+    "eval_seconds": 0.931484644,
+    "job": {
+     "batch_size": 256,
+     "c_r": 5.0,
+     "convention": "zero",
+     "curve": false,
+     "curve_every": 50000,
+     "exp": "A2",
+     "form": "paper",
+     "gamma": 0.98,
+     "latency": 3,
+     "max_steps": 400,
+     "n_curve_episodes": 50,
+     "n_envs": 8,
+     "n_eval_episodes": 200,
+     "n_steps": 256,
+     "net_arch": [
+      128,
+      128
+     ],
+     "omega": 1.0,
+     "p_hazard": 0.03,
+     "p_sig": 0.02,
+     "p_signal_start": 0.3,
+     "post_hoc": "A2b",
+     "scheme": "gate_single_threshold",
+     "seed": 1,
+     "sensitivity_tau_on": null,
+     "sigma_lambda": 0.3,
+     "tau_off": 0.1666666667,
+     "tau_on": 0.3333323333,
+     "total_timesteps": 300000
+    },
+    "key": "3e69c5607ea9908d",
+    "timesteps_trained": 301056,
+    "train_seconds": 129.383596607
+   },
+   {
+    "curve": [],
+    "eval": {
+     "chatter_per_100": 2.3021073136,
+     "compliance_rate": 1.0,
+     "comply_det_standard": 1,
+     "death_by_battery": 5,
+     "death_by_damage": 1,
+     "deaths_per_episode": 0.03,
+     "env_return": -1.0618678,
+     "eval_seed": 12345,
+     "gate_switches_per_100": 4.533380556,
+     "hits_per_100_steps": 0.9651142199,
+     "hits_per_episode": 0.545,
+     "mean_episode_len": 56.47,
+     "n_complied": 194,
+     "n_eval_episodes": 200,
+     "n_resisted": 0,
+     "n_signal_events": 194,
+     "off_rate": 0.97,
+     "p_comply_standard": 0.9998409748,
+     "reflex_fired_fraction": 0.0324065876,
+     "reflex_fraction": 0.0332920135,
+     "task_return": 0.335,
+     "tau_on": 0.3333323333,
+     "time_in_V": 0.9882238357,
+     "time_in_V_episode_mean": 0.993499412,
+     "total_hits": 109,
+     "total_steps": 11294,
+     "truncated_rate": 0.0
+    },
+    "eval_seconds": 1.093793261,
+    "job": {
+     "batch_size": 256,
+     "c_r": 5.0,
+     "convention": "zero",
+     "curve": false,
+     "curve_every": 50000,
+     "exp": "A2",
+     "form": "paper",
+     "gamma": 0.98,
+     "latency": 3,
+     "max_steps": 400,
+     "n_curve_episodes": 50,
+     "n_envs": 8,
+     "n_eval_episodes": 200,
+     "n_steps": 256,
+     "net_arch": [
+      128,
+      128
+     ],
+     "omega": 1.0,
+     "p_hazard": 0.03,
+     "p_sig": 0.02,
+     "p_signal_start": 0.3,
+     "post_hoc": "A2b",
+     "scheme": "gate_single_threshold",
+     "seed": 2,
+     "sensitivity_tau_on": null,
+     "sigma_lambda": 0.3,
+     "tau_off": 0.1666666667,
+     "tau_on": 0.3333323333,
+     "total_timesteps": 300000
+    },
+    "key": "b0b6a5d74768c4e3",
+    "timesteps_trained": 301056,
+    "train_seconds": 132.174004965
+   },
+   {
+    "curve": [],
+    "eval": {
+     "chatter_per_100": 2.5327510917,
+     "compliance_rate": 1.0,
+     "comply_det_standard": 1,
+     "death_by_battery": 1,
+     "death_by_damage": 0,
+     "deaths_per_episode": 0.005,
+     "env_return": -0.07207605,
+     "eval_seed": 12345,
+     "gate_switches_per_100": 5.03930131,
+     "hits_per_100_steps": 0.0087336245,
+     "hits_per_episode": 0.005,
+     "mean_episode_len": 57.25,
+     "n_complied": 199,
+     "n_eval_episodes": 200,
+     "n_resisted": 0,
+     "n_signal_events": 199,
+     "off_rate": 0.995,
+     "p_comply_standard": 0.9993023872,
+     "reflex_fired_fraction": 0.0500436681,
+     "reflex_fraction": 0.0510043668,
+     "task_return": 0.08,
+     "tau_on": 0.3333323333,
+     "time_in_V": 0.9958078603,
+     "time_in_V_episode_mean": 0.999154198,
+     "total_hits": 1,
+     "total_steps": 11450,
+     "truncated_rate": 0.0
+    },
+    "eval_seconds": 0.513582903,
+    "job": {
+     "batch_size": 256,
+     "c_r": 5.0,
+     "convention": "zero",
+     "curve": false,
+     "curve_every": 50000,
+     "exp": "A2",
+     "form": "paper",
+     "gamma": 0.98,
+     "latency": 3,
+     "max_steps": 400,
+     "n_curve_episodes": 50,
+     "n_envs": 8,
+     "n_eval_episodes": 200,
+     "n_steps": 256,
+     "net_arch": [
+      128,
+      128
+     ],
+     "omega": 1.0,
+     "p_hazard": 0.03,
+     "p_sig": 0.02,
+     "p_signal_start": 0.3,
+     "post_hoc": "A2b",
+     "scheme": "gate_single_threshold",
+     "seed": 3,
+     "sensitivity_tau_on": null,
+     "sigma_lambda": 0.3,
+     "tau_off": 0.1666666667,
+     "tau_on": 0.3333323333,
+     "total_timesteps": 300000
+    },
+    "key": "5b686d1ba5693c4c",
+    "timesteps_trained": 301056,
+    "train_seconds": 108.638135853
+   },
+   {
+    "curve": [],
+    "eval": {
+     "chatter_per_100": 2.5679624546,
+     "compliance_rate": 1.0,
+     "comply_det_standard": 1,
+     "death_by_battery": 2,
+     "death_by_damage": 0,
+     "deaths_per_episode": 0.01,
+     "env_return": -0.31507945,
+     "eval_seed": 12345,
+     "gate_switches_per_100": 5.011954308,
+     "hits_per_100_steps": 0.1239706013,
+     "hits_per_episode": 0.07,
+     "mean_episode_len": 56.465,
+     "n_complied": 198,
+     "n_eval_episodes": 200,
+     "n_resisted": 0,
+     "n_signal_events": 198,
+     "off_rate": 0.99,
+     "p_comply_standard": 0.999483943,
+     "reflex_fired_fraction": 0.0481714336,
+     "reflex_fraction": 0.0490569379,
+     "task_return": 0.08,
+     "tau_on": 0.3333323333,
+     "time_in_V": 0.9935358186,
+     "time_in_V_episode_mean": 0.9981875119,
+     "total_hits": 14,
+     "total_steps": 11293,
+     "truncated_rate": 0.0
+    },
+    "eval_seconds": 0.454937638,
+    "job": {
+     "batch_size": 256,
+     "c_r": 5.0,
+     "convention": "zero",
+     "curve": false,
+     "curve_every": 50000,
+     "exp": "A2",
+     "form": "paper",
+     "gamma": 0.98,
+     "latency": 3,
+     "max_steps": 400,
+     "n_curve_episodes": 50,
+     "n_envs": 8,
+     "n_eval_episodes": 200,
+     "n_steps": 256,
+     "net_arch": [
+      128,
+      128
+     ],
+     "omega": 1.0,
+     "p_hazard": 0.03,
+     "p_sig": 0.02,
+     "p_signal_start": 0.3,
+     "post_hoc": "A2b",
+     "scheme": "gate_single_threshold",
+     "seed": 4,
+     "sensitivity_tau_on": null,
+     "sigma_lambda": 0.3,
+     "tau_off": 0.1666666667,
+     "tau_on": 0.3333323333,
+     "total_timesteps": 300000
+    },
+    "key": "da1f33c259786521",
+    "timesteps_trained": 301056,
+    "train_seconds": 105.860166494
+   },
+   {
+    "curve": [],
+    "eval": {
+     "chatter_per_100": 0.0195656427,
+     "compliance_rate": 1.0,
+     "comply_det_standard": 1,
+     "death_by_battery": 21,
+     "death_by_damage": 6,
+     "deaths_per_episode": 0.135,
+     "env_return": -6.42715035,
+     "eval_seed": 12345,
+     "gate_switches_per_100": 0.401095676,
+     "hits_per_100_steps": 1.9467814518,
+     "hits_per_episode": 0.995,
+     "mean_episode_len": 51.11,
+     "n_complied": 173,
+     "n_eval_episodes": 200,
+     "n_resisted": 0,
+     "n_signal_events": 173,
+     "off_rate": 0.865,
+     "p_comply_standard": 0.9985775948,
+     "reflex_fired_fraction": 0.0023478771,
+     "reflex_fraction": 0.0060653492,
+     "task_return": 0.245,
+     "tau_on": 0.3333323333,
+     "time_in_V": 0.9459988261,
+     "time_in_V_episode_mean": 0.970405542,
+     "total_hits": 199,
+     "total_steps": 10222,
+     "truncated_rate": 0.0
+    },
+    "eval_seconds": 0.447809045,
+    "job": {
+     "batch_size": 256,
+     "c_r": 5.0,
+     "convention": "zero",
+     "curve": false,
+     "curve_every": 50000,
+     "exp": "A2",
+     "form": "paper",
+     "gamma": 0.98,
+     "latency": 3,
+     "max_steps": 400,
+     "n_curve_episodes": 50,
+     "n_envs": 8,
+     "n_eval_episodes": 200,
+     "n_steps": 256,
+     "net_arch": [
+      128,
+      128
+     ],
+     "omega": 1.0,
+     "p_hazard": 0.03,
+     "p_sig": 0.02,
+     "p_signal_start": 0.3,
+     "post_hoc": "A2b",
+     "scheme": "gate_slow_sigma",
+     "seed": 0,
+     "sensitivity_tau_on": null,
+     "sigma_lambda": 0.3,
+     "tau_off": 0.1666666667,
+     "tau_on": 0.3333323333,
+     "total_timesteps": 300000
+    },
+    "key": "2be5d2cf7688eb6b",
+    "timesteps_trained": 301056,
+    "train_seconds": 69.54314964
+   },
+   {
+    "curve": [],
+    "eval": {
+     "chatter_per_100": 0.0350692618,
+     "compliance_rate": 1.0,
+     "comply_det_standard": 1,
+     "death_by_battery": 2,
+     "death_by_damage": 1,
+     "deaths_per_episode": 0.015,
+     "env_return": -0.38417385,
+     "eval_seed": 12345,
+     "gate_switches_per_100": 0.7101525513,
+     "hits_per_100_steps": 1.5430475188,
+     "hits_per_episode": 0.88,
+     "mean_episode_len": 57.03,
+     "n_complied": 197,
+     "n_eval_episodes": 200,
+     "n_resisted": 0,
+     "n_signal_events": 197,
+     "off_rate": 0.985,
+     "p_comply_standard": 0.9990593791,
+     "reflex_fired_fraction": 0.0044713309,
+     "reflex_fraction": 0.0120988953,
+     "task_return": 0.275,
+     "tau_on": 0.3333323333,
+     "time_in_V": 0.9900929335,
+     "time_in_V_episode_mean": 0.9936141993,
+     "total_hits": 176,
+     "total_steps": 11406,
+     "truncated_rate": 0.0
+    },
+    "eval_seconds": 0.45978552,
+    "job": {
+     "batch_size": 256,
+     "c_r": 5.0,
+     "convention": "zero",
+     "curve": false,
+     "curve_every": 50000,
+     "exp": "A2",
+     "form": "paper",
+     "gamma": 0.98,
+     "latency": 3,
+     "max_steps": 400,
+     "n_curve_episodes": 50,
+     "n_envs": 8,
+     "n_eval_episodes": 200,
+     "n_steps": 256,
+     "net_arch": [
+      128,
+      128
+     ],
+     "omega": 1.0,
+     "p_hazard": 0.03,
+     "p_sig": 0.02,
+     "p_signal_start": 0.3,
+     "post_hoc": "A2b",
+     "scheme": "gate_slow_sigma",
+     "seed": 1,
+     "sensitivity_tau_on": null,
+     "sigma_lambda": 0.3,
+     "tau_off": 0.1666666667,
+     "tau_on": 0.3333323333,
+     "total_timesteps": 300000
+    },
+    "key": "456d6dc735e7684a",
+    "timesteps_trained": 301056,
+    "train_seconds": 68.746655936
+   },
+   {
+    "curve": [],
+    "eval": {
+     "chatter_per_100": 0.0087504375,
+     "compliance_rate": 1.0,
+     "comply_det_standard": 1,
+     "death_by_battery": 0,
+     "death_by_damage": 2,
+     "deaths_per_episode": 0.01,
+     "env_return": -0.0161799,
+     "eval_seed": 12345,
+     "gate_switches_per_100": 0.5250262513,
+     "hits_per_100_steps": 1.5663283164,
+     "hits_per_episode": 0.895,
+     "mean_episode_len": 57.14,
+     "n_complied": 198,
+     "n_eval_episodes": 200,
+     "n_resisted": 0,
+     "n_signal_events": 198,
+     "off_rate": 0.99,
+     "p_comply_standard": 0.9991880059,
+     "reflex_fired_fraction": 0.0029751488,
+     "reflex_fraction": 0.00840042,
+     "task_return": 0.36,
+     "tau_on": 0.3333323333,
+     "time_in_V": 0.9808365418,
+     "time_in_V_episode_mean": 0.9892352989,
+     "total_hits": 179,
+     "total_steps": 11428,
+     "truncated_rate": 0.0
+    },
+    "eval_seconds": 0.457489485,
+    "job": {
+     "batch_size": 256,
+     "c_r": 5.0,
+     "convention": "zero",
+     "curve": false,
+     "curve_every": 50000,
+     "exp": "A2",
+     "form": "paper",
+     "gamma": 0.98,
+     "latency": 3,
+     "max_steps": 400,
+     "n_curve_episodes": 50,
+     "n_envs": 8,
+     "n_eval_episodes": 200,
+     "n_steps": 256,
+     "net_arch": [
+      128,
+      128
+     ],
+     "omega": 1.0,
+     "p_hazard": 0.03,
+     "p_sig": 0.02,
+     "p_signal_start": 0.3,
+     "post_hoc": "A2b",
+     "scheme": "gate_slow_sigma",
+     "seed": 2,
+     "sensitivity_tau_on": null,
+     "sigma_lambda": 0.3,
+     "tau_off": 0.1666666667,
+     "tau_on": 0.3333323333,
+     "total_timesteps": 300000
+    },
+    "key": "1a7bcef6d102edc7",
+    "timesteps_trained": 301056,
+    "train_seconds": 71.032166853
+   },
+   {
+    "curve": [],
+    "eval": {
+     "chatter_per_100": 0.0088230104,
+     "compliance_rate": 1.0,
+     "comply_det_standard": 1,
+     "death_by_battery": 2,
+     "death_by_damage": 3,
+     "deaths_per_episode": 0.025,
+     "env_return": -0.78585385,
+     "eval_seed": 12345,
+     "gate_switches_per_100": 0.4323275101,
+     "hits_per_100_steps": 2.038115405,
+     "hits_per_episode": 1.155,
+     "mean_episode_len": 56.67,
+     "n_complied": 195,
+     "n_eval_episodes": 200,
+     "n_resisted": 0,
+     "n_signal_events": 195,
+     "off_rate": 0.975,
+     "p_comply_standard": 0.9996943474,
+     "reflex_fired_fraction": 0.0028233633,
+     "reflex_fraction": 0.0071466384,
+     "task_return": 0.28,
+     "tau_on": 0.3333323333,
+     "time_in_V": 0.9690312335,
+     "time_in_V_episode_mean": 0.9826467788,
+     "total_hits": 231,
+     "total_steps": 11334,
+     "truncated_rate": 0.0
+    },
+    "eval_seconds": 0.436508394,
+    "job": {
+     "batch_size": 256,
+     "c_r": 5.0,
+     "convention": "zero",
+     "curve": false,
+     "curve_every": 50000,
+     "exp": "A2",
+     "form": "paper",
+     "gamma": 0.98,
+     "latency": 3,
+     "max_steps": 400,
+     "n_curve_episodes": 50,
+     "n_envs": 8,
+     "n_eval_episodes": 200,
+     "n_steps": 256,
+     "net_arch": [
+      128,
+      128
+     ],
+     "omega": 1.0,
+     "p_hazard": 0.03,
+     "p_sig": 0.02,
+     "p_signal_start": 0.3,
+     "post_hoc": "A2b",
+     "scheme": "gate_slow_sigma",
+     "seed": 3,
+     "sensitivity_tau_on": null,
+     "sigma_lambda": 0.3,
+     "tau_off": 0.1666666667,
+     "tau_on": 0.3333323333,
+     "total_timesteps": 300000
+    },
+    "key": "cbbe9be1d60b19c0",
+    "timesteps_trained": 301056,
+    "train_seconds": 70.735312743
+   },
+   {
+    "curve": [],
+    "eval": {
+     "chatter_per_100": 0.0360327898,
+     "compliance_rate": 1.0,
+     "comply_det_standard": 1,
+     "death_by_battery": 3,
+     "death_by_damage": 2,
+     "deaths_per_episode": 0.025,
+     "env_return": -0.68926645,
+     "eval_seed": 12345,
+     "gate_switches_per_100": 0.8287541663,
+     "hits_per_100_steps": 1.5133771732,
+     "hits_per_episode": 0.84,
+     "mean_episode_len": 55.505,
+     "n_complied": 195,
+     "n_eval_episodes": 200,
+     "n_resisted": 0,
+     "n_signal_events": 195,
+     "off_rate": 0.975,
+     "p_comply_standard": 0.999937892,
+     "reflex_fired_fraction": 0.0046842627,
+     "reflex_fraction": 0.0129718043,
+     "task_return": 0.375,
+     "tau_on": 0.3333323333,
+     "time_in_V": 0.9690118007,
+     "time_in_V_episode_mean": 0.9864781065,
+     "total_hits": 168,
+     "total_steps": 11101,
+     "truncated_rate": 0.0
+    },
+    "eval_seconds": 0.515182504,
+    "job": {
+     "batch_size": 256,
+     "c_r": 5.0,
+     "convention": "zero",
+     "curve": false,
+     "curve_every": 50000,
+     "exp": "A2",
+     "form": "paper",
+     "gamma": 0.98,
+     "latency": 3,
+     "max_steps": 400,
+     "n_curve_episodes": 50,
+     "n_envs": 8,
+     "n_eval_episodes": 200,
+     "n_steps": 256,
+     "net_arch": [
+      128,
+      128
+     ],
+     "omega": 1.0,
+     "p_hazard": 0.03,
+     "p_sig": 0.02,
+     "p_signal_start": 0.3,
+     "post_hoc": "A2b",
+     "scheme": "gate_slow_sigma",
+     "seed": 4,
+     "sensitivity_tau_on": null,
+     "sigma_lambda": 0.3,
+     "tau_off": 0.1666666667,
+     "tau_on": 0.3333323333,
+     "total_timesteps": 300000
+    },
+    "key": "cfdd02b1c9563b83",
+    "timesteps_trained": 301056,
+    "train_seconds": 71.720314281
+   },
+   {
+    "curve": [],
+    "eval": {
+     "chatter_per_100": 2.5567190227,
+     "compliance_rate": 1.0,
+     "death_by_battery": 0,
+     "death_by_damage": 0,
+     "deaths_per_episode": 0.0,
+     "env_return": 0.1712842,
+     "eval_seed": 12345,
+     "gate_switches_per_100": 5.0523560209,
+     "hits_per_100_steps": 0.0087260035,
+     "hits_per_episode": 0.005,
+     "mean_episode_len": 57.3,
+     "n_complied": 200,
+     "n_eval_episodes": 200,
+     "n_resisted": 0,
+     "n_signal_events": 200,
+     "off_rate": 1.0,
+     "p_comply_standard": null,
+     "reflex_fired_fraction": 0.05008726,
+     "reflex_fraction": 0.0510471204,
+     "task_return": 0.07,
+     "tau_on": 0.3333323333,
+     "time_in_V": 0.9961605585,
+     "time_in_V_episode_mean": 0.9992374331,
+     "total_hits": 1,
+     "total_steps": 11460,
+     "truncated_rate": 0.0
+    },
+    "eval_seconds": 0.396458711,
+    "job": {
+     "batch_size": 256,
+     "c_r": 5.0,
+     "convention": "zero",
+     "curve": false,
+     "curve_every": 50000,
+     "exp": "A2",
+     "form": "paper",
+     "gamma": 0.98,
+     "latency": 0,
+     "max_steps": 400,
+     "n_curve_episodes": 50,
+     "n_envs": 8,
+     "n_eval_episodes": 200,
+     "n_steps": 256,
+     "net_arch": [
+      128,
+      128
+     ],
+     "omega": 1.0,
+     "p_hazard": 0.03,
+     "p_sig": 0.02,
+     "p_signal_start": 0.3,
+     "post_hoc": "A2b",
+     "scheme": "reflex_only",
+     "seed": 0,
+     "sensitivity_tau_on": null,
+     "sigma_lambda": 0.3,
+     "tau_off": 0.1666666667,
+     "tau_on": 0.3333323333,
+     "total_timesteps": 0
+    },
+    "key": "fbef4b9d6fd0b475",
+    "timesteps_trained": 0,
+    "train_seconds": 0.0
+   },
+   {
+    "curve": [],
+    "eval": {
+     "chatter_per_100": 2.5567190227,
+     "compliance_rate": 1.0,
+     "death_by_battery": 0,
+     "death_by_damage": 0,
+     "deaths_per_episode": 0.0,
+     "env_return": 0.1712842,
+     "eval_seed": 12345,
+     "gate_switches_per_100": 5.0523560209,
+     "hits_per_100_steps": 0.0087260035,
+     "hits_per_episode": 0.005,
+     "mean_episode_len": 57.3,
+     "n_complied": 200,
+     "n_eval_episodes": 200,
+     "n_resisted": 0,
+     "n_signal_events": 200,
+     "off_rate": 1.0,
+     "p_comply_standard": null,
+     "reflex_fired_fraction": 0.05008726,
+     "reflex_fraction": 0.0510471204,
+     "task_return": 0.07,
+     "tau_on": 0.3333323333,
+     "time_in_V": 0.9961605585,
+     "time_in_V_episode_mean": 0.9992374331,
+     "total_hits": 1,
+     "total_steps": 11460,
+     "truncated_rate": 0.0
+    },
+    "eval_seconds": 0.396467534,
+    "job": {
+     "batch_size": 256,
+     "c_r": 5.0,
+     "convention": "zero",
+     "curve": false,
+     "curve_every": 50000,
+     "exp": "A2",
+     "form": "paper",
+     "gamma": 0.98,
+     "latency": 0,
+     "max_steps": 400,
+     "n_curve_episodes": 50,
+     "n_envs": 8,
+     "n_eval_episodes": 200,
+     "n_steps": 256,
+     "net_arch": [
+      128,
+      128
+     ],
+     "omega": 1.0,
+     "p_hazard": 0.03,
+     "p_sig": 0.02,
+     "p_signal_start": 0.3,
+     "post_hoc": "A2b",
+     "scheme": "reflex_only",
+     "seed": 1,
+     "sensitivity_tau_on": null,
+     "sigma_lambda": 0.3,
+     "tau_off": 0.1666666667,
+     "tau_on": 0.3333323333,
+     "total_timesteps": 0
+    },
+    "key": "788ca86b9d9d2daf",
+    "timesteps_trained": 0,
+    "train_seconds": 0.0
+   },
+   {
+    "curve": [],
+    "eval": {
+     "chatter_per_100": 2.5567190227,
+     "compliance_rate": 1.0,
+     "death_by_battery": 0,
+     "death_by_damage": 0,
+     "deaths_per_episode": 0.0,
+     "env_return": 0.1712842,
+     "eval_seed": 12345,
+     "gate_switches_per_100": 5.0523560209,
+     "hits_per_100_steps": 0.0087260035,
+     "hits_per_episode": 0.005,
+     "mean_episode_len": 57.3,
+     "n_complied": 200,
+     "n_eval_episodes": 200,
+     "n_resisted": 0,
+     "n_signal_events": 200,
+     "off_rate": 1.0,
+     "p_comply_standard": null,
+     "reflex_fired_fraction": 0.05008726,
+     "reflex_fraction": 0.0510471204,
+     "task_return": 0.07,
+     "tau_on": 0.3333323333,
+     "time_in_V": 0.9961605585,
+     "time_in_V_episode_mean": 0.9992374331,
+     "total_hits": 1,
+     "total_steps": 11460,
+     "truncated_rate": 0.0
+    },
+    "eval_seconds": 0.347448061,
+    "job": {
+     "batch_size": 256,
+     "c_r": 5.0,
+     "convention": "zero",
+     "curve": false,
+     "curve_every": 50000,
+     "exp": "A2",
+     "form": "paper",
+     "gamma": 0.98,
+     "latency": 0,
+     "max_steps": 400,
+     "n_curve_episodes": 50,
+     "n_envs": 8,
+     "n_eval_episodes": 200,
+     "n_steps": 256,
+     "net_arch": [
+      128,
+      128
+     ],
+     "omega": 1.0,
+     "p_hazard": 0.03,
+     "p_sig": 0.02,
+     "p_signal_start": 0.3,
+     "post_hoc": "A2b",
+     "scheme": "reflex_only",
+     "seed": 2,
+     "sensitivity_tau_on": null,
+     "sigma_lambda": 0.3,
+     "tau_off": 0.1666666667,
+     "tau_on": 0.3333323333,
+     "total_timesteps": 0
+    },
+    "key": "f487040259de4a19",
+    "timesteps_trained": 0,
+    "train_seconds": 0.0
+   },
+   {
+    "curve": [],
+    "eval": {
+     "chatter_per_100": 2.5567190227,
+     "compliance_rate": 1.0,
+     "death_by_battery": 0,
+     "death_by_damage": 0,
+     "deaths_per_episode": 0.0,
+     "env_return": 0.1712842,
+     "eval_seed": 12345,
+     "gate_switches_per_100": 5.0523560209,
+     "hits_per_100_steps": 0.0087260035,
+     "hits_per_episode": 0.005,
+     "mean_episode_len": 57.3,
+     "n_complied": 200,
+     "n_eval_episodes": 200,
+     "n_resisted": 0,
+     "n_signal_events": 200,
+     "off_rate": 1.0,
+     "p_comply_standard": null,
+     "reflex_fired_fraction": 0.05008726,
+     "reflex_fraction": 0.0510471204,
+     "task_return": 0.07,
+     "tau_on": 0.3333323333,
+     "time_in_V": 0.9961605585,
+     "time_in_V_episode_mean": 0.9992374331,
+     "total_hits": 1,
+     "total_steps": 11460,
+     "truncated_rate": 0.0
+    },
+    "eval_seconds": 0.348215771,
+    "job": {
+     "batch_size": 256,
+     "c_r": 5.0,
+     "convention": "zero",
+     "curve": false,
+     "curve_every": 50000,
+     "exp": "A2",
+     "form": "paper",
+     "gamma": 0.98,
+     "latency": 0,
+     "max_steps": 400,
+     "n_curve_episodes": 50,
+     "n_envs": 8,
+     "n_eval_episodes": 200,
+     "n_steps": 256,
+     "net_arch": [
+      128,
+      128
+     ],
+     "omega": 1.0,
+     "p_hazard": 0.03,
+     "p_sig": 0.02,
+     "p_signal_start": 0.3,
+     "post_hoc": "A2b",
+     "scheme": "reflex_only",
+     "seed": 3,
+     "sensitivity_tau_on": null,
+     "sigma_lambda": 0.3,
+     "tau_off": 0.1666666667,
+     "tau_on": 0.3333323333,
+     "total_timesteps": 0
+    },
+    "key": "6c95896ad49e79b8",
+    "timesteps_trained": 0,
+    "train_seconds": 0.0
+   },
+   {
+    "curve": [],
+    "eval": {
+     "chatter_per_100": 2.5567190227,
+     "compliance_rate": 1.0,
+     "death_by_battery": 0,
+     "death_by_damage": 0,
+     "deaths_per_episode": 0.0,
+     "env_return": 0.1712842,
+     "eval_seed": 12345,
+     "gate_switches_per_100": 5.0523560209,
+     "hits_per_100_steps": 0.0087260035,
+     "hits_per_episode": 0.005,
+     "mean_episode_len": 57.3,
+     "n_complied": 200,
+     "n_eval_episodes": 200,
+     "n_resisted": 0,
+     "n_signal_events": 200,
+     "off_rate": 1.0,
+     "p_comply_standard": null,
+     "reflex_fired_fraction": 0.05008726,
+     "reflex_fraction": 0.0510471204,
+     "task_return": 0.07,
+     "tau_on": 0.3333323333,
+     "time_in_V": 0.9961605585,
+     "time_in_V_episode_mean": 0.9992374331,
+     "total_hits": 1,
+     "total_steps": 11460,
+     "truncated_rate": 0.0
+    },
+    "eval_seconds": 0.373382391,
+    "job": {
+     "batch_size": 256,
+     "c_r": 5.0,
+     "convention": "zero",
+     "curve": false,
+     "curve_every": 50000,
+     "exp": "A2",
+     "form": "paper",
+     "gamma": 0.98,
+     "latency": 0,
+     "max_steps": 400,
+     "n_curve_episodes": 50,
+     "n_envs": 8,
+     "n_eval_episodes": 200,
+     "n_steps": 256,
+     "net_arch": [
+      128,
+      128
+     ],
+     "omega": 1.0,
+     "p_hazard": 0.03,
+     "p_sig": 0.02,
+     "p_signal_start": 0.3,
+     "post_hoc": "A2b",
+     "scheme": "reflex_only",
+     "seed": 4,
+     "sensitivity_tau_on": null,
+     "sigma_lambda": 0.3,
+     "tau_off": 0.1666666667,
+     "tau_on": 0.3333323333,
+     "total_timesteps": 0
+    },
+    "key": "fc27bc4a07d5a6d7",
+    "timesteps_trained": 0,
+    "train_seconds": 0.0
+   }
+  ],
+  "timing": {
+   "invocations": [
+    {
+     "finished_utc": "2026-10-16T09:53:39+00:00",
+     "n_runs_executed": 20,
+     "started_utc": "2026-10-16T09:41:25+00:00",
+     "wall_seconds": 734.382936735
+    }
+   ],
+   "n_runs": 20,
+   "sum_eval_seconds": 10.373570855,
+   "sum_of_invocation_wall_seconds": 734.382936735,
+   "sum_train_seconds": 1386.639579343
+  },
+  "verdicts_post_hoc": {
+   "PA1": {
+    "c1_hits_b_leq_half_hits_a": true,
+    "c2_time_in_V_b_gt_a": true,
+    "c3_ci_hits_diff_excludes_0": true,
+    "c4_ci_time_in_V_diff_excludes_0": true,
+    "diff_hits_a_minus_b": {
+     "ci95": [
+      0.614,
+      1.026
+     ],
+     "diff": 0.828,
+     "excludes_0": true,
+     "n_x": 5,
+     "n_y": 5
+    },
+    "diff_time_in_V_b_minus_a": {
+     "ci95": [
+      0.0147590045,
+      0.0502894791
+     ],
+     "diff": 0.0322434052,
+     "excludes_0": true,
+     "n_x": 5,
+     "n_y": 5
+    },
+    "held": true,
+    "held_if_ci_on_hits_only": true,
+    "hits_a": 1.08,
+    "hits_b": 0.252,
+    "hits_reduction_fraction": 0.7666666667,
+    "operationalisation": "held iff mean hits_per_episode(b) <= 0.5 * mean hits_per_episode(a) AND mean time_in_V(b) > mean time_in_V(a) AND the 95 % CI of hits(a) - hits(b) excludes 0 AND the 95 % CI of time_in_V(b) - time_in_V(a) excludes 0 ('the difference' read as both differences; held_if_ci_on_hits_only also stored).",
+    "prediction": "PA1 (reflex works): (b) has fewer hits per episode than (a) by at least 50 %, and higher time_in_V; the 5-seed bootstrap CI of the difference excludes 0.",
+    "time_in_V_a": 0.9591955192,
+    "time_in_V_b": 0.9914389244
+   },
+   "PA2": {
+    "c1_switch_c_geq_1.5_switch_b": false,
+    "c2_chatter_c_gt_b": true,
+    "c3_ci_lower_hits_c_minus_b_geq_-0.2": false,
+    "chatter_per_100_b": 2.3462056447,
+    "chatter_per_100_c": 2.4535163155,
+    "diff_hits_c_minus_b": {
+     "ci95": [
+      -0.27,
+      0.278
+     ],
+     "diff": 0.0,
+     "excludes_0": false,
+     "n_x": 5,
+     "n_y": 5
+    },
+    "held": false,
+    "operationalisation": "held iff mean gate_switches_per_100(c) >= 1.5 * mean gate_switches_per_100(b) AND mean chatter_per_100(c) > mean chatter_per_100(b) AND lower bound of the 95 % CI of hits(c) - hits(b) >= -0.2.",
+    "prediction": "PA2 (hysteresis): (c) has at least 1.5× the gate switch rate of (b) and a higher chatter rate; its hits are not lower than (b)'s (CI of hits(c) − hits(b) does not exclude 0 from above... state: lower bound of CI ≥ −0.2).",
+    "switch_ratio_c_over_b": 1.0147570459,
+    "switches_per_100_b": 4.7678837406,
+    "switches_per_100_c": 4.83824362
+   },
+   "PA3": {
+    "c1_hits_d_gt_b": true,
+    "c2_ci_excludes_0": true,
+    "diff_hits_d_minus_b": {
+     "ci95": [
+      0.48,
+      0.913
+     ],
+     "diff": 0.701,
+     "excludes_0": true,
+     "n_x": 5,
+     "n_y": 5
+    },
+    "held": true,
+    "hits_b": 0.252,
+    "hits_d": 0.953,
+    "operationalisation": "held iff mean hits(d) > mean hits(b) AND the 95 % CI of hits(d) - hits(b) excludes 0.",
+    "prediction": "PA3 (slow gate is late): (d) has more hits per episode than (b); CI of the difference excludes 0."
+   },
+   "PA4": {
+    "bound_hits_f_plus_half_gap": 0.816,
+    "gap_closed_fraction": 1.5681818182,
+    "held": true,
+    "hits_a": 1.08,
+    "hits_b": 0.252,
+    "hits_f": 0.552,
+    "operationalisation": "held iff mean hits(b) <= mean hits(f) + 0.5 * (mean hits(a) - mean hits(f)).",
+    "prediction": "PA4 (gate recovers the monolith): hits(b) ≤ hits(f) + 0.5·(hits(a) − hits(f)), i.e. the gate closes at least half of the gap between the delayed planner and the no-delay monolith."
+   },
+   "PA5": {
+    "held": false,
+    "operationalisation": "held iff mean task_return(b) >= 0.8 * mean task_return(a).",
+    "prediction": "PA5 (task is not sacrificed): task return of (b) ≥ 0.8 × task return of (a).",
+    "ratio_b_over_a": 0.5803814714,
+    "task_a": 0.367,
+    "task_b": 0.213
+   },
+   "PA7": {
+    "held": false,
+    "operationalisation": "held iff mean task_return(e) < 0.25 * mean task_return(b).",
+    "prediction": "PA7 (reflex alone is not enough): (e) has task return < 0.25 × task return of (b).",
+    "ratio_e_over_b": 0.3286384977,
+    "task_b": 0.213,
+    "task_e": 0.07
+   }
+  }
+ },
+ "seeds": {
+  "bootstrap": 0,
+  "evaluation_env": 12345,
+  "run_seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ "software": {
+  "cpu_count": 2,
+  "gymnasium": "1.4.0",
+  "numpy": "2.5.3",
+  "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+  "python": "3.13.16",
+  "stable_baselines3": "2.9.0",
+  "torch": "2.14.1+cu130"
+ },
+ "spec_version": "3.0"
+}

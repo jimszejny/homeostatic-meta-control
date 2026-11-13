@@ -1,0 +1,69 @@
+{
+ "C0 planner alone": {
+  "V_start": 8.211876811592937,
+  "cstar_bisect": 8.3590579710132,
+  "cstar_closed": 8.359057971014483,
+  "hits_per100": 5.000000000000003,
+  "work_per100": 95.00000000000001,
+  "target": {
+   "Gam": 0.0,
+   "phi": 0.0,
+   "V": 8.2119,
+   "cstar": 8.3591,
+   "hits": 5.0,
+   "work": 95.0
+  },
+  "abs_err_V": 2.3188407062946226e-05,
+  "abs_err_cstar": 4.202898679928069e-05,
+  "bisect_minus_closed": -1.2825296380469808e-12,
+  "planner_commits_work_everywhere": true,
+  "pass": true
+ },
+ "C3 planner + zero-latency reflex": {
+  "V_start": 14.444010304217962,
+  "cstar_bisect": 14.127210144926142,
+  "cstar_closed": 14.127210144927522,
+  "hits_per100": 0.0,
+  "work_per100": 95.00000000000001,
+  "target": {
+   "Gam": 1.0,
+   "phi": 0.0,
+   "V": 14.444,
+   "cstar": 14.1272,
+   "hits": 0.0,
+   "work": 95.0
+  },
+  "abs_err_V": 1.0304217960666051e-05,
+  "abs_err_cstar": 1.014492614181961e-05,
+  "bisect_minus_closed": -1.3802292642139946e-12,
+  "planner_commits_work_everywhere": true,
+  "pass": true
+ },
+ "C1 one in-time tier G=0.8 phi=0.02": {
+  "V_start": 12.526142333417672,
+  "cstar_bisect": 12.691035507245054,
+  "cstar_closed": 12.691035507246363,
+  "hits_per100": 1.0000000000000002,
+  "work_per100": 93.10000000000002,
+  "target": {
+   "Gam": 0.8,
+   "phi": 0.02,
+   "V": 12.5261,
+   "cstar": 12.691,
+   "hits": 1.0,
+   "work": 93.1
+  },
+  "abs_err_V": 4.233341767267973e-05,
+  "abs_err_cstar": 3.5507245053523206e-05,
+  "bisect_minus_closed": -1.3091749906379846e-12,
+  "planner_commits_work_everywhere": true,
+  "pass": true
+ },
+ "constants_K_A_B": {
+  "K": 12.818115942028973,
+  "A": 14.127210144927522,
+  "B": 5.768152173913038
+ },
+ "all_pass": true,
+ "wall_s": 2.382917881011963
+}

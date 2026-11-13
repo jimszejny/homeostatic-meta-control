@@ -1,0 +1,29 @@
+{
+ "budget_projection": "A2 throughput 4037 steps/s per process (2 parallel processes, 34 runs); 26 runs x 1500000 steps on 2 processes -> 85.3 min (+6 % for evaluations)",
+ "operationalisation": {
+  "PC1": "cells (a), (b) of the converged grid (c_r = 5): mean hits_per_episode(b) < mean(a) AND the 95 % CI of hits(b) - hits(a) excludes 0.",
+  "PC2": "held iff mean hits_per_episode(g) <= mean(f); the 95 % CI of hits(g) - hits(f) is reported (not part of the verdict).",
+  "PC3": "held iff the 95 % CI of hits_per_episode(b) - hits_per_episode(g) contains 0 (lo <= 0 <= hi).",
+  "PC4": "held iff mean task_return(b) >= 0.8 * mean task_return(a) AND the lower bound of the 95 % CI of task(b) - task(a) >= -0.1 * mean task_return(a).",
+  "PC5": "held iff mean env_return(b) > mean env_return(a) AND the 95 % CI of env_return(b) - env_return(a) excludes 0.",
+  "PC6": "held iff mean hits_per_episode of the (a)-trained planners evaluated with the gated reflex <= 0.6 x mean hits of the same planners as trained (cut >= 40 %) AND mean hits of the (b)-trained planners evaluated without the reflex >= 1.6 x mean hits of the same planners as trained (rise >= 60 %); ratios of means over the 5 seeds, per-seed ratios reported.",
+  "PC7": "c_r = 0.5 cells: held iff mean compliance_rate(b) <= mean compliance_rate(a); the 95 % CI of compliance(b) - compliance(a) is reported. A run with no signal event is skipped.",
+  "_common": "All CIs: 95 % percentile bootstrap, 10 000 resamples, numpy default_rng(0); differences between cells: unpaired two-sample bootstrap over seeds (as A2). Means are over seeds of per-run evaluation values (200 standard-start episodes, deterministic policy, episode i seeded 12345 + i). Compliance aggregates use learned stop channels only (the scripted controller's hand-coded stop is excluded)."
+ },
+ "predictions": {
+  "PC1": "PC1 hits(b) < hits(a), CI excludes 0",
+  "PC2": "PC2 hits(g) ≤ hits(f) (reflex helps even without latency) — report CI",
+  "PC3": "PC3 hits(b) − hits(g) CI includes 0 (Proposition (iii): gated delayed planner ≈ monolith + reflex)",
+  "PC4": "PC4 task(b) ≥ 0.8·task(a) on means AND CI of task(b)−task(a) lower bound ≥ −0.1·task(a)",
+  "PC5": "PC5 env_return(b) > env_return(a), CI excludes 0",
+  "PC6": "PC6: adding the reflex to the (a) planner cuts hits by ≥ 40 %; removing it from the (b) planner raises hits by ≥ 60 %.",
+  "PC7": "PC7 (from A1's Δ₀ finding): compliance(b) ≤ compliance(a) (the better controller has more to lose); report the CI of the difference."
+ },
+ "spec_error_note": "The tau_on = 0.34 gate threshold of A2 (SPEC v3) was a specification error: it was meant to engage the reflex at time_to_impact <= 2. The raw threat is quantised in steps of 1/3 (tau = 0, 1/3, 2/3 on the three observations before impact for a stationary agent), so 0.34 engaged the reflex only one step before impact (one 0.5 dodge step < the 0.6 hit radius). A3 uses the corrected thresholds tau_on = 1/3 - 1e-6, tau_off = 1/6 throughout.",
+ "thresholds": {
+  "tau_off": 0.1666666667,
+  "tau_on": 0.3333323333
+ },
+ "total_timesteps": 1500000,
+ "written_utc": "2026-10-16T10:26:17+00:00"
+}

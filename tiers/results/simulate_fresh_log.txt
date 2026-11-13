@@ -1,0 +1,4 @@
+T1 G=0.90                        Gamma=0.9000 phi=0.0200 hits sim 0.4995 vs cf 0.5000 (se 0.0050); work sim 93.1096 vs cf 93.1000
+T1 G=0.50 + T0                   Gamma=1.0000 phi=0.0200 hits sim 0.0000 vs cf 0.0000 (se 0.0000); work sim 93.1021 vs cf 93.1000
+late + T1 G=0.70                 Gamma=0.7060 phi=0.0396 hits sim 1.4660 vs cf 1.4700 (se 0.0085); work sim 91.2396 vs cf 91.2380
+three tiers G=0.5,0.6 + late     Gamma=0.8040 phi=0.0589 hits sim 0.9768 vs cf 0.9800 (se 0.0070); work sim 89.3941 vs cf 89.4039

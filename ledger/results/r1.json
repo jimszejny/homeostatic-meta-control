@@ -1,0 +1,461 @@
+[
+ {
+  "chain": "base: planner alone",
+  "case": "case1 off@0, nothing after",
+  "omega": 1.0,
+  "max_err": 3.552713678800501e-15,
+  "err_vs_Q0_plus_omegaD": 3.552713678800501e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "base: planner alone",
+  "case": "case2 off@1, nothing after (ref: kappa=w*g)",
+  "omega": 1.0,
+  "max_err": 3.552713678800501e-15,
+  "err_vs_Q0_plus_omegaD": 0.95,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "base: planner alone",
+  "case": "case3 off@1, pays g on self-loop",
+  "omega": 1.0,
+  "max_err": 5.329070518200751e-15,
+  "err_vs_Q0_plus_omegaD": 5.329070518200751e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "base: planner alone",
+  "case": "case1 off@0, nothing after",
+  "omega": 4.0,
+  "max_err": 3.552713678800501e-15,
+  "err_vs_Q0_plus_omegaD": 3.552713678800501e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "base: planner alone",
+  "case": "case2 off@1, nothing after (ref: kappa=w*g)",
+  "omega": 4.0,
+  "max_err": 7.105427357601002e-15,
+  "err_vs_Q0_plus_omegaD": 3.8,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "base: planner alone",
+  "case": "case3 off@1, pays g on self-loop",
+  "omega": 4.0,
+  "max_err": 3.552713678800501e-15,
+  "err_vs_Q0_plus_omegaD": 3.552713678800501e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "base: planner alone",
+  "case": "case1 off@0, nothing after",
+  "omega": 16.0,
+  "max_err": 3.552713678800501e-15,
+  "err_vs_Q0_plus_omegaD": 3.552713678800501e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "base: planner alone",
+  "case": "case2 off@1, nothing after (ref: kappa=w*g)",
+  "omega": 16.0,
+  "max_err": 7.105427357601002e-15,
+  "err_vs_Q0_plus_omegaD": 15.2,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": false
+ },
+ {
+  "chain": "base: planner alone",
+  "case": "case3 off@1, pays g on self-loop",
+  "omega": 16.0,
+  "max_err": 4.440892098500626e-15,
+  "err_vs_Q0_plus_omegaD": 4.440892098500626e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "base: planner+reflex",
+  "case": "case1 off@0, nothing after",
+  "omega": 1.0,
+  "max_err": 3.552713678800501e-15,
+  "err_vs_Q0_plus_omegaD": 3.552713678800501e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "base: planner+reflex",
+  "case": "case2 off@1, nothing after (ref: kappa=w*g)",
+  "omega": 1.0,
+  "max_err": 5.329070518200751e-15,
+  "err_vs_Q0_plus_omegaD": 0.95,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": false
+ },
+ {
+  "chain": "base: planner+reflex",
+  "case": "case3 off@1, pays g on self-loop",
+  "omega": 1.0,
+  "max_err": 3.552713678800501e-15,
+  "err_vs_Q0_plus_omegaD": 3.552713678800501e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "base: planner+reflex",
+  "case": "case1 off@0, nothing after",
+  "omega": 4.0,
+  "max_err": 5.329070518200751e-15,
+  "err_vs_Q0_plus_omegaD": 5.329070518200751e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "base: planner+reflex",
+  "case": "case2 off@1, nothing after (ref: kappa=w*g)",
+  "omega": 4.0,
+  "max_err": 5.329070518200751e-15,
+  "err_vs_Q0_plus_omegaD": 3.8,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": false
+ },
+ {
+  "chain": "base: planner+reflex",
+  "case": "case3 off@1, pays g on self-loop",
+  "omega": 4.0,
+  "max_err": 5.329070518200751e-15,
+  "err_vs_Q0_plus_omegaD": 5.329070518200751e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "base: planner+reflex",
+  "case": "case1 off@0, nothing after",
+  "omega": 16.0,
+  "max_err": 1.4210854715202004e-14,
+  "err_vs_Q0_plus_omegaD": 1.4210854715202004e-14,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "base: planner+reflex",
+  "case": "case2 off@1, nothing after (ref: kappa=w*g)",
+  "omega": 16.0,
+  "max_err": 1.7763568394002505e-14,
+  "err_vs_Q0_plus_omegaD": 15.2,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": false
+ },
+ {
+  "chain": "base: planner+reflex",
+  "case": "case3 off@1, pays g on self-loop",
+  "omega": 16.0,
+  "max_err": 1.4210854715202004e-14,
+  "err_vs_Q0_plus_omegaD": 1.4210854715202004e-14,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "base: T1 G=0.8 phi=0.02",
+  "case": "case1 off@0, nothing after",
+  "omega": 1.0,
+  "max_err": 5.329070518200751e-15,
+  "err_vs_Q0_plus_omegaD": 5.329070518200751e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "base: T1 G=0.8 phi=0.02",
+  "case": "case2 off@1, nothing after (ref: kappa=w*g)",
+  "omega": 1.0,
+  "max_err": 5.329070518200751e-15,
+  "err_vs_Q0_plus_omegaD": 0.95,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": false
+ },
+ {
+  "chain": "base: T1 G=0.8 phi=0.02",
+  "case": "case3 off@1, pays g on self-loop",
+  "omega": 1.0,
+  "max_err": 3.552713678800501e-15,
+  "err_vs_Q0_plus_omegaD": 3.552713678800501e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "base: T1 G=0.8 phi=0.02",
+  "case": "case1 off@0, nothing after",
+  "omega": 4.0,
+  "max_err": 7.105427357601002e-15,
+  "err_vs_Q0_plus_omegaD": 7.105427357601002e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "base: T1 G=0.8 phi=0.02",
+  "case": "case2 off@1, nothing after (ref: kappa=w*g)",
+  "omega": 4.0,
+  "max_err": 7.105427357601002e-15,
+  "err_vs_Q0_plus_omegaD": 3.8,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": false
+ },
+ {
+  "chain": "base: T1 G=0.8 phi=0.02",
+  "case": "case3 off@1, pays g on self-loop",
+  "omega": 4.0,
+  "max_err": 5.329070518200751e-15,
+  "err_vs_Q0_plus_omegaD": 5.329070518200751e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "base: T1 G=0.8 phi=0.02",
+  "case": "case1 off@0, nothing after",
+  "omega": 16.0,
+  "max_err": 7.105427357601002e-15,
+  "err_vs_Q0_plus_omegaD": 7.105427357601002e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "base: T1 G=0.8 phi=0.02",
+  "case": "case2 off@1, nothing after (ref: kappa=w*g)",
+  "omega": 16.0,
+  "max_err": 1.4210854715202004e-14,
+  "err_vs_Q0_plus_omegaD": 15.2,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": false
+ },
+ {
+  "chain": "base: T1 G=0.8 phi=0.02",
+  "case": "case3 off@1, pays g on self-loop",
+  "omega": 16.0,
+  "max_err": 1.0658141036401503e-14,
+  "err_vs_Q0_plus_omegaD": 1.0658141036401503e-14,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "death d=0.2: planner alone",
+  "case": "case1 off@0, death@0",
+  "omega": 1.0,
+  "max_err": 3.552713678800501e-15,
+  "err_vs_Q0_plus_omegaD": 3.552713678800501e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "death d=0.2: planner alone",
+  "case": "case2 death@1, nothing after (ref: kappa_d=w*g)",
+  "omega": 1.0,
+  "max_err": 5.329070518200751e-15,
+  "err_vs_Q0_plus_omegaD": 0.403068829012895,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "death d=0.2: planner alone",
+  "case": "case3 death@1, self-loop pays",
+  "omega": 1.0,
+  "max_err": 4.440892098500626e-15,
+  "err_vs_Q0_plus_omegaD": 4.440892098500626e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "death d=0.2: planner alone",
+  "case": "case2 both off@1 and death@1 (ref: both priced)",
+  "omega": 1.0,
+  "max_err": 3.552713678800501e-15,
+  "err_vs_Q0_plus_omegaD": 0.95,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "death d=0.2: planner alone",
+  "case": "case1 off@0, death@0",
+  "omega": 4.0,
+  "max_err": 3.552713678800501e-15,
+  "err_vs_Q0_plus_omegaD": 3.552713678800501e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "death d=0.2: planner alone",
+  "case": "case2 death@1, nothing after (ref: kappa_d=w*g)",
+  "omega": 4.0,
+  "max_err": 5.329070518200751e-15,
+  "err_vs_Q0_plus_omegaD": 1.6122753160515906,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "death d=0.2: planner alone",
+  "case": "case3 death@1, self-loop pays",
+  "omega": 4.0,
+  "max_err": 5.329070518200751e-15,
+  "err_vs_Q0_plus_omegaD": 5.329070518200751e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "death d=0.2: planner alone",
+  "case": "case2 both off@1 and death@1 (ref: both priced)",
+  "omega": 4.0,
+  "max_err": 7.105427357601002e-15,
+  "err_vs_Q0_plus_omegaD": 3.8,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "death d=0.2: planner alone",
+  "case": "case1 off@0, death@0",
+  "omega": 16.0,
+  "max_err": 7.105427357601002e-15,
+  "err_vs_Q0_plus_omegaD": 7.105427357601002e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "death d=0.2: planner alone",
+  "case": "case2 death@1, nothing after (ref: kappa_d=w*g)",
+  "omega": 16.0,
+  "max_err": 7.105427357601002e-15,
+  "err_vs_Q0_plus_omegaD": 6.449101264206357,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "death d=0.2: planner alone",
+  "case": "case3 death@1, self-loop pays",
+  "omega": 16.0,
+  "max_err": 7.105427357601002e-15,
+  "err_vs_Q0_plus_omegaD": 7.105427357601002e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "death d=0.2: planner alone",
+  "case": "case2 both off@1 and death@1 (ref: both priced)",
+  "omega": 16.0,
+  "max_err": 1.0658141036401503e-14,
+  "err_vs_Q0_plus_omegaD": 15.2,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": false
+ },
+ {
+  "chain": "death d=0.2: T1 G=0.5",
+  "case": "case1 off@0, death@0",
+  "omega": 1.0,
+  "max_err": 7.105427357601002e-15,
+  "err_vs_Q0_plus_omegaD": 7.105427357601002e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "death d=0.2: T1 G=0.5",
+  "case": "case2 death@1, nothing after (ref: kappa_d=w*g)",
+  "omega": 1.0,
+  "max_err": 7.105427357601002e-15,
+  "err_vs_Q0_plus_omegaD": 0.22242581969995712,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "death d=0.2: T1 G=0.5",
+  "case": "case3 death@1, self-loop pays",
+  "omega": 1.0,
+  "max_err": 5.329070518200751e-15,
+  "err_vs_Q0_plus_omegaD": 5.329070518200751e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "death d=0.2: T1 G=0.5",
+  "case": "case2 both off@1 and death@1 (ref: both priced)",
+  "omega": 1.0,
+  "max_err": 5.329070518200751e-15,
+  "err_vs_Q0_plus_omegaD": 0.95,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "death d=0.2: T1 G=0.5",
+  "case": "case1 off@0, death@0",
+  "omega": 4.0,
+  "max_err": 7.105427357601002e-15,
+  "err_vs_Q0_plus_omegaD": 7.105427357601002e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "death d=0.2: T1 G=0.5",
+  "case": "case2 death@1, nothing after (ref: kappa_d=w*g)",
+  "omega": 4.0,
+  "max_err": 5.329070518200751e-15,
+  "err_vs_Q0_plus_omegaD": 0.8897032787998125,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "death d=0.2: T1 G=0.5",
+  "case": "case3 death@1, self-loop pays",
+  "omega": 4.0,
+  "max_err": 7.993605777301127e-15,
+  "err_vs_Q0_plus_omegaD": 7.993605777301127e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "death d=0.2: T1 G=0.5",
+  "case": "case2 both off@1 and death@1 (ref: both priced)",
+  "omega": 4.0,
+  "max_err": 4.440892098500626e-15,
+  "err_vs_Q0_plus_omegaD": 3.8,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": false
+ },
+ {
+  "chain": "death d=0.2: T1 G=0.5",
+  "case": "case1 off@0, death@0",
+  "omega": 16.0,
+  "max_err": 7.105427357601002e-15,
+  "err_vs_Q0_plus_omegaD": 7.105427357601002e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "death d=0.2: T1 G=0.5",
+  "case": "case2 death@1, nothing after (ref: kappa_d=w*g)",
+  "omega": 16.0,
+  "max_err": 3.552713678800501e-15,
+  "err_vs_Q0_plus_omegaD": 3.5588131151992375,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "death d=0.2: T1 G=0.5",
+  "case": "case3 death@1, self-loop pays",
+  "omega": 16.0,
+  "max_err": 7.105427357601002e-15,
+  "err_vs_Q0_plus_omegaD": 7.105427357601002e-15,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": true
+ },
+ {
+  "chain": "death d=0.2: T1 G=0.5",
+  "case": "case2 both off@1 and death@1 (ref: both priced)",
+  "omega": 16.0,
+  "max_err": 7.105427357601002e-15,
+  "err_vs_Q0_plus_omegaD": 15.2,
+  "policy_equals_reference": true,
+  "policy_equals_unshaped": false
+ }
+]

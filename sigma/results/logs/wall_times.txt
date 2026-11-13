@@ -1,0 +1,8 @@
+step0_validate        2.7 s
+e1_gate              32.5 s
+e2_mode             298.4 s
+e3_sweep             10.9 s
+e4_lockin            26.1 s
+e5_offswitch        301.3 s
+figures               2.7 s
+collect               0.1 s

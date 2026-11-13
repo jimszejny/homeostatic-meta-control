@@ -1,0 +1,150 @@
+{
+ "experiment": "E5_kappa",
+ "notes": [
+  "kappa*_empirical: smallest kappa with STAY greedy-optimal at x = K (exact value iteration + bisection on [-1e3, 1e5], tol 1e-6). The range includes negative kappa so that a negative closed form (STAY optimal even with a death bonus) is reproduced rather than clipped at 0.",
+  "kappa*_theory = (r_max (1 - gamma^T) - r_core) / ((1 - gamma) gamma^T); naive = r_max / (1 - gamma).",
+  "resolution_bound = TIE_TOL / ((1 - gamma) gamma^T) + bisection tol: the advantage of LEAVE over STAY at x = K is (1 - gamma) gamma^T (kappa* - kappa) because STAY can postpone LEAVE, so greedy ties within TIE_TOL = 1e-8 blur kappa* by that much.",
+  "Core moves (LEFT/RIGHT) pay r_core, like STAY; K = 4 (any K >= 0 gives the same kappa*)."
+ ],
+ "parameters": {
+  "gammas": [
+   0.8,
+   0.9,
+   0.95,
+   0.99
+  ],
+  "kappa_bisection": {
+   "hi": 100000.0,
+   "lo": -1000.0,
+   "tol": 1e-06
+  },
+  "m1": {
+   "K": 4,
+   "T": 19,
+   "gamma": 0.95,
+   "kappa": 50.0,
+   "r_core": 0.0,
+   "r_max": 1.0
+  },
+  "r_cores": [
+   0.0,
+   0.2
+  ],
+  "tie_tol": 1e-08,
+  "vi_tol": 1e-10
+ },
+ "results": {
+  "rows": [
+   {
+    "abs_diff_empirical_theory": 3.0701e-06,
+    "gamma": 0.8,
+    "kappa_naive": 5.0,
+    "kappa_star_empirical": 341.9446921253,
+    "kappa_star_theory": 341.9446951954,
+    "r_core": 0.0,
+    "ratio_empirical_over_naive": 68.3889384251,
+    "ratio_empirical_over_theory": 0.999999991,
+    "ratio_theory_over_naive": 68.3889390391,
+    "resolution_bound": 4.4694e-06,
+    "within_resolution": true
+   },
+   {
+    "abs_diff_empirical_theory": 1.06e-07,
+    "gamma": 0.9,
+    "kappa_naive": 10.0,
+    "kappa_star_empirical": 64.0273699537,
+    "kappa_star_theory": 64.0273700597,
+    "r_core": 0.0,
+    "ratio_empirical_over_naive": 6.4027369954,
+    "ratio_empirical_over_theory": 0.9999999983,
+    "ratio_theory_over_naive": 6.402737006,
+    "resolution_bound": 1.7403e-06,
+    "within_resolution": true
+   },
+   {
+    "abs_diff_empirical_theory": 3.269e-07,
+    "gamma": 0.95,
+    "kappa_naive": 20.0,
+    "kappa_star_empirical": 33.0006862059,
+    "kappa_star_theory": 33.0006865328,
+    "r_core": 0.0,
+    "ratio_empirical_over_naive": 1.6500343103,
+    "ratio_empirical_over_theory": 0.9999999901,
+    "ratio_theory_over_naive": 1.6500343266,
+    "resolution_bound": 1.53e-06,
+    "within_resolution": true
+   },
+   {
+    "abs_diff_empirical_theory": 1.0354e-06,
+    "gamma": 0.99,
+    "kappa_naive": 100.0,
+    "kappa_star_empirical": 21.040664411,
+    "kappa_star_theory": 21.0406654464,
+    "r_core": 0.0,
+    "ratio_empirical_over_naive": 0.2104066441,
+    "ratio_empirical_over_theory": 0.9999999508,
+    "ratio_theory_over_naive": 0.2104066545,
+    "resolution_bound": 2.2104e-06,
+    "within_resolution": true
+   },
+   {
+    "abs_diff_empirical_theory": 3.3316e-06,
+    "gamma": 0.8,
+    "kappa_naive": 5.0,
+    "kappa_star_empirical": 272.5557528247,
+    "kappa_star_theory": 272.5557561563,
+    "r_core": 0.2,
+    "ratio_empirical_over_naive": 54.5111505649,
+    "ratio_empirical_over_theory": 0.9999999878,
+    "ratio_theory_over_naive": 54.5111512313,
+    "resolution_bound": 4.4694e-06,
+    "within_resolution": true
+   },
+   {
+    "abs_diff_empirical_theory": 5.8e-07,
+    "gamma": 0.9,
+    "kappa_naive": 10.0,
+    "kappa_star_empirical": 49.2218954678,
+    "kappa_star_theory": 49.2218960478,
+    "r_core": 0.2,
+    "ratio_empirical_over_naive": 4.9221895468,
+    "ratio_empirical_over_theory": 0.9999999882,
+    "ratio_theory_over_naive": 4.9221896048,
+    "resolution_bound": 1.7403e-06,
+    "within_resolution": true
+   },
+   {
+    "abs_diff_empirical_theory": 2.9e-07,
+    "gamma": 0.95,
+    "kappa_naive": 20.0,
+    "kappa_star_empirical": 22.4005489363,
+    "kappa_star_theory": 22.4005492262,
+    "r_core": 0.2,
+    "ratio_empirical_over_naive": 1.1200274468,
+    "ratio_empirical_over_theory": 0.9999999871,
+    "ratio_theory_over_naive": 1.1200274613,
+    "resolution_bound": 1.53e-06,
+    "within_resolution": true
+   },
+   {
+    "abs_diff_empirical_theory": 1.0914e-06,
+    "gamma": 0.99,
+    "kappa_naive": 100.0,
+    "kappa_star_empirical": -3.1674687343,
+    "kappa_star_theory": -3.1674676429,
+    "r_core": 0.2,
+    "ratio_empirical_over_naive": -0.0316746873,
+    "ratio_empirical_over_theory": 1.0000003446,
+    "ratio_theory_over_naive": -0.0316746764,
+    "resolution_bound": 2.2104e-06,
+    "within_resolution": true
+   }
+  ]
+ },
+ "seeds": null,
+ "software": {
+  "numpy": "2.5.3",
+  "python": "3.13.16"
+ },
+ "spec_version": "1.1"
+}

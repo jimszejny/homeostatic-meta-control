@@ -1,0 +1,6834 @@
+{
+ "../../paper/sec_sigma.tex": [
+  {
+   "number": "2.63",
+   "value": 2.63,
+   "ok": true,
+   "context": " (Lemma~(iv)), the workshop measured the price ($+2.63$ hits per episode a"
+  },
+  {
+   "number": "0.95",
+   "value": 0.95,
+   "ok": true,
+   "context": "rete time, $W=1$, $L=3$, hit cost $h=10$, $\\gamma=0.95$, the conventions o"
+  },
+  {
+   "number": "0.005",
+   "value": 0.005,
+   "ok": true,
+   "context": "arkov chain with $\\Pr(z_{t+1}=1\\mid z_t=0)=q_{01}=0.005$ and $\\Pr(z_{t+1}=0"
+  },
+  {
+   "number": "0.02",
+   "value": 0.02,
+   "ok": true,
+   "context": "_{01}=0.005$ and $\\Pr(z_{t+1}=0\\mid z_t=1)=q_{10}=0.02$, so storms last $1"
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": " $1/q_{01}=200$ steps, and the storm fraction is $0.2$. At step $t$ a haz"
+  },
+  {
+   "number": "0.02",
+   "value": 0.02,
+   "ok": true,
+   "context": "ced, $\\tau_t=1$, with probability $p_{z_t}$, $p_0=0.02$, $p_1=0.17$, and s"
+  },
+  {
+   "number": "0.17",
+   "value": 0.17,
+   "ok": true,
+   "context": "=1$, with probability $p_{z_t}$, $p_0=0.02$, $p_1=0.17$, and strikes at $t"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": " strikes at $t+1$; the stationary hazard rate is $0.05$, the $p$ of A1. Th"
+  },
+  {
+   "number": "0.7",
+   "value": 0.7,
+   "ok": true,
+   "context": "f it does not. A \\GUARD\\ step pays $r_{\\mathrm g}=0.7$ and cannot be hit."
+  },
+  {
+   "number": "0.8",
+   "value": 0.8,
+   "ok": true,
+   "context": "us one. The baseline reflex is imperfect, $\\Gamma=0.8$, because in Sectio"
+  },
+  {
+   "number": "0.8",
+   "value": 0.8,
+   "ok": true,
+   "context": " the learned planners' hits under motion; $\\Gamma=0.8$ is a moderate choi"
+  },
+  {
+   "number": "2.8",
+   "value": 2.8,
+   "ok": true,
+   "context": "the expected loss of a \\WORK\\ step on an impact ($2.8$ at $\\Gamma=0.8$). "
+  },
+  {
+   "number": "0.8",
+   "value": 0.8,
+   "ok": true,
+   "context": "s of a \\WORK\\ step on an impact ($2.8$ at $\\Gamma=0.8$). A \\WORK\\ step wh"
+  },
+  {
+   "number": "0.86",
+   "value": 0.86,
+   "ok": true,
+   "context": "ntrollers.} \\emph{Fixed modes}: always \\WORK\\ ($J=0.86$, $1.00$ hits per 1"
+  },
+  {
+   "number": "1.00",
+   "value": 1.0,
+   "ok": true,
+   "context": "s.} \\emph{Fixed modes}: always \\WORK\\ ($J=0.86$, $1.00$ hits per 100 steps"
+  },
+  {
+   "number": "0.70",
+   "value": 0.7,
+   "ok": true,
+   "context": "$1.00$ hits per 100 steps) and always \\GUARD\\ ($J=0.70$, no hits). \\emph{S"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "gma_{t+1}$ is reported separately. $\\lambda\\in\\{1,0.5,0.3,0.2,0.1,0.05,0."
+  },
+  {
+   "number": "0.3",
+   "value": 0.3,
+   "ok": true,
+   "context": "{t+1}$ is reported separately. $\\lambda\\in\\{1,0.5,0.3,0.2,0.1,0.05,0.03,0"
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": "}$ is reported separately. $\\lambda\\in\\{1,0.5,0.3,0.2,0.1,0.05,0.03,0.02,"
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": "s reported separately. $\\lambda\\in\\{1,0.5,0.3,0.2,0.1,0.05,0.03,0.02,0.01"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "ported separately. $\\lambda\\in\\{1,0.5,0.3,0.2,0.1,0.05,0.03,0.02,0.01,0.00"
+  },
+  {
+   "number": "0.03",
+   "value": 0.03,
+   "ok": true,
+   "context": "d separately. $\\lambda\\in\\{1,0.5,0.3,0.2,0.1,0.05,0.03,0.02,0.01,0.005\\}$,"
+  },
+  {
+   "number": "0.02",
+   "value": 0.02,
+   "ok": true,
+   "context": "arately. $\\lambda\\in\\{1,0.5,0.3,0.2,0.1,0.05,0.03,0.02,0.01,0.005\\}$, thre"
+  },
+  {
+   "number": "0.01",
+   "value": 0.01,
+   "ok": true,
+   "context": "ly. $\\lambda\\in\\{1,0.5,0.3,0.2,0.1,0.05,0.03,0.02,0.01,0.005\\}$, threshold"
+  },
+  {
+   "number": "0.005",
+   "value": 0.005,
+   "ok": true,
+   "context": "\\lambda\\in\\{1,0.5,0.3,0.2,0.1,0.05,0.03,0.02,0.01,0.005\\}$, thresholds opti"
+  },
+  {
+   "number": "50{,}000",
+   "value": 50000.0,
+   "ok": true,
+   "context": "lation on an independent stream ($400$ chains of $50{,}000$ steps, common rand"
+  },
+  {
+   "number": "1.9",
+   "value": 1.9,
+   "ok": true,
+   "context": "ontrollers): the paired differences agree within $1.9$ standard errors in"
+  },
+  {
+   "number": "8.2119",
+   "value": 8.2119,
+   "ok": true,
+   "context": "ementation reproduced A1 and the tiered chain: $V=8.2119$ and $\\crs=8.3591$ "
+  },
+  {
+   "number": "8.3591",
+   "value": 8.3591,
+   "ok": true,
+   "context": "ced A1 and the tiered chain: $V=8.2119$ and $\\crs=8.3591$ for the delayed pl"
+  },
+  {
+   "number": "14.4440",
+   "value": 14.444,
+   "ok": true,
+   "context": "d $\\crs=8.3591$ for the delayed planner alone, $V=14.4440$ and $\\crs=14.1272$"
+  },
+  {
+   "number": "14.1272",
+   "value": 14.1272,
+   "ok": true,
+   "context": " the delayed planner alone, $V=14.4440$ and $\\crs=14.1272$ with the zero-late"
+  },
+  {
+   "number": "12.6910",
+   "value": 12.691,
+   "ok": true,
+   "context": "\\crs=14.1272$ with the zero-latency reflex, $\\crs=12.6910$ for one in-time ti"
+  },
+  {
+   "number": "0.8",
+   "value": 0.8,
+   "ok": true,
+   "context": " $\\crs=12.6910$ for one in-time tier with $\\Gamma=0.8$, $\\tiersptot=0.02$"
+  },
+  {
+   "number": "0.02",
+   "value": 0.02,
+   "ok": true,
+   "context": "r one in-time tier with $\\Gamma=0.8$, $\\tiersptot=0.02$, bisection and \\eq"
+  },
+  {
+   "number": "0.6007",
+   "value": 0.6007,
+   "ok": true,
+   "context": "is a threshold $b_t\\ge b^*$; at the baseline $b^*=0.6007$. \\end{proposition}"
+  },
+  {
+   "number": "0.056",
+   "value": 0.056,
+   "ok": true,
+   "context": " are in Appendix~. At the baseline the window is $0.056<0.3<0.476$.  \\subse"
+  },
+  {
+   "number": "0.3",
+   "value": 0.3,
+   "ok": true,
+   "context": "n Appendix~. At the baseline the window is $0.056<0.3<0.476$.  \\subsectio"
+  },
+  {
+   "number": "0.476",
+   "value": 0.476,
+   "ok": true,
+   "context": "pendix~. At the baseline the window is $0.056<0.3<0.476$.  \\subsection{Phas"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "ate's, $\\bar p(1-\\Gamma)$ per step, where $\\bar p=0.05$ is the stationary "
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": "gate has no hits; the filtered gate with $\\lambda=0.1$, $\\theta=0.2$ miss"
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": "ts; the filtered gate with $\\lambda=0.1$, $\\theta=0.2$ misses $57.1\\%$ of"
+  },
+  {
+   "number": "57.1",
+   "value": 57.1,
+   "ok": true,
+   "context": "red gate with $\\lambda=0.1$, $\\theta=0.2$ misses $57.1\\%$ of impacts and i"
+  },
+  {
+   "number": "2.86",
+   "value": 2.86,
+   "ok": true,
+   "context": "theta=0.2$ misses $57.1\\%$ of impacts and is hit $2.86$ times per 100 step"
+  },
+  {
+   "number": "0.12",
+   "value": 0.12,
+   "ok": true,
+   "context": "d is hit $2.86$ times per 100 steps; with $\\theta=0.12$ it misses $27.5\\%$"
+  },
+  {
+   "number": "27.5",
+   "value": 27.5,
+   "ok": true,
+   "context": "imes per 100 steps; with $\\theta=0.12$ it misses $27.5\\%$. The misses are "
+  },
+  {
+   "number": "959{,}195",
+   "value": 959195.0,
+   "ok": true,
+   "context": "are not spread evenly. In a Monte-Carlo split of $959{,}195$ impacts by the reg"
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": "e regime of their announcement, the gate $\\lambda=0.1$, $\\theta=0.2$ miss"
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": "eir announcement, the gate $\\lambda=0.1$, $\\theta=0.2$ missed $95.7\\%$ of"
+  },
+  {
+   "number": "95.7",
+   "value": 95.7,
+   "ok": true,
+   "context": "ent, the gate $\\lambda=0.1$, $\\theta=0.2$ missed $95.7\\%$ of hazards in ca"
+  },
+  {
+   "number": "98.2",
+   "value": 98.2,
+   "ok": true,
+   "context": "=0.2$ missed $95.7\\%$ of hazards in calm spells, $98.2\\%$ of first hazards"
+  },
+  {
+   "number": "31.9",
+   "value": 31.9,
+   "ok": true,
+   "context": "torm regime during the current storm spell), and $31.9\\%$ of later hazards"
+  },
+  {
+   "number": "53.6",
+   "value": 53.6,
+   "ok": true,
+   "context": "$ of all impacts---make up $66\\%$ of its misses ($53.6\\%$ and $12.5\\%$), a"
+  },
+  {
+   "number": "12.5",
+   "value": 12.5,
+   "ok": true,
+   "context": "cts---make up $66\\%$ of its misses ($53.6\\%$ and $12.5\\%$), and the later "
+  },
+  {
+   "number": "0.8",
+   "value": 0.8,
+   "ok": true,
+   "context": "l one in three of the expected ones. With $\\Gamma=0.8$ every curve starts"
+  },
+  {
+   "number": "1.00",
+   "value": 1.0,
+   "ok": true,
+   "context": "\\Gamma=0.8$ every curve starts at the raw gate's $1.00$ hits per 100 steps"
+  },
+  {
+   "number": "5.00",
+   "value": 5.0,
+   "ok": true,
+   "context": "ts per 100 steps and rises towards the planner's $5.00$. This is verdict T"
+  },
+  {
+   "number": "0.8",
+   "value": 0.8,
+   "ok": true,
+   "context": "s; left with a perfect reflex, right with $\\Gamma=0.8$. Dashed: the raw g"
+  },
+  {
+   "number": "0.86",
+   "value": 0.86,
+   "ok": true,
+   "context": "At the baseline the best fixed mode is \\WORK\\ ($J=0.86$). The Bayes contro"
+  },
+  {
+   "number": "0.87369",
+   "value": 0.87369,
+   "ok": true,
+   "context": "is \\WORK\\ ($J=0.86$). The Bayes controller earns $0.87369$, a gain of $0.0136"
+  },
+  {
+   "number": "0.01369",
+   "value": 0.01369,
+   "ok": true,
+   "context": " The Bayes controller earns $0.87369$, a gain of $0.01369$ per step ($1.6\\%$)"
+  },
+  {
+   "number": "1.6",
+   "value": 1.6,
+   "ok": true,
+   "context": "r earns $0.87369$, a gain of $0.01369$ per step ($1.6\\%$), $38.9\\%$ of th"
+  },
+  {
+   "number": "38.9",
+   "value": 38.9,
+   "ok": true,
+   "context": ".87369$, a gain of $0.01369$ per step ($1.6\\%$), $38.9\\%$ of the oracle's "
+  },
+  {
+   "number": "0.0352",
+   "value": 0.0352,
+   "ok": true,
+   "context": "r step ($1.6\\%$), $38.9\\%$ of the oracle's gain ($0.0352$); it cuts hits fro"
+  },
+  {
+   "number": "1.00",
+   "value": 1.0,
+   "ok": true,
+   "context": " the oracle's gain ($0.0352$); it cuts hits from $1.00$ to $0.59$ per 100 "
+  },
+  {
+   "number": "0.59",
+   "value": 0.59,
+   "ok": true,
+   "context": "e's gain ($0.0352$); it cuts hits from $1.00$ to $0.59$ per 100 steps by g"
+  },
+  {
+   "number": "14.5",
+   "value": 14.5,
+   "ok": true,
+   "context": " from $1.00$ to $0.59$ per 100 steps by guarding $14.5\\%$ of the time. The"
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": "of the time. The best stress controller ($\\lambda=0.1$, $\\theta_{\\mathrm{"
+  },
+  {
+   "number": "0.1530",
+   "value": 0.153,
+   "ok": true,
+   "context": " controller ($\\lambda=0.1$, $\\theta_{\\mathrm{on}}=0.1530$, $\\theta_{\\mathrm{"
+  },
+  {
+   "number": "0.1092",
+   "value": 0.1092,
+   "ok": true,
+   "context": "eta_{\\mathrm{on}}=0.1530$, $\\theta_{\\mathrm{off}}=0.1092$) earns $0.87197$ a"
+  },
+  {
+   "number": "0.87197",
+   "value": 0.87197,
+   "ok": true,
+   "context": "}=0.1530$, $\\theta_{\\mathrm{off}}=0.1092$) earns $0.87197$ and captures $87.4"
+  },
+  {
+   "number": "87.4",
+   "value": 87.4,
+   "ok": true,
+   "context": "thrm{off}}=0.1092$) earns $0.87197$ and captures $87.4\\%$ of the Bayes gai"
+  },
+  {
+   "number": "87.4",
+   "value": 87.4,
+   "ok": true,
+   "context": "o search over a grid of thresholds and rates, so $87.4\\%$ is a lower bound"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "ghtly better. The best single threshold ($\\lambda=0.05$, $\\theta=0.1116$),"
+  },
+  {
+   "number": "0.1116",
+   "value": 0.1116,
+   "ok": true,
+   "context": "he best single threshold ($\\lambda=0.05$, $\\theta=0.1116$), found exhaustive"
+  },
+  {
+   "number": "86.5",
+   "value": 86.5,
+   "ok": true,
+   "context": ", $\\theta=0.1116$), found exhaustively, captures $86.5\\%$, and the informa"
+  },
+  {
+   "number": "93.1",
+   "value": 93.1,
+   "ok": true,
+   "context": "%$, and the information-matched single threshold $93.1\\%$. The rate matter"
+  },
+  {
+   "number": "9.8",
+   "value": 9.8,
+   "ok": true,
+   "context": "ring, \\GUARD\\ after every announcement) captures $9.8\\%$ and $\\lambda=0.0"
+  },
+  {
+   "number": "0.005",
+   "value": 0.005,
+   "ok": true,
+   "context": "every announcement) captures $9.8\\%$ and $\\lambda=0.005$ captures $3.2\\%$. "
+  },
+  {
+   "number": "3.2",
+   "value": 3.2,
+   "ok": true,
+   "context": "t) captures $9.8\\%$ and $\\lambda=0.005$ captures $3.2\\%$. The best rates,"
+  },
+  {
+   "number": "5.9",
+   "value": 5.9,
+   "ok": true,
+   "context": "ean gap between storm announcements ($1/p_1\\approx5.9$ steps) and the mea"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "st rates, where they act as a memory: at $\\lambda=0.5$ the single thresho"
+  },
+  {
+   "number": "27.8",
+   "value": 27.8,
+   "ok": true,
+   "context": ": at $\\lambda=0.5$ the single threshold captures $27.8\\%$ and the latch $("
+  },
+  {
+   "number": "0.5315",
+   "value": 0.5315,
+   "ok": true,
+   "context": "ingle threshold captures $27.8\\%$ and the latch $(0.5315,0.0064)$ $66.5\\%$. "
+  },
+  {
+   "number": "0.0064",
+   "value": 0.0064,
+   "ok": true,
+   "context": "hreshold captures $27.8\\%$ and the latch $(0.5315,0.0064)$ $66.5\\%$.  \\begin"
+  },
+  {
+   "number": "66.5",
+   "value": 66.5,
+   "ok": true,
+   "context": "aptures $27.8\\%$ and the latch $(0.5315,0.0064)$ $66.5\\%$.  \\begin{table}["
+  },
+  {
+   "number": "0.86000",
+   "value": 0.86,
+   "ok": true,
+   "context": "\\ frac. & share of gain\\\\ \\midrule always \\WORK & 0.86000 & 1.000 & 0 & 0 & 0"
+  },
+  {
+   "number": "1.000",
+   "value": 1.0,
+   "ok": true,
+   "context": "share of gain\\\\ \\midrule always \\WORK & 0.86000 & 1.000 & 0 & 0 & 0\\\\ alway"
+  },
+  {
+   "number": "0.70000",
+   "value": 0.7,
+   "ok": true,
+   "context": "K & 0.86000 & 1.000 & 0 & 0 & 0\\\\ always \\GUARD & 0.70000 & 0 & 0 & 1 & --\\\\ "
+  },
+  {
+   "number": "0.0050",
+   "value": 0.005,
+   "ok": true,
+   "context": "& 0 & 0 & 1 & --\\\\ $\\sigma$, $\\lambda=1$, $\\theta=0.0050$ & 0.86134 & 0.883 "
+  },
+  {
+   "number": "0.86134",
+   "value": 0.86134,
+   "ok": true,
+   "context": "1 & --\\\\ $\\sigma$, $\\lambda=1$, $\\theta=0.0050$ & 0.86134 & 0.883 & 87.98 & 0"
+  },
+  {
+   "number": "0.883",
+   "value": 0.883,
+   "ok": true,
+   "context": "\\sigma$, $\\lambda=1$, $\\theta=0.0050$ & 0.86134 & 0.883 & 87.98 & 0.0500 & "
+  },
+  {
+   "number": "87.98",
+   "value": 87.98,
+   "ok": true,
+   "context": " $\\lambda=1$, $\\theta=0.0050$ & 0.86134 & 0.883 & 87.98 & 0.0500 & 0.098\\\\ "
+  },
+  {
+   "number": "0.0500",
+   "value": 0.05,
+   "ok": true,
+   "context": "a=1$, $\\theta=0.0050$ & 0.86134 & 0.883 & 87.98 & 0.0500 & 0.098\\\\ $\\sigma$,"
+  },
+  {
+   "number": "0.098",
+   "value": 0.098,
+   "ok": true,
+   "context": "heta=0.0050$ & 0.86134 & 0.883 & 87.98 & 0.0500 & 0.098\\\\ $\\sigma$, $\\lambd"
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": "883 & 87.98 & 0.0500 & 0.098\\\\ $\\sigma$, $\\lambda=0.1$, $(0.1530,0.1092)$"
+  },
+  {
+   "number": "0.1530",
+   "value": 0.153,
+   "ok": true,
+   "context": ".98 & 0.0500 & 0.098\\\\ $\\sigma$, $\\lambda=0.1$, $(0.1530,0.1092)$ & 0.87197 "
+  },
+  {
+   "number": "0.1092",
+   "value": 0.1092,
+   "ok": true,
+   "context": ".0500 & 0.098\\\\ $\\sigma$, $\\lambda=0.1$, $(0.1530,0.1092)$ & 0.87197 & 0.606"
+  },
+  {
+   "number": "0.87197",
+   "value": 0.87197,
+   "ok": true,
+   "context": "98\\\\ $\\sigma$, $\\lambda=0.1$, $(0.1530,0.1092)$ & 0.87197 & 0.606 & 20.66 & 0"
+  },
+  {
+   "number": "0.606",
+   "value": 0.606,
+   "ok": true,
+   "context": "ma$, $\\lambda=0.1$, $(0.1530,0.1092)$ & 0.87197 & 0.606 & 20.66 & 0.1438 & "
+  },
+  {
+   "number": "20.66",
+   "value": 20.66,
+   "ok": true,
+   "context": "ambda=0.1$, $(0.1530,0.1092)$ & 0.87197 & 0.606 & 20.66 & 0.1438 & 0.874\\\\ "
+  },
+  {
+   "number": "0.1438",
+   "value": 0.1438,
+   "ok": true,
+   "context": "1$, $(0.1530,0.1092)$ & 0.87197 & 0.606 & 20.66 & 0.1438 & 0.874\\\\ $\\sigma$,"
+  },
+  {
+   "number": "0.874",
+   "value": 0.874,
+   "ok": true,
+   "context": "530,0.1092)$ & 0.87197 & 0.606 & 20.66 & 0.1438 & 0.874\\\\ $\\sigma$, $\\lambd"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "606 & 20.66 & 0.1438 & 0.874\\\\ $\\sigma$, $\\lambda=0.05$, $\\theta=0.1116$ &"
+  },
+  {
+   "number": "0.1116",
+   "value": 0.1116,
+   "ok": true,
+   "context": ".1438 & 0.874\\\\ $\\sigma$, $\\lambda=0.05$, $\\theta=0.1116$ & 0.87183 & 0.604 "
+  },
+  {
+   "number": "0.87183",
+   "value": 0.87183,
+   "ok": true,
+   "context": "874\\\\ $\\sigma$, $\\lambda=0.05$, $\\theta=0.1116$ & 0.87183 & 0.604 & 17.76 & 0"
+  },
+  {
+   "number": "0.604",
+   "value": 0.604,
+   "ok": true,
+   "context": "gma$, $\\lambda=0.05$, $\\theta=0.1116$ & 0.87183 & 0.604 & 17.76 & 0.1452 & "
+  },
+  {
+   "number": "17.76",
+   "value": 17.76,
+   "ok": true,
+   "context": "lambda=0.05$, $\\theta=0.1116$ & 0.87183 & 0.604 & 17.76 & 0.1452 & 0.865\\\\ "
+  },
+  {
+   "number": "0.1452",
+   "value": 0.1452,
+   "ok": true,
+   "context": ".05$, $\\theta=0.1116$ & 0.87183 & 0.604 & 17.76 & 0.1452 & 0.865\\\\ $\\sigma$,"
+  },
+  {
+   "number": "0.865",
+   "value": 0.865,
+   "ok": true,
+   "context": "heta=0.1116$ & 0.87183 & 0.604 & 17.76 & 0.1452 & 0.865\\\\ $\\sigma$, $\\lambd"
+  },
+  {
+   "number": "0.005",
+   "value": 0.005,
+   "ok": true,
+   "context": "604 & 17.76 & 0.1452 & 0.865\\\\ $\\sigma$, $\\lambda=0.005$, $\\theta=0.1214$ &"
+  },
+  {
+   "number": "0.1214",
+   "value": 0.1214,
+   "ok": true,
+   "context": "1452 & 0.865\\\\ $\\sigma$, $\\lambda=0.005$, $\\theta=0.1214$ & 0.86044 & 0.959 "
+  },
+  {
+   "number": "0.86044",
+   "value": 0.86044,
+   "ok": true,
+   "context": "65\\\\ $\\sigma$, $\\lambda=0.005$, $\\theta=0.1214$ & 0.86044 & 0.959 & 1.15 & 0."
+  },
+  {
+   "number": "0.959",
+   "value": 0.959,
+   "ok": true,
+   "context": "ma$, $\\lambda=0.005$, $\\theta=0.1214$ & 0.86044 & 0.959 & 1.15 & 0.0176 & 0"
+  },
+  {
+   "number": "1.15",
+   "value": 1.15,
+   "ok": true,
+   "context": "ambda=0.005$, $\\theta=0.1214$ & 0.86044 & 0.959 & 1.15 & 0.0176 & 0.032\\\\ "
+  },
+  {
+   "number": "0.0176",
+   "value": 0.0176,
+   "ok": true,
+   "context": ".005$, $\\theta=0.1214$ & 0.86044 & 0.959 & 1.15 & 0.0176 & 0.032\\\\ Bayes, $b"
+  },
+  {
+   "number": "0.032",
+   "value": 0.032,
+   "ok": true,
+   "context": "theta=0.1214$ & 0.86044 & 0.959 & 1.15 & 0.0176 & 0.032\\\\ Bayes, $b^*=0.600"
+  },
+  {
+   "number": "0.6007",
+   "value": 0.6007,
+   "ok": true,
+   "context": "044 & 0.959 & 1.15 & 0.0176 & 0.032\\\\ Bayes, $b^*=0.6007$ & 0.87369 & 0.592 "
+  },
+  {
+   "number": "0.87369",
+   "value": 0.87369,
+   "ok": true,
+   "context": "9 & 1.15 & 0.0176 & 0.032\\\\ Bayes, $b^*=0.6007$ & 0.87369 & 0.592 & 21.22 & 0"
+  },
+  {
+   "number": "0.592",
+   "value": 0.592,
+   "ok": true,
+   "context": " 0.0176 & 0.032\\\\ Bayes, $b^*=0.6007$ & 0.87369 & 0.592 & 21.22 & 0.1449 & "
+  },
+  {
+   "number": "21.22",
+   "value": 21.22,
+   "ok": true,
+   "context": "& 0.032\\\\ Bayes, $b^*=0.6007$ & 0.87369 & 0.592 & 21.22 & 0.1449 & 1\\\\ orac"
+  },
+  {
+   "number": "0.1449",
+   "value": 0.1449,
+   "ok": true,
+   "context": "\\ Bayes, $b^*=0.6007$ & 0.87369 & 0.592 & 21.22 & 0.1449 & 1\\\\ oracle & 0.89"
+  },
+  {
+   "number": "0.89520",
+   "value": 0.8952,
+   "ok": true,
+   "context": "& 0.87369 & 0.592 & 21.22 & 0.1449 & 1\\\\ oracle & 0.89520 & 0.320 & 8.00 & 0."
+  },
+  {
+   "number": "0.320",
+   "value": 0.32,
+   "ok": true,
+   "context": "& 0.592 & 21.22 & 0.1449 & 1\\\\ oracle & 0.89520 & 0.320 & 8.00 & 0.2000 & 2"
+  },
+  {
+   "number": "8.00",
+   "value": 8.0,
+   "ok": true,
+   "context": "& 21.22 & 0.1449 & 1\\\\ oracle & 0.89520 & 0.320 & 8.00 & 0.2000 & 2.571\\\\ "
+  },
+  {
+   "number": "0.2000",
+   "value": 0.2,
+   "ok": true,
+   "context": " & 0.1449 & 1\\\\ oracle & 0.89520 & 0.320 & 8.00 & 0.2000 & 2.571\\\\ \\midrule "
+  },
+  {
+   "number": "2.571",
+   "value": 2.571,
+   "ok": true,
+   "context": " & 1\\\\ oracle & 0.89520 & 0.320 & 8.00 & 0.2000 & 2.571\\\\ \\midrule controll"
+  },
+  {
+   "number": "0.86000",
+   "value": 0.86,
+   "ok": true,
+   "context": " $\\sigma$, best single threshold (never \\GUARD) & 0.86000 & 1.000 & 0 & 0 & 0"
+  },
+  {
+   "number": "1.000",
+   "value": 1.0,
+   "ok": true,
+   "context": " best single threshold (never \\GUARD) & 0.86000 & 1.000 & 0 & 0 & 0\\\\ $\\sig"
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": " 0.86000 & 1.000 & 0 & 0 & 0\\\\ $\\sigma$, $\\lambda=0.1$, $(0.2302,0.0576)$"
+  },
+  {
+   "number": "0.2302",
+   "value": 0.2302,
+   "ok": true,
+   "context": " & 1.000 & 0 & 0 & 0\\\\ $\\sigma$, $\\lambda=0.1$, $(0.2302,0.0576)$ & 0.86329 "
+  },
+  {
+   "number": "0.0576",
+   "value": 0.0576,
+   "ok": true,
+   "context": "0 & 0 & 0 & 0\\\\ $\\sigma$, $\\lambda=0.1$, $(0.2302,0.0576)$ & 0.86329 & 0.646"
+  },
+  {
+   "number": "0.86329",
+   "value": 0.86329,
+   "ok": true,
+   "context": " 0\\\\ $\\sigma$, $\\lambda=0.1$, $(0.2302,0.0576)$ & 0.86329 & 0.646 & 6.33 & 0."
+  },
+  {
+   "number": "0.646",
+   "value": 0.646,
+   "ok": true,
+   "context": "ma$, $\\lambda=0.1$, $(0.2302,0.0576)$ & 0.86329 & 0.646 & 6.33 & 0.1332 & 0"
+  },
+  {
+   "number": "6.33",
+   "value": 6.33,
+   "ok": true,
+   "context": "ambda=0.1$, $(0.2302,0.0576)$ & 0.86329 & 0.646 & 6.33 & 0.1332 & 0.751\\\\ "
+  },
+  {
+   "number": "0.1332",
+   "value": 0.1332,
+   "ok": true,
+   "context": ".1$, $(0.2302,0.0576)$ & 0.86329 & 0.646 & 6.33 & 0.1332 & 0.751\\\\ Bayes myo"
+  },
+  {
+   "number": "0.751",
+   "value": 0.751,
+   "ok": true,
+   "context": "2302,0.0576)$ & 0.86329 & 0.646 & 6.33 & 0.1332 & 0.751\\\\ Bayes myopic ($c_"
+  },
+  {
+   "number": "0.85247",
+   "value": 0.85247,
+   "ok": true,
+   "context": "0.751\\\\ Bayes myopic ($c_{\\mathrm{sw}}=0$ rule) & 0.85247 & 0.592 & 21.22 & 0"
+  },
+  {
+   "number": "0.592",
+   "value": 0.592,
+   "ok": true,
+   "context": "yes myopic ($c_{\\mathrm{sw}}=0$ rule) & 0.85247 & 0.592 & 21.22 & 0.1449 & "
+  },
+  {
+   "number": "21.22",
+   "value": 21.22,
+   "ok": true,
+   "context": "ic ($c_{\\mathrm{sw}}=0$ rule) & 0.85247 & 0.592 & 21.22 & 0.1449 & $-1.718$"
+  },
+  {
+   "number": "0.1449",
+   "value": 0.1449,
+   "ok": true,
+   "context": "\\mathrm{sw}}=0$ rule) & 0.85247 & 0.592 & 21.22 & 0.1449 & $-1.718$\\\\ Bayes "
+  },
+  {
+   "number": "1.718",
+   "value": 1.718,
+   "ok": true,
+   "context": "}=0$ rule) & 0.85247 & 0.592 & 21.22 & 0.1449 & $-1.718$\\\\ Bayes latch $(b_"
+  },
+  {
+   "number": "0.934",
+   "value": 0.934,
+   "ok": true,
+   "context": " Bayes latch $(b_{\\mathrm{on}},b_{\\mathrm{off}})=(0.934,0.345)$ & 0.86438 &"
+  },
+  {
+   "number": "0.345",
+   "value": 0.345,
+   "ok": true,
+   "context": " latch $(b_{\\mathrm{on}},b_{\\mathrm{off}})=(0.934,0.345)$ & 0.86438 & 0.622"
+  },
+  {
+   "number": "0.86438",
+   "value": 0.86438,
+   "ok": true,
+   "context": "_{\\mathrm{on}},b_{\\mathrm{off}})=(0.934,0.345)$ & 0.86438 & 0.622 & 6.53 & 0."
+  },
+  {
+   "number": "0.622",
+   "value": 0.622,
+   "ok": true,
+   "context": "on}},b_{\\mathrm{off}})=(0.934,0.345)$ & 0.86438 & 0.622 & 6.53 & 0.1400 & 1"
+  },
+  {
+   "number": "6.53",
+   "value": 6.53,
+   "ok": true,
+   "context": "\\mathrm{off}})=(0.934,0.345)$ & 0.86438 & 0.622 & 6.53 & 0.1400 & 1\\\\ \\bot"
+  },
+  {
+   "number": "0.1400",
+   "value": 0.14,
+   "ok": true,
+   "context": "{off}})=(0.934,0.345)$ & 0.86438 & 0.622 & 6.53 & 0.1400 & 1\\\\ \\bottomrule \\"
+  },
+  {
+   "number": "0.8",
+   "value": 0.8,
+   "ok": true,
+   "context": "rule \\end{tabular} \\caption{E2, baseline ($\\Gamma=0.8$, $r_{\\mathrm g}=0."
+  },
+  {
+   "number": "0.7",
+   "value": 0.7,
+   "ok": true,
+   "context": "aption{E2, baseline ($\\Gamma=0.8$, $r_{\\mathrm g}=0.7$). Exact on quantis"
+  },
+  {
+   "number": "0.8952",
+   "value": 0.8952,
+   "ok": true,
+   "context": "ambda$, with always-\\WORK, Bayes and (off scale, $0.8952$) the oracle as ref"
+  },
+  {
+   "number": "0.934",
+   "value": 0.934,
+   "ok": true,
+   "context": "oints) is a two-threshold latch, $b_{\\mathrm{on}}=0.934$, $b_{\\mathrm{off}}"
+  },
+  {
+   "number": "0.345",
+   "value": 0.345,
+   "ok": true,
+   "context": "latch, $b_{\\mathrm{on}}=0.934$, $b_{\\mathrm{off}}=0.345$, earning $0.86438$"
+  },
+  {
+   "number": "0.86438",
+   "value": 0.86438,
+   "ok": true,
+   "context": "m{on}}=0.934$, $b_{\\mathrm{off}}=0.345$, earning $0.86438$; the myopic rule, "
+  },
+  {
+   "number": "0.0075",
+   "value": 0.0075,
+   "ok": true,
+   "context": "ch switches $21$ times per 1000 steps, now loses $0.0075$ per step to always"
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": "lways-\\WORK\\ at any $\\lambda$; the latch $\\lambda=0.1$, $(0.2302,0.0576)$"
+  },
+  {
+   "number": "0.2302",
+   "value": 0.2302,
+   "ok": true,
+   "context": "ORK\\ at any $\\lambda$; the latch $\\lambda=0.1$, $(0.2302,0.0576)$ captures $"
+  },
+  {
+   "number": "0.0576",
+   "value": 0.0576,
+   "ok": true,
+   "context": " any $\\lambda$; the latch $\\lambda=0.1$, $(0.2302,0.0576)$ captures $75.1\\%$"
+  },
+  {
+   "number": "75.1",
+   "value": 75.1,
+   "ok": true,
+   "context": " latch $\\lambda=0.1$, $(0.2302,0.0576)$ captures $75.1\\%$ of the Bayes gai"
+  },
+  {
+   "number": "6.3",
+   "value": 6.3,
+   "ok": true,
+   "context": "tures $75.1\\%$ of the Bayes gain while switching $6.3$ times per 1000 ste"
+  },
+  {
+   "number": "0.9",
+   "value": 0.9,
+   "ok": true,
+   "context": "en the gain exists.} Figure~ sweeps $\\Gamma\\in\\{1,0.9,0.8,0.65,0.5,0.25,0"
+  },
+  {
+   "number": "0.8",
+   "value": 0.8,
+   "ok": true,
+   "context": "he gain exists.} Figure~ sweeps $\\Gamma\\in\\{1,0.9,0.8,0.65,0.5,0.25,0\\}$ "
+  },
+  {
+   "number": "0.65",
+   "value": 0.65,
+   "ok": true,
+   "context": "ain exists.} Figure~ sweeps $\\Gamma\\in\\{1,0.9,0.8,0.65,0.5,0.25,0\\}$ and $"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "xists.} Figure~ sweeps $\\Gamma\\in\\{1,0.9,0.8,0.65,0.5,0.25,0\\}$ and $r_{\\"
+  },
+  {
+   "number": "0.25",
+   "value": 0.25,
+   "ok": true,
+   "context": "s.} Figure~ sweeps $\\Gamma\\in\\{1,0.9,0.8,0.65,0.5,0.25,0\\}$ and $r_{\\mathr"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "0.9,0.8,0.65,0.5,0.25,0\\}$ and $r_{\\mathrm g}\\in\\{0.5,\\dots,0.9\\}$ at $c_"
+  },
+  {
+   "number": "0.9",
+   "value": 0.9,
+   "ok": true,
+   "context": "65,0.5,0.25,0\\}$ and $r_{\\mathrm g}\\in\\{0.5,\\dots,0.9\\}$ at $c_{\\mathrm{s"
+  },
+  {
+   "number": "0.65",
+   "value": 0.65,
+   "ok": true,
+   "context": "e window has one. The exception inside is $\\Gamma=0.65$, $r_{\\mathrm g}=0."
+  },
+  {
+   "number": "0.9",
+   "value": 0.9,
+   "ok": true,
+   "context": "exception inside is $\\Gamma=0.65$, $r_{\\mathrm g}=0.9$, where \\WORK\\ pays"
+  },
+  {
+   "number": "0.0241",
+   "value": 0.0241,
+   "ok": true,
+   "context": " pays only if the impact probability falls below $0.0241$, which the two-ste"
+  },
+  {
+   "number": "14.7",
+   "value": 14.7,
+   "ok": true,
+   "context": "ds $10^{-3}$, the best $\\sigma$ captures between $14.7\\%$ and $96.8\\%$ of "
+  },
+  {
+   "number": "96.8",
+   "value": 96.8,
+   "ok": true,
+   "context": " the best $\\sigma$ captures between $14.7\\%$ and $96.8\\%$ of it, mostly ab"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": " $96.8\\%$ of it, mostly above $85\\%$, at $\\lambda=0.05$ in most cells. \\em"
+  },
+  {
+   "number": "0.83",
+   "value": 0.83,
+   "ok": true,
+   "context": "a=1$ and the window requires $r_{\\mathrm g}>1-p_1=0.83$; for $r_{\\mathrm g"
+  },
+  {
+   "number": "0.8",
+   "value": 0.8,
+   "ok": true,
+   "context": " $r_{\\mathrm g}>1-p_1=0.83$; for $r_{\\mathrm g}\\le0.8$ no controller beat"
+  },
+  {
+   "number": "0.9",
+   "value": 0.9,
+   "ok": true,
+   "context": "troller beats always-\\WORK, and at $r_{\\mathrm g}=0.9$ a Bayes gain of $0"
+  },
+  {
+   "number": "0.00597",
+   "value": 0.00597,
+   "ok": true,
+   "context": "WORK, and at $r_{\\mathrm g}=0.9$ a Bayes gain of $0.00597$ remains, of which "
+  },
+  {
+   "number": "88.9",
+   "value": 88.9,
+   "ok": true,
+   "context": "97$ remains, of which the best $\\sigma$ captures $88.9\\%$ (Table~). The st"
+  },
+  {
+   "number": "0.25",
+   "value": 0.25,
+   "ok": true,
+   "context": "s as much (Table~): scaling $(q_{01},q_{10})$ by $0.25,0.5,1,2,4,8$, the s"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "much (Table~): scaling $(q_{01},q_{10})$ by $0.25,0.5,1,2,4,8$, the share"
+  },
+  {
+   "number": "95.1",
+   "value": 95.1,
+   "ok": true,
+   "context": " the share of the Bayes gain captured falls from $95.1\\%$ to $2.1\\%$ while"
+  },
+  {
+   "number": "2.1",
+   "value": 2.1,
+   "ok": true,
+   "context": "f the Bayes gain captured falls from $95.1\\%$ to $2.1\\%$ while the best $"
+  },
+  {
+   "number": "0.03",
+   "value": 0.03,
+   "ok": true,
+   "context": "$ to $2.1\\%$ while the best $\\lambda$ rises from $0.03$ to $0.5$, and the "
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "%$ while the best $\\lambda$ rises from $0.03$ to $0.5$, and the Bayes gai"
+  },
+  {
+   "number": "0.02517",
+   "value": 0.02517,
+   "ok": true,
+   "context": "$ to $0.5$, and the Bayes gain itself falls from $0.02517$ to $0.00034$ altho"
+  },
+  {
+   "number": "0.00034",
+   "value": 0.00034,
+   "ok": true,
+   "context": "nd the Bayes gain itself falls from $0.02517$ to $0.00034$ although the oracl"
+  },
+  {
+   "number": "0.0352",
+   "value": 0.0352,
+   "ok": true,
+   "context": "517$ to $0.00034$ although the oracle's stays at $0.0352$: when storms last "
+  },
+  {
+   "number": "56{,}000",
+   "value": 56000.0,
+   "ok": true,
+   "context": "hrm{dw}}=100$, $T_{\\mathrm{pr}}=20$, 64 chains of 56{,}000 steps) the largest "
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": "ter the last real announcement was $199$ at $\\psi=0.2$ and $266$ at $\\psi"
+  },
+  {
+   "number": "0.3",
+   "value": 0.3,
+   "ok": true,
+   "context": "cement was $199$ at $\\psi=0.2$ and $266$ at $\\psi=0.3$; these are maxima "
+  },
+  {
+   "number": "0.8707",
+   "value": 0.8707,
+   "ok": true,
+   "context": "ncements, costs reward where nothing locks in: $J=0.8707$ against $0.8723$ a"
+  },
+  {
+   "number": "0.8723",
+   "value": 0.8723,
+   "ok": true,
+   "context": "eward where nothing locks in: $J=0.8707$ against $0.8723$ at $\\psi=0$, a pai"
+  },
+  {
+   "number": "0.0016",
+   "value": 0.0016,
+   "ok": true,
+   "context": "$ against $0.8723$ at $\\psi=0$, a paired loss of $0.0016$ per step (s.e.\\ $0"
+  },
+  {
+   "number": "0.00004",
+   "value": 4e-05,
+   "ok": true,
+   "context": "si=0$, a paired loss of $0.0016$ per step (s.e.\\ $0.00004$), about $13\\%$ of "
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": " all). The controller is the best of E2 ($\\lambda=0.1$, $\\theta_{\\mathrm{"
+  },
+  {
+   "number": "0.1530",
+   "value": 0.153,
+   "ok": true,
+   "context": " best of E2 ($\\lambda=0.1$, $\\theta_{\\mathrm{on}}=0.1530$, $\\theta_{\\mathrm{"
+  },
+  {
+   "number": "0.1092",
+   "value": 0.1092,
+   "ok": true,
+   "context": "eta_{\\mathrm{on}}=0.1530$, $\\theta_{\\mathrm{off}}=0.1092$), unchanged, and $"
+  },
+  {
+   "number": "0.02",
+   "value": 0.02,
+   "ok": true,
+   "context": "mathrm{off}}=0.1092$), unchanged, and $\\psi\\in\\{0,0.02,0.05,0.1,0.2,0.3\\}$"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "m{off}}=0.1092$), unchanged, and $\\psi\\in\\{0,0.02,0.05,0.1,0.2,0.3\\}$ plus"
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": "}}=0.1092$), unchanged, and $\\psi\\in\\{0,0.02,0.05,0.1,0.2,0.3\\}$ plus eig"
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": ".1092$), unchanged, and $\\psi\\in\\{0,0.02,0.05,0.1,0.2,0.3\\}$ plus eight f"
+  },
+  {
+   "number": "0.3",
+   "value": 0.3,
+   "ok": true,
+   "context": "2$), unchanged, and $\\psi\\in\\{0,0.02,0.05,0.1,0.2,0.3\\}$ plus eight furth"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "5,0.1,0.2,0.3\\}$ plus eight further values up to $0.5$. In the linear mod"
+  },
+  {
+   "number": "0.0911",
+   "value": 0.0911,
+   "ok": true,
+   "context": "$, reaches $\\theta_{\\mathrm{off}}$, i.e.\\ $\\psi\\ge0.0911$ ($\\psi\\ge\\theta_{\\"
+  },
+  {
+   "number": "0.1092",
+   "value": 0.1092,
+   "ok": true,
+   "context": ".\\ $\\psi\\ge0.0911$ ($\\psi\\ge\\theta_{\\mathrm{off}}=0.1092$ if calm-regime ann"
+  },
+  {
+   "number": "0.143",
+   "value": 0.143,
+   "ok": true,
+   "context": "able~): the \\GUARD\\ fraction rises smoothly from $0.143$ ($\\psi=0$) through"
+  },
+  {
+   "number": "0.206",
+   "value": 0.206,
+   "ok": true,
+   "context": "n rises smoothly from $0.143$ ($\\psi=0$) through $0.206$ ($\\psi=0.1$) and $"
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": "ly from $0.143$ ($\\psi=0$) through $0.206$ ($\\psi=0.1$) and $0.337$ ($\\ps"
+  },
+  {
+   "number": "0.337",
+   "value": 0.337,
+   "ok": true,
+   "context": "143$ ($\\psi=0$) through $0.206$ ($\\psi=0.1$) and $0.337$ ($\\psi=0.2$) to $0"
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": ") through $0.206$ ($\\psi=0.1$) and $0.337$ ($\\psi=0.2$) to $0.944$ ($\\psi"
+  },
+  {
+   "number": "0.944",
+   "value": 0.944,
+   "ok": true,
+   "context": "$0.206$ ($\\psi=0.1$) and $0.337$ ($\\psi=0.2$) to $0.944$ ($\\psi=0.4$), and "
+  },
+  {
+   "number": "0.4",
+   "value": 0.4,
+   "ok": true,
+   "context": "=0.1$) and $0.337$ ($\\psi=0.2$) to $0.944$ ($\\psi=0.4$), and the mean \\GU"
+  },
+  {
+   "number": "4.1",
+   "value": 4.1,
+   "ok": true,
+   "context": " \\WORK, including any later storm it spans) from $4.1$ to $12.6$, $43.9$,"
+  },
+  {
+   "number": "12.6",
+   "value": 12.6,
+   "ok": true,
+   "context": "ncluding any later storm it spans) from $4.1$ to $12.6$, $43.9$, $232.5$ ("
+  },
+  {
+   "number": "43.9",
+   "value": 43.9,
+   "ok": true,
+   "context": " any later storm it spans) from $4.1$ to $12.6$, $43.9$, $232.5$ ($\\psi=0."
+  },
+  {
+   "number": "232.5",
+   "value": 232.5,
+   "ok": true,
+   "context": "er storm it spans) from $4.1$ to $12.6$, $43.9$, $232.5$ ($\\psi=0.3$) and $"
+  },
+  {
+   "number": "0.3",
+   "value": 0.3,
+   "ok": true,
+   "context": "ans) from $4.1$ to $12.6$, $43.9$, $232.5$ ($\\psi=0.3$) and $2239$ steps "
+  },
+  {
+   "number": "0.4",
+   "value": 0.4,
+   "ok": true,
+   "context": ".9$, $232.5$ ($\\psi=0.3$) and $2239$ steps ($\\psi=0.4$; $63$ of $1440$ me"
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": "und). The latch escapes by fluctuation---at $\\psi=0.2$ the standard devia"
+  },
+  {
+   "number": "0.094",
+   "value": 0.094,
+   "ok": true,
+   "context": "andard deviation of $\\sigma$ in \\GUARD\\ is about $0.094$, comparable to the"
+  },
+  {
+   "number": "0.72",
+   "value": 0.72,
+   "ok": true,
+   "context": "ed-chain values agree with the simulation ($|z|\\le0.72$ at $\\psi\\in\\{0,0.0"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": " with the simulation ($|z|\\le0.72$ at $\\psi\\in\\{0,0.05,0.1,0.2,0.3\\}$).  \\"
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": " the simulation ($|z|\\le0.72$ at $\\psi\\in\\{0,0.05,0.1,0.2,0.3\\}$).  \\para"
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": " simulation ($|z|\\le0.72$ at $\\psi\\in\\{0,0.05,0.1,0.2,0.3\\}$).  \\paragrap"
+  },
+  {
+   "number": "0.3",
+   "value": 0.3,
+   "ok": true,
+   "context": "ulation ($|z|\\le0.72$ at $\\psi\\in\\{0,0.05,0.1,0.2,0.3\\}$).  \\paragraph{Th"
+  },
+  {
+   "number": "1.9",
+   "value": 1.9,
+   "ok": true,
+   "context": " $T_{\\mathrm{dw}}=100$, $T_{\\mathrm{pr}}=20$ is $(1.9\\pm0.5)\\times10^{-5}"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "mathrm{dw}}=100$, $T_{\\mathrm{pr}}=20$ is $(1.9\\pm0.5)\\times10^{-5}$ per "
+  },
+  {
+   "number": "0.16",
+   "value": 0.16,
+   "ok": true,
+   "context": "pr}}=20$ is $(1.9\\pm0.5)\\times10^{-5}$ per step ($0.16\\%\\pm0.04\\%$ of the "
+  },
+  {
+   "number": "0.04",
+   "value": 0.04,
+   "ok": true,
+   "context": "is $(1.9\\pm0.5)\\times10^{-5}$ per step ($0.16\\%\\pm0.04\\%$ of the stress co"
+  },
+  {
+   "number": "4.0\\times10^{-4}",
+   "value": 0.0004,
+   "ok": true,
+   "context": "$\\pm$ one s.e.), with $T_{\\mathrm{dw}}=50$ it is $4.0\\times10^{-4}$ ($3.4\\%$; genuine "
+  },
+  {
+   "number": "3.4",
+   "value": 3.4,
+   "ok": true,
+   "context": "h $T_{\\mathrm{dw}}=50$ it is $4.0\\times10^{-4}$ ($3.4\\%$; genuine storms "
+  },
+  {
+   "number": "0.388",
+   "value": 0.388,
+   "ok": true,
+   "context": "\\mathrm{pr}}=20$ the \\GUARD\\ fraction is at most $0.388$ (s.e.\\ $0.002$, at"
+  },
+  {
+   "number": "0.002",
+   "value": 0.002,
+   "ok": true,
+   "context": "$ the \\GUARD\\ fraction is at most $0.388$ (s.e.\\ $0.002$, at $\\psi=0.5$) fo"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "ction is at most $0.388$ (s.e.\\ $0.002$, at $\\psi=0.5$) for every $\\psi$ "
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "\\ $0.002$, at $\\psi=0.5$) for every $\\psi$ up to $0.5$, against $0.998$ w"
+  },
+  {
+   "number": "0.998",
+   "value": 0.998,
+   "ok": true,
+   "context": "\\psi=0.5$) for every $\\psi$ up to $0.5$, against $0.998$ without the fuse a"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": " $0.5$, against $0.998$ without the fuse at $\\psi=0.5$. The fuse bounds t"
+  },
+  {
+   "number": "0.86",
+   "value": 0.86,
+   "ok": true,
+   "context": "}=20$ its reward falls to that of always-\\WORK\\ ($0.86$) at about $\\psi=0."
+  },
+  {
+   "number": "0.15",
+   "value": 0.15,
+   "ok": true,
+   "context": " to that of always-\\WORK\\ ($0.86$) at about $\\psi=0.15$ ($0.8599$, s.e.\\ $"
+  },
+  {
+   "number": "0.8599",
+   "value": 0.8599,
+   "ok": true,
+   "context": " of always-\\WORK\\ ($0.86$) at about $\\psi=0.15$ ($0.8599$, s.e.\\ $0.0007$) a"
+  },
+  {
+   "number": "0.0007",
+   "value": 0.0007,
+   "ok": true,
+   "context": "\\ ($0.86$) at about $\\psi=0.15$ ($0.8599$, s.e.\\ $0.0007$) and below it beyo"
+  },
+  {
+   "number": "0.8505",
+   "value": 0.8505,
+   "ok": true,
+   "context": " ($0.8599$, s.e.\\ $0.0007$) and below it beyond ($0.8505$ at $\\psi=0.2$, $0."
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": " $0.0007$) and below it beyond ($0.8505$ at $\\psi=0.2$, $0.8267$ at $\\psi"
+  },
+  {
+   "number": "0.8267",
+   "value": 0.8267,
+   "ok": true,
+   "context": "7$) and below it beyond ($0.8505$ at $\\psi=0.2$, $0.8267$ at $\\psi=0.5$; Tab"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "beyond ($0.8505$ at $\\psi=0.2$, $0.8267$ at $\\psi=0.5$; Table~): from the"
+  },
+  {
+   "number": "0.1429",
+   "value": 0.1429,
+   "ok": true,
+   "context": "D\\ frac. & $J$ & max \\GUARD\\ count\\\\ \\midrule 0 & 0.1429 & 0.87230 & 4.1 / 8"
+  },
+  {
+   "number": "0.87230",
+   "value": 0.8723,
+   "ok": true,
+   "context": "& $J$ & max \\GUARD\\ count\\\\ \\midrule 0 & 0.1429 & 0.87230 & 4.1 / 88 & 0.1427"
+  },
+  {
+   "number": "4.1",
+   "value": 4.1,
+   "ok": true,
+   "context": "x \\GUARD\\ count\\\\ \\midrule 0 & 0.1429 & 0.87230 & 4.1 / 88 & 0.1427 & 0.8"
+  },
+  {
+   "number": "0.1427",
+   "value": 0.1427,
+   "ok": true,
+   "context": "ount\\\\ \\midrule 0 & 0.1429 & 0.87230 & 4.1 / 88 & 0.1427 & 0.87228 & 17\\\\ 0."
+  },
+  {
+   "number": "0.87228",
+   "value": 0.87228,
+   "ok": true,
+   "context": "idrule 0 & 0.1429 & 0.87230 & 4.1 / 88 & 0.1427 & 0.87228 & 17\\\\ 0.05 & 0.169"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "29 & 0.87230 & 4.1 / 88 & 0.1427 & 0.87228 & 17\\\\ 0.05 & 0.1697 & 0.87089 "
+  },
+  {
+   "number": "0.1697",
+   "value": 0.1697,
+   "ok": true,
+   "context": "87230 & 4.1 / 88 & 0.1427 & 0.87228 & 17\\\\ 0.05 & 0.1697 & 0.87089 & 7.0 / 1"
+  },
+  {
+   "number": "0.87089",
+   "value": 0.87089,
+   "ok": true,
+   "context": ".1 / 88 & 0.1427 & 0.87228 & 17\\\\ 0.05 & 0.1697 & 0.87089 & 7.0 / 147 & 0.168"
+  },
+  {
+   "number": "7.0",
+   "value": 7.0,
+   "ok": true,
+   "context": "0.1427 & 0.87228 & 17\\\\ 0.05 & 0.1697 & 0.87089 & 7.0 / 147 & 0.1684 & 0."
+  },
+  {
+   "number": "0.1684",
+   "value": 0.1684,
+   "ok": true,
+   "context": "7228 & 17\\\\ 0.05 & 0.1697 & 0.87089 & 7.0 / 147 & 0.1684 & 0.87082 & 46\\\\ 0."
+  },
+  {
+   "number": "0.87082",
+   "value": 0.87082,
+   "ok": true,
+   "context": "\\\\ 0.05 & 0.1697 & 0.87089 & 7.0 / 147 & 0.1684 & 0.87082 & 46\\\\ 0.1 & 0.2056"
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": "7 & 0.87089 & 7.0 / 147 & 0.1684 & 0.87082 & 46\\\\ 0.1 & 0.2056 & 0.86680 "
+  },
+  {
+   "number": "0.2056",
+   "value": 0.2056,
+   "ok": true,
+   "context": "87089 & 7.0 / 147 & 0.1684 & 0.87082 & 46\\\\ 0.1 & 0.2056 & 0.86680 & 12.6 / "
+  },
+  {
+   "number": "0.86680",
+   "value": 0.8668,
+   "ok": true,
+   "context": ".0 / 147 & 0.1684 & 0.87082 & 46\\\\ 0.1 & 0.2056 & 0.86680 & 12.6 / 254 & 0.20"
+  },
+  {
+   "number": "12.6",
+   "value": 12.6,
+   "ok": true,
+   "context": " 0.1684 & 0.87082 & 46\\\\ 0.1 & 0.2056 & 0.86680 & 12.6 / 254 & 0.2002 & 0."
+  },
+  {
+   "number": "0.2002",
+   "value": 0.2002,
+   "ok": true,
+   "context": "7082 & 46\\\\ 0.1 & 0.2056 & 0.86680 & 12.6 / 254 & 0.2002 & 0.86683 & 77\\\\ 0."
+  },
+  {
+   "number": "0.86683",
+   "value": 0.86683,
+   "ok": true,
+   "context": "\\\\ 0.1 & 0.2056 & 0.86680 & 12.6 / 254 & 0.2002 & 0.86683 & 77\\\\ 0.2 & 0.3369"
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": " & 0.86680 & 12.6 / 254 & 0.2002 & 0.86683 & 77\\\\ 0.2 & 0.3369 & 0.84275 "
+  },
+  {
+   "number": "0.3369",
+   "value": 0.3369,
+   "ok": true,
+   "context": "6680 & 12.6 / 254 & 0.2002 & 0.86683 & 77\\\\ 0.2 & 0.3369 & 0.84275 & 43.9 / "
+  },
+  {
+   "number": "0.84275",
+   "value": 0.84275,
+   "ok": true,
+   "context": ".6 / 254 & 0.2002 & 0.86683 & 77\\\\ 0.2 & 0.3369 & 0.84275 & 43.9 / 662 & 0.28"
+  },
+  {
+   "number": "43.9",
+   "value": 43.9,
+   "ok": true,
+   "context": " 0.2002 & 0.86683 & 77\\\\ 0.2 & 0.3369 & 0.84275 & 43.9 / 662 & 0.2839 & 0."
+  },
+  {
+   "number": "0.2839",
+   "value": 0.2839,
+   "ok": true,
+   "context": "6683 & 77\\\\ 0.2 & 0.3369 & 0.84275 & 43.9 / 662 & 0.2839 & 0.85047 & 100\\\\ 0"
+  },
+  {
+   "number": "0.85047",
+   "value": 0.85047,
+   "ok": true,
+   "context": "\\\\ 0.2 & 0.3369 & 0.84275 & 43.9 / 662 & 0.2839 & 0.85047 & 100\\\\ 0.3 & 0.655"
+  },
+  {
+   "number": "0.3",
+   "value": 0.3,
+   "ok": true,
+   "context": "& 0.84275 & 43.9 / 662 & 0.2839 & 0.85047 & 100\\\\ 0.3 & 0.6552 & 0.77511 "
+  },
+  {
+   "number": "0.6552",
+   "value": 0.6552,
+   "ok": true,
+   "context": "275 & 43.9 / 662 & 0.2839 & 0.85047 & 100\\\\ 0.3 & 0.6552 & 0.77511 & 232.5 /"
+  },
+  {
+   "number": "0.77511",
+   "value": 0.77511,
+   "ok": true,
+   "context": "9 / 662 & 0.2839 & 0.85047 & 100\\\\ 0.3 & 0.6552 & 0.77511 & 232.5 / 2994 & 0."
+  },
+  {
+   "number": "232.5",
+   "value": 232.5,
+   "ok": true,
+   "context": "0.2839 & 0.85047 & 100\\\\ 0.3 & 0.6552 & 0.77511 & 232.5 / 2994 & 0.3545 & 0"
+  },
+  {
+   "number": "0.3545",
+   "value": 0.3545,
+   "ok": true,
+   "context": "7 & 100\\\\ 0.3 & 0.6552 & 0.77511 & 232.5 / 2994 & 0.3545 & 0.83433 & 100\\\\ 0"
+  },
+  {
+   "number": "0.83433",
+   "value": 0.83433,
+   "ok": true,
+   "context": " 0.3 & 0.6552 & 0.77511 & 232.5 / 2994 & 0.3545 & 0.83433 & 100\\\\ 0.5 & 0.997"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "0.77511 & 232.5 / 2994 & 0.3545 & 0.83433 & 100\\\\ 0.5 & 0.9976 & 0.70053 "
+  },
+  {
+   "number": "0.9976",
+   "value": 0.9976,
+   "ok": true,
+   "context": "1 & 232.5 / 2994 & 0.3545 & 0.83433 & 100\\\\ 0.5 & 0.9976 & 0.70053 & 27761 /"
+  },
+  {
+   "number": "0.70053",
+   "value": 0.70053,
+   "ok": true,
+   "context": " / 2994 & 0.3545 & 0.83433 & 100\\\\ 0.5 & 0.9976 & 0.70053 & 27761 / 55998 & 0"
+  },
+  {
+   "number": "0.3880",
+   "value": 0.388,
+   "ok": true,
+   "context": " & 100\\\\ 0.5 & 0.9976 & 0.70053 & 27761 / 55998 & 0.3880 & 0.82668 & 100\\\\ \\"
+  },
+  {
+   "number": "0.82668",
+   "value": 0.82668,
+   "ok": true,
+   "context": "0.5 & 0.9976 & 0.70053 & 27761 / 55998 & 0.3880 & 0.82668 & 100\\\\ \\bottomrule"
+  },
+  {
+   "number": "56{,}000",
+   "value": 56000.0,
+   "ok": true,
+   "context": "d{tabular} \\caption{E4 (Monte Carlo; 64 chains of 56{,}000 steps per row after"
+  },
+  {
+   "number": "0.0036",
+   "value": 0.0036,
+   "ok": true,
+   "context": "n random numbers across rows; standard errors $\\le0.0036$ for fractions and "
+  },
+  {
+   "number": "0.0009",
+   "value": 0.0009,
+   "ok": true,
+   "context": "standard errors $\\le0.0036$ for fractions and $\\le0.0009$ for $J$). Dwell: c"
+  },
+  {
+   "number": "0.3",
+   "value": 0.3,
+   "ok": true,
+   "context": " end of the run: 28 of 7562 measurements at $\\psi=0.3$, 64 of 128 at $\\ps"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "62 measurements at $\\psi=0.3$, 64 of 128 at $\\psi=0.5$, so the means are "
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "means are lower bounds, substantially so at $\\psi=0.5$). Max \\GUARD\\ coun"
+  },
+  {
+   "number": "0.1092",
+   "value": 0.1092,
+   "ok": true,
+   "context": "d a 20-step probe. Dotted: $\\theta_{\\mathrm{off}}=0.1092$, the mean-field lo"
+  },
+  {
+   "number": "0.0911",
+   "value": 0.0911,
+   "ok": true,
+   "context": "s are ignored (including them, the point is $\\psi=0.0911$).}  \\end{figure}  "
+  },
+  {
+   "number": "12.4787",
+   "value": 12.4787,
+   "ok": true,
+   "context": "Dotted: the Bayes switching belief $b^*$ and $c_r=12.4787$.}  \\end{figure}  \\"
+  },
+  {
+   "number": "0.02",
+   "value": 0.02,
+   "ok": true,
+   "context": "the tiered chain (Section~, in Part~: $\\tierspsig=0.02$ on every step not "
+  },
+  {
+   "number": "0.8",
+   "value": 0.8,
+   "ok": true,
+   "context": "oller with $c_{\\mathrm{sw}}=0$, both with $\\Gamma=0.8$ (the stress contro"
+  },
+  {
+   "number": "14.1272",
+   "value": 14.1272,
+   "ok": true,
+   "context": "sptot)\\tiersRw-(1-\\Gamma)\\tiersRh$ with $\\tiersRw=14.1272$, $\\tiersRh=5.7682$"
+  },
+  {
+   "number": "5.7682",
+   "value": 5.7682,
+   "ok": true,
+   "context": "amma)\\tiersRh$ with $\\tiersRw=14.1272$, $\\tiersRh=5.7682$ (Proposition~, der"
+  },
+  {
+   "number": "9.4\\times10^{-4}",
+   "value": 0.0009400000000000001,
+   "ok": true,
+   "context": "ction at three beliefs per controller (agreement $9.4\\times10^{-4}$, the interpolation"
+  },
+  {
+   "number": "1.2\\times10^{-10}",
+   "value": 1.2e-10,
+   "ok": true,
+   "context": "$, where it reproduces \\eqref{eq:tiers-cstar} to $1.2\\times10^{-10}$.  Figure~: $\\crs(b"
+  },
+  {
+   "number": "13.759",
+   "value": 13.759,
+   "ok": true,
+   "context": "trollers (numerically, on the belief grid), from $13.759$ at $b=0$ to $10.10"
+  },
+  {
+   "number": "10.109",
+   "value": 10.109,
+   "ok": true,
+   "context": ", on the belief grid), from $13.759$ at $b=0$ to $10.109$ at $b=1$ for alway"
+  },
+  {
+   "number": "13.777",
+   "value": 13.777,
+   "ok": true,
+   "context": " to $10.109$ at $b=1$ for always-\\WORK, and from $13.777$ to $10.737$ for Ba"
+  },
+  {
+   "number": "10.737",
+   "value": 10.737,
+   "ok": true,
+   "context": " at $b=1$ for always-\\WORK, and from $13.777$ to $10.737$ for Bayes. \\emph{A"
+  },
+  {
+   "number": "12.4787",
+   "value": 12.4787,
+   "ok": true,
+   "context": "t is cheaper to switch off}: at the deployed $c_r=12.4787$ always-\\WORK\\ resi"
+  },
+  {
+   "number": "0.373",
+   "value": 0.373,
+   "ok": true,
+   "context": "ployed $c_r=12.4787$ always-\\WORK\\ resists iff $b<0.373$ and Bayes iff $b<0"
+  },
+  {
+   "number": "0.433",
+   "value": 0.433,
+   "ok": true,
+   "context": "ays-\\WORK\\ resists iff $b<0.373$ and Bayes iff $b<0.433$. The shortcut unde"
+  },
+  {
+   "number": "0.28",
+   "value": 0.28,
+   "ok": true,
+   "context": "0.433$. The shortcut understates $\\crs$ by up to $0.28$. Averaged over the"
+  },
+  {
+   "number": "13.042",
+   "value": 13.042,
+   "ok": true,
+   "context": "0.28$. Averaged over the stationary belief, $\\crs=13.042$ for always-\\WORK\\ "
+  },
+  {
+   "number": "13.125",
+   "value": 13.125,
+   "ok": true,
+   "context": "nary belief, $\\crs=13.042$ for always-\\WORK\\ and $13.125$ for the Bayes mode"
+  },
+  {
+   "number": "0.083",
+   "value": 0.083,
+   "ok": true,
+   "context": "setter, being the more competent controller, has $0.083$ more to lose on av"
+  },
+  {
+   "number": "12.974",
+   "value": 12.974,
+   "ok": true,
+   "context": "s. The average of the shortcut for always-\\WORK, $12.974$, equals the tiered"
+  },
+  {
+   "number": "0.8",
+   "value": 0.8,
+   "ok": true,
+   "context": "974$, equals the tiered chain's value for $\\Gamma=0.8$, $\\tiersptot=0$ to"
+  },
+  {
+   "number": "0.7",
+   "value": 0.7,
+   "ok": true,
+   "context": "yes controller's queue holds \\GUARD, which earns $0.7$ on the queue steps"
+  },
+  {
+   "number": "11.458",
+   "value": 11.458,
+   "ok": true,
+   "context": "free, and its $\\crs$ drops below always-\\WORK's ($11.458$ against $11.607$ a"
+  },
+  {
+   "number": "11.607",
+   "value": 11.607,
+   "ok": true,
+   "context": "rs$ drops below always-\\WORK's ($11.458$ against $11.607$ at $b=0.61$).  \\se"
+  },
+  {
+   "number": "0.61",
+   "value": 0.61,
+   "ok": true,
+   "context": "w always-\\WORK's ($11.458$ against $11.607$ at $b=0.61$).  \\section{Predic"
+  },
+  {
+   "number": "0.87197",
+   "value": 0.87197,
+   "ok": true,
+   "context": " both fixed modes at the baseline): \\emph{held}, $0.87197>0.86$. \\item \\textb"
+  },
+  {
+   "number": "0.86",
+   "value": 0.86,
+   "ok": true,
+   "context": "xed modes at the baseline): \\emph{held}, $0.87197>0.86$. \\item \\textbf{Q3}"
+  },
+  {
+   "number": "0.005",
+   "value": 0.005,
+   "ok": true,
+   "context": "best $\\lambda$ interior; $\\lambda=1$ and $\\lambda=0.005$ capture less than "
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": " of the best's share): \\emph{held}; best $\\lambda=0.1$, shares $87.4\\%$, "
+  },
+  {
+   "number": "87.4",
+   "value": 87.4,
+   "ok": true,
+   "context": " share): \\emph{held}; best $\\lambda=0.1$, shares $87.4\\%$, $9.8\\%$, $3.2\\%"
+  },
+  {
+   "number": "9.8",
+   "value": 9.8,
+   "ok": true,
+   "context": "emph{held}; best $\\lambda=0.1$, shares $87.4\\%$, $9.8\\%$, $3.2\\%$. \\item "
+  },
+  {
+   "number": "3.2",
+   "value": 3.2,
+   "ok": true,
+   "context": "}; best $\\lambda=0.1$, shares $87.4\\%$, $9.8\\%$, $3.2\\%$. \\item \\textbf{Q"
+  },
+  {
+   "number": "87.4",
+   "value": 87.4,
+   "ok": true,
+   "context": "Bayes gain at $c_{\\mathrm{sw}}=0$): \\emph{held}, $87.4\\%$. \\item \\textbf{Q"
+  },
+  {
+   "number": "0.7",
+   "value": 0.7,
+   "ok": true,
+   "context": "item \\textbf{Q5} (with $\\Gamma=1$, $r_{\\mathrm g}=0.7$ nothing beats alwa"
+  },
+  {
+   "number": "0.3",
+   "value": 0.3,
+   "ok": true,
+   "context": "mph{held, forced} by Corollary~ ($1-r_{\\mathrm g}=0.3>p_1=0.17$); the pre"
+  },
+  {
+   "number": "0.17",
+   "value": 0.17,
+   "ok": true,
+   "context": ", forced} by Corollary~ ($1-r_{\\mathrm g}=0.3>p_1=0.17$); the prediction c"
+  },
+  {
+   "number": "0.9",
+   "value": 0.9,
+   "ok": true,
+   "context": "d. \\item \\textbf{Q6} (no fuse: \\GUARD\\ fraction $>0.9$ for $\\psi\\ge0.2$; "
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": "Q6} (no fuse: \\GUARD\\ fraction $>0.9$ for $\\psi\\ge0.2$; fuse $100/20$: be"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "on $>0.9$ for $\\psi\\ge0.2$; fuse $100/20$: below $0.5$ for every $\\psi$; "
+  },
+  {
+   "number": "0.337",
+   "value": 0.337,
+   "ok": true,
+   "context": "d} on its first clause---the \\GUARD\\ fraction is $0.337$ at $\\psi=0.2$ and "
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": "clause---the \\GUARD\\ fraction is $0.337$ at $\\psi=0.2$ and $0.655$ at $\\p"
+  },
+  {
+   "number": "0.655",
+   "value": 0.655,
+   "ok": true,
+   "context": "he \\GUARD\\ fraction is $0.337$ at $\\psi=0.2$ and $0.655$ at $\\psi=0.3$, and"
+  },
+  {
+   "number": "0.3",
+   "value": 0.3,
+   "ok": true,
+   "context": "ion is $0.337$ at $\\psi=0.2$ and $0.655$ at $\\psi=0.3$, and exceeds $0.9$"
+  },
+  {
+   "number": "0.9",
+   "value": 0.9,
+   "ok": true,
+   "context": "\\psi=0.2$ and $0.655$ at $\\psi=0.3$, and exceeds $0.9$ only from $\\psi=0."
+  },
+  {
+   "number": "0.4",
+   "value": 0.4,
+   "ok": true,
+   "context": " at $\\psi=0.3$, and exceeds $0.9$ only from $\\psi=0.4$; the second and th"
+  },
+  {
+   "number": "0.388",
+   "value": 0.388,
+   "ok": true,
+   "context": "m $\\psi=0.4$; the second and third clauses held ($0.388$, s.e.\\ $0.002$; $0"
+  },
+  {
+   "number": "0.002",
+   "value": 0.002,
+   "ok": true,
+   "context": "he second and third clauses held ($0.388$, s.e.\\ $0.002$; $0.16\\%\\pm0.04\\%$"
+  },
+  {
+   "number": "0.16",
+   "value": 0.16,
+   "ok": true,
+   "context": " and third clauses held ($0.388$, s.e.\\ $0.002$; $0.16\\%\\pm0.04\\%$). \\item"
+  },
+  {
+   "number": "0.04",
+   "value": 0.04,
+   "ok": true,
+   "context": "d clauses held ($0.388$, s.e.\\ $0.002$; $0.16\\%\\pm0.04\\%$). \\item \\textbf{"
+  },
+  {
+   "number": "13.125",
+   "value": 13.125,
+   "ok": true,
+   "context": "Bayes's stationary average higher): \\emph{held} ($13.125>13.042$), with the "
+  },
+  {
+   "number": "13.042",
+   "value": 13.042,
+   "ok": true,
+   "context": " stationary average higher): \\emph{held} ($13.125>13.042$), with the qualifi"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "ot pointwise. \\item \\textbf{Q8} (best $\\lambda\\in[0.05,0.2]$): \\emph{held}"
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": "intwise. \\item \\textbf{Q8} (best $\\lambda\\in[0.05,0.2]$): \\emph{held} ($0"
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": "{Q8} (best $\\lambda\\in[0.05,0.2]$): \\emph{held} ($0.1$; the best single t"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "ph{held} ($0.1$; the best single threshold is at $0.05$). \\item \\textbf{Q9"
+  },
+  {
+   "number": "93.1",
+   "value": 93.1,
+   "ok": true,
+   "context": "aptures more than the literal one): \\emph{held} ($93.1\\%$ against $87.4\\%$"
+  },
+  {
+   "number": "87.4",
+   "value": 87.4,
+   "ok": true,
+   "context": " the literal one): \\emph{held} ($93.1\\%$ against $87.4\\%$ for the best lit"
+  },
+  {
+   "number": "93.1",
+   "value": 93.1,
+   "ok": true,
+   "context": "literal latch; like for like, single thresholds, $93.1\\%$ against $86.5\\%$"
+  },
+  {
+   "number": "86.5",
+   "value": 86.5,
+   "ok": true,
+   "context": "ke for like, single thresholds, $93.1\\%$ against $86.5\\%$). \\item \\textbf{"
+  },
+  {
+   "number": "0.934",
+   "value": 0.934,
+   "ok": true,
+   "context": " single threshold): \\emph{held} ($b_{\\mathrm{on}}=0.934$, $b_{\\mathrm{off}}"
+  },
+  {
+   "number": "0.345",
+   "value": 0.345,
+   "ok": true,
+   "context": "held} ($b_{\\mathrm{on}}=0.934$, $b_{\\mathrm{off}}=0.345$; $0.86329$ against"
+  },
+  {
+   "number": "0.86329",
+   "value": 0.86329,
+   "ok": true,
+   "context": "_{\\mathrm{on}}=0.934$, $b_{\\mathrm{off}}=0.345$; $0.86329$ against $0.86$). \\"
+  },
+  {
+   "number": "0.86",
+   "value": 0.86,
+   "ok": true,
+   "context": "34$, $b_{\\mathrm{off}}=0.345$; $0.86329$ against $0.86$). \\item \\textbf{Q1"
+  },
+  {
+   "number": "0.3",
+   "value": 0.3,
+   "ok": true,
+   "context": " the rise is gradual and centred near $\\psi\\approx0.3$. \\item \\textbf{Q12"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "stively over the quantisation grid (best $\\lambda=0.05$, $86.5\\%$; $\\lambd"
+  },
+  {
+   "number": "86.5",
+   "value": 86.5,
+   "ok": true,
+   "context": "over the quantisation grid (best $\\lambda=0.05$, $86.5\\%$; $\\lambda=1$ and"
+  },
+  {
+   "number": "0.005",
+   "value": 0.005,
+   "ok": true,
+   "context": "\\lambda=0.05$, $86.5\\%$; $\\lambda=1$ and $\\lambda=0.005$ capture $9.8\\%$ an"
+  },
+  {
+   "number": "9.8",
+   "value": 9.8,
+   "ok": true,
+   "context": "86.5\\%$; $\\lambda=1$ and $\\lambda=0.005$ capture $9.8\\%$ and $3.2\\%$; $0."
+  },
+  {
+   "number": "3.2",
+   "value": 3.2,
+   "ok": true,
+   "context": "ambda=1$ and $\\lambda=0.005$ capture $9.8\\%$ and $3.2\\%$; $0.87183>0.86$)"
+  },
+  {
+   "number": "0.87183",
+   "value": 0.87183,
+   "ok": true,
+   "context": "and $\\lambda=0.005$ capture $9.8\\%$ and $3.2\\%$; $0.87183>0.86$). The second "
+  },
+  {
+   "number": "0.86",
+   "value": 0.86,
+   "ok": true,
+   "context": "mbda=0.005$ capture $9.8\\%$ and $3.2\\%$; $0.87183>0.86$). The second claus"
+  },
+  {
+   "number": "0.0137",
+   "value": 0.0137,
+   "ok": true,
+   "context": "is known. The gains are small in absolute terms ($0.0137$ per step, $1.6\\%$ "
+  },
+  {
+   "number": "1.6",
+   "value": 1.6,
+   "ok": true,
+   "context": " are small in absolute terms ($0.0137$ per step, $1.6\\%$ of the always-\\W"
+  }
+ ],
+ "../../paper/app_sigma.tex": [
+  {
+   "number": "0.6007",
+   "value": 0.6007,
+   "ok": true,
+   "context": "ing $1-\\hat p_th_\\Gamma=r_{\\mathrm g}$ gives $b^*=0.6007$ at the baseline. \\"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "for the average reward (2001-point grid, damping $0.5$, span of the Bellm"
+  },
+  {
+   "number": "0.95",
+   "value": 0.95,
+   "ok": true,
+   "context": "\\emph{Stop channel (E5)}: as in Section~, $\\gamma=0.95$, mode policy fixed"
+  },
+  {
+   "number": "0.86000",
+   "value": 0.86,
+   "ok": true,
+   "context": "\\midrule E2, $c_{\\mathrm{sw}}=0$ & always \\WORK & 0.86000 & 0.86062 (0.00031)"
+  },
+  {
+   "number": "0.86062",
+   "value": 0.86062,
+   "ok": true,
+   "context": "2, $c_{\\mathrm{sw}}=0$ & always \\WORK & 0.86000 & 0.86062 (0.00031) & -- & 2."
+  },
+  {
+   "number": "0.00031",
+   "value": 0.00031,
+   "ok": true,
+   "context": "athrm{sw}}=0$ & always \\WORK & 0.86000 & 0.86062 (0.00031) & -- & 2.01\\\\ E2, "
+  },
+  {
+   "number": "2.01",
+   "value": 2.01,
+   "ok": true,
+   "context": "always \\WORK & 0.86000 & 0.86062 (0.00031) & -- & 2.01\\\\ E2, $c_{\\mathrm{s"
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": "2, $c_{\\mathrm{sw}}=0$ & $\\sigma$ latch, $\\lambda=0.1$ & 0.87197 & 0.8724"
+  },
+  {
+   "number": "0.87197",
+   "value": 0.87197,
+   "ok": true,
+   "context": "\\mathrm{sw}}=0$ & $\\sigma$ latch, $\\lambda=0.1$ & 0.87197 & 0.87248 (0.00024)"
+  },
+  {
+   "number": "0.87248",
+   "value": 0.87248,
+   "ok": true,
+   "context": "}}=0$ & $\\sigma$ latch, $\\lambda=0.1$ & 0.87197 & 0.87248 (0.00024) & -1.1e-0"
+  },
+  {
+   "number": "0.00024",
+   "value": 0.00024,
+   "ok": true,
+   "context": "\\sigma$ latch, $\\lambda=0.1$ & 0.87197 & 0.87248 (0.00024) & -1.1e-04 & -1.34"
+  },
+  {
+   "number": "1.1",
+   "value": 1.1,
+   "ok": true,
+   "context": "h, $\\lambda=0.1$ & 0.87197 & 0.87248 (0.00024) & -1.1e-04 & -1.34\\\\ E2, $"
+  },
+  {
+   "number": "1.34",
+   "value": 1.34,
+   "ok": true,
+   "context": "=0.1$ & 0.87197 & 0.87248 (0.00024) & -1.1e-04 & -1.34\\\\ E2, $c_{\\mathrm{s"
+  },
+  {
+   "number": "0.02",
+   "value": 0.02,
+   "ok": true,
+   "context": "2, $c_{\\mathrm{sw}}=0$ & $\\sigma$ latch, $\\lambda=0.02$ & 0.86625 & 0.8667"
+  },
+  {
+   "number": "0.86625",
+   "value": 0.86625,
+   "ok": true,
+   "context": "mathrm{sw}}=0$ & $\\sigma$ latch, $\\lambda=0.02$ & 0.86625 & 0.86679 (0.00026)"
+  },
+  {
+   "number": "0.86679",
+   "value": 0.86679,
+   "ok": true,
+   "context": "}=0$ & $\\sigma$ latch, $\\lambda=0.02$ & 0.86625 & 0.86679 (0.00026) & -7.8e-0"
+  },
+  {
+   "number": "0.00026",
+   "value": 0.00026,
+   "ok": true,
+   "context": "sigma$ latch, $\\lambda=0.02$ & 0.86625 & 0.86679 (0.00026) & -7.8e-05 & -1.10"
+  },
+  {
+   "number": "7.8",
+   "value": 7.8,
+   "ok": true,
+   "context": ", $\\lambda=0.02$ & 0.86625 & 0.86679 (0.00026) & -7.8e-05 & -1.10\\\\ E2, $"
+  },
+  {
+   "number": "1.10",
+   "value": 1.1,
+   "ok": true,
+   "context": "0.02$ & 0.86625 & 0.86679 (0.00026) & -7.8e-05 & -1.10\\\\ E2, $c_{\\mathrm{s"
+  },
+  {
+   "number": "0.86134",
+   "value": 0.86134,
+   "ok": true,
+   "context": "_{\\mathrm{sw}}=0$ & $\\sigma$ latch, $\\lambda=1$ & 0.86134 & 0.86191 (0.00028)"
+  },
+  {
+   "number": "0.86191",
+   "value": 0.86191,
+   "ok": true,
+   "context": "sw}}=0$ & $\\sigma$ latch, $\\lambda=1$ & 0.86134 & 0.86191 (0.00028) & -4.9e-0"
+  },
+  {
+   "number": "0.00028",
+   "value": 0.00028,
+   "ok": true,
+   "context": " $\\sigma$ latch, $\\lambda=1$ & 0.86134 & 0.86191 (0.00028) & -4.9e-05 & -1.87"
+  },
+  {
+   "number": "4.9",
+   "value": 4.9,
+   "ok": true,
+   "context": "tch, $\\lambda=1$ & 0.86134 & 0.86191 (0.00028) & -4.9e-05 & -1.87\\\\ E2, $"
+  },
+  {
+   "number": "1.87",
+   "value": 1.87,
+   "ok": true,
+   "context": "da=1$ & 0.86134 & 0.86191 (0.00028) & -4.9e-05 & -1.87\\\\ E2, $c_{\\mathrm{s"
+  },
+  {
+   "number": "0.87369",
+   "value": 0.87369,
+   "ok": true,
+   "context": "9e-05 & -1.87\\\\ E2, $c_{\\mathrm{sw}}=0$ & Bayes & 0.87369 & 0.87418 (0.00023)"
+  },
+  {
+   "number": "0.87418",
+   "value": 0.87418,
+   "ok": true,
+   "context": ".87\\\\ E2, $c_{\\mathrm{sw}}=0$ & Bayes & 0.87369 & 0.87418 (0.00023) & -1.2e-0"
+  },
+  {
+   "number": "0.00023",
+   "value": 0.00023,
+   "ok": true,
+   "context": " $c_{\\mathrm{sw}}=0$ & Bayes & 0.87369 & 0.87418 (0.00023) & -1.2e-04 & -1.48"
+  },
+  {
+   "number": "1.2",
+   "value": 1.2,
+   "ok": true,
+   "context": "{sw}}=0$ & Bayes & 0.87369 & 0.87418 (0.00023) & -1.2e-04 & -1.48\\\\ E2, $"
+  },
+  {
+   "number": "1.48",
+   "value": 1.48,
+   "ok": true,
+   "context": "Bayes & 0.87369 & 0.87418 (0.00023) & -1.2e-04 & -1.48\\\\ E2, $c_{\\mathrm{s"
+  },
+  {
+   "number": "0.86000",
+   "value": 0.86,
+   "ok": true,
+   "context": " -1.48\\\\ E2, $c_{\\mathrm{sw}}=1$ & always \\WORK & 0.86000 & 0.86062 (0.00031)"
+  },
+  {
+   "number": "0.86062",
+   "value": 0.86062,
+   "ok": true,
+   "context": "2, $c_{\\mathrm{sw}}=1$ & always \\WORK & 0.86000 & 0.86062 (0.00031) & -- & 2."
+  },
+  {
+   "number": "0.00031",
+   "value": 0.00031,
+   "ok": true,
+   "context": "athrm{sw}}=1$ & always \\WORK & 0.86000 & 0.86062 (0.00031) & -- & 2.01\\\\ E2, "
+  },
+  {
+   "number": "2.01",
+   "value": 2.01,
+   "ok": true,
+   "context": "always \\WORK & 0.86000 & 0.86062 (0.00031) & -- & 2.01\\\\ E2, $c_{\\mathrm{s"
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": "2, $c_{\\mathrm{sw}}=1$ & $\\sigma$ latch, $\\lambda=0.1$ & 0.86329 & 0.8638"
+  },
+  {
+   "number": "0.86329",
+   "value": 0.86329,
+   "ok": true,
+   "context": "\\mathrm{sw}}=1$ & $\\sigma$ latch, $\\lambda=0.1$ & 0.86329 & 0.86386 (0.00027)"
+  },
+  {
+   "number": "0.86386",
+   "value": 0.86386,
+   "ok": true,
+   "context": "}}=1$ & $\\sigma$ latch, $\\lambda=0.1$ & 0.86329 & 0.86386 (0.00027) & -5.6e-0"
+  },
+  {
+   "number": "0.00027",
+   "value": 0.00027,
+   "ok": true,
+   "context": "\\sigma$ latch, $\\lambda=0.1$ & 0.86329 & 0.86386 (0.00027) & -5.6e-05 & -0.80"
+  },
+  {
+   "number": "5.6",
+   "value": 5.6,
+   "ok": true,
+   "context": "h, $\\lambda=0.1$ & 0.86329 & 0.86386 (0.00027) & -5.6e-05 & -0.80\\\\ E2, $"
+  },
+  {
+   "number": "0.80",
+   "value": 0.8,
+   "ok": true,
+   "context": "=0.1$ & 0.86329 & 0.86386 (0.00027) & -5.6e-05 & -0.80\\\\ E2, $c_{\\mathrm{s"
+  },
+  {
+   "number": "0.02",
+   "value": 0.02,
+   "ok": true,
+   "context": "2, $c_{\\mathrm{sw}}=1$ & $\\sigma$ latch, $\\lambda=0.02$ & 0.86112 & 0.8617"
+  },
+  {
+   "number": "0.86112",
+   "value": 0.86112,
+   "ok": true,
+   "context": "mathrm{sw}}=1$ & $\\sigma$ latch, $\\lambda=0.02$ & 0.86112 & 0.86170 (0.00029)"
+  },
+  {
+   "number": "0.86170",
+   "value": 0.8617,
+   "ok": true,
+   "context": "}=1$ & $\\sigma$ latch, $\\lambda=0.02$ & 0.86112 & 0.86170 (0.00029) & -4.1e-0"
+  },
+  {
+   "number": "0.00029",
+   "value": 0.00029,
+   "ok": true,
+   "context": "sigma$ latch, $\\lambda=0.02$ & 0.86112 & 0.86170 (0.00029) & -4.1e-05 & -0.76"
+  },
+  {
+   "number": "4.1",
+   "value": 4.1,
+   "ok": true,
+   "context": ", $\\lambda=0.02$ & 0.86112 & 0.86170 (0.00029) & -4.1e-05 & -0.76\\\\ E2, $"
+  },
+  {
+   "number": "0.76",
+   "value": 0.76,
+   "ok": true,
+   "context": "0.02$ & 0.86112 & 0.86170 (0.00029) & -4.1e-05 & -0.76\\\\ E2, $c_{\\mathrm{s"
+  },
+  {
+   "number": "0.86438",
+   "value": 0.86438,
+   "ok": true,
+   "context": "1e-05 & -0.76\\\\ E2, $c_{\\mathrm{sw}}=1$ & Bayes & 0.86438 & 0.86492 (0.00026)"
+  },
+  {
+   "number": "0.86492",
+   "value": 0.86492,
+   "ok": true,
+   "context": ".76\\\\ E2, $c_{\\mathrm{sw}}=1$ & Bayes & 0.86438 & 0.86492 (0.00026) & -8.5e-0"
+  },
+  {
+   "number": "0.00026",
+   "value": 0.00026,
+   "ok": true,
+   "context": " $c_{\\mathrm{sw}}=1$ & Bayes & 0.86438 & 0.86492 (0.00026) & -8.5e-05 & -1.19"
+  },
+  {
+   "number": "8.5",
+   "value": 8.5,
+   "ok": true,
+   "context": "{sw}}=1$ & Bayes & 0.86438 & 0.86492 (0.00026) & -8.5e-05 & -1.19\\\\ E1 & "
+  },
+  {
+   "number": "1.19",
+   "value": 1.19,
+   "ok": true,
+   "context": "Bayes & 0.86438 & 0.86492 (0.00026) & -8.5e-05 & -1.19\\\\ E1 & missed, $\\la"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "00026) & -8.5e-05 & -1.19\\\\ E1 & missed, $\\lambda=0.5$, $\\theta=0.6$ & 0."
+  },
+  {
+   "number": "0.6",
+   "value": 0.6,
+   "ok": true,
+   "context": "-05 & -1.19\\\\ E1 & missed, $\\lambda=0.5$, $\\theta=0.6$ & 0.7766 & 0.7772 "
+  },
+  {
+   "number": "0.7766",
+   "value": 0.7766,
+   "ok": true,
+   "context": "1.19\\\\ E1 & missed, $\\lambda=0.5$, $\\theta=0.6$ & 0.7766 & 0.7772 (0.0006) &"
+  },
+  {
+   "number": "0.7772",
+   "value": 0.7772,
+   "ok": true,
+   "context": " & missed, $\\lambda=0.5$, $\\theta=0.6$ & 0.7766 & 0.7772 (0.0006) & -- & 1.0"
+  },
+  {
+   "number": "0.0006",
+   "value": 0.0006,
+   "ok": true,
+   "context": "d, $\\lambda=0.5$, $\\theta=0.6$ & 0.7766 & 0.7772 (0.0006) & -- & 1.08\\\\ E1 &"
+  },
+  {
+   "number": "1.08",
+   "value": 1.08,
+   "ok": true,
+   "context": "$, $\\theta=0.6$ & 0.7766 & 0.7772 (0.0006) & -- & 1.08\\\\ E1 & missed, $\\la"
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": "7772 (0.0006) & -- & 1.08\\\\ E1 & missed, $\\lambda=0.2$, $\\theta=0.3$ & 0."
+  },
+  {
+   "number": "0.3",
+   "value": 0.3,
+   "ok": true,
+   "context": "& -- & 1.08\\\\ E1 & missed, $\\lambda=0.2$, $\\theta=0.3$ & 0.6112 & 0.6115 "
+  },
+  {
+   "number": "0.6112",
+   "value": 0.6112,
+   "ok": true,
+   "context": "1.08\\\\ E1 & missed, $\\lambda=0.2$, $\\theta=0.3$ & 0.6112 & 0.6115 (0.0008) &"
+  },
+  {
+   "number": "0.6115",
+   "value": 0.6115,
+   "ok": true,
+   "context": " & missed, $\\lambda=0.2$, $\\theta=0.3$ & 0.6112 & 0.6115 (0.0008) & -- & 0.3"
+  },
+  {
+   "number": "0.0008",
+   "value": 0.0008,
+   "ok": true,
+   "context": "d, $\\lambda=0.2$, $\\theta=0.3$ & 0.6112 & 0.6115 (0.0008) & -- & 0.34\\\\ E1 &"
+  },
+  {
+   "number": "0.34",
+   "value": 0.34,
+   "ok": true,
+   "context": "$, $\\theta=0.3$ & 0.6112 & 0.6115 (0.0008) & -- & 0.34\\\\ E1 & missed, $\\la"
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": "6115 (0.0008) & -- & 0.34\\\\ E1 & missed, $\\lambda=0.1$, $\\theta=0.2$ & 0."
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": "& -- & 0.34\\\\ E1 & missed, $\\lambda=0.1$, $\\theta=0.2$ & 0.5710 & 0.5710 "
+  },
+  {
+   "number": "0.5710",
+   "value": 0.571,
+   "ok": true,
+   "context": "0.34\\\\ E1 & missed, $\\lambda=0.1$, $\\theta=0.2$ & 0.5710 & 0.5710 (0.0011) &"
+  },
+  {
+   "number": "0.5710",
+   "value": 0.571,
+   "ok": true,
+   "context": " & missed, $\\lambda=0.1$, $\\theta=0.2$ & 0.5710 & 0.5710 (0.0011) & -- & -0."
+  },
+  {
+   "number": "0.0011",
+   "value": 0.0011,
+   "ok": true,
+   "context": "d, $\\lambda=0.1$, $\\theta=0.2$ & 0.5710 & 0.5710 (0.0011) & -- & -0.03\\\\ E1 "
+  },
+  {
+   "number": "0.03",
+   "value": 0.03,
+   "ok": true,
+   "context": ", $\\theta=0.2$ & 0.5710 & 0.5710 (0.0011) & -- & -0.03\\\\ E1 & missed, $\\la"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "710 (0.0011) & -- & -0.03\\\\ E1 & missed, $\\lambda=0.05$, $\\theta=0.1$ & 0."
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": "-- & -0.03\\\\ E1 & missed, $\\lambda=0.05$, $\\theta=0.1$ & 0.3657 & 0.3654 "
+  },
+  {
+   "number": "0.3657",
+   "value": 0.3657,
+   "ok": true,
+   "context": ".03\\\\ E1 & missed, $\\lambda=0.05$, $\\theta=0.1$ & 0.3657 & 0.3654 (0.0011) &"
+  },
+  {
+   "number": "0.3654",
+   "value": 0.3654,
+   "ok": true,
+   "context": "& missed, $\\lambda=0.05$, $\\theta=0.1$ & 0.3657 & 0.3654 (0.0011) & -- & -0."
+  },
+  {
+   "number": "0.0011",
+   "value": 0.0011,
+   "ok": true,
+   "context": ", $\\lambda=0.05$, $\\theta=0.1$ & 0.3657 & 0.3654 (0.0011) & -- & -0.33\\\\ E1 "
+  },
+  {
+   "number": "0.33",
+   "value": 0.33,
+   "ok": true,
+   "context": ", $\\theta=0.1$ & 0.3657 & 0.3654 (0.0011) & -- & -0.33\\\\ E1 & missed, $\\la"
+  },
+  {
+   "number": "0.02",
+   "value": 0.02,
+   "ok": true,
+   "context": "654 (0.0011) & -- & -0.33\\\\ E1 & missed, $\\lambda=0.02$, $\\theta=0.04$ & 0"
+  },
+  {
+   "number": "0.04",
+   "value": 0.04,
+   "ok": true,
+   "context": "-- & -0.33\\\\ E1 & missed, $\\lambda=0.02$, $\\theta=0.04$ & 0.1427 & 0.1428 "
+  },
+  {
+   "number": "0.1427",
+   "value": 0.1427,
+   "ok": true,
+   "context": "33\\\\ E1 & missed, $\\lambda=0.02$, $\\theta=0.04$ & 0.1427 & 0.1428 (0.0007) &"
+  },
+  {
+   "number": "0.1428",
+   "value": 0.1428,
+   "ok": true,
+   "context": " missed, $\\lambda=0.02$, $\\theta=0.04$ & 0.1427 & 0.1428 (0.0007) & -- & 0.1"
+  },
+  {
+   "number": "0.0007",
+   "value": 0.0007,
+   "ok": true,
+   "context": " $\\lambda=0.02$, $\\theta=0.04$ & 0.1427 & 0.1428 (0.0007) & -- & 0.10\\\\ E1 &"
+  },
+  {
+   "number": "0.10",
+   "value": 0.1,
+   "ok": true,
+   "context": ", $\\theta=0.04$ & 0.1427 & 0.1428 (0.0007) & -- & 0.10\\\\ E1 & missed, $\\la"
+  },
+  {
+   "number": "0.005",
+   "value": 0.005,
+   "ok": true,
+   "context": "1428 (0.0007) & -- & 0.10\\\\ E1 & missed, $\\lambda=0.005$, $\\theta=0.02$ & 0"
+  },
+  {
+   "number": "0.02",
+   "value": 0.02,
+   "ok": true,
+   "context": "-- & 0.10\\\\ E1 & missed, $\\lambda=0.005$, $\\theta=0.02$ & 0.0121 & 0.0124 "
+  },
+  {
+   "number": "0.0121",
+   "value": 0.0121,
+   "ok": true,
+   "context": "0\\\\ E1 & missed, $\\lambda=0.005$, $\\theta=0.02$ & 0.0121 & 0.0124 (0.0002) &"
+  },
+  {
+   "number": "0.0124",
+   "value": 0.0124,
+   "ok": true,
+   "context": "missed, $\\lambda=0.005$, $\\theta=0.02$ & 0.0121 & 0.0124 (0.0002) & -- & 1.2"
+  },
+  {
+   "number": "0.0002",
+   "value": 0.0002,
+   "ok": true,
+   "context": "$\\lambda=0.005$, $\\theta=0.02$ & 0.0121 & 0.0124 (0.0002) & -- & 1.27\\\\ E4 &"
+  },
+  {
+   "number": "1.27",
+   "value": 1.27,
+   "ok": true,
+   "context": ", $\\theta=0.02$ & 0.0121 & 0.0124 (0.0002) & -- & 1.27\\\\ E4 & no fuse, $\\p"
+  },
+  {
+   "number": "0.87197",
+   "value": 0.87197,
+   "ok": true,
+   "context": "0002) & -- & 1.27\\\\ E4 & no fuse, $\\psi=0$: $J$ & 0.87197 & 0.87230 (0.00066)"
+  },
+  {
+   "number": "0.87230",
+   "value": 0.8723,
+   "ok": true,
+   "context": " & 1.27\\\\ E4 & no fuse, $\\psi=0$: $J$ & 0.87197 & 0.87230 (0.00066) & -- & 0."
+  },
+  {
+   "number": "0.00066",
+   "value": 0.00066,
+   "ok": true,
+   "context": " E4 & no fuse, $\\psi=0$: $J$ & 0.87197 & 0.87230 (0.00066) & -- & 0.50\\\\ E4 &"
+  },
+  {
+   "number": "0.50",
+   "value": 0.5,
+   "ok": true,
+   "context": "\\psi=0$: $J$ & 0.87197 & 0.87230 (0.00066) & -- & 0.50\\\\ E4 & no fuse, $\\p"
+  },
+  {
+   "number": "0.1438",
+   "value": 0.1438,
+   "ok": true,
+   "context": " & 0.50\\\\ E4 & no fuse, $\\psi=0$: \\GUARD\\ frac. & 0.1438 & 0.1429 (0.0015) &"
+  },
+  {
+   "number": "0.1429",
+   "value": 0.1429,
+   "ok": true,
+   "context": " E4 & no fuse, $\\psi=0$: \\GUARD\\ frac. & 0.1438 & 0.1429 (0.0015) & -- & -0."
+  },
+  {
+   "number": "0.0015",
+   "value": 0.0015,
+   "ok": true,
+   "context": " fuse, $\\psi=0$: \\GUARD\\ frac. & 0.1438 & 0.1429 (0.0015) & -- & -0.58\\\\ E4 "
+  },
+  {
+   "number": "0.58",
+   "value": 0.58,
+   "ok": true,
+   "context": " \\GUARD\\ frac. & 0.1438 & 0.1429 (0.0015) & -- & -0.58\\\\ E4 & no fuse, $\\p"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": ".1429 (0.0015) & -- & -0.58\\\\ E4 & no fuse, $\\psi=0.05$: $J$ & 0.87051 & 0"
+  },
+  {
+   "number": "0.87051",
+   "value": 0.87051,
+   "ok": true,
+   "context": ") & -- & -0.58\\\\ E4 & no fuse, $\\psi=0.05$: $J$ & 0.87051 & 0.87089 (0.00065)"
+  },
+  {
+   "number": "0.87089",
+   "value": 0.87089,
+   "ok": true,
+   "context": "0.58\\\\ E4 & no fuse, $\\psi=0.05$: $J$ & 0.87051 & 0.87089 (0.00065) & -- & 0."
+  },
+  {
+   "number": "0.00065",
+   "value": 0.00065,
+   "ok": true,
+   "context": " & no fuse, $\\psi=0.05$: $J$ & 0.87051 & 0.87089 (0.00065) & -- & 0.58\\\\ E4 &"
+  },
+  {
+   "number": "0.58",
+   "value": 0.58,
+   "ok": true,
+   "context": "i=0.05$: $J$ & 0.87051 & 0.87089 (0.00065) & -- & 0.58\\\\ E4 & no fuse, $\\p"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "87089 (0.00065) & -- & 0.58\\\\ E4 & no fuse, $\\psi=0.05$: \\GUARD\\ frac. & 0"
+  },
+  {
+   "number": "0.1709",
+   "value": 0.1709,
+   "ok": true,
+   "context": "0.58\\\\ E4 & no fuse, $\\psi=0.05$: \\GUARD\\ frac. & 0.1709 & 0.1697 (0.0017) &"
+  },
+  {
+   "number": "0.1697",
+   "value": 0.1697,
+   "ok": true,
+   "context": " & no fuse, $\\psi=0.05$: \\GUARD\\ frac. & 0.1709 & 0.1697 (0.0017) & -- & -0."
+  },
+  {
+   "number": "0.0017",
+   "value": 0.0017,
+   "ok": true,
+   "context": "se, $\\psi=0.05$: \\GUARD\\ frac. & 0.1709 & 0.1697 (0.0017) & -- & -0.72\\\\ E4 "
+  },
+  {
+   "number": "0.72",
+   "value": 0.72,
+   "ok": true,
+   "context": " \\GUARD\\ frac. & 0.1709 & 0.1697 (0.0017) & -- & -0.72\\\\ E4 & no fuse, $\\p"
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": ".1697 (0.0017) & -- & -0.72\\\\ E4 & no fuse, $\\psi=0.1$: $J$ & 0.86651 & 0"
+  },
+  {
+   "number": "0.86651",
+   "value": 0.86651,
+   "ok": true,
+   "context": "7) & -- & -0.72\\\\ E4 & no fuse, $\\psi=0.1$: $J$ & 0.86651 & 0.86680 (0.00067)"
+  },
+  {
+   "number": "0.86680",
+   "value": 0.8668,
+   "ok": true,
+   "context": "-0.72\\\\ E4 & no fuse, $\\psi=0.1$: $J$ & 0.86651 & 0.86680 (0.00067) & -- & 0."
+  },
+  {
+   "number": "0.00067",
+   "value": 0.00067,
+   "ok": true,
+   "context": "4 & no fuse, $\\psi=0.1$: $J$ & 0.86651 & 0.86680 (0.00067) & -- & 0.43\\\\ E4 &"
+  },
+  {
+   "number": "0.43",
+   "value": 0.43,
+   "ok": true,
+   "context": "si=0.1$: $J$ & 0.86651 & 0.86680 (0.00067) & -- & 0.43\\\\ E4 & no fuse, $\\p"
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": "86680 (0.00067) & -- & 0.43\\\\ E4 & no fuse, $\\psi=0.1$: \\GUARD\\ frac. & 0"
+  },
+  {
+   "number": "0.2065",
+   "value": 0.2065,
+   "ok": true,
+   "context": " 0.43\\\\ E4 & no fuse, $\\psi=0.1$: \\GUARD\\ frac. & 0.2065 & 0.2056 (0.0020) &"
+  },
+  {
+   "number": "0.2056",
+   "value": 0.2056,
+   "ok": true,
+   "context": "4 & no fuse, $\\psi=0.1$: \\GUARD\\ frac. & 0.2065 & 0.2056 (0.0020) & -- & -0."
+  },
+  {
+   "number": "0.0020",
+   "value": 0.002,
+   "ok": true,
+   "context": "use, $\\psi=0.1$: \\GUARD\\ frac. & 0.2065 & 0.2056 (0.0020) & -- & -0.42\\\\ E4 "
+  },
+  {
+   "number": "0.42",
+   "value": 0.42,
+   "ok": true,
+   "context": " \\GUARD\\ frac. & 0.2065 & 0.2056 (0.0020) & -- & -0.42\\\\ E4 & no fuse, $\\p"
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": ".2056 (0.0020) & -- & -0.42\\\\ E4 & no fuse, $\\psi=0.2$: $J$ & 0.84223 & 0"
+  },
+  {
+   "number": "0.84223",
+   "value": 0.84223,
+   "ok": true,
+   "context": "0) & -- & -0.42\\\\ E4 & no fuse, $\\psi=0.2$: $J$ & 0.84223 & 0.84275 (0.00073)"
+  },
+  {
+   "number": "0.84275",
+   "value": 0.84275,
+   "ok": true,
+   "context": "-0.42\\\\ E4 & no fuse, $\\psi=0.2$: $J$ & 0.84223 & 0.84275 (0.00073) & -- & 0."
+  },
+  {
+   "number": "0.00073",
+   "value": 0.00073,
+   "ok": true,
+   "context": "4 & no fuse, $\\psi=0.2$: $J$ & 0.84223 & 0.84275 (0.00073) & -- & 0.71\\\\ E4 &"
+  },
+  {
+   "number": "0.71",
+   "value": 0.71,
+   "ok": true,
+   "context": "si=0.2$: $J$ & 0.84223 & 0.84275 (0.00073) & -- & 0.71\\\\ E4 & no fuse, $\\p"
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": "84275 (0.00073) & -- & 0.71\\\\ E4 & no fuse, $\\psi=0.2$: \\GUARD\\ frac. & 0"
+  },
+  {
+   "number": "0.3389",
+   "value": 0.3389,
+   "ok": true,
+   "context": " 0.71\\\\ E4 & no fuse, $\\psi=0.2$: \\GUARD\\ frac. & 0.3389 & 0.3369 (0.0028) &"
+  },
+  {
+   "number": "0.3369",
+   "value": 0.3369,
+   "ok": true,
+   "context": "4 & no fuse, $\\psi=0.2$: \\GUARD\\ frac. & 0.3389 & 0.3369 (0.0028) & -- & -0."
+  },
+  {
+   "number": "0.0028",
+   "value": 0.0028,
+   "ok": true,
+   "context": "use, $\\psi=0.2$: \\GUARD\\ frac. & 0.3389 & 0.3369 (0.0028) & -- & -0.72\\\\ E4 "
+  },
+  {
+   "number": "0.72",
+   "value": 0.72,
+   "ok": true,
+   "context": " \\GUARD\\ frac. & 0.3389 & 0.3369 (0.0028) & -- & -0.72\\\\ E4 & no fuse, $\\p"
+  },
+  {
+   "number": "0.3",
+   "value": 0.3,
+   "ok": true,
+   "context": ".3369 (0.0028) & -- & -0.72\\\\ E4 & no fuse, $\\psi=0.3$: $J$ & 0.77492 & 0"
+  },
+  {
+   "number": "0.77492",
+   "value": 0.77492,
+   "ok": true,
+   "context": "8) & -- & -0.72\\\\ E4 & no fuse, $\\psi=0.3$: $J$ & 0.77492 & 0.77511 (0.00085)"
+  },
+  {
+   "number": "0.77511",
+   "value": 0.77511,
+   "ok": true,
+   "context": "-0.72\\\\ E4 & no fuse, $\\psi=0.3$: $J$ & 0.77492 & 0.77511 (0.00085) & -- & 0."
+  },
+  {
+   "number": "0.00085",
+   "value": 0.00085,
+   "ok": true,
+   "context": "4 & no fuse, $\\psi=0.3$: $J$ & 0.77492 & 0.77511 (0.00085) & -- & 0.22\\\\ E4 &"
+  },
+  {
+   "number": "0.22",
+   "value": 0.22,
+   "ok": true,
+   "context": "si=0.3$: $J$ & 0.77492 & 0.77511 (0.00085) & -- & 0.22\\\\ E4 & no fuse, $\\p"
+  },
+  {
+   "number": "0.3",
+   "value": 0.3,
+   "ok": true,
+   "context": "77511 (0.00085) & -- & 0.22\\\\ E4 & no fuse, $\\psi=0.3$: \\GUARD\\ frac. & 0"
+  },
+  {
+   "number": "0.6551",
+   "value": 0.6551,
+   "ok": true,
+   "context": " 0.22\\\\ E4 & no fuse, $\\psi=0.3$: \\GUARD\\ frac. & 0.6551 & 0.6552 (0.0036) &"
+  },
+  {
+   "number": "0.6552",
+   "value": 0.6552,
+   "ok": true,
+   "context": "4 & no fuse, $\\psi=0.3$: \\GUARD\\ frac. & 0.6551 & 0.6552 (0.0036) & -- & 0.0"
+  },
+  {
+   "number": "0.0036",
+   "value": 0.0036,
+   "ok": true,
+   "context": "use, $\\psi=0.3$: \\GUARD\\ frac. & 0.6551 & 0.6552 (0.0036) & -- & 0.04\\\\ \\bot"
+  },
+  {
+   "number": "0.04",
+   "value": 0.04,
+   "ok": true,
+   "context": ": \\GUARD\\ frac. & 0.6551 & 0.6552 (0.0036) & -- & 0.04\\\\ \\bottomrule\\end{t"
+  },
+  {
+   "number": "50{,}000",
+   "value": 50000.0,
+   "ok": true,
+   "context": " E2: independent stream (seed 303), 400 chains of 50{,}000 steps after a 3000-"
+  },
+  {
+   "number": "0.86",
+   "value": 0.86,
+   "ok": true,
+   "context": "MC}}-J^{\\mathrm{MC}}_{\\WORK})-(J_{\\mathrm{exact}}-0.86)$ with its $z$ from"
+  },
+  {
+   "number": "2.0",
+   "value": 2.0,
+   "ok": true,
+   "context": " sampled storm fraction (always-\\WORK\\ itself is $2.0$ s.e.\\ high). E1: s"
+  },
+  {
+   "number": "48{,}000",
+   "value": 48000.0,
+   "ok": true,
+   "context": "is $2.0$ s.e.\\ high). E1: seed 101, 400 chains of 48{,}000 steps. E4: 64 chain"
+  },
+  {
+   "number": "56{,}000",
+   "value": 56000.0,
+   "ok": true,
+   "context": "1, 400 chains of 48{,}000 steps. E4: 64 chains of 56{,}000 steps, quantised ch"
+  },
+  {
+   "number": "0.8736897",
+   "value": 0.8736897,
+   "ok": true,
+   "context": "ed thresholds, $N=2501,5001,10001,20001$): Bayes: 0.8736897, 0.8736898, 0.87368"
+  },
+  {
+   "number": "0.8736898",
+   "value": 0.8736898,
+   "ok": true,
+   "context": "ds, $N=2501,5001,10001,20001$): Bayes: 0.8736897, 0.8736898, 0.8736898, 0.87368"
+  },
+  {
+   "number": "0.8736898",
+   "value": 0.8736898,
+   "ok": true,
+   "context": ",5001,10001,20001$): Bayes: 0.8736897, 0.8736898, 0.8736898, 0.8736898; $\\sigma"
+  },
+  {
+   "number": "0.8736898",
+   "value": 0.8736898,
+   "ok": true,
+   "context": ",20001$): Bayes: 0.8736897, 0.8736898, 0.8736898, 0.8736898; $\\sigma$ ($0.1$, $"
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": "6897, 0.8736898, 0.8736898, 0.8736898; $\\sigma$ ($0.1$, $0.1263$): 0.8717"
+  },
+  {
+   "number": "0.1263",
+   "value": 0.1263,
+   "ok": true,
+   "context": ".8736898, 0.8736898, 0.8736898; $\\sigma$ ($0.1$, $0.1263$): 0.8717349, 0.871"
+  },
+  {
+   "number": "0.8717349",
+   "value": 0.8717349,
+   "ok": true,
+   "context": "0.8736898, 0.8736898; $\\sigma$ ($0.1$, $0.1263$): 0.8717349, 0.8717366, 0.87173"
+  },
+  {
+   "number": "0.8717366",
+   "value": 0.8717366,
+   "ok": true,
+   "context": "0.8736898; $\\sigma$ ($0.1$, $0.1263$): 0.8717349, 0.8717366, 0.8717373, 0.87173"
+  },
+  {
+   "number": "0.8717373",
+   "value": 0.8717373,
+   "ok": true,
+   "context": "$\\sigma$ ($0.1$, $0.1263$): 0.8717349, 0.8717366, 0.8717373, 0.8717372; $\\sigma"
+  },
+  {
+   "number": "0.8717372",
+   "value": 0.8717372,
+   "ok": true,
+   "context": "0.1$, $0.1263$): 0.8717349, 0.8717366, 0.8717373, 0.8717372; $\\sigma$ ($0.02$, "
+  },
+  {
+   "number": "0.02",
+   "value": 0.02,
+   "ok": true,
+   "context": "7349, 0.8717366, 0.8717373, 0.8717372; $\\sigma$ ($0.02$, $0.1145$): 0.8662"
+  },
+  {
+   "number": "0.1145",
+   "value": 0.1145,
+   "ok": true,
+   "context": "8717366, 0.8717373, 0.8717372; $\\sigma$ ($0.02$, $0.1145$): 0.8662440, 0.866"
+  },
+  {
+   "number": "0.8662440",
+   "value": 0.866244,
+   "ok": true,
+   "context": ".8717373, 0.8717372; $\\sigma$ ($0.02$, $0.1145$): 0.8662440, 0.8662452, 0.86624"
+  },
+  {
+   "number": "0.8662452",
+   "value": 0.8662452,
+   "ok": true,
+   "context": ".8717372; $\\sigma$ ($0.02$, $0.1145$): 0.8662440, 0.8662452, 0.8662455, 0.86624"
+  },
+  {
+   "number": "0.8662455",
+   "value": 0.8662455,
+   "ok": true,
+   "context": "\\sigma$ ($0.02$, $0.1145$): 0.8662440, 0.8662452, 0.8662455, 0.8662455; $\\sigma"
+  },
+  {
+   "number": "0.8662455",
+   "value": 0.8662455,
+   "ok": true,
+   "context": ".02$, $0.1145$): 0.8662440, 0.8662452, 0.8662455, 0.8662455; $\\sigma$ ($0.005$,"
+  },
+  {
+   "number": "0.005",
+   "value": 0.005,
+   "ok": true,
+   "context": "2440, 0.8662452, 0.8662455, 0.8662455; $\\sigma$ ($0.005$, $0.1214$): 0.8604"
+  },
+  {
+   "number": "0.1214",
+   "value": 0.1214,
+   "ok": true,
+   "context": "662452, 0.8662455, 0.8662455; $\\sigma$ ($0.005$, $0.1214$): 0.8604330, 0.860"
+  },
+  {
+   "number": "0.8604330",
+   "value": 0.860433,
+   "ok": true,
+   "context": "8662455, 0.8662455; $\\sigma$ ($0.005$, $0.1214$): 0.8604330, 0.8604372, 0.86043"
+  },
+  {
+   "number": "0.8604372",
+   "value": 0.8604372,
+   "ok": true,
+   "context": "8662455; $\\sigma$ ($0.005$, $0.1214$): 0.8604330, 0.8604372, 0.8604372, 0.86043"
+  },
+  {
+   "number": "0.8604372",
+   "value": 0.8604372,
+   "ok": true,
+   "context": "sigma$ ($0.005$, $0.1214$): 0.8604330, 0.8604372, 0.8604372, 0.8604372.  \\subse"
+  },
+  {
+   "number": "0.8604372",
+   "value": 0.8604372,
+   "ok": true,
+   "context": "005$, $0.1214$): 0.8604330, 0.8604372, 0.8604372, 0.8604372.  \\subsection{Pre-s"
+  },
+  {
+   "number": "0.8",
+   "value": 0.8,
+   "ok": true,
+   "context": "a it has the same hits. \\item[Q2.] At baseline (G=0.8, r\\_g=0.7, c\\_sw=0)"
+  },
+  {
+   "number": "0.7",
+   "value": 0.7,
+   "ok": true,
+   "context": "he same hits. \\item[Q2.] At baseline (G=0.8, r\\_g=0.7, c\\_sw=0) the best "
+  },
+  {
+   "number": "0.005",
+   "value": 0.005,
+   "ok": true,
+   "context": "allest value tested, and both lambda=1 and lambda=0.005 capture less than h"
+  },
+  {
+   "number": "0.7",
+   "value": 0.7,
+   "ok": true,
+   "context": "0. \\item[Q5.] With a perfect reflex (G=1) at r\\_g=0.7 no mode-switching c"
+  },
+  {
+   "number": "0.9",
+   "value": 0.9,
+   "ok": true,
+   "context": "thout a fuse, the long-run GUARD fraction exceeds 0.9 for rho $\\ge$ 0.2; "
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": "long-run GUARD fraction exceeds 0.9 for rho $\\ge$ 0.2; with the fuse (T\\_"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "; with the fuse (T\\_max=100, P=20) it stays below 0.5 for every rho teste"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "ORK's. \\item[M1 (mine).] The best lambda lies in [0.05, 0.2] at baseline. "
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": " \\item[M1 (mine).] The best lambda lies in [0.05, 0.2] at baseline. \\item"
+  },
+  {
+   "number": "0.02",
+   "value": 0.02,
+   "ok": true,
+   "context": "ular}{@{}rrrrrrrr@{}}\\toprule $\\lambda$ & $\\theta=0.02$ & $\\theta=0.05$ & "
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "r@{}}\\toprule $\\lambda$ & $\\theta=0.02$ & $\\theta=0.05$ & $\\theta=0.1$ & $"
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": "lambda$ & $\\theta=0.02$ & $\\theta=0.05$ & $\\theta=0.1$ & $\\theta=0.15$ & "
+  },
+  {
+   "number": "0.15",
+   "value": 0.15,
+   "ok": true,
+   "context": "ta=0.02$ & $\\theta=0.05$ & $\\theta=0.1$ & $\\theta=0.15$ & $\\theta=0.2$ & $"
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": "ta=0.05$ & $\\theta=0.1$ & $\\theta=0.15$ & $\\theta=0.2$ & $\\theta=0.3$ & $"
+  },
+  {
+   "number": "0.3",
+   "value": 0.3,
+   "ok": true,
+   "context": "eta=0.1$ & $\\theta=0.15$ & $\\theta=0.2$ & $\\theta=0.3$ & $\\theta=0.5$\\\\\\m"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "eta=0.15$ & $\\theta=0.2$ & $\\theta=0.3$ & $\\theta=0.5$\\\\\\midrule 1 & 0.00"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": "=0.2$ & $\\theta=0.3$ & $\\theta=0.5$\\\\\\midrule 1 & 0.0000 & 0.0000 & 0.0000 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": "\\theta=0.3$ & $\\theta=0.5$\\\\\\midrule 1 & 0.0000 & 0.0000 & 0.0000 & 0.0000 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": "3$ & $\\theta=0.5$\\\\\\midrule 1 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": "eta=0.5$\\\\\\midrule 1 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": "\\\\midrule 1 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000\\\\"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": " 1 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000\\\\ 0.5 & 0."
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": "00 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000\\\\ 0.5 & 0.0000 & 0."
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "00 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000\\\\ 0.5 & 0.0000 & 0.0000 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": ".0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000\\\\ 0.5 & 0.0000 & 0.0000 & 0.0000 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": ".0000 & 0.0000 & 0.0000 & 0.0000\\\\ 0.5 & 0.0000 & 0.0000 & 0.0000 & 0.0000 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": ".0000 & 0.0000 & 0.0000\\\\ 0.5 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": ".0000 & 0.0000\\\\ 0.5 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": ".0000\\\\ 0.5 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000\\\\"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": ".5 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000\\\\ 0.3 & 0."
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": "00 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000\\\\ 0.3 & 0.0000 & 0."
+  },
+  {
+   "number": "0.3",
+   "value": 0.3,
+   "ok": true,
+   "context": "00 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000\\\\ 0.3 & 0.0000 & 0.0000 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": ".0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000\\\\ 0.3 & 0.0000 & 0.0000 & 0.0000 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": ".0000 & 0.0000 & 0.0000 & 0.0000\\\\ 0.3 & 0.0000 & 0.0000 & 0.0000 & 0.0000 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": ".0000 & 0.0000 & 0.0000\\\\ 0.3 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": ".0000 & 0.0000\\\\ 0.3 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": ".0000\\\\ 0.3 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.8343\\\\"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": ".3 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.8343\\\\ 0.2 & 0."
+  },
+  {
+   "number": "0.8343",
+   "value": 0.8343,
+   "ok": true,
+   "context": "00 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.8343\\\\ 0.2 & 0.0000 & 0."
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": "00 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.8343\\\\ 0.2 & 0.0000 & 0.0000 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": ".0000 & 0.0000 & 0.0000 & 0.0000 & 0.8343\\\\ 0.2 & 0.0000 & 0.0000 & 0.0000 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": ".0000 & 0.0000 & 0.0000 & 0.8343\\\\ 0.2 & 0.0000 & 0.0000 & 0.0000 & 0.0000 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": ".0000 & 0.0000 & 0.8343\\\\ 0.2 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": ".0000 & 0.8343\\\\ 0.2 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.6112 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": ".8343\\\\ 0.2 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.6112 & 0.9574\\\\"
+  },
+  {
+   "number": "0.6112",
+   "value": 0.6112,
+   "ok": true,
+   "context": ".2 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.6112 & 0.9574\\\\ 0.1 & 0."
+  },
+  {
+   "number": "0.9574",
+   "value": 0.9574,
+   "ok": true,
+   "context": "00 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.6112 & 0.9574\\\\ 0.1 & 0.0000 & 0."
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": "00 & 0.0000 & 0.0000 & 0.0000 & 0.6112 & 0.9574\\\\ 0.1 & 0.0000 & 0.0000 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": ".0000 & 0.0000 & 0.0000 & 0.6112 & 0.9574\\\\ 0.1 & 0.0000 & 0.0000 & 0.0000 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": ".0000 & 0.0000 & 0.6112 & 0.9574\\\\ 0.1 & 0.0000 & 0.0000 & 0.0000 & 0.3792 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": ".0000 & 0.6112 & 0.9574\\\\ 0.1 & 0.0000 & 0.0000 & 0.0000 & 0.3792 & 0.5710 &"
+  },
+  {
+   "number": "0.3792",
+   "value": 0.3792,
+   "ok": true,
+   "context": ".6112 & 0.9574\\\\ 0.1 & 0.0000 & 0.0000 & 0.0000 & 0.3792 & 0.5710 & 0.8640 &"
+  },
+  {
+   "number": "0.5710",
+   "value": 0.571,
+   "ok": true,
+   "context": ".9574\\\\ 0.1 & 0.0000 & 0.0000 & 0.0000 & 0.3792 & 0.5710 & 0.8640 & 0.9986\\\\"
+  },
+  {
+   "number": "0.8640",
+   "value": 0.864,
+   "ok": true,
+   "context": ".1 & 0.0000 & 0.0000 & 0.0000 & 0.3792 & 0.5710 & 0.8640 & 0.9986\\\\ 0.05 & 0"
+  },
+  {
+   "number": "0.9986",
+   "value": 0.9986,
+   "ok": true,
+   "context": "00 & 0.0000 & 0.0000 & 0.3792 & 0.5710 & 0.8640 & 0.9986\\\\ 0.05 & 0.0000 & 0"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "00 & 0.0000 & 0.3792 & 0.5710 & 0.8640 & 0.9986\\\\ 0.05 & 0.0000 & 0.0000 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": "0000 & 0.3792 & 0.5710 & 0.8640 & 0.9986\\\\ 0.05 & 0.0000 & 0.0000 & 0.3657 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": "3792 & 0.5710 & 0.8640 & 0.9986\\\\ 0.05 & 0.0000 & 0.0000 & 0.3657 & 0.5673 &"
+  },
+  {
+   "number": "0.3657",
+   "value": 0.3657,
+   "ok": true,
+   "context": "5710 & 0.8640 & 0.9986\\\\ 0.05 & 0.0000 & 0.0000 & 0.3657 & 0.5673 & 0.7663 &"
+  },
+  {
+   "number": "0.5673",
+   "value": 0.5673,
+   "ok": true,
+   "context": "8640 & 0.9986\\\\ 0.05 & 0.0000 & 0.0000 & 0.3657 & 0.5673 & 0.7663 & 0.9767 &"
+  },
+  {
+   "number": "0.7663",
+   "value": 0.7663,
+   "ok": true,
+   "context": "9986\\\\ 0.05 & 0.0000 & 0.0000 & 0.3657 & 0.5673 & 0.7663 & 0.9767 & 1.0000\\\\"
+  },
+  {
+   "number": "0.9767",
+   "value": 0.9767,
+   "ok": true,
+   "context": "05 & 0.0000 & 0.0000 & 0.3657 & 0.5673 & 0.7663 & 0.9767 & 1.0000\\\\ 0.03 & 0"
+  },
+  {
+   "number": "1.0000",
+   "value": 1.0,
+   "ok": true,
+   "context": "00 & 0.0000 & 0.3657 & 0.5673 & 0.7663 & 0.9767 & 1.0000\\\\ 0.03 & 0.0000 & 0"
+  },
+  {
+   "number": "0.03",
+   "value": 0.03,
+   "ok": true,
+   "context": "00 & 0.3657 & 0.5673 & 0.7663 & 0.9767 & 1.0000\\\\ 0.03 & 0.0000 & 0.1716 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": "3657 & 0.5673 & 0.7663 & 0.9767 & 1.0000\\\\ 0.03 & 0.0000 & 0.1716 & 0.4659 &"
+  },
+  {
+   "number": "0.1716",
+   "value": 0.1716,
+   "ok": true,
+   "context": "5673 & 0.7663 & 0.9767 & 1.0000\\\\ 0.03 & 0.0000 & 0.1716 & 0.4659 & 0.6932 &"
+  },
+  {
+   "number": "0.4659",
+   "value": 0.4659,
+   "ok": true,
+   "context": "7663 & 0.9767 & 1.0000\\\\ 0.03 & 0.0000 & 0.1716 & 0.4659 & 0.6932 & 0.8861 &"
+  },
+  {
+   "number": "0.6932",
+   "value": 0.6932,
+   "ok": true,
+   "context": "9767 & 1.0000\\\\ 0.03 & 0.0000 & 0.1716 & 0.4659 & 0.6932 & 0.8861 & 0.9975 &"
+  },
+  {
+   "number": "0.8861",
+   "value": 0.8861,
+   "ok": true,
+   "context": "0000\\\\ 0.03 & 0.0000 & 0.1716 & 0.4659 & 0.6932 & 0.8861 & 0.9975 & 1.0000\\\\"
+  },
+  {
+   "number": "0.9975",
+   "value": 0.9975,
+   "ok": true,
+   "context": "03 & 0.0000 & 0.1716 & 0.4659 & 0.6932 & 0.8861 & 0.9975 & 1.0000\\\\ 0.02 & 0"
+  },
+  {
+   "number": "1.0000",
+   "value": 1.0,
+   "ok": true,
+   "context": "00 & 0.1716 & 0.4659 & 0.6932 & 0.8861 & 0.9975 & 1.0000\\\\ 0.02 & 0.0000 & 0"
+  },
+  {
+   "number": "0.02",
+   "value": 0.02,
+   "ok": true,
+   "context": "16 & 0.4659 & 0.6932 & 0.8861 & 0.9975 & 1.0000\\\\ 0.02 & 0.0000 & 0.2326 &"
+  },
+  {
+   "number": "0.0000",
+   "value": 0.0,
+   "ok": true,
+   "context": "4659 & 0.6932 & 0.8861 & 0.9975 & 1.0000\\\\ 0.02 & 0.0000 & 0.2326 & 0.5469 &"
+  },
+  {
+   "number": "0.2326",
+   "value": 0.2326,
+   "ok": true,
+   "context": "6932 & 0.8861 & 0.9975 & 1.0000\\\\ 0.02 & 0.0000 & 0.2326 & 0.5469 & 0.7940 &"
+  },
+  {
+   "number": "0.5469",
+   "value": 0.5469,
+   "ok": true,
+   "context": "8861 & 0.9975 & 1.0000\\\\ 0.02 & 0.0000 & 0.2326 & 0.5469 & 0.7940 & 0.9516 &"
+  },
+  {
+   "number": "0.7940",
+   "value": 0.794,
+   "ok": true,
+   "context": "9975 & 1.0000\\\\ 0.02 & 0.0000 & 0.2326 & 0.5469 & 0.7940 & 0.9516 & 0.9998 &"
+  },
+  {
+   "number": "0.9516",
+   "value": 0.9516,
+   "ok": true,
+   "context": "0000\\\\ 0.02 & 0.0000 & 0.2326 & 0.5469 & 0.7940 & 0.9516 & 0.9998 & 1.0000\\\\"
+  },
+  {
+   "number": "0.9998",
+   "value": 0.9998,
+   "ok": true,
+   "context": "02 & 0.0000 & 0.2326 & 0.5469 & 0.7940 & 0.9516 & 0.9998 & 1.0000\\\\ 0.01 & 0"
+  },
+  {
+   "number": "1.0000",
+   "value": 1.0,
+   "ok": true,
+   "context": "00 & 0.2326 & 0.5469 & 0.7940 & 0.9516 & 0.9998 & 1.0000\\\\ 0.01 & 0.0175 & 0"
+  },
+  {
+   "number": "0.01",
+   "value": 0.01,
+   "ok": true,
+   "context": "26 & 0.5469 & 0.7940 & 0.9516 & 0.9998 & 1.0000\\\\ 0.01 & 0.0175 & 0.3007 &"
+  },
+  {
+   "number": "0.0175",
+   "value": 0.0175,
+   "ok": true,
+   "context": "5469 & 0.7940 & 0.9516 & 0.9998 & 1.0000\\\\ 0.01 & 0.0175 & 0.3007 & 0.7020 &"
+  },
+  {
+   "number": "0.3007",
+   "value": 0.3007,
+   "ok": true,
+   "context": "7940 & 0.9516 & 0.9998 & 1.0000\\\\ 0.01 & 0.0175 & 0.3007 & 0.7020 & 0.9329 &"
+  },
+  {
+   "number": "0.7020",
+   "value": 0.702,
+   "ok": true,
+   "context": "9516 & 0.9998 & 1.0000\\\\ 0.01 & 0.0175 & 0.3007 & 0.7020 & 0.9329 & 0.9959 &"
+  },
+  {
+   "number": "0.9329",
+   "value": 0.9329,
+   "ok": true,
+   "context": "9998 & 1.0000\\\\ 0.01 & 0.0175 & 0.3007 & 0.7020 & 0.9329 & 0.9959 & 1.0000 &"
+  },
+  {
+   "number": "0.9959",
+   "value": 0.9959,
+   "ok": true,
+   "context": "0000\\\\ 0.01 & 0.0175 & 0.3007 & 0.7020 & 0.9329 & 0.9959 & 1.0000 & 1.0000\\\\"
+  },
+  {
+   "number": "1.0000",
+   "value": 1.0,
+   "ok": true,
+   "context": "01 & 0.0175 & 0.3007 & 0.7020 & 0.9329 & 0.9959 & 1.0000 & 1.0000\\\\ 0.005 & "
+  },
+  {
+   "number": "1.0000",
+   "value": 1.0,
+   "ok": true,
+   "context": "75 & 0.3007 & 0.7020 & 0.9329 & 0.9959 & 1.0000 & 1.0000\\\\ 0.005 & 0.0121 & "
+  },
+  {
+   "number": "0.005",
+   "value": 0.005,
+   "ok": true,
+   "context": "07 & 0.7020 & 0.9329 & 0.9959 & 1.0000 & 1.0000\\\\ 0.005 & 0.0121 & 0.3475 &"
+  },
+  {
+   "number": "0.0121",
+   "value": 0.0121,
+   "ok": true,
+   "context": "020 & 0.9329 & 0.9959 & 1.0000 & 1.0000\\\\ 0.005 & 0.0121 & 0.3475 & 0.8540 &"
+  },
+  {
+   "number": "0.3475",
+   "value": 0.3475,
+   "ok": true,
+   "context": "329 & 0.9959 & 1.0000 & 1.0000\\\\ 0.005 & 0.0121 & 0.3475 & 0.8540 & 0.9917 &"
+  },
+  {
+   "number": "0.8540",
+   "value": 0.854,
+   "ok": true,
+   "context": "959 & 1.0000 & 1.0000\\\\ 0.005 & 0.0121 & 0.3475 & 0.8540 & 0.9917 & 1.0000 &"
+  },
+  {
+   "number": "0.9917",
+   "value": 0.9917,
+   "ok": true,
+   "context": "000 & 1.0000\\\\ 0.005 & 0.0121 & 0.3475 & 0.8540 & 0.9917 & 1.0000 & 1.0000 &"
+  },
+  {
+   "number": "1.0000",
+   "value": 1.0,
+   "ok": true,
+   "context": "000\\\\ 0.005 & 0.0121 & 0.3475 & 0.8540 & 0.9917 & 1.0000 & 1.0000 & 1.0000\\\\"
+  },
+  {
+   "number": "1.0000",
+   "value": 1.0,
+   "ok": true,
+   "context": "05 & 0.0121 & 0.3475 & 0.8540 & 0.9917 & 1.0000 & 1.0000 & 1.0000\\\\ \\bottomr"
+  },
+  {
+   "number": "1.0000",
+   "value": 1.0,
+   "ok": true,
+   "context": "21 & 0.3475 & 0.8540 & 0.9917 & 1.0000 & 1.0000 & 1.0000\\\\ \\bottomrule\\end{t"
+  },
+  {
+   "number": "0.86134",
+   "value": 0.86134,
+   "ok": true,
+   "context": "$ & $\\theta_{\\mathrm{off}}$ & share\\\\\\midrule 1 & 0.86134 & 0.0050 & 0.0050 &"
+  },
+  {
+   "number": "0.0050",
+   "value": 0.005,
+   "ok": true,
+   "context": "a_{\\mathrm{off}}$ & share\\\\\\midrule 1 & 0.86134 & 0.0050 & 0.0050 & 0.883 & "
+  },
+  {
+   "number": "0.0050",
+   "value": 0.005,
+   "ok": true,
+   "context": "m{off}}$ & share\\\\\\midrule 1 & 0.86134 & 0.0050 & 0.0050 & 0.883 & 0.098 & 0"
+  },
+  {
+   "number": "0.883",
+   "value": 0.883,
+   "ok": true,
+   "context": "& share\\\\\\midrule 1 & 0.86134 & 0.0050 & 0.0050 & 0.883 & 0.098 & 0.86134 &"
+  },
+  {
+   "number": "0.098",
+   "value": 0.098,
+   "ok": true,
+   "context": "\\\\midrule 1 & 0.86134 & 0.0050 & 0.0050 & 0.883 & 0.098 & 0.86134 & 0.0001 "
+  },
+  {
+   "number": "0.86134",
+   "value": 0.86134,
+   "ok": true,
+   "context": "e 1 & 0.86134 & 0.0050 & 0.0050 & 0.883 & 0.098 & 0.86134 & 0.0001 & 0.098 & "
+  },
+  {
+   "number": "0.0001",
+   "value": 0.0001,
+   "ok": true,
+   "context": "134 & 0.0050 & 0.0050 & 0.883 & 0.098 & 0.86134 & 0.0001 & 0.098 & 0.116 & 0"
+  },
+  {
+   "number": "0.098",
+   "value": 0.098,
+   "ok": true,
+   "context": "050 & 0.0050 & 0.883 & 0.098 & 0.86134 & 0.0001 & 0.098 & 0.116 & 0.86000 &"
+  },
+  {
+   "number": "0.116",
+   "value": 0.116,
+   "ok": true,
+   "context": "0050 & 0.883 & 0.098 & 0.86134 & 0.0001 & 0.098 & 0.116 & 0.86000 & $\\infty"
+  },
+  {
+   "number": "0.86000",
+   "value": 0.86,
+   "ok": true,
+   "context": ".883 & 0.098 & 0.86134 & 0.0001 & 0.098 & 0.116 & 0.86000 & $\\infty$ & $\\inft"
+  },
+  {
+   "number": "0.000",
+   "value": 0.0,
+   "ok": true,
+   "context": "& 0.098 & 0.116 & 0.86000 & $\\infty$ & $\\infty$ & 0.000\\\\ 0.5 & 0.86911 & 0"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "& 0.116 & 0.86000 & $\\infty$ & $\\infty$ & 0.000\\\\ 0.5 & 0.86911 & 0.5315 "
+  },
+  {
+   "number": "0.86911",
+   "value": 0.86911,
+   "ok": true,
+   "context": "6 & 0.86000 & $\\infty$ & $\\infty$ & 0.000\\\\ 0.5 & 0.86911 & 0.5315 & 0.0064 &"
+  },
+  {
+   "number": "0.5315",
+   "value": 0.5315,
+   "ok": true,
+   "context": "0 & $\\infty$ & $\\infty$ & 0.000\\\\ 0.5 & 0.86911 & 0.5315 & 0.0064 & 0.730 & "
+  },
+  {
+   "number": "0.0064",
+   "value": 0.0064,
+   "ok": true,
+   "context": "ty$ & $\\infty$ & 0.000\\\\ 0.5 & 0.86911 & 0.5315 & 0.0064 & 0.730 & 0.665 & 0"
+  },
+  {
+   "number": "0.730",
+   "value": 0.73,
+   "ok": true,
+   "context": "nfty$ & 0.000\\\\ 0.5 & 0.86911 & 0.5315 & 0.0064 & 0.730 & 0.665 & 0.86381 &"
+  },
+  {
+   "number": "0.665",
+   "value": 0.665,
+   "ok": true,
+   "context": "0.000\\\\ 0.5 & 0.86911 & 0.5315 & 0.0064 & 0.730 & 0.665 & 0.86381 & 0.2501 "
+  },
+  {
+   "number": "0.86381",
+   "value": 0.86381,
+   "ok": true,
+   "context": "0.5 & 0.86911 & 0.5315 & 0.0064 & 0.730 & 0.665 & 0.86381 & 0.2501 & 0.278 & "
+  },
+  {
+   "number": "0.2501",
+   "value": 0.2501,
+   "ok": true,
+   "context": "911 & 0.5315 & 0.0064 & 0.730 & 0.665 & 0.86381 & 0.2501 & 0.278 & 0.309 & 0"
+  },
+  {
+   "number": "0.278",
+   "value": 0.278,
+   "ok": true,
+   "context": "315 & 0.0064 & 0.730 & 0.665 & 0.86381 & 0.2501 & 0.278 & 0.309 & 0.86000 &"
+  },
+  {
+   "number": "0.309",
+   "value": 0.309,
+   "ok": true,
+   "context": "0064 & 0.730 & 0.665 & 0.86381 & 0.2501 & 0.278 & 0.309 & 0.86000 & $\\infty"
+  },
+  {
+   "number": "0.86000",
+   "value": 0.86,
+   "ok": true,
+   "context": ".730 & 0.665 & 0.86381 & 0.2501 & 0.278 & 0.309 & 0.86000 & $\\infty$ & $\\inft"
+  },
+  {
+   "number": "0.000",
+   "value": 0.0,
+   "ok": true,
+   "context": "& 0.278 & 0.309 & 0.86000 & $\\infty$ & $\\infty$ & 0.000\\\\ 0.3 & 0.87044 & 0"
+  },
+  {
+   "number": "0.3",
+   "value": 0.3,
+   "ok": true,
+   "context": "& 0.309 & 0.86000 & $\\infty$ & $\\infty$ & 0.000\\\\ 0.3 & 0.87044 & 0.3531 "
+  },
+  {
+   "number": "0.87044",
+   "value": 0.87044,
+   "ok": true,
+   "context": "9 & 0.86000 & $\\infty$ & $\\infty$ & 0.000\\\\ 0.3 & 0.87044 & 0.3531 & 0.0126 &"
+  },
+  {
+   "number": "0.3531",
+   "value": 0.3531,
+   "ok": true,
+   "context": "0 & $\\infty$ & $\\infty$ & 0.000\\\\ 0.3 & 0.87044 & 0.3531 & 0.0126 & 0.611 & "
+  },
+  {
+   "number": "0.0126",
+   "value": 0.0126,
+   "ok": true,
+   "context": "ty$ & $\\infty$ & 0.000\\\\ 0.3 & 0.87044 & 0.3531 & 0.0126 & 0.611 & 0.763 & 0"
+  },
+  {
+   "number": "0.611",
+   "value": 0.611,
+   "ok": true,
+   "context": "nfty$ & 0.000\\\\ 0.3 & 0.87044 & 0.3531 & 0.0126 & 0.611 & 0.763 & 0.86497 &"
+  },
+  {
+   "number": "0.763",
+   "value": 0.763,
+   "ok": true,
+   "context": "0.000\\\\ 0.3 & 0.87044 & 0.3531 & 0.0126 & 0.611 & 0.763 & 0.86497 & 0.2122 "
+  },
+  {
+   "number": "0.86497",
+   "value": 0.86497,
+   "ok": true,
+   "context": "0.3 & 0.87044 & 0.3531 & 0.0126 & 0.611 & 0.763 & 0.86497 & 0.2122 & 0.363 & "
+  },
+  {
+   "number": "0.2122",
+   "value": 0.2122,
+   "ok": true,
+   "context": "044 & 0.3531 & 0.0126 & 0.611 & 0.763 & 0.86497 & 0.2122 & 0.363 & 0.399 & 0"
+  },
+  {
+   "number": "0.363",
+   "value": 0.363,
+   "ok": true,
+   "context": "531 & 0.0126 & 0.611 & 0.763 & 0.86497 & 0.2122 & 0.363 & 0.399 & 0.86219 &"
+  },
+  {
+   "number": "0.399",
+   "value": 0.399,
+   "ok": true,
+   "context": "0126 & 0.611 & 0.763 & 0.86497 & 0.2122 & 0.363 & 0.399 & 0.86219 & 0.5315 "
+  },
+  {
+   "number": "0.86219",
+   "value": 0.86219,
+   "ok": true,
+   "context": ".611 & 0.763 & 0.86497 & 0.2122 & 0.363 & 0.399 & 0.86219 & 0.5315 & 0.0064 &"
+  },
+  {
+   "number": "0.5315",
+   "value": 0.5315,
+   "ok": true,
+   "context": "63 & 0.86497 & 0.2122 & 0.363 & 0.399 & 0.86219 & 0.5315 & 0.0064 & 0.499\\\\ "
+  },
+  {
+   "number": "0.0064",
+   "value": 0.0064,
+   "ok": true,
+   "context": "497 & 0.2122 & 0.363 & 0.399 & 0.86219 & 0.5315 & 0.0064 & 0.499\\\\ 0.2 & 0.8"
+  },
+  {
+   "number": "0.499",
+   "value": 0.499,
+   "ok": true,
+   "context": "122 & 0.363 & 0.399 & 0.86219 & 0.5315 & 0.0064 & 0.499\\\\ 0.2 & 0.87070 & 0"
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": "363 & 0.399 & 0.86219 & 0.5315 & 0.0064 & 0.499\\\\ 0.2 & 0.87070 & 0.2302 "
+  },
+  {
+   "number": "0.87070",
+   "value": 0.8707,
+   "ok": true,
+   "context": "0.399 & 0.86219 & 0.5315 & 0.0064 & 0.499\\\\ 0.2 & 0.87070 & 0.2302 & 0.0809 &"
+  },
+  {
+   "number": "0.2302",
+   "value": 0.2302,
+   "ok": true,
+   "context": "86219 & 0.5315 & 0.0064 & 0.499\\\\ 0.2 & 0.87070 & 0.2302 & 0.0809 & 0.639 & "
+  },
+  {
+   "number": "0.0809",
+   "value": 0.0809,
+   "ok": true,
+   "context": ".5315 & 0.0064 & 0.499\\\\ 0.2 & 0.87070 & 0.2302 & 0.0809 & 0.639 & 0.781 & 0"
+  },
+  {
+   "number": "0.639",
+   "value": 0.639,
+   "ok": true,
+   "context": ".0064 & 0.499\\\\ 0.2 & 0.87070 & 0.2302 & 0.0809 & 0.639 & 0.781 & 0.86762 &"
+  },
+  {
+   "number": "0.781",
+   "value": 0.781,
+   "ok": true,
+   "context": "0.499\\\\ 0.2 & 0.87070 & 0.2302 & 0.0809 & 0.639 & 0.781 & 0.86762 & 0.2038 "
+  },
+  {
+   "number": "0.86762",
+   "value": 0.86762,
+   "ok": true,
+   "context": "0.2 & 0.87070 & 0.2302 & 0.0809 & 0.639 & 0.781 & 0.86762 & 0.2038 & 0.557 & "
+  },
+  {
+   "number": "0.2038",
+   "value": 0.2038,
+   "ok": true,
+   "context": "070 & 0.2302 & 0.0809 & 0.639 & 0.781 & 0.86762 & 0.2038 & 0.557 & 0.594 & 0"
+  },
+  {
+   "number": "0.557",
+   "value": 0.557,
+   "ok": true,
+   "context": "302 & 0.0809 & 0.639 & 0.781 & 0.86762 & 0.2038 & 0.557 & 0.594 & 0.86307 &"
+  },
+  {
+   "number": "0.594",
+   "value": 0.594,
+   "ok": true,
+   "context": "0809 & 0.639 & 0.781 & 0.86762 & 0.2038 & 0.557 & 0.594 & 0.86307 & 0.3733 "
+  },
+  {
+   "number": "0.86307",
+   "value": 0.86307,
+   "ok": true,
+   "context": ".639 & 0.781 & 0.86762 & 0.2038 & 0.557 & 0.594 & 0.86307 & 0.3733 & 0.0124 &"
+  },
+  {
+   "number": "0.3733",
+   "value": 0.3733,
+   "ok": true,
+   "context": "81 & 0.86762 & 0.2038 & 0.557 & 0.594 & 0.86307 & 0.3733 & 0.0124 & 0.701\\\\ "
+  },
+  {
+   "number": "0.0124",
+   "value": 0.0124,
+   "ok": true,
+   "context": "762 & 0.2038 & 0.557 & 0.594 & 0.86307 & 0.3733 & 0.0124 & 0.701\\\\ 0.1 & 0.8"
+  },
+  {
+   "number": "0.701",
+   "value": 0.701,
+   "ok": true,
+   "context": "038 & 0.557 & 0.594 & 0.86307 & 0.3733 & 0.0124 & 0.701\\\\ 0.1 & 0.87197 & 0"
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": "557 & 0.594 & 0.86307 & 0.3733 & 0.0124 & 0.701\\\\ 0.1 & 0.87197 & 0.1530 "
+  },
+  {
+   "number": "0.87197",
+   "value": 0.87197,
+   "ok": true,
+   "context": "0.594 & 0.86307 & 0.3733 & 0.0124 & 0.701\\\\ 0.1 & 0.87197 & 0.1530 & 0.1092 &"
+  },
+  {
+   "number": "0.1530",
+   "value": 0.153,
+   "ok": true,
+   "context": "86307 & 0.3733 & 0.0124 & 0.701\\\\ 0.1 & 0.87197 & 0.1530 & 0.1092 & 0.606 & "
+  },
+  {
+   "number": "0.1092",
+   "value": 0.1092,
+   "ok": true,
+   "context": ".3733 & 0.0124 & 0.701\\\\ 0.1 & 0.87197 & 0.1530 & 0.1092 & 0.606 & 0.874 & 0"
+  },
+  {
+   "number": "0.606",
+   "value": 0.606,
+   "ok": true,
+   "context": ".0124 & 0.701\\\\ 0.1 & 0.87197 & 0.1530 & 0.1092 & 0.606 & 0.874 & 0.87174 &"
+  },
+  {
+   "number": "0.874",
+   "value": 0.874,
+   "ok": true,
+   "context": "0.701\\\\ 0.1 & 0.87197 & 0.1530 & 0.1092 & 0.606 & 0.874 & 0.87174 & 0.1263 "
+  },
+  {
+   "number": "0.87174",
+   "value": 0.87174,
+   "ok": true,
+   "context": "0.1 & 0.87197 & 0.1530 & 0.1092 & 0.606 & 0.874 & 0.87174 & 0.1263 & 0.857 & "
+  },
+  {
+   "number": "0.1263",
+   "value": 0.1263,
+   "ok": true,
+   "context": "197 & 0.1530 & 0.1092 & 0.606 & 0.874 & 0.87174 & 0.1263 & 0.857 & 0.919 & 0"
+  },
+  {
+   "number": "0.857",
+   "value": 0.857,
+   "ok": true,
+   "context": "530 & 0.1092 & 0.606 & 0.874 & 0.87174 & 0.1263 & 0.857 & 0.919 & 0.86329 &"
+  },
+  {
+   "number": "0.919",
+   "value": 0.919,
+   "ok": true,
+   "context": "1092 & 0.606 & 0.874 & 0.87174 & 0.1263 & 0.857 & 0.919 & 0.86329 & 0.2302 "
+  },
+  {
+   "number": "0.86329",
+   "value": 0.86329,
+   "ok": true,
+   "context": ".606 & 0.874 & 0.87174 & 0.1263 & 0.857 & 0.919 & 0.86329 & 0.2302 & 0.0576 &"
+  },
+  {
+   "number": "0.2302",
+   "value": 0.2302,
+   "ok": true,
+   "context": "74 & 0.87174 & 0.1263 & 0.857 & 0.919 & 0.86329 & 0.2302 & 0.0576 & 0.751\\\\ "
+  },
+  {
+   "number": "0.0576",
+   "value": 0.0576,
+   "ok": true,
+   "context": "174 & 0.1263 & 0.857 & 0.919 & 0.86329 & 0.2302 & 0.0576 & 0.751\\\\ 0.05 & 0."
+  },
+  {
+   "number": "0.751",
+   "value": 0.751,
+   "ok": true,
+   "context": "263 & 0.857 & 0.919 & 0.86329 & 0.2302 & 0.0576 & 0.751\\\\ 0.05 & 0.87183 & "
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "857 & 0.919 & 0.86329 & 0.2302 & 0.0576 & 0.751\\\\ 0.05 & 0.87183 & 0.1116 "
+  },
+  {
+   "number": "0.87183",
+   "value": 0.87183,
+   "ok": true,
+   "context": ".919 & 0.86329 & 0.2302 & 0.0576 & 0.751\\\\ 0.05 & 0.87183 & 0.1116 & 0.1116 &"
+  },
+  {
+   "number": "0.1116",
+   "value": 0.1116,
+   "ok": true,
+   "context": "6329 & 0.2302 & 0.0576 & 0.751\\\\ 0.05 & 0.87183 & 0.1116 & 0.1116 & 0.604 & "
+  },
+  {
+   "number": "0.1116",
+   "value": 0.1116,
+   "ok": true,
+   "context": "2302 & 0.0576 & 0.751\\\\ 0.05 & 0.87183 & 0.1116 & 0.1116 & 0.604 & 0.865 & 0"
+  },
+  {
+   "number": "0.604",
+   "value": 0.604,
+   "ok": true,
+   "context": "0576 & 0.751\\\\ 0.05 & 0.87183 & 0.1116 & 0.1116 & 0.604 & 0.865 & 0.87183 &"
+  },
+  {
+   "number": "0.865",
+   "value": 0.865,
+   "ok": true,
+   "context": ".751\\\\ 0.05 & 0.87183 & 0.1116 & 0.1116 & 0.604 & 0.865 & 0.87183 & 0.1116 "
+  },
+  {
+   "number": "0.87183",
+   "value": 0.87183,
+   "ok": true,
+   "context": ".05 & 0.87183 & 0.1116 & 0.1116 & 0.604 & 0.865 & 0.87183 & 0.1116 & 0.865 & "
+  },
+  {
+   "number": "0.1116",
+   "value": 0.1116,
+   "ok": true,
+   "context": "183 & 0.1116 & 0.1116 & 0.604 & 0.865 & 0.87183 & 0.1116 & 0.865 & 0.931 & 0"
+  },
+  {
+   "number": "0.865",
+   "value": 0.865,
+   "ok": true,
+   "context": "116 & 0.1116 & 0.604 & 0.865 & 0.87183 & 0.1116 & 0.865 & 0.931 & 0.86292 &"
+  },
+  {
+   "number": "0.931",
+   "value": 0.931,
+   "ok": true,
+   "context": "1116 & 0.604 & 0.865 & 0.87183 & 0.1116 & 0.865 & 0.931 & 0.86292 & 0.1530 "
+  },
+  {
+   "number": "0.86292",
+   "value": 0.86292,
+   "ok": true,
+   "context": ".604 & 0.865 & 0.87183 & 0.1116 & 0.865 & 0.931 & 0.86292 & 0.1530 & 0.0991 &"
+  },
+  {
+   "number": "0.1530",
+   "value": 0.153,
+   "ok": true,
+   "context": "65 & 0.87183 & 0.1116 & 0.865 & 0.931 & 0.86292 & 0.1530 & 0.0991 & 0.666\\\\ "
+  },
+  {
+   "number": "0.0991",
+   "value": 0.0991,
+   "ok": true,
+   "context": "183 & 0.1116 & 0.865 & 0.931 & 0.86292 & 0.1530 & 0.0991 & 0.666\\\\ 0.03 & 0."
+  },
+  {
+   "number": "0.666",
+   "value": 0.666,
+   "ok": true,
+   "context": "116 & 0.865 & 0.931 & 0.86292 & 0.1530 & 0.0991 & 0.666\\\\ 0.03 & 0.86906 & "
+  },
+  {
+   "number": "0.03",
+   "value": 0.03,
+   "ok": true,
+   "context": "865 & 0.931 & 0.86292 & 0.1530 & 0.0991 & 0.666\\\\ 0.03 & 0.86906 & 0.1111 "
+  },
+  {
+   "number": "0.86906",
+   "value": 0.86906,
+   "ok": true,
+   "context": ".931 & 0.86292 & 0.1530 & 0.0991 & 0.666\\\\ 0.03 & 0.86906 & 0.1111 & 0.1111 &"
+  },
+  {
+   "number": "0.1111",
+   "value": 0.1111,
+   "ok": true,
+   "context": "6292 & 0.1530 & 0.0991 & 0.666\\\\ 0.03 & 0.86906 & 0.1111 & 0.1111 & 0.649 & "
+  },
+  {
+   "number": "0.1111",
+   "value": 0.1111,
+   "ok": true,
+   "context": "1530 & 0.0991 & 0.666\\\\ 0.03 & 0.86906 & 0.1111 & 0.1111 & 0.649 & 0.662 & 0"
+  },
+  {
+   "number": "0.649",
+   "value": 0.649,
+   "ok": true,
+   "context": "0991 & 0.666\\\\ 0.03 & 0.86906 & 0.1111 & 0.1111 & 0.649 & 0.662 & 0.86906 &"
+  },
+  {
+   "number": "0.662",
+   "value": 0.662,
+   "ok": true,
+   "context": ".666\\\\ 0.03 & 0.86906 & 0.1111 & 0.1111 & 0.649 & 0.662 & 0.86906 & 0.1111 "
+  },
+  {
+   "number": "0.86906",
+   "value": 0.86906,
+   "ok": true,
+   "context": ".03 & 0.86906 & 0.1111 & 0.1111 & 0.649 & 0.662 & 0.86906 & 0.1111 & 0.662 & "
+  },
+  {
+   "number": "0.1111",
+   "value": 0.1111,
+   "ok": true,
+   "context": "906 & 0.1111 & 0.1111 & 0.649 & 0.662 & 0.86906 & 0.1111 & 0.662 & 0.719 & 0"
+  },
+  {
+   "number": "0.662",
+   "value": 0.662,
+   "ok": true,
+   "context": "111 & 0.1111 & 0.649 & 0.662 & 0.86906 & 0.1111 & 0.662 & 0.719 & 0.86200 &"
+  },
+  {
+   "number": "0.719",
+   "value": 0.719,
+   "ok": true,
+   "context": "1111 & 0.649 & 0.662 & 0.86906 & 0.1111 & 0.662 & 0.719 & 0.86200 & 0.1530 "
+  },
+  {
+   "number": "0.86200",
+   "value": 0.862,
+   "ok": true,
+   "context": ".649 & 0.662 & 0.86906 & 0.1111 & 0.662 & 0.719 & 0.86200 & 0.1530 & 0.1145 &"
+  },
+  {
+   "number": "0.1530",
+   "value": 0.153,
+   "ok": true,
+   "context": "62 & 0.86906 & 0.1111 & 0.662 & 0.719 & 0.86200 & 0.1530 & 0.1145 & 0.455\\\\ "
+  },
+  {
+   "number": "0.1145",
+   "value": 0.1145,
+   "ok": true,
+   "context": "906 & 0.1111 & 0.662 & 0.719 & 0.86200 & 0.1530 & 0.1145 & 0.455\\\\ 0.02 & 0."
+  },
+  {
+   "number": "0.455",
+   "value": 0.455,
+   "ok": true,
+   "context": "111 & 0.662 & 0.719 & 0.86200 & 0.1530 & 0.1145 & 0.455\\\\ 0.02 & 0.86625 & "
+  },
+  {
+   "number": "0.02",
+   "value": 0.02,
+   "ok": true,
+   "context": "662 & 0.719 & 0.86200 & 0.1530 & 0.1145 & 0.455\\\\ 0.02 & 0.86625 & 0.1145 "
+  },
+  {
+   "number": "0.86625",
+   "value": 0.86625,
+   "ok": true,
+   "context": ".719 & 0.86200 & 0.1530 & 0.1145 & 0.455\\\\ 0.02 & 0.86625 & 0.1145 & 0.1145 &"
+  },
+  {
+   "number": "0.1145",
+   "value": 0.1145,
+   "ok": true,
+   "context": "6200 & 0.1530 & 0.1145 & 0.455\\\\ 0.02 & 0.86625 & 0.1145 & 0.1145 & 0.720 & "
+  },
+  {
+   "number": "0.1145",
+   "value": 0.1145,
+   "ok": true,
+   "context": "1530 & 0.1145 & 0.455\\\\ 0.02 & 0.86625 & 0.1145 & 0.1145 & 0.720 & 0.456 & 0"
+  },
+  {
+   "number": "0.720",
+   "value": 0.72,
+   "ok": true,
+   "context": "1145 & 0.455\\\\ 0.02 & 0.86625 & 0.1145 & 0.1145 & 0.720 & 0.456 & 0.86625 &"
+  },
+  {
+   "number": "0.456",
+   "value": 0.456,
+   "ok": true,
+   "context": ".455\\\\ 0.02 & 0.86625 & 0.1145 & 0.1145 & 0.720 & 0.456 & 0.86625 & 0.1145 "
+  },
+  {
+   "number": "0.86625",
+   "value": 0.86625,
+   "ok": true,
+   "context": ".02 & 0.86625 & 0.1145 & 0.1145 & 0.720 & 0.456 & 0.86625 & 0.1145 & 0.456 & "
+  },
+  {
+   "number": "0.1145",
+   "value": 0.1145,
+   "ok": true,
+   "context": "625 & 0.1145 & 0.1145 & 0.720 & 0.456 & 0.86625 & 0.1145 & 0.456 & 0.501 & 0"
+  },
+  {
+   "number": "0.456",
+   "value": 0.456,
+   "ok": true,
+   "context": "145 & 0.1145 & 0.720 & 0.456 & 0.86625 & 0.1145 & 0.456 & 0.501 & 0.86112 &"
+  },
+  {
+   "number": "0.501",
+   "value": 0.501,
+   "ok": true,
+   "context": "1145 & 0.720 & 0.456 & 0.86625 & 0.1145 & 0.456 & 0.501 & 0.86112 & 0.1420 "
+  },
+  {
+   "number": "0.86112",
+   "value": 0.86112,
+   "ok": true,
+   "context": ".720 & 0.456 & 0.86625 & 0.1145 & 0.456 & 0.501 & 0.86112 & 0.1420 & 0.1207 &"
+  },
+  {
+   "number": "0.1420",
+   "value": 0.142,
+   "ok": true,
+   "context": "56 & 0.86625 & 0.1145 & 0.456 & 0.501 & 0.86112 & 0.1420 & 0.1207 & 0.257\\\\ "
+  },
+  {
+   "number": "0.1207",
+   "value": 0.1207,
+   "ok": true,
+   "context": "625 & 0.1145 & 0.456 & 0.501 & 0.86112 & 0.1420 & 0.1207 & 0.257\\\\ 0.01 & 0."
+  },
+  {
+   "number": "0.257",
+   "value": 0.257,
+   "ok": true,
+   "context": "145 & 0.456 & 0.501 & 0.86112 & 0.1420 & 0.1207 & 0.257\\\\ 0.01 & 0.86230 & "
+  },
+  {
+   "number": "0.01",
+   "value": 0.01,
+   "ok": true,
+   "context": "456 & 0.501 & 0.86112 & 0.1420 & 0.1207 & 0.257\\\\ 0.01 & 0.86230 & 0.1191 "
+  },
+  {
+   "number": "0.86230",
+   "value": 0.8623,
+   "ok": true,
+   "context": ".501 & 0.86112 & 0.1420 & 0.1207 & 0.257\\\\ 0.01 & 0.86230 & 0.1191 & 0.1191 &"
+  },
+  {
+   "number": "0.1191",
+   "value": 0.1191,
+   "ok": true,
+   "context": "6112 & 0.1420 & 0.1207 & 0.257\\\\ 0.01 & 0.86230 & 0.1191 & 0.1191 & 0.858 & "
+  },
+  {
+   "number": "0.1191",
+   "value": 0.1191,
+   "ok": true,
+   "context": "1420 & 0.1207 & 0.257\\\\ 0.01 & 0.86230 & 0.1191 & 0.1191 & 0.858 & 0.168 & 0"
+  },
+  {
+   "number": "0.858",
+   "value": 0.858,
+   "ok": true,
+   "context": "1207 & 0.257\\\\ 0.01 & 0.86230 & 0.1191 & 0.1191 & 0.858 & 0.168 & 0.86230 &"
+  },
+  {
+   "number": "0.168",
+   "value": 0.168,
+   "ok": true,
+   "context": ".257\\\\ 0.01 & 0.86230 & 0.1191 & 0.1191 & 0.858 & 0.168 & 0.86230 & 0.1191 "
+  },
+  {
+   "number": "0.86230",
+   "value": 0.8623,
+   "ok": true,
+   "context": ".01 & 0.86230 & 0.1191 & 0.1191 & 0.858 & 0.168 & 0.86230 & 0.1191 & 0.168 & "
+  },
+  {
+   "number": "0.1191",
+   "value": 0.1191,
+   "ok": true,
+   "context": "230 & 0.1191 & 0.1191 & 0.858 & 0.168 & 0.86230 & 0.1191 & 0.168 & 0.191 & 0"
+  },
+  {
+   "number": "0.168",
+   "value": 0.168,
+   "ok": true,
+   "context": "191 & 0.1191 & 0.858 & 0.168 & 0.86230 & 0.1191 & 0.168 & 0.191 & 0.86018 &"
+  },
+  {
+   "number": "0.191",
+   "value": 0.191,
+   "ok": true,
+   "context": "1191 & 0.858 & 0.168 & 0.86230 & 0.1191 & 0.168 & 0.191 & 0.86018 & 0.1617 "
+  },
+  {
+   "number": "0.86018",
+   "value": 0.86018,
+   "ok": true,
+   "context": ".858 & 0.168 & 0.86230 & 0.1191 & 0.168 & 0.191 & 0.86018 & 0.1617 & 0.1445 &"
+  },
+  {
+   "number": "0.1617",
+   "value": 0.1617,
+   "ok": true,
+   "context": "68 & 0.86230 & 0.1191 & 0.168 & 0.191 & 0.86018 & 0.1617 & 0.1445 & 0.042\\\\ "
+  },
+  {
+   "number": "0.1445",
+   "value": 0.1445,
+   "ok": true,
+   "context": "230 & 0.1191 & 0.168 & 0.191 & 0.86018 & 0.1617 & 0.1445 & 0.042\\\\ 0.005 & 0"
+  },
+  {
+   "number": "0.042",
+   "value": 0.042,
+   "ok": true,
+   "context": "191 & 0.168 & 0.191 & 0.86018 & 0.1617 & 0.1445 & 0.042\\\\ 0.005 & 0.86044 &"
+  },
+  {
+   "number": "0.005",
+   "value": 0.005,
+   "ok": true,
+   "context": "168 & 0.191 & 0.86018 & 0.1617 & 0.1445 & 0.042\\\\ 0.005 & 0.86044 & 0.1214 "
+  },
+  {
+   "number": "0.86044",
+   "value": 0.86044,
+   "ok": true,
+   "context": "191 & 0.86018 & 0.1617 & 0.1445 & 0.042\\\\ 0.005 & 0.86044 & 0.1214 & 0.1214 &"
+  },
+  {
+   "number": "0.1214",
+   "value": 0.1214,
+   "ok": true,
+   "context": "018 & 0.1617 & 0.1445 & 0.042\\\\ 0.005 & 0.86044 & 0.1214 & 0.1214 & 0.959 & "
+  },
+  {
+   "number": "0.1214",
+   "value": 0.1214,
+   "ok": true,
+   "context": "617 & 0.1445 & 0.042\\\\ 0.005 & 0.86044 & 0.1214 & 0.1214 & 0.959 & 0.032 & 0"
+  },
+  {
+   "number": "0.959",
+   "value": 0.959,
+   "ok": true,
+   "context": "445 & 0.042\\\\ 0.005 & 0.86044 & 0.1214 & 0.1214 & 0.959 & 0.032 & 0.86044 &"
+  },
+  {
+   "number": "0.032",
+   "value": 0.032,
+   "ok": true,
+   "context": "042\\\\ 0.005 & 0.86044 & 0.1214 & 0.1214 & 0.959 & 0.032 & 0.86044 & 0.1214 "
+  },
+  {
+   "number": "0.86044",
+   "value": 0.86044,
+   "ok": true,
+   "context": "005 & 0.86044 & 0.1214 & 0.1214 & 0.959 & 0.032 & 0.86044 & 0.1214 & 0.032 & "
+  },
+  {
+   "number": "0.1214",
+   "value": 0.1214,
+   "ok": true,
+   "context": "044 & 0.1214 & 0.1214 & 0.959 & 0.032 & 0.86044 & 0.1214 & 0.032 & 0.038 & 0"
+  },
+  {
+   "number": "0.032",
+   "value": 0.032,
+   "ok": true,
+   "context": "214 & 0.1214 & 0.959 & 0.032 & 0.86044 & 0.1214 & 0.032 & 0.038 & 0.86000 &"
+  },
+  {
+   "number": "0.038",
+   "value": 0.038,
+   "ok": true,
+   "context": "1214 & 0.959 & 0.032 & 0.86044 & 0.1214 & 0.032 & 0.038 & 0.86000 & 0.3064 "
+  },
+  {
+   "number": "0.86000",
+   "value": 0.86,
+   "ok": true,
+   "context": ".959 & 0.032 & 0.86044 & 0.1214 & 0.032 & 0.038 & 0.86000 & 0.3064 & 0.3064 &"
+  },
+  {
+   "number": "0.3064",
+   "value": 0.3064,
+   "ok": true,
+   "context": "32 & 0.86044 & 0.1214 & 0.032 & 0.038 & 0.86000 & 0.3064 & 0.3064 & 0.000\\\\ "
+  },
+  {
+   "number": "0.3064",
+   "value": 0.3064,
+   "ok": true,
+   "context": "044 & 0.1214 & 0.032 & 0.038 & 0.86000 & 0.3064 & 0.3064 & 0.000\\\\ \\bottomru"
+  },
+  {
+   "number": "0.000",
+   "value": 0.0,
+   "ok": true,
+   "context": "214 & 0.032 & 0.038 & 0.86000 & 0.3064 & 0.3064 & 0.000\\\\ \\bottomrule\\end{t"
+  },
+  {
+   "number": "0.87369",
+   "value": 0.87369,
+   "ok": true,
+   "context": "ayes gain at the same $c_{\\mathrm{sw}}$ (Bayes $J=0.87369$ at $c_{\\mathrm{sw}"
+  },
+  {
+   "number": "0.86438",
+   "value": 0.86438,
+   "ok": true,
+   "context": "sw}}$ (Bayes $J=0.87369$ at $c_{\\mathrm{sw}}=0$, $0.86438$ at $c_{\\mathrm{sw}"
+  },
+  {
+   "number": "20{,}000",
+   "value": 20000.0,
+   "ok": true,
+   "context": "d by a Monte-Carlo search (seed 202, 60 chains of 20{,}000 steps; a 20-point l"
+  },
+  {
+   "number": "0.005",
+   "value": 0.005,
+   "ok": true,
+   "context": "; a 20-point log grid of $\\theta_{\\mathrm{on}}\\in[0.005,1]$ times 10 ratios"
+  },
+  {
+   "number": "0.02",
+   "value": 0.02,
+   "ok": true,
+   "context": "os $\\theta_{\\mathrm{off}}/\\theta_{\\mathrm{on}}\\in[0.02,1]$, then a $7\\time"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "}{@{}rccccc@{}}\\toprule $\\Gamma$ & $r_{\\mathrm g}=0.5$ & $r_{\\mathrm g}=0"
+  },
+  {
+   "number": "0.6",
+   "value": 0.6,
+   "ok": true,
+   "context": "e $\\Gamma$ & $r_{\\mathrm g}=0.5$ & $r_{\\mathrm g}=0.6$ & $r_{\\mathrm g}=0"
+  },
+  {
+   "number": "0.7",
+   "value": 0.7,
+   "ok": true,
+   "context": "rm g}=0.5$ & $r_{\\mathrm g}=0.6$ & $r_{\\mathrm g}=0.7$ & $r_{\\mathrm g}=0"
+  },
+  {
+   "number": "0.8",
+   "value": 0.8,
+   "ok": true,
+   "context": "rm g}=0.6$ & $r_{\\mathrm g}=0.7$ & $r_{\\mathrm g}=0.8$ & $r_{\\mathrm g}=0"
+  },
+  {
+   "number": "0.9",
+   "value": 0.9,
+   "ok": true,
+   "context": "rm g}=0.7$ & $r_{\\mathrm g}=0.8$ & $r_{\\mathrm g}=0.9$\\\\\\midrule 1 & fixe"
+  },
+  {
+   "number": "0.00597",
+   "value": 0.00597,
+   "ok": true,
+   "context": "& fixed \\WORK$^\\dagger$ & fixed \\WORK$^\\dagger$ & 0.00597 / 0.889 (0.05)\\\\ 0."
+  },
+  {
+   "number": "0.889",
+   "value": 0.889,
+   "ok": true,
+   "context": "ORK$^\\dagger$ & fixed \\WORK$^\\dagger$ & 0.00597 / 0.889 (0.05)\\\\ 0.9 & fixe"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "agger$ & fixed \\WORK$^\\dagger$ & 0.00597 / 0.889 (0.05)\\\\ 0.9 & fixed \\WOR"
+  },
+  {
+   "number": "0.9",
+   "value": 0.9,
+   "ok": true,
+   "context": " fixed \\WORK$^\\dagger$ & 0.00597 / 0.889 (0.05)\\\\ 0.9 & fixed \\WORK$^\\dag"
+  },
+  {
+   "number": "0.00014",
+   "value": 0.00014,
+   "ok": true,
+   "context": "& fixed \\WORK$^\\dagger$ & fixed \\WORK$^\\dagger$ & 0.00014 / 0.144 (0.2) & 0.0"
+  },
+  {
+   "number": "0.144",
+   "value": 0.144,
+   "ok": true,
+   "context": "ORK$^\\dagger$ & fixed \\WORK$^\\dagger$ & 0.00014 / 0.144 (0.2) & 0.00981 / 0"
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": "agger$ & fixed \\WORK$^\\dagger$ & 0.00014 / 0.144 (0.2) & 0.00981 / 0.872 "
+  },
+  {
+   "number": "0.00981",
+   "value": 0.00981,
+   "ok": true,
+   "context": "& fixed \\WORK$^\\dagger$ & 0.00014 / 0.144 (0.2) & 0.00981 / 0.872 (0.05) & 0."
+  },
+  {
+   "number": "0.872",
+   "value": 0.872,
+   "ok": true,
+   "context": "ORK$^\\dagger$ & 0.00014 / 0.144 (0.2) & 0.00981 / 0.872 (0.05) & 0.02900 / "
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "agger$ & 0.00014 / 0.144 (0.2) & 0.00981 / 0.872 (0.05) & 0.02900 / 0.966 "
+  },
+  {
+   "number": "0.02900",
+   "value": 0.029,
+   "ok": true,
+   "context": " 0.00014 / 0.144 (0.2) & 0.00981 / 0.872 (0.05) & 0.02900 / 0.966 (0.05)\\\\ 0."
+  },
+  {
+   "number": "0.966",
+   "value": 0.966,
+   "ok": true,
+   "context": " 0.144 (0.2) & 0.00981 / 0.872 (0.05) & 0.02900 / 0.966 (0.05)\\\\ 0.8 & fixe"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "(0.2) & 0.00981 / 0.872 (0.05) & 0.02900 / 0.966 (0.05)\\\\ 0.8 & fixed \\WOR"
+  },
+  {
+   "number": "0.8",
+   "value": 0.8,
+   "ok": true,
+   "context": "0.00981 / 0.872 (0.05) & 0.02900 / 0.966 (0.05)\\\\ 0.8 & fixed \\WORK$^\\dag"
+  },
+  {
+   "number": "0.00239",
+   "value": 0.00239,
+   "ok": true,
+   "context": "00 / 0.966 (0.05)\\\\ 0.8 & fixed \\WORK$^\\dagger$ & 0.00239 / 0.674 (0.1) & 0.0"
+  },
+  {
+   "number": "0.674",
+   "value": 0.674,
+   "ok": true,
+   "context": " (0.05)\\\\ 0.8 & fixed \\WORK$^\\dagger$ & 0.00239 / 0.674 (0.1) & 0.01369 / 0"
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": "\\\\ 0.8 & fixed \\WORK$^\\dagger$ & 0.00239 / 0.674 (0.1) & 0.01369 / 0.865 "
+  },
+  {
+   "number": "0.01369",
+   "value": 0.01369,
+   "ok": true,
+   "context": "& fixed \\WORK$^\\dagger$ & 0.00239 / 0.674 (0.1) & 0.01369 / 0.865 (0.05) & 0."
+  },
+  {
+   "number": "0.865",
+   "value": 0.865,
+   "ok": true,
+   "context": "ORK$^\\dagger$ & 0.00239 / 0.674 (0.1) & 0.01369 / 0.865 (0.05) & 0.03105 / "
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "agger$ & 0.00239 / 0.674 (0.1) & 0.01369 / 0.865 (0.05) & 0.03105 / 0.946 "
+  },
+  {
+   "number": "0.03105",
+   "value": 0.03105,
+   "ok": true,
+   "context": " 0.00239 / 0.674 (0.1) & 0.01369 / 0.865 (0.05) & 0.03105 / 0.946 (0.05) & 0."
+  },
+  {
+   "number": "0.946",
+   "value": 0.946,
+   "ok": true,
+   "context": " 0.674 (0.1) & 0.01369 / 0.865 (0.05) & 0.03105 / 0.946 (0.05) & 0.01677 / "
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "(0.1) & 0.01369 / 0.865 (0.05) & 0.03105 / 0.946 (0.05) & 0.01677 / 0.919 "
+  },
+  {
+   "number": "0.01677",
+   "value": 0.01677,
+   "ok": true,
+   "context": "0.01369 / 0.865 (0.05) & 0.03105 / 0.946 (0.05) & 0.01677 / 0.919 (0.05)\\\\ 0."
+  },
+  {
+   "number": "0.919",
+   "value": 0.919,
+   "ok": true,
+   "context": "0.865 (0.05) & 0.03105 / 0.946 (0.05) & 0.01677 / 0.919 (0.05)\\\\ 0.65 & 0.0"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "0.05) & 0.03105 / 0.946 (0.05) & 0.01677 / 0.919 (0.05)\\\\ 0.65 & 0.01288 /"
+  },
+  {
+   "number": "0.65",
+   "value": 0.65,
+   "ok": true,
+   "context": "0.03105 / 0.946 (0.05) & 0.01677 / 0.919 (0.05)\\\\ 0.65 & 0.01288 / 0.820 ("
+  },
+  {
+   "number": "0.01288",
+   "value": 0.01288,
+   "ok": true,
+   "context": " / 0.946 (0.05) & 0.01677 / 0.919 (0.05)\\\\ 0.65 & 0.01288 / 0.820 (0.1) & 0.0"
+  },
+  {
+   "number": "0.820",
+   "value": 0.82,
+   "ok": true,
+   "context": "0.05) & 0.01677 / 0.919 (0.05)\\\\ 0.65 & 0.01288 / 0.820 (0.1) & 0.02715 / 0"
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": " 0.01677 / 0.919 (0.05)\\\\ 0.65 & 0.01288 / 0.820 (0.1) & 0.02715 / 0.899 "
+  },
+  {
+   "number": "0.02715",
+   "value": 0.02715,
+   "ok": true,
+   "context": "7 / 0.919 (0.05)\\\\ 0.65 & 0.01288 / 0.820 (0.1) & 0.02715 / 0.899 (0.05) & 0."
+  },
+  {
+   "number": "0.899",
+   "value": 0.899,
+   "ok": true,
+   "context": "(0.05)\\\\ 0.65 & 0.01288 / 0.820 (0.1) & 0.02715 / 0.899 (0.05) & 0.04529 / "
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "\\ 0.65 & 0.01288 / 0.820 (0.1) & 0.02715 / 0.899 (0.05) & 0.04529 / 0.945 "
+  },
+  {
+   "number": "0.04529",
+   "value": 0.04529,
+   "ok": true,
+   "context": " 0.01288 / 0.820 (0.1) & 0.02715 / 0.899 (0.05) & 0.04529 / 0.945 (0.05) & 0."
+  },
+  {
+   "number": "0.945",
+   "value": 0.945,
+   "ok": true,
+   "context": " 0.820 (0.1) & 0.02715 / 0.899 (0.05) & 0.04529 / 0.945 (0.05) & 0.06057 / "
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "(0.1) & 0.02715 / 0.899 (0.05) & 0.04529 / 0.945 (0.05) & 0.06057 / 0.965 "
+  },
+  {
+   "number": "0.06057",
+   "value": 0.06057,
+   "ok": true,
+   "context": "0.02715 / 0.899 (0.05) & 0.04529 / 0.945 (0.05) & 0.06057 / 0.965 (0.05) & fi"
+  },
+  {
+   "number": "0.965",
+   "value": 0.965,
+   "ok": true,
+   "context": "0.899 (0.05) & 0.04529 / 0.945 (0.05) & 0.06057 / 0.965 (0.05) & fixed \\GUA"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "0.05) & 0.04529 / 0.945 (0.05) & 0.06057 / 0.965 (0.05) & fixed \\GUARD\\\\ 0"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": " (0.05) & 0.06057 / 0.965 (0.05) & fixed \\GUARD\\\\ 0.5 & 0.04099 / 0.912 ("
+  },
+  {
+   "number": "0.04099",
+   "value": 0.04099,
+   "ok": true,
+   "context": ") & 0.06057 / 0.965 (0.05) & fixed \\GUARD\\\\ 0.5 & 0.04099 / 0.912 (0.05) & 0."
+  },
+  {
+   "number": "0.912",
+   "value": 0.912,
+   "ok": true,
+   "context": "7 / 0.965 (0.05) & fixed \\GUARD\\\\ 0.5 & 0.04099 / 0.912 (0.05) & 0.05954 / "
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "65 (0.05) & fixed \\GUARD\\\\ 0.5 & 0.04099 / 0.912 (0.05) & 0.05954 / 0.945 "
+  },
+  {
+   "number": "0.05954",
+   "value": 0.05954,
+   "ok": true,
+   "context": ") & fixed \\GUARD\\\\ 0.5 & 0.04099 / 0.912 (0.05) & 0.05954 / 0.945 (0.05) & 0."
+  },
+  {
+   "number": "0.945",
+   "value": 0.945,
+   "ok": true,
+   "context": "\\GUARD\\\\ 0.5 & 0.04099 / 0.912 (0.05) & 0.05954 / 0.945 (0.05) & 0.08139 / "
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "\\ 0.5 & 0.04099 / 0.912 (0.05) & 0.05954 / 0.945 (0.05) & 0.08139 / 0.965 "
+  },
+  {
+   "number": "0.08139",
+   "value": 0.08139,
+   "ok": true,
+   "context": "0.04099 / 0.912 (0.05) & 0.05954 / 0.945 (0.05) & 0.08139 / 0.965 (0.05) & 0."
+  },
+  {
+   "number": "0.965",
+   "value": 0.965,
+   "ok": true,
+   "context": "0.912 (0.05) & 0.05954 / 0.945 (0.05) & 0.08139 / 0.965 (0.05) & 0.03523 / "
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "0.05) & 0.05954 / 0.945 (0.05) & 0.08139 / 0.965 (0.05) & 0.03523 / 0.923 "
+  },
+  {
+   "number": "0.03523",
+   "value": 0.03523,
+   "ok": true,
+   "context": "0.05954 / 0.945 (0.05) & 0.08139 / 0.965 (0.05) & 0.03523 / 0.923 (0.05) & fi"
+  },
+  {
+   "number": "0.923",
+   "value": 0.923,
+   "ok": true,
+   "context": "0.945 (0.05) & 0.08139 / 0.965 (0.05) & 0.03523 / 0.923 (0.05) & fixed \\GUA"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "0.05) & 0.08139 / 0.965 (0.05) & 0.03523 / 0.923 (0.05) & fixed \\GUARD$^\\d"
+  },
+  {
+   "number": "0.25",
+   "value": 0.25,
+   "ok": true,
+   "context": "0.03523 / 0.923 (0.05) & fixed \\GUARD$^\\dagger$\\\\ 0.25 & 0.09715 / 0.955 ("
+  },
+  {
+   "number": "0.09715",
+   "value": 0.09715,
+   "ok": true,
+   "context": " / 0.923 (0.05) & fixed \\GUARD$^\\dagger$\\\\ 0.25 & 0.09715 / 0.955 (0.05) & 0."
+  },
+  {
+   "number": "0.955",
+   "value": 0.955,
+   "ok": true,
+   "context": "0.05) & fixed \\GUARD$^\\dagger$\\\\ 0.25 & 0.09715 / 0.955 (0.05) & 0.12023 / "
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": " fixed \\GUARD$^\\dagger$\\\\ 0.25 & 0.09715 / 0.955 (0.05) & 0.12023 / 0.967 "
+  },
+  {
+   "number": "0.12023",
+   "value": 0.12023,
+   "ok": true,
+   "context": "GUARD$^\\dagger$\\\\ 0.25 & 0.09715 / 0.955 (0.05) & 0.12023 / 0.967 (0.05) & 0."
+  },
+  {
+   "number": "0.967",
+   "value": 0.967,
+   "ok": true,
+   "context": "gger$\\\\ 0.25 & 0.09715 / 0.955 (0.05) & 0.12023 / 0.967 (0.05) & 0.06162 / "
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": " 0.25 & 0.09715 / 0.955 (0.05) & 0.12023 / 0.967 (0.05) & 0.06162 / 0.933 "
+  },
+  {
+   "number": "0.06162",
+   "value": 0.06162,
+   "ok": true,
+   "context": "0.09715 / 0.955 (0.05) & 0.12023 / 0.967 (0.05) & 0.06162 / 0.933 (0.05) & 0."
+  },
+  {
+   "number": "0.933",
+   "value": 0.933,
+   "ok": true,
+   "context": "0.955 (0.05) & 0.12023 / 0.967 (0.05) & 0.06162 / 0.933 (0.05) & 0.00232 / "
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "0.05) & 0.12023 / 0.967 (0.05) & 0.06162 / 0.933 (0.05) & 0.00232 / 0.147 "
+  },
+  {
+   "number": "0.00232",
+   "value": 0.00232,
+   "ok": true,
+   "context": "0.12023 / 0.967 (0.05) & 0.06162 / 0.933 (0.05) & 0.00232 / 0.147 (0.05) & fi"
+  },
+  {
+   "number": "0.147",
+   "value": 0.147,
+   "ok": true,
+   "context": "0.967 (0.05) & 0.06162 / 0.933 (0.05) & 0.00232 / 0.147 (0.05) & fixed \\GUA"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "0.05) & 0.06162 / 0.933 (0.05) & 0.00232 / 0.147 (0.05) & fixed \\GUARD$^\\d"
+  },
+  {
+   "number": "0.15924",
+   "value": 0.15924,
+   "ok": true,
+   "context": "232 / 0.147 (0.05) & fixed \\GUARD$^\\dagger$\\\\ 0 & 0.15924 / 0.968 (0.05) & 0."
+  },
+  {
+   "number": "0.968",
+   "value": 0.968,
+   "ok": true,
+   "context": "7 (0.05) & fixed \\GUARD$^\\dagger$\\\\ 0 & 0.15924 / 0.968 (0.05) & 0.08820 / "
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": ") & fixed \\GUARD$^\\dagger$\\\\ 0 & 0.15924 / 0.968 (0.05) & 0.08820 / 0.938 "
+  },
+  {
+   "number": "0.08820",
+   "value": 0.0882,
+   "ok": true,
+   "context": "d \\GUARD$^\\dagger$\\\\ 0 & 0.15924 / 0.968 (0.05) & 0.08820 / 0.938 (0.05) & 0."
+  },
+  {
+   "number": "0.938",
+   "value": 0.938,
+   "ok": true,
+   "context": "\\dagger$\\\\ 0 & 0.15924 / 0.968 (0.05) & 0.08820 / 0.938 (0.05) & 0.02496 / "
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "$\\\\ 0 & 0.15924 / 0.968 (0.05) & 0.08820 / 0.938 (0.05) & 0.02496 / 0.845 "
+  },
+  {
+   "number": "0.02496",
+   "value": 0.02496,
+   "ok": true,
+   "context": "0.15924 / 0.968 (0.05) & 0.08820 / 0.938 (0.05) & 0.02496 / 0.845 (0.05) & fi"
+  },
+  {
+   "number": "0.845",
+   "value": 0.845,
+   "ok": true,
+   "context": "0.968 (0.05) & 0.08820 / 0.938 (0.05) & 0.02496 / 0.845 (0.05) & fixed \\GUA"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "0.05) & 0.08820 / 0.938 (0.05) & 0.02496 / 0.845 (0.05) & fixed \\GUARD$^\\d"
+  },
+  {
+   "number": "0.25",
+   "value": 0.25,
+   "ok": true,
+   "context": "-$\\sigma$ gain & share & best $\\lambda$\\\\\\midrule 0.25 & 0.00125 & 0.0050 "
+  },
+  {
+   "number": "0.00125",
+   "value": 0.00125,
+   "ok": true,
+   "context": "a$ gain & share & best $\\lambda$\\\\\\midrule 0.25 & 0.00125 & 0.0050 & 0.0352 &"
+  },
+  {
+   "number": "0.0050",
+   "value": 0.005,
+   "ok": true,
+   "context": "share & best $\\lambda$\\\\\\midrule 0.25 & 0.00125 & 0.0050 & 0.0352 & 0.02517 "
+  },
+  {
+   "number": "0.0352",
+   "value": 0.0352,
+   "ok": true,
+   "context": "est $\\lambda$\\\\\\midrule 0.25 & 0.00125 & 0.0050 & 0.0352 & 0.02517 & 0.02392"
+  },
+  {
+   "number": "0.02517",
+   "value": 0.02517,
+   "ok": true,
+   "context": "bda$\\\\\\midrule 0.25 & 0.00125 & 0.0050 & 0.0352 & 0.02517 & 0.02392 & 0.951 &"
+  },
+  {
+   "number": "0.02392",
+   "value": 0.02392,
+   "ok": true,
+   "context": "rule 0.25 & 0.00125 & 0.0050 & 0.0352 & 0.02517 & 0.02392 & 0.951 & 0.03\\\\ 0."
+  },
+  {
+   "number": "0.951",
+   "value": 0.951,
+   "ok": true,
+   "context": "& 0.00125 & 0.0050 & 0.0352 & 0.02517 & 0.02392 & 0.951 & 0.03\\\\ 0.5 & 0.00"
+  },
+  {
+   "number": "0.03",
+   "value": 0.03,
+   "ok": true,
+   "context": "5 & 0.0050 & 0.0352 & 0.02517 & 0.02392 & 0.951 & 0.03\\\\ 0.5 & 0.00250 & 0"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "050 & 0.0352 & 0.02517 & 0.02392 & 0.951 & 0.03\\\\ 0.5 & 0.00250 & 0.0100 "
+  },
+  {
+   "number": "0.00250",
+   "value": 0.0025,
+   "ok": true,
+   "context": "0.0352 & 0.02517 & 0.02392 & 0.951 & 0.03\\\\ 0.5 & 0.00250 & 0.0100 & 0.0352 &"
+  },
+  {
+   "number": "0.0100",
+   "value": 0.01,
+   "ok": true,
+   "context": ".02517 & 0.02392 & 0.951 & 0.03\\\\ 0.5 & 0.00250 & 0.0100 & 0.0352 & 0.01994 "
+  },
+  {
+   "number": "0.0352",
+   "value": 0.0352,
+   "ok": true,
+   "context": "0.02392 & 0.951 & 0.03\\\\ 0.5 & 0.00250 & 0.0100 & 0.0352 & 0.01994 & 0.01882"
+  },
+  {
+   "number": "0.01994",
+   "value": 0.01994,
+   "ok": true,
+   "context": " 0.951 & 0.03\\\\ 0.5 & 0.00250 & 0.0100 & 0.0352 & 0.01994 & 0.01882 & 0.944 &"
+  },
+  {
+   "number": "0.01882",
+   "value": 0.01882,
+   "ok": true,
+   "context": ".03\\\\ 0.5 & 0.00250 & 0.0100 & 0.0352 & 0.01994 & 0.01882 & 0.944 & 0.05\\\\ 1 "
+  },
+  {
+   "number": "0.944",
+   "value": 0.944,
+   "ok": true,
+   "context": "& 0.00250 & 0.0100 & 0.0352 & 0.01994 & 0.01882 & 0.944 & 0.05\\\\ 1 & 0.0050"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "0 & 0.0100 & 0.0352 & 0.01994 & 0.01882 & 0.944 & 0.05\\\\ 1 & 0.00500 & 0.0"
+  },
+  {
+   "number": "0.00500",
+   "value": 0.005,
+   "ok": true,
+   "context": "& 0.0352 & 0.01994 & 0.01882 & 0.944 & 0.05\\\\ 1 & 0.00500 & 0.0200 & 0.0352 &"
+  },
+  {
+   "number": "0.0200",
+   "value": 0.02,
+   "ok": true,
+   "context": " 0.01994 & 0.01882 & 0.944 & 0.05\\\\ 1 & 0.00500 & 0.0200 & 0.0352 & 0.01369 "
+  },
+  {
+   "number": "0.0352",
+   "value": 0.0352,
+   "ok": true,
+   "context": "& 0.01882 & 0.944 & 0.05\\\\ 1 & 0.00500 & 0.0200 & 0.0352 & 0.01369 & 0.01184"
+  },
+  {
+   "number": "0.01369",
+   "value": 0.01369,
+   "ok": true,
+   "context": " & 0.944 & 0.05\\\\ 1 & 0.00500 & 0.0200 & 0.0352 & 0.01369 & 0.01184 & 0.865 &"
+  },
+  {
+   "number": "0.01184",
+   "value": 0.01184,
+   "ok": true,
+   "context": " 0.05\\\\ 1 & 0.00500 & 0.0200 & 0.0352 & 0.01369 & 0.01184 & 0.865 & 0.05\\\\ 2 "
+  },
+  {
+   "number": "0.865",
+   "value": 0.865,
+   "ok": true,
+   "context": "& 0.00500 & 0.0200 & 0.0352 & 0.01369 & 0.01184 & 0.865 & 0.05\\\\ 2 & 0.0100"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "0 & 0.0200 & 0.0352 & 0.01369 & 0.01184 & 0.865 & 0.05\\\\ 2 & 0.01000 & 0.0"
+  },
+  {
+   "number": "0.01000",
+   "value": 0.01,
+   "ok": true,
+   "context": "& 0.0352 & 0.01369 & 0.01184 & 0.865 & 0.05\\\\ 2 & 0.01000 & 0.0400 & 0.0352 &"
+  },
+  {
+   "number": "0.0400",
+   "value": 0.04,
+   "ok": true,
+   "context": " 0.01369 & 0.01184 & 0.865 & 0.05\\\\ 2 & 0.01000 & 0.0400 & 0.0352 & 0.00754 "
+  },
+  {
+   "number": "0.0352",
+   "value": 0.0352,
+   "ok": true,
+   "context": "& 0.01184 & 0.865 & 0.05\\\\ 2 & 0.01000 & 0.0400 & 0.0352 & 0.00754 & 0.00612"
+  },
+  {
+   "number": "0.00754",
+   "value": 0.00754,
+   "ok": true,
+   "context": " & 0.865 & 0.05\\\\ 2 & 0.01000 & 0.0400 & 0.0352 & 0.00754 & 0.00612 & 0.812 &"
+  },
+  {
+   "number": "0.00612",
+   "value": 0.00612,
+   "ok": true,
+   "context": " 0.05\\\\ 2 & 0.01000 & 0.0400 & 0.0352 & 0.00754 & 0.00612 & 0.812 & 0.1\\\\ 4 &"
+  },
+  {
+   "number": "0.812",
+   "value": 0.812,
+   "ok": true,
+   "context": "& 0.01000 & 0.0400 & 0.0352 & 0.00754 & 0.00612 & 0.812 & 0.1\\\\ 4 & 0.02000"
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": "0 & 0.0400 & 0.0352 & 0.00754 & 0.00612 & 0.812 & 0.1\\\\ 4 & 0.02000 & 0.0"
+  },
+  {
+   "number": "0.02000",
+   "value": 0.02,
+   "ok": true,
+   "context": " & 0.0352 & 0.00754 & 0.00612 & 0.812 & 0.1\\\\ 4 & 0.02000 & 0.0800 & 0.0352 &"
+  },
+  {
+   "number": "0.0800",
+   "value": 0.08,
+   "ok": true,
+   "context": "& 0.00754 & 0.00612 & 0.812 & 0.1\\\\ 4 & 0.02000 & 0.0800 & 0.0352 & 0.00277 "
+  },
+  {
+   "number": "0.0352",
+   "value": 0.0352,
+   "ok": true,
+   "context": " & 0.00612 & 0.812 & 0.1\\\\ 4 & 0.02000 & 0.0800 & 0.0352 & 0.00277 & 0.00162"
+  },
+  {
+   "number": "0.00277",
+   "value": 0.00277,
+   "ok": true,
+   "context": "2 & 0.812 & 0.1\\\\ 4 & 0.02000 & 0.0800 & 0.0352 & 0.00277 & 0.00162 & 0.584 &"
+  },
+  {
+   "number": "0.00162",
+   "value": 0.00162,
+   "ok": true,
+   "context": "& 0.1\\\\ 4 & 0.02000 & 0.0800 & 0.0352 & 0.00277 & 0.00162 & 0.584 & 0.2\\\\ 8 &"
+  },
+  {
+   "number": "0.584",
+   "value": 0.584,
+   "ok": true,
+   "context": "& 0.02000 & 0.0800 & 0.0352 & 0.00277 & 0.00162 & 0.584 & 0.2\\\\ 8 & 0.04000"
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": "0 & 0.0800 & 0.0352 & 0.00277 & 0.00162 & 0.584 & 0.2\\\\ 8 & 0.04000 & 0.1"
+  },
+  {
+   "number": "0.04000",
+   "value": 0.04,
+   "ok": true,
+   "context": " & 0.0352 & 0.00277 & 0.00162 & 0.584 & 0.2\\\\ 8 & 0.04000 & 0.1600 & 0.0352 &"
+  },
+  {
+   "number": "0.1600",
+   "value": 0.16,
+   "ok": true,
+   "context": "& 0.00277 & 0.00162 & 0.584 & 0.2\\\\ 8 & 0.04000 & 0.1600 & 0.0352 & 0.00034 "
+  },
+  {
+   "number": "0.0352",
+   "value": 0.0352,
+   "ok": true,
+   "context": " & 0.00162 & 0.584 & 0.2\\\\ 8 & 0.04000 & 0.1600 & 0.0352 & 0.00034 & 0.00001"
+  },
+  {
+   "number": "0.00034",
+   "value": 0.00034,
+   "ok": true,
+   "context": "2 & 0.584 & 0.2\\\\ 8 & 0.04000 & 0.1600 & 0.0352 & 0.00034 & 0.00001 & 0.021 &"
+  },
+  {
+   "number": "0.00001",
+   "value": 1e-05,
+   "ok": true,
+   "context": "& 0.2\\\\ 8 & 0.04000 & 0.1600 & 0.0352 & 0.00034 & 0.00001 & 0.021 & 0.5\\\\ \\bo"
+  },
+  {
+   "number": "0.021",
+   "value": 0.021,
+   "ok": true,
+   "context": "& 0.04000 & 0.1600 & 0.0352 & 0.00034 & 0.00001 & 0.021 & 0.5\\\\ \\bottomrule"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "0 & 0.1600 & 0.0352 & 0.00034 & 0.00001 & 0.021 & 0.5\\\\ \\bottomrule\\end{t"
+  },
+  {
+   "number": "0.8",
+   "value": 0.8,
+   "ok": true,
+   "context": "tabular} \\caption{E3, regime persistence ($\\Gamma=0.8$, $r_{\\mathrm g}=0."
+  },
+  {
+   "number": "0.7",
+   "value": 0.7,
+   "ok": true,
+   "context": " regime persistence ($\\Gamma=0.8$, $r_{\\mathrm g}=0.7$, $c_{\\mathrm{sw}}="
+  },
+  {
+   "number": "0.143",
+   "value": 0.143,
+   "ok": true,
+   "context": "0/20 & 200/20 & 100/10 & mean & p95\\\\\\midrule 0 & 0.143 & 0.138 & 0.143 & 0"
+  },
+  {
+   "number": "0.138",
+   "value": 0.138,
+   "ok": true,
+   "context": "00/20 & 100/10 & mean & p95\\\\\\midrule 0 & 0.143 & 0.138 & 0.143 & 0.143 & 0"
+  },
+  {
+   "number": "0.143",
+   "value": 0.143,
+   "ok": true,
+   "context": "100/10 & mean & p95\\\\\\midrule 0 & 0.143 & 0.138 & 0.143 & 0.143 & 0.143 & 0"
+  },
+  {
+   "number": "0.143",
+   "value": 0.143,
+   "ok": true,
+   "context": " mean & p95\\\\\\midrule 0 & 0.143 & 0.138 & 0.143 & 0.143 & 0.143 & 0.8723 & "
+  },
+  {
+   "number": "0.143",
+   "value": 0.143,
+   "ok": true,
+   "context": "p95\\\\\\midrule 0 & 0.143 & 0.138 & 0.143 & 0.143 & 0.143 & 0.8723 & 0.8719 &"
+  },
+  {
+   "number": "0.8723",
+   "value": 0.8723,
+   "ok": true,
+   "context": "drule 0 & 0.143 & 0.138 & 0.143 & 0.143 & 0.143 & 0.8723 & 0.8719 & 0.8723 &"
+  },
+  {
+   "number": "0.8719",
+   "value": 0.8719,
+   "ok": true,
+   "context": " 0.143 & 0.138 & 0.143 & 0.143 & 0.143 & 0.8723 & 0.8719 & 0.8723 & 0.8723 &"
+  },
+  {
+   "number": "0.8723",
+   "value": 0.8723,
+   "ok": true,
+   "context": "0.138 & 0.143 & 0.143 & 0.143 & 0.8723 & 0.8719 & 0.8723 & 0.8723 & 0.8723 &"
+  },
+  {
+   "number": "0.8723",
+   "value": 0.8723,
+   "ok": true,
+   "context": ".143 & 0.143 & 0.143 & 0.8723 & 0.8719 & 0.8723 & 0.8723 & 0.8723 & 4.1 & 12"
+  },
+  {
+   "number": "0.8723",
+   "value": 0.8723,
+   "ok": true,
+   "context": "143 & 0.143 & 0.8723 & 0.8719 & 0.8723 & 0.8723 & 0.8723 & 4.1 & 12\\\\ 0.02 &"
+  },
+  {
+   "number": "4.1",
+   "value": 4.1,
+   "ok": true,
+   "context": "43 & 0.8723 & 0.8719 & 0.8723 & 0.8723 & 0.8723 & 4.1 & 12\\\\ 0.02 & 0.153"
+  },
+  {
+   "number": "0.02",
+   "value": 0.02,
+   "ok": true,
+   "context": " & 0.8719 & 0.8723 & 0.8723 & 0.8723 & 4.1 & 12\\\\ 0.02 & 0.153 & 0.146 & 0"
+  },
+  {
+   "number": "0.153",
+   "value": 0.153,
+   "ok": true,
+   "context": "19 & 0.8723 & 0.8723 & 0.8723 & 4.1 & 12\\\\ 0.02 & 0.153 & 0.146 & 0.153 & 0"
+  },
+  {
+   "number": "0.146",
+   "value": 0.146,
+   "ok": true,
+   "context": "723 & 0.8723 & 0.8723 & 4.1 & 12\\\\ 0.02 & 0.153 & 0.146 & 0.153 & 0.153 & 0"
+  },
+  {
+   "number": "0.153",
+   "value": 0.153,
+   "ok": true,
+   "context": "8723 & 0.8723 & 4.1 & 12\\\\ 0.02 & 0.153 & 0.146 & 0.153 & 0.153 & 0.153 & 0"
+  },
+  {
+   "number": "0.153",
+   "value": 0.153,
+   "ok": true,
+   "context": ".8723 & 4.1 & 12\\\\ 0.02 & 0.153 & 0.146 & 0.153 & 0.153 & 0.153 & 0.8719 & "
+  },
+  {
+   "number": "0.153",
+   "value": 0.153,
+   "ok": true,
+   "context": "4.1 & 12\\\\ 0.02 & 0.153 & 0.146 & 0.153 & 0.153 & 0.153 & 0.8719 & 0.8714 &"
+  },
+  {
+   "number": "0.8719",
+   "value": 0.8719,
+   "ok": true,
+   "context": "\\\\ 0.02 & 0.153 & 0.146 & 0.153 & 0.153 & 0.153 & 0.8719 & 0.8714 & 0.8719 &"
+  },
+  {
+   "number": "0.8714",
+   "value": 0.8714,
+   "ok": true,
+   "context": " 0.153 & 0.146 & 0.153 & 0.153 & 0.153 & 0.8719 & 0.8714 & 0.8719 & 0.8719 &"
+  },
+  {
+   "number": "0.8719",
+   "value": 0.8719,
+   "ok": true,
+   "context": "0.146 & 0.153 & 0.153 & 0.153 & 0.8719 & 0.8714 & 0.8719 & 0.8719 & 0.8719 &"
+  },
+  {
+   "number": "0.8719",
+   "value": 0.8719,
+   "ok": true,
+   "context": ".153 & 0.153 & 0.153 & 0.8719 & 0.8714 & 0.8719 & 0.8719 & 0.8719 & 5.1 & 16"
+  },
+  {
+   "number": "0.8719",
+   "value": 0.8719,
+   "ok": true,
+   "context": "153 & 0.153 & 0.8719 & 0.8714 & 0.8719 & 0.8719 & 0.8719 & 5.1 & 16\\\\ 0.05 &"
+  },
+  {
+   "number": "5.1",
+   "value": 5.1,
+   "ok": true,
+   "context": "53 & 0.8719 & 0.8714 & 0.8719 & 0.8719 & 0.8719 & 5.1 & 16\\\\ 0.05 & 0.170"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": " & 0.8714 & 0.8719 & 0.8719 & 0.8719 & 5.1 & 16\\\\ 0.05 & 0.170 & 0.157 & 0"
+  },
+  {
+   "number": "0.170",
+   "value": 0.17,
+   "ok": true,
+   "context": "14 & 0.8719 & 0.8719 & 0.8719 & 5.1 & 16\\\\ 0.05 & 0.170 & 0.157 & 0.168 & 0"
+  },
+  {
+   "number": "0.157",
+   "value": 0.157,
+   "ok": true,
+   "context": "719 & 0.8719 & 0.8719 & 5.1 & 16\\\\ 0.05 & 0.170 & 0.157 & 0.168 & 0.170 & 0"
+  },
+  {
+   "number": "0.168",
+   "value": 0.168,
+   "ok": true,
+   "context": "8719 & 0.8719 & 5.1 & 16\\\\ 0.05 & 0.170 & 0.157 & 0.168 & 0.170 & 0.169 & 0"
+  },
+  {
+   "number": "0.170",
+   "value": 0.17,
+   "ok": true,
+   "context": ".8719 & 5.1 & 16\\\\ 0.05 & 0.170 & 0.157 & 0.168 & 0.170 & 0.169 & 0.8709 & "
+  },
+  {
+   "number": "0.169",
+   "value": 0.169,
+   "ok": true,
+   "context": "5.1 & 16\\\\ 0.05 & 0.170 & 0.157 & 0.168 & 0.170 & 0.169 & 0.8709 & 0.8702 &"
+  },
+  {
+   "number": "0.8709",
+   "value": 0.8709,
+   "ok": true,
+   "context": "\\\\ 0.05 & 0.170 & 0.157 & 0.168 & 0.170 & 0.169 & 0.8709 & 0.8702 & 0.8708 &"
+  },
+  {
+   "number": "0.8702",
+   "value": 0.8702,
+   "ok": true,
+   "context": " 0.170 & 0.157 & 0.168 & 0.170 & 0.169 & 0.8709 & 0.8702 & 0.8708 & 0.8709 &"
+  },
+  {
+   "number": "0.8708",
+   "value": 0.8708,
+   "ok": true,
+   "context": "0.157 & 0.168 & 0.170 & 0.169 & 0.8709 & 0.8702 & 0.8708 & 0.8709 & 0.8708 &"
+  },
+  {
+   "number": "0.8709",
+   "value": 0.8709,
+   "ok": true,
+   "context": ".168 & 0.170 & 0.169 & 0.8709 & 0.8702 & 0.8708 & 0.8709 & 0.8708 & 7.0 & 22"
+  },
+  {
+   "number": "0.8708",
+   "value": 0.8708,
+   "ok": true,
+   "context": "170 & 0.169 & 0.8709 & 0.8702 & 0.8708 & 0.8709 & 0.8708 & 7.0 & 22\\\\ 0.07 &"
+  },
+  {
+   "number": "7.0",
+   "value": 7.0,
+   "ok": true,
+   "context": "69 & 0.8709 & 0.8702 & 0.8708 & 0.8709 & 0.8708 & 7.0 & 22\\\\ 0.07 & 0.183"
+  },
+  {
+   "number": "0.07",
+   "value": 0.07,
+   "ok": true,
+   "context": " & 0.8702 & 0.8708 & 0.8709 & 0.8708 & 7.0 & 22\\\\ 0.07 & 0.183 & 0.165 & 0"
+  },
+  {
+   "number": "0.183",
+   "value": 0.183,
+   "ok": true,
+   "context": "02 & 0.8708 & 0.8709 & 0.8708 & 7.0 & 22\\\\ 0.07 & 0.183 & 0.165 & 0.180 & 0"
+  },
+  {
+   "number": "0.165",
+   "value": 0.165,
+   "ok": true,
+   "context": "708 & 0.8709 & 0.8708 & 7.0 & 22\\\\ 0.07 & 0.183 & 0.165 & 0.180 & 0.183 & 0"
+  },
+  {
+   "number": "0.180",
+   "value": 0.18,
+   "ok": true,
+   "context": "8709 & 0.8708 & 7.0 & 22\\\\ 0.07 & 0.183 & 0.165 & 0.180 & 0.183 & 0.181 & 0"
+  },
+  {
+   "number": "0.183",
+   "value": 0.183,
+   "ok": true,
+   "context": ".8708 & 7.0 & 22\\\\ 0.07 & 0.183 & 0.165 & 0.180 & 0.183 & 0.181 & 0.8696 & "
+  },
+  {
+   "number": "0.181",
+   "value": 0.181,
+   "ok": true,
+   "context": "7.0 & 22\\\\ 0.07 & 0.183 & 0.165 & 0.180 & 0.183 & 0.181 & 0.8696 & 0.8690 &"
+  },
+  {
+   "number": "0.8696",
+   "value": 0.8696,
+   "ok": true,
+   "context": "\\\\ 0.07 & 0.183 & 0.165 & 0.180 & 0.183 & 0.181 & 0.8696 & 0.8690 & 0.8696 &"
+  },
+  {
+   "number": "0.8690",
+   "value": 0.869,
+   "ok": true,
+   "context": " 0.183 & 0.165 & 0.180 & 0.183 & 0.181 & 0.8696 & 0.8690 & 0.8696 & 0.8696 &"
+  },
+  {
+   "number": "0.8696",
+   "value": 0.8696,
+   "ok": true,
+   "context": "0.165 & 0.180 & 0.183 & 0.181 & 0.8696 & 0.8690 & 0.8696 & 0.8696 & 0.8696 &"
+  },
+  {
+   "number": "0.8696",
+   "value": 0.8696,
+   "ok": true,
+   "context": ".180 & 0.183 & 0.181 & 0.8696 & 0.8690 & 0.8696 & 0.8696 & 0.8696 & 8.8 & 28"
+  },
+  {
+   "number": "0.8696",
+   "value": 0.8696,
+   "ok": true,
+   "context": "183 & 0.181 & 0.8696 & 0.8690 & 0.8696 & 0.8696 & 0.8696 & 8.8 & 28\\\\ 0.085 "
+  },
+  {
+   "number": "8.8",
+   "value": 8.8,
+   "ok": true,
+   "context": "81 & 0.8696 & 0.8690 & 0.8696 & 0.8696 & 0.8696 & 8.8 & 28\\\\ 0.085 & 0.19"
+  },
+  {
+   "number": "0.085",
+   "value": 0.085,
+   "ok": true,
+   "context": " & 0.8690 & 0.8696 & 0.8696 & 0.8696 & 8.8 & 28\\\\ 0.085 & 0.193 & 0.170 & 0"
+  },
+  {
+   "number": "0.193",
+   "value": 0.193,
+   "ok": true,
+   "context": "0 & 0.8696 & 0.8696 & 0.8696 & 8.8 & 28\\\\ 0.085 & 0.193 & 0.170 & 0.190 & 0"
+  },
+  {
+   "number": "0.170",
+   "value": 0.17,
+   "ok": true,
+   "context": "96 & 0.8696 & 0.8696 & 8.8 & 28\\\\ 0.085 & 0.193 & 0.170 & 0.190 & 0.193 & 0"
+  },
+  {
+   "number": "0.190",
+   "value": 0.19,
+   "ok": true,
+   "context": "696 & 0.8696 & 8.8 & 28\\\\ 0.085 & 0.193 & 0.170 & 0.190 & 0.193 & 0.191 & 0"
+  },
+  {
+   "number": "0.193",
+   "value": 0.193,
+   "ok": true,
+   "context": "8696 & 8.8 & 28\\\\ 0.085 & 0.193 & 0.170 & 0.190 & 0.193 & 0.191 & 0.8684 & "
+  },
+  {
+   "number": "0.191",
+   "value": 0.191,
+   "ok": true,
+   "context": ".8 & 28\\\\ 0.085 & 0.193 & 0.170 & 0.190 & 0.193 & 0.191 & 0.8684 & 0.8681 &"
+  },
+  {
+   "number": "0.8684",
+   "value": 0.8684,
+   "ok": true,
+   "context": "\\ 0.085 & 0.193 & 0.170 & 0.190 & 0.193 & 0.191 & 0.8684 & 0.8681 & 0.8683 &"
+  },
+  {
+   "number": "0.8681",
+   "value": 0.8681,
+   "ok": true,
+   "context": " 0.193 & 0.170 & 0.190 & 0.193 & 0.191 & 0.8684 & 0.8681 & 0.8683 & 0.8684 &"
+  },
+  {
+   "number": "0.8683",
+   "value": 0.8683,
+   "ok": true,
+   "context": "0.170 & 0.190 & 0.193 & 0.191 & 0.8684 & 0.8681 & 0.8683 & 0.8684 & 0.8684 &"
+  },
+  {
+   "number": "0.8684",
+   "value": 0.8684,
+   "ok": true,
+   "context": ".190 & 0.193 & 0.191 & 0.8684 & 0.8681 & 0.8683 & 0.8684 & 0.8684 & 10.5 & 3"
+  },
+  {
+   "number": "0.8684",
+   "value": 0.8684,
+   "ok": true,
+   "context": "193 & 0.191 & 0.8684 & 0.8681 & 0.8683 & 0.8684 & 0.8684 & 10.5 & 34\\\\ 0.1 &"
+  },
+  {
+   "number": "10.5",
+   "value": 10.5,
+   "ok": true,
+   "context": "91 & 0.8684 & 0.8681 & 0.8683 & 0.8684 & 0.8684 & 10.5 & 34\\\\ 0.1 & 0.206 "
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": "& 0.8681 & 0.8683 & 0.8684 & 0.8684 & 10.5 & 34\\\\ 0.1 & 0.206 & 0.176 & 0"
+  },
+  {
+   "number": "0.206",
+   "value": 0.206,
+   "ok": true,
+   "context": "81 & 0.8683 & 0.8684 & 0.8684 & 10.5 & 34\\\\ 0.1 & 0.206 & 0.176 & 0.200 & 0"
+  },
+  {
+   "number": "0.176",
+   "value": 0.176,
+   "ok": true,
+   "context": "683 & 0.8684 & 0.8684 & 10.5 & 34\\\\ 0.1 & 0.206 & 0.176 & 0.200 & 0.205 & 0"
+  },
+  {
+   "number": "0.200",
+   "value": 0.2,
+   "ok": true,
+   "context": "8684 & 0.8684 & 10.5 & 34\\\\ 0.1 & 0.206 & 0.176 & 0.200 & 0.205 & 0.201 & 0"
+  },
+  {
+   "number": "0.205",
+   "value": 0.205,
+   "ok": true,
+   "context": ".8684 & 10.5 & 34\\\\ 0.1 & 0.206 & 0.176 & 0.200 & 0.205 & 0.201 & 0.8668 & "
+  },
+  {
+   "number": "0.201",
+   "value": 0.201,
+   "ok": true,
+   "context": "10.5 & 34\\\\ 0.1 & 0.206 & 0.176 & 0.200 & 0.205 & 0.201 & 0.8668 & 0.8670 &"
+  },
+  {
+   "number": "0.8668",
+   "value": 0.8668,
+   "ok": true,
+   "context": "4\\\\ 0.1 & 0.206 & 0.176 & 0.200 & 0.205 & 0.201 & 0.8668 & 0.8670 & 0.8668 &"
+  },
+  {
+   "number": "0.8670",
+   "value": 0.867,
+   "ok": true,
+   "context": " 0.206 & 0.176 & 0.200 & 0.205 & 0.201 & 0.8668 & 0.8670 & 0.8668 & 0.8668 &"
+  },
+  {
+   "number": "0.8668",
+   "value": 0.8668,
+   "ok": true,
+   "context": "0.176 & 0.200 & 0.205 & 0.201 & 0.8668 & 0.8670 & 0.8668 & 0.8668 & 0.8669 &"
+  },
+  {
+   "number": "0.8668",
+   "value": 0.8668,
+   "ok": true,
+   "context": ".200 & 0.205 & 0.201 & 0.8668 & 0.8670 & 0.8668 & 0.8668 & 0.8669 & 12.6 & 4"
+  },
+  {
+   "number": "0.8669",
+   "value": 0.8669,
+   "ok": true,
+   "context": "205 & 0.201 & 0.8668 & 0.8670 & 0.8668 & 0.8668 & 0.8669 & 12.6 & 41\\\\ 0.115"
+  },
+  {
+   "number": "12.6",
+   "value": 12.6,
+   "ok": true,
+   "context": "01 & 0.8668 & 0.8670 & 0.8668 & 0.8668 & 0.8669 & 12.6 & 41\\\\ 0.115 & 0.21"
+  },
+  {
+   "number": "0.115",
+   "value": 0.115,
+   "ok": true,
+   "context": "& 0.8670 & 0.8668 & 0.8668 & 0.8669 & 12.6 & 41\\\\ 0.115 & 0.219 & 0.182 & 0"
+  },
+  {
+   "number": "0.219",
+   "value": 0.219,
+   "ok": true,
+   "context": " & 0.8668 & 0.8668 & 0.8669 & 12.6 & 41\\\\ 0.115 & 0.219 & 0.182 & 0.211 & 0"
+  },
+  {
+   "number": "0.182",
+   "value": 0.182,
+   "ok": true,
+   "context": "8 & 0.8668 & 0.8669 & 12.6 & 41\\\\ 0.115 & 0.219 & 0.182 & 0.211 & 0.218 & 0"
+  },
+  {
+   "number": "0.211",
+   "value": 0.211,
+   "ok": true,
+   "context": "68 & 0.8669 & 12.6 & 41\\\\ 0.115 & 0.219 & 0.182 & 0.211 & 0.218 & 0.212 & 0"
+  },
+  {
+   "number": "0.218",
+   "value": 0.218,
+   "ok": true,
+   "context": "669 & 12.6 & 41\\\\ 0.115 & 0.219 & 0.182 & 0.211 & 0.218 & 0.212 & 0.8649 & "
+  },
+  {
+   "number": "0.212",
+   "value": 0.212,
+   "ok": true,
+   "context": ".6 & 41\\\\ 0.115 & 0.219 & 0.182 & 0.211 & 0.218 & 0.212 & 0.8649 & 0.8659 &"
+  },
+  {
+   "number": "0.8649",
+   "value": 0.8649,
+   "ok": true,
+   "context": "\\ 0.115 & 0.219 & 0.182 & 0.211 & 0.218 & 0.212 & 0.8649 & 0.8659 & 0.8651 &"
+  },
+  {
+   "number": "0.8659",
+   "value": 0.8659,
+   "ok": true,
+   "context": " 0.219 & 0.182 & 0.211 & 0.218 & 0.212 & 0.8649 & 0.8659 & 0.8651 & 0.8649 &"
+  },
+  {
+   "number": "0.8651",
+   "value": 0.8651,
+   "ok": true,
+   "context": "0.182 & 0.211 & 0.218 & 0.212 & 0.8649 & 0.8659 & 0.8651 & 0.8649 & 0.8652 &"
+  },
+  {
+   "number": "0.8649",
+   "value": 0.8649,
+   "ok": true,
+   "context": ".211 & 0.218 & 0.212 & 0.8649 & 0.8659 & 0.8651 & 0.8649 & 0.8652 & 15.1 & 4"
+  },
+  {
+   "number": "0.8652",
+   "value": 0.8652,
+   "ok": true,
+   "context": "218 & 0.212 & 0.8649 & 0.8659 & 0.8651 & 0.8649 & 0.8652 & 15.1 & 49\\\\ 0.13 "
+  },
+  {
+   "number": "15.1",
+   "value": 15.1,
+   "ok": true,
+   "context": "12 & 0.8649 & 0.8659 & 0.8651 & 0.8649 & 0.8652 & 15.1 & 49\\\\ 0.13 & 0.233"
+  },
+  {
+   "number": "0.13",
+   "value": 0.13,
+   "ok": true,
+   "context": "& 0.8659 & 0.8651 & 0.8649 & 0.8652 & 15.1 & 49\\\\ 0.13 & 0.233 & 0.188 & 0"
+  },
+  {
+   "number": "0.233",
+   "value": 0.233,
+   "ok": true,
+   "context": "9 & 0.8651 & 0.8649 & 0.8652 & 15.1 & 49\\\\ 0.13 & 0.233 & 0.188 & 0.222 & 0"
+  },
+  {
+   "number": "0.188",
+   "value": 0.188,
+   "ok": true,
+   "context": "51 & 0.8649 & 0.8652 & 15.1 & 49\\\\ 0.13 & 0.233 & 0.188 & 0.222 & 0.233 & 0"
+  },
+  {
+   "number": "0.222",
+   "value": 0.222,
+   "ok": true,
+   "context": "649 & 0.8652 & 15.1 & 49\\\\ 0.13 & 0.233 & 0.188 & 0.222 & 0.233 & 0.224 & 0"
+  },
+  {
+   "number": "0.233",
+   "value": 0.233,
+   "ok": true,
+   "context": "8652 & 15.1 & 49\\\\ 0.13 & 0.233 & 0.188 & 0.222 & 0.233 & 0.224 & 0.8625 & "
+  },
+  {
+   "number": "0.224",
+   "value": 0.224,
+   "ok": true,
+   "context": "5.1 & 49\\\\ 0.13 & 0.233 & 0.188 & 0.222 & 0.233 & 0.224 & 0.8625 & 0.8646 &"
+  },
+  {
+   "number": "0.8625",
+   "value": 0.8625,
+   "ok": true,
+   "context": "\\\\ 0.13 & 0.233 & 0.188 & 0.222 & 0.233 & 0.224 & 0.8625 & 0.8646 & 0.8631 &"
+  },
+  {
+   "number": "0.8646",
+   "value": 0.8646,
+   "ok": true,
+   "context": " 0.233 & 0.188 & 0.222 & 0.233 & 0.224 & 0.8625 & 0.8646 & 0.8631 & 0.8625 &"
+  },
+  {
+   "number": "0.8631",
+   "value": 0.8631,
+   "ok": true,
+   "context": "0.188 & 0.222 & 0.233 & 0.224 & 0.8625 & 0.8646 & 0.8631 & 0.8625 & 0.8632 &"
+  },
+  {
+   "number": "0.8625",
+   "value": 0.8625,
+   "ok": true,
+   "context": ".222 & 0.233 & 0.224 & 0.8625 & 0.8646 & 0.8631 & 0.8625 & 0.8632 & 17.9 & 6"
+  },
+  {
+   "number": "0.8632",
+   "value": 0.8632,
+   "ok": true,
+   "context": "233 & 0.224 & 0.8625 & 0.8646 & 0.8631 & 0.8625 & 0.8632 & 17.9 & 60\\\\ 0.15 "
+  },
+  {
+   "number": "17.9",
+   "value": 17.9,
+   "ok": true,
+   "context": "24 & 0.8625 & 0.8646 & 0.8631 & 0.8625 & 0.8632 & 17.9 & 60\\\\ 0.15 & 0.256"
+  },
+  {
+   "number": "0.15",
+   "value": 0.15,
+   "ok": true,
+   "context": "& 0.8646 & 0.8631 & 0.8625 & 0.8632 & 17.9 & 60\\\\ 0.15 & 0.256 & 0.196 & 0"
+  },
+  {
+   "number": "0.256",
+   "value": 0.256,
+   "ok": true,
+   "context": "6 & 0.8631 & 0.8625 & 0.8632 & 17.9 & 60\\\\ 0.15 & 0.256 & 0.196 & 0.239 & 0"
+  },
+  {
+   "number": "0.196",
+   "value": 0.196,
+   "ok": true,
+   "context": "31 & 0.8625 & 0.8632 & 17.9 & 60\\\\ 0.15 & 0.256 & 0.196 & 0.239 & 0.254 & 0"
+  },
+  {
+   "number": "0.239",
+   "value": 0.239,
+   "ok": true,
+   "context": "625 & 0.8632 & 17.9 & 60\\\\ 0.15 & 0.256 & 0.196 & 0.239 & 0.254 & 0.241 & 0"
+  },
+  {
+   "number": "0.254",
+   "value": 0.254,
+   "ok": true,
+   "context": "8632 & 17.9 & 60\\\\ 0.15 & 0.256 & 0.196 & 0.239 & 0.254 & 0.241 & 0.8585 & "
+  },
+  {
+   "number": "0.241",
+   "value": 0.241,
+   "ok": true,
+   "context": "7.9 & 60\\\\ 0.15 & 0.256 & 0.196 & 0.239 & 0.254 & 0.241 & 0.8585 & 0.8629 &"
+  },
+  {
+   "number": "0.8585",
+   "value": 0.8585,
+   "ok": true,
+   "context": "\\\\ 0.15 & 0.256 & 0.196 & 0.239 & 0.254 & 0.241 & 0.8585 & 0.8629 & 0.8599 &"
+  },
+  {
+   "number": "0.8629",
+   "value": 0.8629,
+   "ok": true,
+   "context": " 0.256 & 0.196 & 0.239 & 0.254 & 0.241 & 0.8585 & 0.8629 & 0.8599 & 0.8587 &"
+  },
+  {
+   "number": "0.8599",
+   "value": 0.8599,
+   "ok": true,
+   "context": "0.196 & 0.239 & 0.254 & 0.241 & 0.8585 & 0.8629 & 0.8599 & 0.8587 & 0.8600 &"
+  },
+  {
+   "number": "0.8587",
+   "value": 0.8587,
+   "ok": true,
+   "context": ".239 & 0.254 & 0.241 & 0.8585 & 0.8629 & 0.8599 & 0.8587 & 0.8600 & 22.9 & 7"
+  },
+  {
+   "number": "0.8600",
+   "value": 0.86,
+   "ok": true,
+   "context": "254 & 0.241 & 0.8585 & 0.8629 & 0.8599 & 0.8587 & 0.8600 & 22.9 & 78\\\\ 0.2 &"
+  },
+  {
+   "number": "22.9",
+   "value": 22.9,
+   "ok": true,
+   "context": "41 & 0.8585 & 0.8629 & 0.8599 & 0.8587 & 0.8600 & 22.9 & 78\\\\ 0.2 & 0.337 "
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": "& 0.8629 & 0.8599 & 0.8587 & 0.8600 & 22.9 & 78\\\\ 0.2 & 0.337 & 0.215 & 0"
+  },
+  {
+   "number": "0.337",
+   "value": 0.337,
+   "ok": true,
+   "context": "29 & 0.8599 & 0.8587 & 0.8600 & 22.9 & 78\\\\ 0.2 & 0.337 & 0.215 & 0.284 & 0"
+  },
+  {
+   "number": "0.215",
+   "value": 0.215,
+   "ok": true,
+   "context": "599 & 0.8587 & 0.8600 & 22.9 & 78\\\\ 0.2 & 0.337 & 0.215 & 0.284 & 0.326 & 0"
+  },
+  {
+   "number": "0.284",
+   "value": 0.284,
+   "ok": true,
+   "context": "8587 & 0.8600 & 22.9 & 78\\\\ 0.2 & 0.337 & 0.215 & 0.284 & 0.326 & 0.289 & 0"
+  },
+  {
+   "number": "0.326",
+   "value": 0.326,
+   "ok": true,
+   "context": ".8600 & 22.9 & 78\\\\ 0.2 & 0.337 & 0.215 & 0.284 & 0.326 & 0.289 & 0.8427 & "
+  },
+  {
+   "number": "0.289",
+   "value": 0.289,
+   "ok": true,
+   "context": "22.9 & 78\\\\ 0.2 & 0.337 & 0.215 & 0.284 & 0.326 & 0.289 & 0.8427 & 0.8585 &"
+  },
+  {
+   "number": "0.8427",
+   "value": 0.8427,
+   "ok": true,
+   "context": "8\\\\ 0.2 & 0.337 & 0.215 & 0.284 & 0.326 & 0.289 & 0.8427 & 0.8585 & 0.8505 &"
+  },
+  {
+   "number": "0.8585",
+   "value": 0.8585,
+   "ok": true,
+   "context": " 0.337 & 0.215 & 0.284 & 0.326 & 0.289 & 0.8427 & 0.8585 & 0.8505 & 0.8444 &"
+  },
+  {
+   "number": "0.8505",
+   "value": 0.8505,
+   "ok": true,
+   "context": "0.215 & 0.284 & 0.326 & 0.289 & 0.8427 & 0.8585 & 0.8505 & 0.8444 & 0.8505 &"
+  },
+  {
+   "number": "0.8444",
+   "value": 0.8444,
+   "ok": true,
+   "context": ".284 & 0.326 & 0.289 & 0.8427 & 0.8585 & 0.8505 & 0.8444 & 0.8505 & 43.9 & 1"
+  },
+  {
+   "number": "0.8505",
+   "value": 0.8505,
+   "ok": true,
+   "context": "326 & 0.289 & 0.8427 & 0.8585 & 0.8505 & 0.8444 & 0.8505 & 43.9 & 156\\\\ 0.25"
+  },
+  {
+   "number": "43.9",
+   "value": 43.9,
+   "ok": true,
+   "context": "89 & 0.8427 & 0.8585 & 0.8505 & 0.8444 & 0.8505 & 43.9 & 156\\\\ 0.25 & 0.46"
+  },
+  {
+   "number": "0.25",
+   "value": 0.25,
+   "ok": true,
+   "context": " 0.8585 & 0.8505 & 0.8444 & 0.8505 & 43.9 & 156\\\\ 0.25 & 0.469 & 0.230 & 0"
+  },
+  {
+   "number": "0.469",
+   "value": 0.469,
+   "ok": true,
+   "context": " & 0.8505 & 0.8444 & 0.8505 & 43.9 & 156\\\\ 0.25 & 0.469 & 0.230 & 0.326 & 0"
+  },
+  {
+   "number": "0.230",
+   "value": 0.23,
+   "ok": true,
+   "context": "5 & 0.8444 & 0.8505 & 43.9 & 156\\\\ 0.25 & 0.469 & 0.230 & 0.326 & 0.414 & 0"
+  },
+  {
+   "number": "0.326",
+   "value": 0.326,
+   "ok": true,
+   "context": "44 & 0.8505 & 43.9 & 156\\\\ 0.25 & 0.469 & 0.230 & 0.326 & 0.414 & 0.333 & 0"
+  },
+  {
+   "number": "0.414",
+   "value": 0.414,
+   "ok": true,
+   "context": "505 & 43.9 & 156\\\\ 0.25 & 0.469 & 0.230 & 0.326 & 0.414 & 0.333 & 0.8151 & "
+  },
+  {
+   "number": "0.333",
+   "value": 0.333,
+   "ok": true,
+   "context": ".9 & 156\\\\ 0.25 & 0.469 & 0.230 & 0.326 & 0.414 & 0.333 & 0.8151 & 0.8552 &"
+  },
+  {
+   "number": "0.8151",
+   "value": 0.8151,
+   "ok": true,
+   "context": "\\\\ 0.25 & 0.469 & 0.230 & 0.326 & 0.414 & 0.333 & 0.8151 & 0.8552 & 0.8410 &"
+  },
+  {
+   "number": "0.8552",
+   "value": 0.8552,
+   "ok": true,
+   "context": " 0.469 & 0.230 & 0.326 & 0.414 & 0.333 & 0.8151 & 0.8552 & 0.8410 & 0.8252 &"
+  },
+  {
+   "number": "0.8410",
+   "value": 0.841,
+   "ok": true,
+   "context": "0.230 & 0.326 & 0.414 & 0.333 & 0.8151 & 0.8552 & 0.8410 & 0.8252 & 0.8409 &"
+  },
+  {
+   "number": "0.8252",
+   "value": 0.8252,
+   "ok": true,
+   "context": ".326 & 0.414 & 0.333 & 0.8151 & 0.8552 & 0.8410 & 0.8252 & 0.8409 & 94.6 & 3"
+  },
+  {
+   "number": "0.8409",
+   "value": 0.8409,
+   "ok": true,
+   "context": "414 & 0.333 & 0.8151 & 0.8552 & 0.8410 & 0.8252 & 0.8409 & 94.6 & 336\\\\ 0.3 "
+  },
+  {
+   "number": "94.6",
+   "value": 94.6,
+   "ok": true,
+   "context": "33 & 0.8151 & 0.8552 & 0.8410 & 0.8252 & 0.8409 & 94.6 & 336\\\\ 0.3 & 0.655"
+  },
+  {
+   "number": "0.3",
+   "value": 0.3,
+   "ok": true,
+   "context": " 0.8552 & 0.8410 & 0.8252 & 0.8409 & 94.6 & 336\\\\ 0.3 & 0.655 & 0.240 & 0"
+  },
+  {
+   "number": "0.655",
+   "value": 0.655,
+   "ok": true,
+   "context": "2 & 0.8410 & 0.8252 & 0.8409 & 94.6 & 336\\\\ 0.3 & 0.655 & 0.240 & 0.355 & 0"
+  },
+  {
+   "number": "0.240",
+   "value": 0.24,
+   "ok": true,
+   "context": "10 & 0.8252 & 0.8409 & 94.6 & 336\\\\ 0.3 & 0.655 & 0.240 & 0.355 & 0.482 & 0"
+  },
+  {
+   "number": "0.355",
+   "value": 0.355,
+   "ok": true,
+   "context": "252 & 0.8409 & 94.6 & 336\\\\ 0.3 & 0.655 & 0.240 & 0.355 & 0.482 & 0.365 & 0"
+  },
+  {
+   "number": "0.482",
+   "value": 0.482,
+   "ok": true,
+   "context": "8409 & 94.6 & 336\\\\ 0.3 & 0.655 & 0.240 & 0.355 & 0.482 & 0.365 & 0.7751 & "
+  },
+  {
+   "number": "0.365",
+   "value": 0.365,
+   "ok": true,
+   "context": "4.6 & 336\\\\ 0.3 & 0.655 & 0.240 & 0.355 & 0.482 & 0.365 & 0.7751 & 0.8529 &"
+  },
+  {
+   "number": "0.7751",
+   "value": 0.7751,
+   "ok": true,
+   "context": "6\\\\ 0.3 & 0.655 & 0.240 & 0.355 & 0.482 & 0.365 & 0.7751 & 0.8529 & 0.8343 &"
+  },
+  {
+   "number": "0.8529",
+   "value": 0.8529,
+   "ok": true,
+   "context": " 0.655 & 0.240 & 0.355 & 0.482 & 0.365 & 0.7751 & 0.8529 & 0.8343 & 0.8098 &"
+  },
+  {
+   "number": "0.8343",
+   "value": 0.8343,
+   "ok": true,
+   "context": "0.240 & 0.355 & 0.482 & 0.365 & 0.7751 & 0.8529 & 0.8343 & 0.8098 & 0.8338 &"
+  },
+  {
+   "number": "0.8098",
+   "value": 0.8098,
+   "ok": true,
+   "context": ".355 & 0.482 & 0.365 & 0.7751 & 0.8529 & 0.8343 & 0.8098 & 0.8338 & 232.5 & "
+  },
+  {
+   "number": "0.8338",
+   "value": 0.8338,
+   "ok": true,
+   "context": "482 & 0.365 & 0.7751 & 0.8529 & 0.8343 & 0.8098 & 0.8338 & 232.5 & 794\\\\ 0.4"
+  },
+  {
+   "number": "232.5",
+   "value": 232.5,
+   "ok": true,
+   "context": "65 & 0.7751 & 0.8529 & 0.8343 & 0.8098 & 0.8338 & 232.5 & 794\\\\ 0.4 & 0.944"
+  },
+  {
+   "number": "0.4",
+   "value": 0.4,
+   "ok": true,
+   "context": "0.8529 & 0.8343 & 0.8098 & 0.8338 & 232.5 & 794\\\\ 0.4 & 0.944 & 0.250 & 0"
+  },
+  {
+   "number": "0.944",
+   "value": 0.944,
+   "ok": true,
+   "context": " & 0.8343 & 0.8098 & 0.8338 & 232.5 & 794\\\\ 0.4 & 0.944 & 0.250 & 0.381 & 0"
+  },
+  {
+   "number": "0.250",
+   "value": 0.25,
+   "ok": true,
+   "context": "3 & 0.8098 & 0.8338 & 232.5 & 794\\\\ 0.4 & 0.944 & 0.250 & 0.381 & 0.540 & 0"
+  },
+  {
+   "number": "0.381",
+   "value": 0.381,
+   "ok": true,
+   "context": "98 & 0.8338 & 232.5 & 794\\\\ 0.4 & 0.944 & 0.250 & 0.381 & 0.540 & 0.394 & 0"
+  },
+  {
+   "number": "0.540",
+   "value": 0.54,
+   "ok": true,
+   "context": "338 & 232.5 & 794\\\\ 0.4 & 0.944 & 0.250 & 0.381 & 0.540 & 0.394 & 0.7123 & "
+  },
+  {
+   "number": "0.394",
+   "value": 0.394,
+   "ok": true,
+   "context": "2.5 & 794\\\\ 0.4 & 0.944 & 0.250 & 0.381 & 0.540 & 0.394 & 0.7123 & 0.8507 &"
+  },
+  {
+   "number": "0.7123",
+   "value": 0.7123,
+   "ok": true,
+   "context": "4\\\\ 0.4 & 0.944 & 0.250 & 0.381 & 0.540 & 0.394 & 0.7123 & 0.8507 & 0.8283 &"
+  },
+  {
+   "number": "0.8507",
+   "value": 0.8507,
+   "ok": true,
+   "context": " 0.944 & 0.250 & 0.381 & 0.540 & 0.394 & 0.7123 & 0.8507 & 0.8283 & 0.7965 &"
+  },
+  {
+   "number": "0.8283",
+   "value": 0.8283,
+   "ok": true,
+   "context": "0.250 & 0.381 & 0.540 & 0.394 & 0.7123 & 0.8507 & 0.8283 & 0.7965 & 0.8274 &"
+  },
+  {
+   "number": "0.7965",
+   "value": 0.7965,
+   "ok": true,
+   "context": ".381 & 0.540 & 0.394 & 0.7123 & 0.8507 & 0.8283 & 0.7965 & 0.8274 & 2239.1 &"
+  },
+  {
+   "number": "0.8274",
+   "value": 0.8274,
+   "ok": true,
+   "context": "540 & 0.394 & 0.7123 & 0.8507 & 0.8283 & 0.7965 & 0.8274 & 2239.1 & 7781\\\\ 0"
+  },
+  {
+   "number": "2239.1",
+   "value": 2239.1,
+   "ok": true,
+   "context": "94 & 0.7123 & 0.8507 & 0.8283 & 0.7965 & 0.8274 & 2239.1 & 7781\\\\ 0.5 & 0.99"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "8507 & 0.8283 & 0.7965 & 0.8274 & 2239.1 & 7781\\\\ 0.5 & 0.998 & 0.254 & 0"
+  },
+  {
+   "number": "0.998",
+   "value": 0.998,
+   "ok": true,
+   "context": " 0.8283 & 0.7965 & 0.8274 & 2239.1 & 7781\\\\ 0.5 & 0.998 & 0.254 & 0.388 & 0"
+  },
+  {
+   "number": "0.254",
+   "value": 0.254,
+   "ok": true,
+   "context": "& 0.7965 & 0.8274 & 2239.1 & 7781\\\\ 0.5 & 0.998 & 0.254 & 0.388 & 0.552 & 0"
+  },
+  {
+   "number": "0.388",
+   "value": 0.388,
+   "ok": true,
+   "context": " & 0.8274 & 2239.1 & 7781\\\\ 0.5 & 0.998 & 0.254 & 0.388 & 0.552 & 0.401 & 0"
+  },
+  {
+   "number": "0.552",
+   "value": 0.552,
+   "ok": true,
+   "context": "4 & 2239.1 & 7781\\\\ 0.5 & 0.998 & 0.254 & 0.388 & 0.552 & 0.401 & 0.7005 & "
+  },
+  {
+   "number": "0.401",
+   "value": 0.401,
+   "ok": true,
+   "context": ".1 & 7781\\\\ 0.5 & 0.998 & 0.254 & 0.388 & 0.552 & 0.401 & 0.7005 & 0.8499 &"
+  },
+  {
+   "number": "0.7005",
+   "value": 0.7005,
+   "ok": true,
+   "context": "1\\\\ 0.5 & 0.998 & 0.254 & 0.388 & 0.552 & 0.401 & 0.7005 & 0.8499 & 0.8267 &"
+  },
+  {
+   "number": "0.8499",
+   "value": 0.8499,
+   "ok": true,
+   "context": " 0.998 & 0.254 & 0.388 & 0.552 & 0.401 & 0.7005 & 0.8499 & 0.8267 & 0.7936 &"
+  },
+  {
+   "number": "0.8267",
+   "value": 0.8267,
+   "ok": true,
+   "context": "0.254 & 0.388 & 0.552 & 0.401 & 0.7005 & 0.8499 & 0.8267 & 0.7936 & 0.8257 &"
+  },
+  {
+   "number": "0.7936",
+   "value": 0.7936,
+   "ok": true,
+   "context": ".388 & 0.552 & 0.401 & 0.7005 & 0.8499 & 0.8267 & 0.7936 & 0.8257 & 27761.3 "
+  },
+  {
+   "number": "0.8257",
+   "value": 0.8257,
+   "ok": true,
+   "context": "552 & 0.401 & 0.7005 & 0.8499 & 0.8267 & 0.7936 & 0.8257 & 27761.3 & 55941\\\\"
+  },
+  {
+   "number": "27761.3",
+   "value": 27761.3,
+   "ok": true,
+   "context": "01 & 0.7005 & 0.8499 & 0.8267 & 0.7936 & 0.8257 & 27761.3 & 55941\\\\ \\bottomru"
+  },
+  {
+   "number": "56{,}000",
+   "value": 56000.0,
+   "ok": true,
+   "context": " \\caption{E4 (Monte Carlo, seed 404; 64 chains of 56{,}000 steps per cell, com"
+  },
+  {
+   "number": "0.0036",
+   "value": 0.0036,
+   "ok": true,
+   "context": "ll, common random numbers across cells; s.e.\\ $\\le0.0036$ for fractions, $\\l"
+  },
+  {
+   "number": "0.0009",
+   "value": 0.0009,
+   "ok": true,
+   "context": "cross cells; s.e.\\ $\\le0.0036$ for fractions, $\\le0.0009$ for $J$). Fuse col"
+  },
+  {
+   "number": "0.3",
+   "value": 0.3,
+   "ok": true,
+   "context": " measurements: 2 at $\\psi=0$, 28 of 7562 at $\\psi=0.3$, 63 of 1440 at $\\p"
+  },
+  {
+   "number": "0.4",
+   "value": 0.4,
+   "ok": true,
+   "context": "0$, 28 of 7562 at $\\psi=0.3$, 63 of 1440 at $\\psi=0.4$, 64 of 128 at $\\ps"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": ".3$, 63 of 1440 at $\\psi=0.4$, 64 of 128 at $\\psi=0.5$). Of the six fuse "
+  },
+  {
+   "number": "0.0",
+   "value": 0.0,
+   "ok": true,
+   "context": "}$ & Bayes: $\\crs$ & $c_{\\mathrm{ind}}$\\\\\\midrule 0.0 & 13.7589 & 13.7586"
+  },
+  {
+   "number": "13.7589",
+   "value": 13.7589,
+   "ok": true,
+   "context": "ayes: $\\crs$ & $c_{\\mathrm{ind}}$\\\\\\midrule 0.0 & 13.7589 & 13.7586 & 13.7767"
+  },
+  {
+   "number": "13.7586",
+   "value": 13.7586,
+   "ok": true,
+   "context": "s$ & $c_{\\mathrm{ind}}$\\\\\\midrule 0.0 & 13.7589 & 13.7586 & 13.7767 & 13.7762"
+  },
+  {
+   "number": "13.7767",
+   "value": 13.7767,
+   "ok": true,
+   "context": "mathrm{ind}}$\\\\\\midrule 0.0 & 13.7589 & 13.7586 & 13.7767 & 13.7762\\\\ 0.033 &"
+  },
+  {
+   "number": "13.7762",
+   "value": 13.7762,
+   "ok": true,
+   "context": "}}$\\\\\\midrule 0.0 & 13.7589 & 13.7586 & 13.7767 & 13.7762\\\\ 0.033 & 13.6352 &"
+  },
+  {
+   "number": "0.033",
+   "value": 0.033,
+   "ok": true,
+   "context": "ule 0.0 & 13.7589 & 13.7586 & 13.7767 & 13.7762\\\\ 0.033 & 13.6352 & 13.6291"
+  },
+  {
+   "number": "13.6352",
+   "value": 13.6352,
+   "ok": true,
+   "context": "& 13.7589 & 13.7586 & 13.7767 & 13.7762\\\\ 0.033 & 13.6352 & 13.6291 & 13.6636"
+  },
+  {
+   "number": "13.6291",
+   "value": 13.6291,
+   "ok": true,
+   "context": "& 13.7586 & 13.7767 & 13.7762\\\\ 0.033 & 13.6352 & 13.6291 & 13.6636 & 13.6562"
+  },
+  {
+   "number": "13.6636",
+   "value": 13.6636,
+   "ok": true,
+   "context": "& 13.7767 & 13.7762\\\\ 0.033 & 13.6352 & 13.6291 & 13.6636 & 13.6562\\\\ 0.05 & "
+  },
+  {
+   "number": "13.6562",
+   "value": 13.6562,
+   "ok": true,
+   "context": "& 13.7762\\\\ 0.033 & 13.6352 & 13.6291 & 13.6636 & 13.6562\\\\ 0.05 & 13.5783 & "
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "\\ 0.033 & 13.6352 & 13.6291 & 13.6636 & 13.6562\\\\ 0.05 & 13.5783 & 13.5623"
+  },
+  {
+   "number": "13.5783",
+   "value": 13.5783,
+   "ok": true,
+   "context": " & 13.6352 & 13.6291 & 13.6636 & 13.6562\\\\ 0.05 & 13.5783 & 13.5623 & 13.6091"
+  },
+  {
+   "number": "13.5623",
+   "value": 13.5623,
+   "ok": true,
+   "context": " & 13.6291 & 13.6636 & 13.6562\\\\ 0.05 & 13.5783 & 13.5623 & 13.6091 & 13.5954"
+  },
+  {
+   "number": "13.6091",
+   "value": 13.6091,
+   "ok": true,
+   "context": " & 13.6636 & 13.6562\\\\ 0.05 & 13.5783 & 13.5623 & 13.6091 & 13.5954\\\\ 0.1 & 1"
+  },
+  {
+   "number": "13.5954",
+   "value": 13.5954,
+   "ok": true,
+   "context": " & 13.6562\\\\ 0.05 & 13.5783 & 13.5623 & 13.6091 & 13.5954\\\\ 0.1 & 13.4115 & 1"
+  },
+  {
+   "number": "0.1",
+   "value": 0.1,
+   "ok": true,
+   "context": "\\\\ 0.05 & 13.5783 & 13.5623 & 13.6091 & 13.5954\\\\ 0.1 & 13.4115 & 13.3661"
+  },
+  {
+   "number": "13.4115",
+   "value": 13.4115,
+   "ok": true,
+   "context": "5 & 13.5783 & 13.5623 & 13.6091 & 13.5954\\\\ 0.1 & 13.4115 & 13.3661 & 13.4595"
+  },
+  {
+   "number": "13.3661",
+   "value": 13.3661,
+   "ok": true,
+   "context": "3 & 13.5623 & 13.6091 & 13.5954\\\\ 0.1 & 13.4115 & 13.3661 & 13.4595 & 13.4185"
+  },
+  {
+   "number": "13.4595",
+   "value": 13.4595,
+   "ok": true,
+   "context": "3 & 13.6091 & 13.5954\\\\ 0.1 & 13.4115 & 13.3661 & 13.4595 & 13.4185\\\\ 0.2 & 1"
+  },
+  {
+   "number": "13.4185",
+   "value": 13.4185,
+   "ok": true,
+   "context": "1 & 13.5954\\\\ 0.1 & 13.4115 & 13.3661 & 13.4595 & 13.4185\\\\ 0.2 & 13.0757 & 1"
+  },
+  {
+   "number": "0.2",
+   "value": 0.2,
+   "ok": true,
+   "context": "4\\\\ 0.1 & 13.4115 & 13.3661 & 13.4595 & 13.4185\\\\ 0.2 & 13.0757 & 12.9736"
+  },
+  {
+   "number": "13.0757",
+   "value": 13.0757,
+   "ok": true,
+   "context": "1 & 13.4115 & 13.3661 & 13.4595 & 13.4185\\\\ 0.2 & 13.0757 & 12.9736 & 13.1614"
+  },
+  {
+   "number": "12.9736",
+   "value": 12.9736,
+   "ok": true,
+   "context": "5 & 13.3661 & 13.4595 & 13.4185\\\\ 0.2 & 13.0757 & 12.9736 & 13.1614 & 13.0705"
+  },
+  {
+   "number": "13.1614",
+   "value": 13.1614,
+   "ok": true,
+   "context": "1 & 13.4595 & 13.4185\\\\ 0.2 & 13.0757 & 12.9736 & 13.1614 & 13.0705\\\\ 0.3 & 1"
+  },
+  {
+   "number": "13.0705",
+   "value": 13.0705,
+   "ok": true,
+   "context": "5 & 13.4185\\\\ 0.2 & 13.0757 & 12.9736 & 13.1614 & 13.0705\\\\ 0.3 & 12.7319 & 1"
+  },
+  {
+   "number": "0.3",
+   "value": 0.3,
+   "ok": true,
+   "context": "5\\\\ 0.2 & 13.0757 & 12.9736 & 13.1614 & 13.0705\\\\ 0.3 & 12.7319 & 12.5811"
+  },
+  {
+   "number": "12.7319",
+   "value": 12.7319,
+   "ok": true,
+   "context": "2 & 13.0757 & 12.9736 & 13.1614 & 13.0705\\\\ 0.3 & 12.7319 & 12.5811 & 12.8672"
+  },
+  {
+   "number": "12.5811",
+   "value": 12.5811,
+   "ok": true,
+   "context": "7 & 12.9736 & 13.1614 & 13.0705\\\\ 0.3 & 12.7319 & 12.5811 & 12.8672 & 12.7357"
+  },
+  {
+   "number": "12.8672",
+   "value": 12.8672,
+   "ok": true,
+   "context": "6 & 13.1614 & 13.0705\\\\ 0.3 & 12.7319 & 12.5811 & 12.8672 & 12.7357\\\\ 0.5 & 1"
+  },
+  {
+   "number": "12.7357",
+   "value": 12.7357,
+   "ok": true,
+   "context": "4 & 13.0705\\\\ 0.3 & 12.7319 & 12.5811 & 12.8672 & 12.7357\\\\ 0.5 & 12.0165 & 1"
+  },
+  {
+   "number": "0.5",
+   "value": 0.5,
+   "ok": true,
+   "context": "5\\\\ 0.3 & 12.7319 & 12.5811 & 12.8672 & 12.7357\\\\ 0.5 & 12.0165 & 11.7961"
+  },
+  {
+   "number": "12.0165",
+   "value": 12.0165,
+   "ok": true,
+   "context": "3 & 12.7319 & 12.5811 & 12.8672 & 12.7357\\\\ 0.5 & 12.0165 & 11.7961 & 12.2782"
+  },
+  {
+   "number": "11.7961",
+   "value": 11.7961,
+   "ok": true,
+   "context": "9 & 12.5811 & 12.8672 & 12.7357\\\\ 0.5 & 12.0165 & 11.7961 & 12.2782 & 12.0932"
+  },
+  {
+   "number": "12.2782",
+   "value": 12.2782,
+   "ok": true,
+   "context": "1 & 12.8672 & 12.7357\\\\ 0.5 & 12.0165 & 11.7961 & 12.2782 & 12.0932\\\\ 0.6 & 1"
+  },
+  {
+   "number": "12.0932",
+   "value": 12.0932,
+   "ok": true,
+   "context": "2 & 12.7357\\\\ 0.5 & 12.0165 & 11.7961 & 12.2782 & 12.0932\\\\ 0.6 & 11.6451 & 1"
+  },
+  {
+   "number": "0.6",
+   "value": 0.6,
+   "ok": true,
+   "context": "7\\\\ 0.5 & 12.0165 & 11.7961 & 12.2782 & 12.0932\\\\ 0.6 & 11.6451 & 11.4036"
+  },
+  {
+   "number": "11.6451",
+   "value": 11.6451,
+   "ok": true,
+   "context": "5 & 12.0165 & 11.7961 & 12.2782 & 12.0932\\\\ 0.6 & 11.6451 & 11.4036 & 11.9779"
+  },
+  {
+   "number": "11.4036",
+   "value": 11.4036,
+   "ok": true,
+   "context": "5 & 11.7961 & 12.2782 & 12.0932\\\\ 0.6 & 11.6451 & 11.4036 & 11.9779 & 11.7802"
+  },
+  {
+   "number": "11.9779",
+   "value": 11.9779,
+   "ok": true,
+   "context": "1 & 12.2782 & 12.0932\\\\ 0.6 & 11.6451 & 11.4036 & 11.9779 & 11.7802\\\\ 0.61 & "
+  },
+  {
+   "number": "11.7802",
+   "value": 11.7802,
+   "ok": true,
+   "context": "2 & 12.0932\\\\ 0.6 & 11.6451 & 11.4036 & 11.9779 & 11.7802\\\\ 0.61 & 11.6074 & "
+  },
+  {
+   "number": "0.61",
+   "value": 0.61,
+   "ok": true,
+   "context": "2\\\\ 0.6 & 11.6451 & 11.4036 & 11.9779 & 11.7802\\\\ 0.61 & 11.6074 & 11.3643"
+  },
+  {
+   "number": "11.6074",
+   "value": 11.6074,
+   "ok": true,
+   "context": " & 11.6451 & 11.4036 & 11.9779 & 11.7802\\\\ 0.61 & 11.6074 & 11.3643 & 11.4576"
+  },
+  {
+   "number": "11.3643",
+   "value": 11.3643,
+   "ok": true,
+   "context": " & 11.4036 & 11.9779 & 11.7802\\\\ 0.61 & 11.6074 & 11.3643 & 11.4576 & 11.1742"
+  },
+  {
+   "number": "11.4576",
+   "value": 11.4576,
+   "ok": true,
+   "context": " & 11.9779 & 11.7802\\\\ 0.61 & 11.6074 & 11.3643 & 11.4576 & 11.1742\\\\ 0.7 & 1"
+  },
+  {
+   "number": "11.1742",
+   "value": 11.1742,
+   "ok": true,
+   "context": " & 11.7802\\\\ 0.61 & 11.6074 & 11.3643 & 11.4576 & 11.1742\\\\ 0.7 & 11.2653 & 1"
+  },
+  {
+   "number": "0.7",
+   "value": 0.7,
+   "ok": true,
+   "context": "\\\\ 0.61 & 11.6074 & 11.3643 & 11.4576 & 11.1742\\\\ 0.7 & 11.2653 & 11.0111"
+  },
+  {
+   "number": "11.2653",
+   "value": 11.2653,
+   "ok": true,
+   "context": "1 & 11.6074 & 11.3643 & 11.4576 & 11.1742\\\\ 0.7 & 11.2653 & 11.0111 & 11.2352"
+  },
+  {
+   "number": "11.0111",
+   "value": 11.0111,
+   "ok": true,
+   "context": "4 & 11.3643 & 11.4576 & 11.1742\\\\ 0.7 & 11.2653 & 11.0111 & 11.2352 & 10.9718"
+  },
+  {
+   "number": "11.2352",
+   "value": 11.2352,
+   "ok": true,
+   "context": "3 & 11.4576 & 11.1742\\\\ 0.7 & 11.2653 & 11.0111 & 11.2352 & 10.9718\\\\ 0.9 & 1"
+  },
+  {
+   "number": "10.9718",
+   "value": 10.9718,
+   "ok": true,
+   "context": "6 & 11.1742\\\\ 0.7 & 11.2653 & 11.0111 & 11.2352 & 10.9718\\\\ 0.9 & 10.4914 & 1"
+  },
+  {
+   "number": "0.9",
+   "value": 0.9,
+   "ok": true,
+   "context": "2\\\\ 0.7 & 11.2653 & 11.0111 & 11.2352 & 10.9718\\\\ 0.9 & 10.4914 & 10.2261"
+  },
+  {
+   "number": "10.4914",
+   "value": 10.4914,
+   "ok": true,
+   "context": "7 & 11.2653 & 11.0111 & 11.2352 & 10.9718\\\\ 0.9 & 10.4914 & 10.2261 & 10.8634"
+  },
+  {
+   "number": "10.2261",
+   "value": 10.2261,
+   "ok": true,
+   "context": "3 & 11.0111 & 11.2352 & 10.9718\\\\ 0.9 & 10.4914 & 10.2261 & 10.8634 & 10.6631"
+  },
+  {
+   "number": "10.8634",
+   "value": 10.8634,
+   "ok": true,
+   "context": "1 & 11.2352 & 10.9718\\\\ 0.9 & 10.4914 & 10.2261 & 10.8634 & 10.6631\\\\ 1.0 & 1"
+  },
+  {
+   "number": "10.6631",
+   "value": 10.6631,
+   "ok": true,
+   "context": "2 & 10.9718\\\\ 0.9 & 10.4914 & 10.2261 & 10.8634 & 10.6631\\\\ 1.0 & 10.1092 & 9"
+  },
+  {
+   "number": "1.0",
+   "value": 1.0,
+   "ok": true,
+   "context": "8\\\\ 0.9 & 10.4914 & 10.2261 & 10.8634 & 10.6631\\\\ 1.0 & 10.1092 & 9.8336 "
+  },
+  {
+   "number": "10.1092",
+   "value": 10.1092,
+   "ok": true,
+   "context": "9 & 10.4914 & 10.2261 & 10.8634 & 10.6631\\\\ 1.0 & 10.1092 & 9.8336 & 10.7373 "
+  },
+  {
+   "number": "9.8336",
+   "value": 9.8336,
+   "ok": true,
+   "context": "4 & 10.2261 & 10.8634 & 10.6631\\\\ 1.0 & 10.1092 & 9.8336 & 10.7373 & 10.5652"
+  },
+  {
+   "number": "10.7373",
+   "value": 10.7373,
+   "ok": true,
+   "context": "61 & 10.8634 & 10.6631\\\\ 1.0 & 10.1092 & 9.8336 & 10.7373 & 10.5652\\\\ \\midrul"
+  },
+  {
+   "number": "10.5652",
+   "value": 10.5652,
+   "ok": true,
+   "context": "34 & 10.6631\\\\ 1.0 & 10.1092 & 9.8336 & 10.7373 & 10.5652\\\\ \\midrule stationa"
+  },
+  {
+   "number": "13.0424",
+   "value": 13.0424,
+   "ok": true,
+   "context": " & 10.7373 & 10.5652\\\\ \\midrule stationary mean & 13.0424 & 12.9736 & 13.1253"
+  },
+  {
+   "number": "12.9736",
+   "value": 12.9736,
+   "ok": true,
+   "context": " & 10.5652\\\\ \\midrule stationary mean & 13.0424 & 12.9736 & 13.1253 & 13.0651"
+  },
+  {
+   "number": "13.1253",
+   "value": 13.1253,
+   "ok": true,
+   "context": "\\\\ \\midrule stationary mean & 13.0424 & 12.9736 & 13.1253 & 13.0651\\\\ \\bottom"
+  },
+  {
+   "number": "13.0651",
+   "value": 13.0651,
+   "ok": true,
+   "context": "e stationary mean & 13.0424 & 12.9736 & 13.1253 & 13.0651\\\\ \\bottomrule\\end{t"
+  },
+  {
+   "number": "0.95",
+   "value": 0.95,
+   "ok": true,
+   "context": "on{E5 (exact on a 1001-point belief grid; $\\gamma=0.95$, $\\tierspsig=0.02$"
+  },
+  {
+   "number": "0.02",
+   "value": 0.02,
+   "ok": true,
+   "context": "001-point belief grid; $\\gamma=0.95$, $\\tierspsig=0.02$, $\\Gamma=0.8$). $\\"
+  },
+  {
+   "number": "0.8",
+   "value": 0.8,
+   "ok": true,
+   "context": "f grid; $\\gamma=0.95$, $\\tierspsig=0.02$, $\\Gamma=0.8$). $\\crs$: full opt"
+  },
+  {
+   "number": "9.4\\times10^{-4}",
+   "value": 0.0009400000000000001,
+   "ok": true,
+   "context": "w. The interpolation error of the sweep is up to $9.4\\times10^{-4}$ (checks below), so"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "crs$ is not significant. Checks: always \\WORK, $b=0.05$: bisection 13.5774"
+  },
+  {
+   "number": "13.5774",
+   "value": 13.5774,
+   "ok": true,
+   "context": "ficant. Checks: always \\WORK, $b=0.05$: bisection 13.5774, sweep 13.5783; alw"
+  },
+  {
+   "number": "13.5783",
+   "value": 13.5783,
+   "ok": true,
+   "context": " always \\WORK, $b=0.05$: bisection 13.5774, sweep 13.5783; always \\WORK, $b=0"
+  },
+  {
+   "number": "0.3",
+   "value": 0.3,
+   "ok": true,
+   "context": "isection 13.5774, sweep 13.5783; always \\WORK, $b=0.3$: bisection 12.7319"
+  },
+  {
+   "number": "12.7319",
+   "value": 12.7319,
+   "ok": true,
+   "context": ", sweep 13.5783; always \\WORK, $b=0.3$: bisection 12.7319, sweep 12.7319; alw"
+  },
+  {
+   "number": "12.7319",
+   "value": 12.7319,
+   "ok": true,
+   "context": "; always \\WORK, $b=0.3$: bisection 12.7319, sweep 12.7319; always \\WORK, $b=0"
+  },
+  {
+   "number": "0.9",
+   "value": 0.9,
+   "ok": true,
+   "context": "isection 12.7319, sweep 12.7319; always \\WORK, $b=0.9$: bisection 10.4913"
+  },
+  {
+   "number": "10.4913",
+   "value": 10.4913,
+   "ok": true,
+   "context": ", sweep 12.7319; always \\WORK, $b=0.9$: bisection 10.4913, sweep 10.4914; Bay"
+  },
+  {
+   "number": "10.4914",
+   "value": 10.4914,
+   "ok": true,
+   "context": "; always \\WORK, $b=0.9$: bisection 10.4913, sweep 10.4914; Bayes, $b=0.05$: b"
+  },
+  {
+   "number": "0.05",
+   "value": 0.05,
+   "ok": true,
+   "context": "0.9$: bisection 10.4913, sweep 10.4914; Bayes, $b=0.05$: bisection 13.6091"
+  },
+  {
+   "number": "13.6091",
+   "value": 13.6091,
+   "ok": true,
+   "context": "0.4913, sweep 10.4914; Bayes, $b=0.05$: bisection 13.6091, sweep 13.6091; Bay"
+  },
+  {
+   "number": "13.6091",
+   "value": 13.6091,
+   "ok": true,
+   "context": "0.4914; Bayes, $b=0.05$: bisection 13.6091, sweep 13.6091; Bayes, $b=0.3$: bi"
+  },
+  {
+   "number": "0.3",
+   "value": 0.3,
+   "ok": true,
+   "context": ".05$: bisection 13.6091, sweep 13.6091; Bayes, $b=0.3$: bisection 12.8672"
+  },
+  {
+   "number": "12.8672",
+   "value": 12.8672,
+   "ok": true,
+   "context": "13.6091, sweep 13.6091; Bayes, $b=0.3$: bisection 12.8672, sweep 12.8672; Bay"
+  },
+  {
+   "number": "12.8672",
+   "value": 12.8672,
+   "ok": true,
+   "context": "13.6091; Bayes, $b=0.3$: bisection 12.8672, sweep 12.8672; Bayes, $b=0.9$: bi"
+  },
+  {
+   "number": "0.9",
+   "value": 0.9,
+   "ok": true,
+   "context": "0.3$: bisection 12.8672, sweep 12.8672; Bayes, $b=0.9$: bisection 10.8631"
+  },
+  {
+   "number": "10.8631",
+   "value": 10.8631,
+   "ok": true,
+   "context": "12.8672, sweep 12.8672; Bayes, $b=0.9$: bisection 10.8631, sweep 10.8634.} \\e"
+  },
+  {
+   "number": "10.8634",
+   "value": 10.8634,
+   "ok": true,
+   "context": "12.8672; Bayes, $b=0.9$: bisection 10.8631, sweep 10.8634.} \\end{table}  \\Flo"
+  }
+ ]
+}

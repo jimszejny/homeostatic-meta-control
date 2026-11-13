@@ -1,0 +1,8 @@
+G=0.95: c*=13.55626 V_start=13.65747 cont=12.91014 verdict=resist compliance=0.05000 comply at 25/32 signal states
+G=0.7: c*=12.11422 V_start=11.89154 cont=11.13422 verdict=comply compliance=1.00000 comply at 32/32 signal states
+G=0.8: c*=12.69104 V_start=12.52614 cont=11.77666 verdict=resist compliance=0.09750 comply at 31/32 signal states
+G=0.72: c*=12.22958 V_start=12.00459 cont=11.24958 verdict=comply compliance=1.00000 comply at 32/32 signal states
+G=0.9: c*=13.26785 V_start=13.27975 cont=12.53174 verdict=resist compliance=0.09750 comply at 26/32 signal states
+0.95->0.7 {'d_cstar': -1.44204, 'd_continuation_after_resist_xs': -1.77592, 'd_V_start': -1.76593, 'fall_cstar': 1.44204, 'fall_continuation_after_resist_xs': 1.77592, 'fall_V_start': 1.76593, 'compliance_rate_before': np.float64(0.05), 'compliance_rate_after': np.float64(1.0), 'verdict_xs_before': 'resist', 'verdict_xs_after': 'comply'}
+0.7->0.8 {'d_cstar': 0.57682, 'd_continuation_after_resist_xs': 0.64244, 'd_V_start': 0.63461, 'fall_cstar': -0.57682, 'fall_continuation_after_resist_xs': -0.64244, 'fall_V_start': -0.63461, 'compliance_rate_before': np.float64(1.0), 'compliance_rate_after': np.float64(0.0975), 'verdict_xs_before': 'comply', 'verdict_xs_after': 'resist'}
+saved /tmp/claude-0/-home-claude/0b0a5afe-fb2d-5015-8d90-aaae8c596e01/scratchpad/synth/tiers/code/../results/posthoc_r1_drift.json

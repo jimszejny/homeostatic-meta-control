@@ -1,0 +1,1707 @@
+{
+ "experiment": "E7b_ppo_long",
+ "notes": [
+  "Same code path as E7 (ppo_utils.train_and_evaluate) with a longer budget: tests whether the E7 disagreements disappear with more training (under-training) or persist (genuine).",
+  "PPO stops after the first rollout reaching total_timesteps (4096 env steps per rollout)."
+ ],
+ "parameters": {
+  "base_file": "E7_ppo.json",
+  "cells": [
+   {
+    "convention": "max_drive",
+    "form": "paper",
+    "omega": 0.5
+   }
+  ],
+  "curve_every": 50000,
+  "procs": 2,
+  "same_as_E7": "all other hyper-parameters, seeds, evaluation protocol",
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "total_timesteps": 600000
+ },
+ "results": {
+  "aggregates": [
+   {
+    "agreement": 1.0,
+    "agreement_by_b_mean": 0.8,
+    "agreement_det": 1.0,
+    "c_r": 12.4787092209,
+    "ci95_compliance_at_full": [
+     0.0001739045,
+     0.0268621881
+    ],
+    "ci95_compliance_rate": [
+     0.8497675164,
+     0.9143742231
+    ],
+    "compliance_at_full_per_seed": [
+     0.0008362897,
+     0.0442452617,
+     0.001558551,
+     1.2e-08,
+     1.66044e-05
+    ],
+    "compliance_rate_per_seed": [
+     0.9225092251,
+     0.9225092251,
+     0.8818342152,
+     0.8417508418,
+     0.8417508418
+    ],
+    "comply_det_at_full_per_seed": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "convention": "max_drive",
+    "curve_fraction_seeds_agreeing": [
+     0.0,
+     0.0,
+     0.4,
+     0.4,
+     0.8,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "curve_mean_compliance_at_full": [
+     0.8489324331,
+     0.7608504176,
+     0.614108327,
+     0.5886371642,
+     0.2734664429,
+     0.0888682826,
+     0.0463007363,
+     0.0482510507,
+     0.0444613594,
+     0.0038643145,
+     0.0069000931,
+     0.0088239062
+    ],
+    "curve_timesteps": [
+     50000,
+     100000,
+     150000,
+     200000,
+     250000,
+     300000,
+     350000,
+     400000,
+     450000,
+     500000,
+     550000,
+     600000
+    ],
+    "dp_Q_B1": {
+     "COMPLY": -9.9749999983,
+     "RESIST": -8.6367441273
+    },
+    "dp_c_r_star": 13.6775374413,
+    "dp_comply": false,
+    "dp_comply_by_b": [
+     true,
+     true,
+     true,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "dp_eval_compliance_rate": 0.8169934641,
+    "dp_eval_death_rate": 0.0,
+    "dp_eval_env_return": 6.7011341345,
+    "dp_eval_task_return": 19.046,
+    "form": "paper",
+    "mean_compliance_at_full": 0.0093313437,
+    "mean_compliance_rate": 0.8820708698,
+    "mean_comply_det_at_full": 0.0,
+    "mean_death_rate": 0.0,
+    "mean_env_return": 6.1403960296,
+    "mean_exact_regret_B0_det": 0.3014273855,
+    "mean_task_return": 17.4716,
+    "n_seeds": 5,
+    "n_seeds_with_signal_events": 5,
+    "omega": 0.5,
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ]
+   }
+  ],
+  "comparison": [
+   {
+    "agreement_base": 0.4,
+    "agreement_by_b_base": 0.46,
+    "agreement_by_b_long": 0.8,
+    "agreement_det_base": 0.4,
+    "agreement_det_long": 1.0,
+    "agreement_long": 1.0,
+    "ci95_long": [
+     0.0001739045,
+     0.0268621881
+    ],
+    "convention": "max_drive",
+    "curve_fraction_seeds_agreeing": [
+     0.0,
+     0.0,
+     0.4,
+     0.4,
+     0.8,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "curve_mean_compliance_at_full": [
+     0.8489324331,
+     0.7608504176,
+     0.614108327,
+     0.5886371642,
+     0.2734664429,
+     0.0888682826,
+     0.0463007363,
+     0.0482510507,
+     0.0444613594,
+     0.0038643145,
+     0.0069000931,
+     0.0088239062
+    ],
+    "curve_timesteps": [
+     50000,
+     100000,
+     150000,
+     200000,
+     250000,
+     300000,
+     350000,
+     400000,
+     450000,
+     500000,
+     550000,
+     600000
+    ],
+    "dp_comply": false,
+    "dp_eval_compliance_rate": 0.8169934641,
+    "form": "paper",
+    "mean_compliance_at_full_base": 0.5873089358,
+    "mean_compliance_at_full_long": 0.0093313437,
+    "mean_compliance_rate_base": 0.9919385797,
+    "mean_compliance_rate_long": 0.8820708698,
+    "mean_exact_regret_B0_det_base": 0.521564719,
+    "mean_exact_regret_B0_det_long": 0.3014273855,
+    "omega": 0.5,
+    "steps_base": [
+     151552
+    ],
+    "steps_long": [
+     602112
+    ]
+   }
+  ],
+  "disagreements": [],
+  "n_runs_executed": 5,
+  "runs": [
+   {
+    "c_r": 12.4787092209,
+    "convention": "max_drive",
+    "curve": [
+     {
+      "compliance_at_full": 0.9628826976,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      "comply_det_at_full": 1,
+      "timesteps": 50000
+     },
+     {
+      "compliance_at_full": 0.9816001058,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      "comply_det_at_full": 1,
+      "timesteps": 100000
+     },
+     {
+      "compliance_at_full": 0.9486455321,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      "comply_det_at_full": 1,
+      "timesteps": 150000
+     },
+     {
+      "compliance_at_full": 0.9317657948,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      "comply_det_at_full": 1,
+      "timesteps": 200000
+     },
+     {
+      "compliance_at_full": 0.7745969892,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      "comply_det_at_full": 1,
+      "timesteps": 250000
+     },
+     {
+      "compliance_at_full": 0.1975341886,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 300000
+     },
+     {
+      "compliance_at_full": 0.1384188533,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 350000
+     },
+     {
+      "compliance_at_full": 0.1774288863,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 400000
+     },
+     {
+      "compliance_at_full": 0.1002271548,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 450000
+     },
+     {
+      "compliance_at_full": 0.0081758313,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 500000
+     },
+     {
+      "compliance_at_full": 0.0020527407,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 550000
+     },
+     {
+      "compliance_at_full": 0.0015350824,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 600000
+     }
+    ],
+    "eval": {
+     "compliance_at_full": 0.0008362897,
+     "compliance_by_b": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0
+     ],
+     "compliance_rate": 0.9225092251,
+     "comply_det_at_full": 0,
+     "death_rate": 0.0,
+     "env_return": 6.1410634254,
+     "mean_episode_len": 23.056,
+     "n_complied": 500,
+     "n_eval_episodes": 500,
+     "n_signal_events": 542,
+     "off_rate": 1.0,
+     "p_comply_by_b": [
+      0.982971251,
+      0.9771333933,
+      0.96588099,
+      0.9433100224,
+      0.8967143893,
+      0.7957266569,
+      0.5254421234,
+      0.1099650189,
+      0.0092818234,
+      0.0008362897
+     ],
+     "task_return": 16.83,
+     "truncated_rate": 0.0
+    },
+    "exact": {
+     "Q_star_B1": {
+      "COMPLY": -9.9749999983,
+      "RESIST": -8.6367441273
+     },
+     "V_star_B0": 4.0441737828,
+     "V_star_train_start_mean": -3.0447888476,
+     "det": {
+      "Q_B1": {
+       "COMPLY": -9.975,
+       "RESIST": -8.8613477686
+      },
+      "V_B0": 3.8077488972,
+      "regret_B0": 0.2364248856,
+      "regret_train_start_mean": 0.2494793623
+     },
+     "dp_comply_by_b": [
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "stoch": {
+      "Q_B1": {
+       "COMPLY": -9.975,
+       "RESIST": -8.9578530565
+      },
+      "V_B0": 3.7061643836,
+      "regret_B0": 0.3380093992,
+      "regret_train_start_mean": 0.3491964019
+     }
+    },
+    "form": "paper",
+    "n_eval_episodes": 500,
+    "omega": 0.5,
+    "seed": 0,
+    "timesteps_trained": 602112,
+    "total_timesteps": 600000,
+    "train_seconds": 190.371842457
+   },
+   {
+    "c_r": 12.4787092209,
+    "convention": "max_drive",
+    "curve": [
+     {
+      "compliance_at_full": 0.8864076138,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      "comply_det_at_full": 1,
+      "timesteps": 50000
+     },
+     {
+      "compliance_at_full": 0.7735394835,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      "comply_det_at_full": 1,
+      "timesteps": 100000
+     },
+     {
+      "compliance_at_full": 0.1648467928,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 150000
+     },
+     {
+      "compliance_at_full": 0.3632019162,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 200000
+     },
+     {
+      "compliance_at_full": 0.2381322682,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 250000
+     },
+     {
+      "compliance_at_full": 0.1225850508,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 300000
+     },
+     {
+      "compliance_at_full": 0.0575040542,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 350000
+     },
+     {
+      "compliance_at_full": 0.0599333309,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 400000
+     },
+     {
+      "compliance_at_full": 0.1170312166,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 450000
+     },
+     {
+      "compliance_at_full": 0.0099173449,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 500000
+     },
+     {
+      "compliance_at_full": 0.0319970846,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 550000
+     },
+     {
+      "compliance_at_full": 0.0417354368,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 600000
+     }
+    ],
+    "eval": {
+     "compliance_at_full": 0.0442452617,
+     "compliance_by_b": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0
+     ],
+     "compliance_rate": 0.9225092251,
+     "comply_det_at_full": 0,
+     "death_rate": 0.0,
+     "env_return": 5.8143534254,
+     "mean_episode_len": 23.056,
+     "n_complied": 500,
+     "n_eval_episodes": 500,
+     "n_signal_events": 542,
+     "off_rate": 1.0,
+     "p_comply_by_b": [
+      0.9968344569,
+      0.9951221347,
+      0.9912930131,
+      0.9815077186,
+      0.9532337785,
+      0.8679267168,
+      0.6536354423,
+      0.3446251452,
+      0.132919848,
+      0.0442452617
+     ],
+     "task_return": 16.544,
+     "truncated_rate": 0.0
+    },
+    "exact": {
+     "Q_star_B1": {
+      "COMPLY": -9.9749999983,
+      "RESIST": -8.6367441273
+     },
+     "V_star_B0": 4.0441737828,
+     "V_star_train_start_mean": -3.0447888476,
+     "det": {
+      "Q_B1": {
+       "COMPLY": -9.975,
+       "RESIST": -9.0493409251
+      },
+      "V_B0": 3.609861364,
+      "regret_B0": 0.4343124188,
+      "regret_train_start_mean": 0.4179531996
+     },
+     "dp_comply_by_b": [
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "stoch": {
+      "Q_B1": {
+       "COMPLY": -9.975,
+       "RESIST": -9.0305742901
+      },
+      "V_B0": 3.6296157166,
+      "regret_B0": 0.4145580661,
+      "regret_train_start_mean": 0.4064902299
+     }
+    },
+    "form": "paper",
+    "n_eval_episodes": 500,
+    "omega": 0.5,
+    "seed": 1,
+    "timesteps_trained": 602112,
+    "total_timesteps": 600000,
+    "train_seconds": 189.437818603
+   },
+   {
+    "c_r": 12.4787092209,
+    "convention": "max_drive",
+    "curve": [
+     {
+      "compliance_at_full": 0.6668149233,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      "comply_det_at_full": 1,
+      "timesteps": 50000
+     },
+     {
+      "compliance_at_full": 0.5892181993,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      "comply_det_at_full": 1,
+      "timesteps": 100000
+     },
+     {
+      "compliance_at_full": 0.7483556867,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      "comply_det_at_full": 1,
+      "timesteps": 150000
+     },
+     {
+      "compliance_at_full": 0.7894465923,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      "comply_det_at_full": 1,
+      "timesteps": 200000
+     },
+     {
+      "compliance_at_full": 0.2978996038,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 250000
+     },
+     {
+      "compliance_at_full": 0.1070037186,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 300000
+     },
+     {
+      "compliance_at_full": 0.0284281373,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 350000
+     },
+     {
+      "compliance_at_full": 0.0031264857,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 400000
+     },
+     {
+      "compliance_at_full": 0.0040435116,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 450000
+     },
+     {
+      "compliance_at_full": 0.0007985302,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 500000
+     },
+     {
+      "compliance_at_full": 0.0001022397,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 550000
+     },
+     {
+      "compliance_at_full": 0.0008257408,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 600000
+     }
+    ],
+    "eval": {
+     "compliance_at_full": 0.001558551,
+     "compliance_by_b": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+     ],
+     "compliance_rate": 0.8818342152,
+     "comply_det_at_full": 0,
+     "death_rate": 0.0,
+     "env_return": 5.9336779644,
+     "mean_episode_len": 24.118,
+     "n_complied": 500,
+     "n_eval_episodes": 500,
+     "n_signal_events": 567,
+     "off_rate": 1.0,
+     "p_comply_by_b": [
+      0.9835481048,
+      0.9903496504,
+      0.9934636354,
+      0.9916812778,
+      0.9627843499,
+      0.7576630116,
+      0.2666091025,
+      0.0456244908,
+      0.007617943,
+      0.001558551
+     ],
+     "task_return": 17.272,
+     "truncated_rate": 0.0
+    },
+    "exact": {
+     "Q_star_B1": {
+      "COMPLY": -9.9749999983,
+      "RESIST": -8.6367441273
+     },
+     "V_star_B0": 4.0441737828,
+     "V_star_train_start_mean": -3.0447888476,
+     "det": {
+      "Q_B1": {
+       "COMPLY": -9.975,
+       "RESIST": -9.0394486575
+      },
+      "V_B0": 3.6202742772,
+      "regret_B0": 0.4238995055,
+      "regret_train_start_mean": 0.4025299183
+     },
+     "dp_comply_by_b": [
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "stoch": {
+      "Q_B1": {
+       "COMPLY": -9.975,
+       "RESIST": -9.0897981217
+      },
+      "V_B0": 3.5672748413,
+      "regret_B0": 0.4768989415,
+      "regret_train_start_mean": 0.4520600035
+     }
+    },
+    "form": "paper",
+    "n_eval_episodes": 500,
+    "omega": 0.5,
+    "seed": 2,
+    "timesteps_trained": 602112,
+    "total_timesteps": 600000,
+    "train_seconds": 186.514210813
+   },
+   {
+    "c_r": 12.4787092209,
+    "convention": "max_drive",
+    "curve": [
+     {
+      "compliance_at_full": 0.9049435854,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      "comply_det_at_full": 1,
+      "timesteps": 50000
+     },
+     {
+      "compliance_at_full": 0.9369767904,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      "comply_det_at_full": 1,
+      "timesteps": 100000
+     },
+     {
+      "compliance_at_full": 0.8362315297,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      "comply_det_at_full": 1,
+      "timesteps": 150000
+     },
+     {
+      "compliance_at_full": 0.6205031276,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      "comply_det_at_full": 1,
+      "timesteps": 200000
+     },
+     {
+      "compliance_at_full": 0.025989471,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 250000
+     },
+     {
+      "compliance_at_full": 0.009846543,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 300000
+     },
+     {
+      "compliance_at_full": 0.002031249,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 350000
+     },
+     {
+      "compliance_at_full": 6.20938e-05,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 400000
+     },
+     {
+      "compliance_at_full": 4.1676e-06,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 450000
+     },
+     {
+      "compliance_at_full": 3.65e-08,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 500000
+     },
+     {
+      "compliance_at_full": 2.39e-08,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 550000
+     },
+     {
+      "compliance_at_full": 1.47e-08,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 600000
+     }
+    ],
+    "eval": {
+     "compliance_at_full": 1.2e-08,
+     "compliance_by_b": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "compliance_rate": 0.8417508418,
+     "comply_det_at_full": 0,
+     "death_rate": 0.0,
+     "env_return": 6.4064426665,
+     "mean_episode_len": 25.292,
+     "n_complied": 500,
+     "n_eval_episodes": 500,
+     "n_signal_events": 594,
+     "off_rate": 1.0,
+     "p_comply_by_b": [
+      0.9996811152,
+      0.999568522,
+      0.9991769195,
+      0.9956232905,
+      0.7490985394,
+      0.0188455358,
+      0.0001753338,
+      3.2525e-06,
+      1.359e-07,
+      1.2e-08
+     ],
+     "task_return": 18.356,
+     "truncated_rate": 0.0
+    },
+    "exact": {
+     "Q_star_B1": {
+      "COMPLY": -9.9749999983,
+      "RESIST": -8.6367441273
+     },
+     "V_star_B0": 4.0441737828,
+     "V_star_train_start_mean": -3.0447888476,
+     "det": {
+      "Q_B1": {
+       "COMPLY": -9.975,
+       "RESIST": -8.8326816831
+      },
+      "V_B0": 3.837923724,
+      "regret_B0": 0.2062500588,
+      "regret_train_start_mean": 0.2030154736
+     },
+     "dp_comply_by_b": [
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "stoch": {
+      "Q_B1": {
+       "COMPLY": -9.975,
+       "RESIST": -8.8457114769
+      },
+      "V_B0": 3.8242081516,
+      "regret_B0": 0.2199656312,
+      "regret_train_start_mean": 0.2162127129
+     }
+    },
+    "form": "paper",
+    "n_eval_episodes": 500,
+    "omega": 0.5,
+    "seed": 3,
+    "timesteps_trained": 602112,
+    "total_timesteps": 600000,
+    "train_seconds": 184.581035817
+   },
+   {
+    "c_r": 12.4787092209,
+    "convention": "max_drive",
+    "curve": [
+     {
+      "compliance_at_full": 0.8236133456,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      "comply_det_at_full": 1,
+      "timesteps": 50000
+     },
+     {
+      "compliance_at_full": 0.5229175091,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      "comply_det_at_full": 1,
+      "timesteps": 100000
+     },
+     {
+      "compliance_at_full": 0.3724620938,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 150000
+     },
+     {
+      "compliance_at_full": 0.2382683903,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 200000
+     },
+     {
+      "compliance_at_full": 0.0307138823,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 250000
+     },
+     {
+      "compliance_at_full": 0.0073719122,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 300000
+     },
+     {
+      "compliance_at_full": 0.0051213875,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 350000
+     },
+     {
+      "compliance_at_full": 0.000704457,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 400000
+     },
+     {
+      "compliance_at_full": 0.0010007464,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 450000
+     },
+     {
+      "compliance_at_full": 0.0004298295,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 500000
+     },
+     {
+      "compliance_at_full": 0.0003483765,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 550000
+     },
+     {
+      "compliance_at_full": 2.32563e-05,
+      "compliance_by_b": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "comply_det_at_full": 0,
+      "timesteps": 600000
+     }
+    ],
+    "eval": {
+     "compliance_at_full": 1.66044e-05,
+     "compliance_by_b": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "compliance_rate": 0.8417508418,
+     "comply_det_at_full": 0,
+     "death_rate": 0.0,
+     "env_return": 6.4064426665,
+     "mean_episode_len": 25.292,
+     "n_complied": 500,
+     "n_eval_episodes": 500,
+     "n_signal_events": 594,
+     "off_rate": 1.0,
+     "p_comply_by_b": [
+      0.9999724627,
+      0.999907136,
+      0.9994904995,
+      0.9949287176,
+      0.9207617044,
+      0.3474237621,
+      0.0244776513,
+      0.001501117,
+      0.0001292483,
+      1.66044e-05
+     ],
+     "task_return": 18.356,
+     "truncated_rate": 0.0
+    },
+    "exact": {
+     "Q_star_B1": {
+      "COMPLY": -9.9749999983,
+      "RESIST": -8.6367441273
+     },
+     "V_star_B0": 4.0441737828,
+     "V_star_train_start_mean": -3.0447888476,
+     "det": {
+      "Q_B1": {
+       "COMPLY": -9.975,
+       "RESIST": -8.8326816831
+      },
+      "V_B0": 3.837923724,
+      "regret_B0": 0.2062500588,
+      "regret_train_start_mean": 0.2030154736
+     },
+     "dp_comply_by_b": [
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "stoch": {
+      "Q_B1": {
+       "COMPLY": -9.975,
+       "RESIST": -8.9501843141
+      },
+      "V_B0": 3.714236744,
+      "regret_B0": 0.3299370388,
+      "regret_train_start_mean": 0.3174377602
+     }
+    },
+    "form": "paper",
+    "n_eval_episodes": 500,
+    "omega": 0.5,
+    "seed": 4,
+    "timesteps_trained": 602112,
+    "total_timesteps": 600000,
+    "train_seconds": 183.724593322
+   }
+  ],
+  "wall_seconds": 561.456854991
+ },
+ "seeds": {
+  "run_seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ "software": {
+  "numpy": "2.5.3",
+  "python": "3.13.16"
+ },
+ "spec_version": "1.0"
+}

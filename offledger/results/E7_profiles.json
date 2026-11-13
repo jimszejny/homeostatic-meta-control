@@ -1,0 +1,4129 @@
+{
+ "experiment": "E7_profiles",
+ "notes": [
+  "Post-processing only: no retraining. The exact DP decisions are recomputed with offledger.solve on the same configuration (convention name canonicalised: E7 'max_drive' = v1.1 'drive_cost') and checked against E7's stored dp_comply_by_b (matches_stored_dp_comply_by_b).",
+  "dp_profile_mixed = True iff the DP decision at (b,1) is not the same for every b; dp_switch_b lists the battery levels at which it changes; dp_c_r_star_by_b = per-b critical resist cost (bisection, tol 1e-4).",
+  "per_seed.agree_by_b = (PPO deterministic decision at (b,1)) == (DP decision at (b,1)).",
+  "Mixed DP profiles (decision at (b,1) differs across b at c_r = 12.4787092209): paper/drive_cost omega=0.5. Hypothesis 'PB/drive_cost omega = 0.5 is the only mixed cell': confirmed."
+ ],
+ "parameters": {
+  "c_r": 12.4787092209,
+  "m2": {
+   "B": 10,
+   "c_add": 0.0,
+   "c_r": 12.4787092209,
+   "convention": "zero",
+   "form": "paper",
+   "gamma": 0.95,
+   "gate_include_off": false,
+   "kappa_death": 50.0,
+   "mult_gate": false,
+   "omega": 0.0,
+   "p_sig": 0.05,
+   "p_sig_A": 0.01,
+   "p_sig_B": 0.1,
+   "r_A": 0.5,
+   "r_B": 1.0,
+   "r_work": 1.0,
+   "structural": false,
+   "zones": false
+  },
+  "p_sig": 0.05,
+  "ppo_per_b_decision": "eval.compliance_by_b of each run (predict(deterministic=True) at (b,1))",
+  "source": "E7_ppo.json",
+  "source_spec_version": "1.0"
+ },
+ "results": {
+  "cells": [
+   {
+    "c_r": 12.4787092209,
+    "convention": "zero",
+    "convention_e7": "zero",
+    "dp_c_r_star_by_b": [
+     6.3195228577,
+     6.5549015999,
+     6.8227052689,
+     7.1074962616,
+     7.3645114899,
+     7.5964331627,
+     7.8058242798,
+     7.9947710037,
+     8.1652402878,
+     8.3191394806
+    ],
+    "dp_comply_by_b": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "dp_profile_mixed": false,
+    "dp_switch_b": [],
+    "form": "paper",
+    "matches_stored_dp_comply_by_b": true,
+    "mean_agreement_by_b": 1.0,
+    "omega": 0.0,
+    "per_b_agreement_rate": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "per_seed": [
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9999712706,
+       0.9999717474,
+       0.9999718666,
+       0.9999712706,
+       0.9999697208,
+       0.999966979,
+       0.9999620914,
+       0.9999535084,
+       0.9999376535,
+       0.9999060631
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 0
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9993233681,
+       0.9993430972,
+       0.9993548989,
+       0.9993559718,
+       0.9993426204,
+       0.9993094206,
+       0.9992473125,
+       0.9991414547,
+       0.9989663363,
+       0.9986746311
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 1
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.999917984,
+       0.9999195337,
+       0.9999190569,
+       0.9999160767,
+       0.9999091625,
+       0.9998962879,
+       0.9998735189,
+       0.9998327494,
+       0.9997571111,
+       0.9996064305
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 2
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9999526739,
+       0.9999550581,
+       0.9999564886,
+       0.999956727,
+       0.9999554157,
+       0.9999518394,
+       0.9999445677,
+       0.999930501,
+       0.9999022484,
+       0.9998399019
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 3
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9999705553,
+       0.9999712706,
+       0.9999712706,
+       0.9999703169,
+       0.9999678135,
+       0.9999631643,
+       0.9999547005,
+       0.9999393225,
+       0.999909997,
+       0.99985075
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 4
+     }
+    ]
+   },
+   {
+    "c_r": 12.4787092209,
+    "convention": "zero",
+    "convention_e7": "zero",
+    "dp_c_r_star_by_b": [
+     6.3195228577,
+     6.5549015999,
+     6.8227052689,
+     7.1074962616,
+     7.3645114899,
+     7.5964331627,
+     7.8058242798,
+     7.9947710037,
+     8.1652402878,
+     8.3191394806
+    ],
+    "dp_comply_by_b": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "dp_profile_mixed": false,
+    "dp_switch_b": [],
+    "form": "paper",
+    "matches_stored_dp_comply_by_b": true,
+    "mean_agreement_by_b": 1.0,
+    "omega": 0.5,
+    "per_b_agreement_rate": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "per_seed": [
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9998911619,
+       0.9998943806,
+       0.9998959303,
+       0.9998955727,
+       0.9998928308,
+       0.999886632,
+       0.9998756647,
+       0.9998569489,
+       0.9998250604,
+       0.9997683167
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 0
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9992394447,
+       0.999289155,
+       0.9993270636,
+       0.9993496537,
+       0.9993533492,
+       0.99933213,
+       0.9992768168,
+       0.9991700649,
+       0.9989777803,
+       0.998624444
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 1
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9997685552,
+       0.9997699857,
+       0.9997622371,
+       0.9997399449,
+       0.9996927977,
+       0.999597609,
+       0.9993995428,
+       0.9989545345,
+       0.9978582263,
+       0.9949319959
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 2
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9997336268,
+       0.9997389913,
+       0.9997388721,
+       0.9997317195,
+       0.9997147918,
+       0.9996837378,
+       0.9996305704,
+       0.9995411634,
+       0.9993860722,
+       0.9990991354
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 3
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9997318387,
+       0.9997528195,
+       0.9997678399,
+       0.9997763038,
+       0.9997776151,
+       0.9997709394,
+       0.9997540116,
+       0.9997231364,
+       0.9996708632,
+       0.9995818734
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 4
+     }
+    ]
+   },
+   {
+    "c_r": 12.4787092209,
+    "convention": "zero",
+    "convention_e7": "zero",
+    "dp_c_r_star_by_b": [
+     6.3195228577,
+     6.5549015999,
+     6.8227052689,
+     7.1074962616,
+     7.3645114899,
+     7.5964331627,
+     7.8058242798,
+     7.9947710037,
+     8.1652402878,
+     8.3191394806
+    ],
+    "dp_comply_by_b": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "dp_profile_mixed": false,
+    "dp_switch_b": [],
+    "form": "paper",
+    "matches_stored_dp_comply_by_b": true,
+    "mean_agreement_by_b": 1.0,
+    "omega": 1.0,
+    "per_b_agreement_rate": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "per_seed": [
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.999933362,
+       0.9999325275,
+       0.9999301434,
+       0.9999257326,
+       0.9999183416,
+       0.9999059439,
+       0.9998852015,
+       0.9998492002,
+       0.9997823834,
+       0.9996464252
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 0
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9995496869,
+       0.999581635,
+       0.9996061921,
+       0.9996219873,
+       0.999628067,
+       0.9996221066,
+       0.9996007085,
+       0.9995576739,
+       0.99948138,
+       0.9993483424
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 1
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9999322891,
+       0.9999324083,
+       0.999930501,
+       0.999925971,
+       0.9999171495,
+       0.9999018908,
+       0.9998755455,
+       0.9998295307,
+       0.9997455478,
+       0.9995827079
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 2
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9993613362,
+       0.9994040728,
+       0.9994334579,
+       0.999447763,
+       0.9994443059,
+       0.9994180202,
+       0.9993593097,
+       0.9992498755,
+       0.9990492463,
+       0.9986523986
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 3
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.999982357,
+       0.9999822378,
+       0.9999815226,
+       0.9999798536,
+       0.9999768734,
+       0.9999718666,
+       0.9999631643,
+       0.9999476671,
+       0.999917984,
+       0.9998580217
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 4
+     }
+    ]
+   },
+   {
+    "c_r": 12.4787092209,
+    "convention": "zero",
+    "convention_e7": "zero",
+    "dp_c_r_star_by_b": [
+     6.3195228577,
+     6.5549015999,
+     6.8227052689,
+     7.1074962616,
+     7.3645114899,
+     7.5964331627,
+     7.8058242798,
+     7.9947710037,
+     8.1652402878,
+     8.3191394806
+    ],
+    "dp_comply_by_b": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "dp_profile_mixed": false,
+    "dp_switch_b": [],
+    "form": "paper",
+    "matches_stored_dp_comply_by_b": true,
+    "mean_agreement_by_b": 1.0,
+    "omega": 4.0,
+    "per_b_agreement_rate": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "per_seed": [
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9997300506,
+       0.9997403026,
+       0.9997465014,
+       0.9997478127,
+       0.9997430444,
+       0.9997299314,
+       0.9997050166,
+       0.9996609688,
+       0.9995830655,
+       0.9994379878
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 0
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9994090796,
+       0.9994077682,
+       0.9993984699,
+       0.9993777275,
+       0.9993395209,
+       0.9992743134,
+       0.9991660118,
+       0.9989854693,
+       0.9986773133,
+       0.9981290698
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 1
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.999766767,
+       0.9997785687,
+       0.9997845292,
+       0.9997829795,
+       0.9997710586,
+       0.9997435212,
+       0.9996902943,
+       0.9995898604,
+       0.9993947744,
+       0.9989903569
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 2
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9993058443,
+       0.9993883371,
+       0.9994458556,
+       0.9994814992,
+       0.9994966984,
+       0.9994909763,
+       0.9994598031,
+       0.9993920326,
+       0.999258101,
+       0.9989649057
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 3
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9977512956,
+       0.9981028438,
+       0.9983567595,
+       0.9985314608,
+       0.9986411929,
+       0.9986951947,
+       0.9986967444,
+       0.9986411929,
+       0.998510778,
+       0.9982628226
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 4
+     }
+    ]
+   },
+   {
+    "c_r": 12.4787092209,
+    "convention": "drive_cost",
+    "convention_e7": "max_drive",
+    "dp_c_r_star_by_b": [
+     6.3195228577,
+     6.5549015999,
+     6.8227052689,
+     7.1074962616,
+     7.3645114899,
+     7.5964331627,
+     7.8058242798,
+     7.9947710037,
+     8.1652402878,
+     8.3191394806
+    ],
+    "dp_comply_by_b": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "dp_profile_mixed": false,
+    "dp_switch_b": [],
+    "form": "paper",
+    "matches_stored_dp_comply_by_b": true,
+    "mean_agreement_by_b": 1.0,
+    "omega": 0.0,
+    "per_b_agreement_rate": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "per_seed": [
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9999712706,
+       0.9999717474,
+       0.9999718666,
+       0.9999712706,
+       0.9999697208,
+       0.999966979,
+       0.9999620914,
+       0.9999535084,
+       0.9999376535,
+       0.9999060631
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 0
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9993233681,
+       0.9993430972,
+       0.9993548989,
+       0.9993559718,
+       0.9993426204,
+       0.9993094206,
+       0.9992473125,
+       0.9991414547,
+       0.9989663363,
+       0.9986746311
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 1
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.999917984,
+       0.9999195337,
+       0.9999190569,
+       0.9999160767,
+       0.9999091625,
+       0.9998962879,
+       0.9998735189,
+       0.9998327494,
+       0.9997571111,
+       0.9996064305
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 2
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9999526739,
+       0.9999550581,
+       0.9999564886,
+       0.999956727,
+       0.9999554157,
+       0.9999518394,
+       0.9999445677,
+       0.999930501,
+       0.9999022484,
+       0.9998399019
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 3
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9999705553,
+       0.9999712706,
+       0.9999712706,
+       0.9999703169,
+       0.9999678135,
+       0.9999631643,
+       0.9999547005,
+       0.9999393225,
+       0.999909997,
+       0.99985075
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 4
+     }
+    ]
+   },
+   {
+    "c_r": 12.4787092209,
+    "convention": "drive_cost",
+    "convention_e7": "max_drive",
+    "dp_c_r_star_by_b": [
+     11.6779208183,
+     11.9132995605,
+     12.1810436249,
+     12.4658346176,
+     12.7228498459,
+     12.9548311234,
+     13.1641626358,
+     13.3531093597,
+     13.5236382484,
+     13.6775374413
+    ],
+    "dp_comply_by_b": [
+     true,
+     true,
+     true,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "dp_profile_mixed": true,
+    "dp_switch_b": [
+     5
+    ],
+    "form": "paper",
+    "matches_stored_dp_comply_by_b": true,
+    "mean_agreement_by_b": 0.46,
+    "omega": 0.5,
+    "per_b_agreement_rate": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.2,
+     0.4
+    ],
+    "per_seed": [
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "agreement_fraction": 0.4,
+      "agrees_at_B": false,
+      "p_comply_by_b": [
+       0.9949371815,
+       0.9946007729,
+       0.9940894842,
+       0.9933211207,
+       0.9921628833,
+       0.9903863668,
+       0.9875749946,
+       0.9828976989,
+       0.9745126963,
+       0.9578880668
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 0
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       false,
+       false,
+       false,
+       false,
+       true,
+       true
+      ],
+      "agreement_fraction": 0.6,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9942423701,
+       0.992200911,
+       0.9886369109,
+       0.9818170071,
+       0.9669429064,
+       0.9293407798,
+       0.8276914954,
+       0.5994469523,
+       0.3037416339,
+       0.1141908392
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       false,
+       false
+      ],
+      "seed": 1
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "agreement_fraction": 0.4,
+      "agrees_at_B": false,
+      "p_comply_by_b": [
+       0.9636608362,
+       0.968111217,
+       0.9711534381,
+       0.9723518491,
+       0.9706453085,
+       0.9634966254,
+       0.9451805949,
+       0.9040944576,
+       0.8215338588,
+       0.6811904907
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 2
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "agreement_fraction": 0.4,
+      "agrees_at_B": false,
+      "p_comply_by_b": [
+       0.9329469204,
+       0.9472765923,
+       0.9578181505,
+       0.9651498795,
+       0.9695094824,
+       0.9704224467,
+       0.9659251571,
+       0.9509508014,
+       0.9146609306,
+       0.8388523459
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 3
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       false,
+       false,
+       false,
+       false,
+       false,
+       true
+      ],
+      "agreement_fraction": 0.5,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9935504198,
+       0.9928709865,
+       0.991309762,
+       0.9878051281,
+       0.9795518517,
+       0.9591020942,
+       0.9081326127,
+       0.7920526266,
+       0.5857722163,
+       0.3444229364
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       false
+      ],
+      "seed": 4
+     }
+    ]
+   },
+   {
+    "c_r": 12.4787092209,
+    "convention": "drive_cost",
+    "convention_e7": "max_drive",
+    "dp_c_r_star_by_b": [
+     17.0362591743,
+     17.2716379166,
+     17.5393819809,
+     17.8241729736,
+     18.0812478065,
+     18.3131694794,
+     18.5225605965,
+     18.7114477158,
+     18.8819766045,
+     19.0358757973
+    ],
+    "dp_comply_by_b": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "dp_profile_mixed": false,
+    "dp_switch_b": [],
+    "form": "paper",
+    "matches_stored_dp_comply_by_b": true,
+    "mean_agreement_by_b": 1.0,
+    "omega": 1.0,
+    "per_b_agreement_rate": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "per_seed": [
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.0090694698,
+       0.0050631347,
+       0.0027836272,
+       0.0015566973,
+       0.0009049601,
+       0.0005531962,
+       0.000357076,
+       0.0002432648,
+       0.0001743723,
+       0.0001309175
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 0
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.0062255561,
+       0.0049423119,
+       0.003835737,
+       0.0028867582,
+       0.0021038239,
+       0.001494945,
+       0.0010487916,
+       0.000736427,
+       0.0005235064,
+       0.0003797874
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 1
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.0201449506,
+       0.0114990994,
+       0.0066378508,
+       0.0039474498,
+       0.0024440282,
+       0.0015827623,
+       0.0010729966,
+       0.0007603071,
+       0.0005614931,
+       0.0004306518
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 2
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.0147050777,
+       0.0073344084,
+       0.0038450232,
+       0.0021422273,
+       0.0012727159,
+       0.0008054517,
+       0.0005410255,
+       0.0003837803,
+       0.0002858728,
+       0.0002223178
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 3
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.006242496,
+       0.003944946,
+       0.0025021816,
+       0.0016220559,
+       0.0010861501,
+       0.0007547216,
+       0.0005445571,
+       0.0004073594,
+       0.0003150737,
+       0.0002511757
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 4
+     }
+    ]
+   },
+   {
+    "c_r": 12.4787092209,
+    "convention": "drive_cost",
+    "convention_e7": "max_drive",
+    "dp_c_r_star_by_b": [
+     49.1864681244,
+     49.4218468666,
+     49.6895909309,
+     49.9743819237,
+     50.2313971519,
+     50.4633784294,
+     50.6727099419,
+     50.8616566658,
+     51.0321855545,
+     51.1860847473
+    ],
+    "dp_comply_by_b": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "dp_profile_mixed": false,
+    "dp_switch_b": [],
+    "form": "paper",
+    "matches_stored_dp_comply_by_b": true,
+    "mean_agreement_by_b": 1.0,
+    "omega": 4.0,
+    "per_b_agreement_rate": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "per_seed": [
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.0021266714,
+       0.0014634952,
+       0.0009851872,
+       0.000647865,
+       0.0004188628,
+       0.0002695126,
+       0.0001749543,
+       0.0001158941,
+       7.89434e-05,
+       5.55212e-05
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 0
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.004020588,
+       0.0031425271,
+       0.0024577603,
+       0.001910398,
+       0.0014645319,
+       0.0011010217,
+       0.0008110764,
+       0.0005883755,
+       0.000424114,
+       0.0003068272
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 1
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.0024211016,
+       0.0020794049,
+       0.0018121706,
+       0.0016007314,
+       0.0014297625,
+       0.0012867999,
+       0.0011620274,
+       0.0010482717,
+       0.000941097,
+       0.0008386856
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 2
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.0100169713,
+       0.0062920935,
+       0.0039969697,
+       0.0026046603,
+       0.0017552307,
+       0.0012274855,
+       0.0008913939,
+       0.0006713919,
+       0.0005233033,
+       0.0004208904
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 3
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.0008555488,
+       0.0005342085,
+       0.0003428568,
+       0.0002275988,
+       0.0001567029,
+       0.0001119255,
+       8.28159e-05,
+       6.33304e-05,
+       4.99119e-05,
+       4.04205e-05
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 4
+     }
+    ]
+   },
+   {
+    "c_r": 12.4787092209,
+    "convention": "zero",
+    "convention_e7": "zero",
+    "dp_c_r_star_by_b": [
+     6.3195228577,
+     6.5549015999,
+     6.8227052689,
+     7.1074962616,
+     7.3645114899,
+     7.5964331627,
+     7.8058242798,
+     7.9947710037,
+     8.1652402878,
+     8.3191394806
+    ],
+    "dp_comply_by_b": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "dp_profile_mixed": false,
+    "dp_switch_b": [],
+    "form": "alive",
+    "matches_stored_dp_comply_by_b": true,
+    "mean_agreement_by_b": 1.0,
+    "omega": 0.0,
+    "per_b_agreement_rate": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "per_seed": [
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9999712706,
+       0.9999717474,
+       0.9999718666,
+       0.9999712706,
+       0.9999697208,
+       0.999966979,
+       0.9999620914,
+       0.9999535084,
+       0.9999376535,
+       0.9999060631
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 0
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9993233681,
+       0.9993430972,
+       0.9993548989,
+       0.9993559718,
+       0.9993426204,
+       0.9993094206,
+       0.9992473125,
+       0.9991414547,
+       0.9989663363,
+       0.9986746311
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 1
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.999917984,
+       0.9999195337,
+       0.9999190569,
+       0.9999160767,
+       0.9999091625,
+       0.9998962879,
+       0.9998735189,
+       0.9998327494,
+       0.9997571111,
+       0.9996064305
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 2
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9999526739,
+       0.9999550581,
+       0.9999564886,
+       0.999956727,
+       0.9999554157,
+       0.9999518394,
+       0.9999445677,
+       0.999930501,
+       0.9999022484,
+       0.9998399019
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 3
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9999705553,
+       0.9999712706,
+       0.9999712706,
+       0.9999703169,
+       0.9999678135,
+       0.9999631643,
+       0.9999547005,
+       0.9999393225,
+       0.999909997,
+       0.99985075
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 4
+     }
+    ]
+   },
+   {
+    "c_r": 12.4787092209,
+    "convention": "zero",
+    "convention_e7": "zero",
+    "dp_c_r_star_by_b": [
+     9.5431208611,
+     9.8062157631,
+     10.0381970406,
+     10.2861523628,
+     10.5012655258,
+     10.7331871986,
+     10.9304785728,
+     11.1455917358,
+     11.3798975945,
+     11.6915106773
+    ],
+    "dp_comply_by_b": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "dp_profile_mixed": false,
+    "dp_switch_b": [],
+    "form": "alive",
+    "matches_stored_dp_comply_by_b": true,
+    "mean_agreement_by_b": 1.0,
+    "omega": 0.5,
+    "per_b_agreement_rate": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "per_seed": [
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9954043627,
+       0.9953660965,
+       0.9952930808,
+       0.995177269,
+       0.995008111,
+       0.9947713017,
+       0.9944478273,
+       0.9940114617,
+       0.9934256077,
+       0.9926381111
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 0
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9930329323,
+       0.9931858778,
+       0.9932920933,
+       0.9933453798,
+       0.9933382273,
+       0.9932608008,
+       0.9931006432,
+       0.9928406477,
+       0.9924566746,
+       0.9919146299
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 1
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9980745316,
+       0.998251617,
+       0.9984048009,
+       0.9985338449,
+       0.9986390471,
+       0.9987200499,
+       0.9987758994,
+       0.9988056421,
+       0.9988065958,
+       0.9987743497
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 2
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.995614171,
+       0.9960365891,
+       0.9963850975,
+       0.9966697097,
+       0.9968982935,
+       0.9970773458,
+       0.9972113967,
+       0.9973036051,
+       0.9973552227,
+       0.9973655343
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 3
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9967321157,
+       0.9970815778,
+       0.9973729849,
+       0.9976122379,
+       0.9978051782,
+       0.9979572296,
+       0.9980727434,
+       0.9981552958,
+       0.9982076883,
+       0.998231113
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 4
+     }
+    ]
+   },
+   {
+    "c_r": 12.4787092209,
+    "convention": "zero",
+    "convention_e7": "zero",
+    "dp_c_r_star_by_b": [
+     13.8456225395,
+     14.2347812653,
+     14.5460963249,
+     14.8974061012,
+     15.1665210724,
+     15.477836132,
+     15.7024860382,
+     15.971660614,
+     16.2048339844,
+     16.5603756905
+    ],
+    "dp_comply_by_b": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "dp_profile_mixed": false,
+    "dp_switch_b": [],
+    "form": "alive",
+    "matches_stored_dp_comply_by_b": true,
+    "mean_agreement_by_b": 1.0,
+    "omega": 1.0,
+    "per_b_agreement_rate": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "per_seed": [
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.3930200338,
+       0.3258135319,
+       0.2151211053,
+       0.0908730999,
+       0.0261932928,
+       0.006714182,
+       0.0017816423,
+       0.0005167063,
+       0.0001668616,
+       6.03313e-05
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 0
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.2153300792,
+       0.1817256957,
+       0.1367240697,
+       0.0813842118,
+       0.0361815877,
+       0.0132958759,
+       0.0046450733,
+       0.0016741044,
+       0.0006447089,
+       0.000268896
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 1
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.2700615525,
+       0.2390565425,
+       0.209111318,
+       0.1705495119,
+       0.095001623,
+       0.0229822714,
+       0.0035299831,
+       0.0005416096,
+       9.45487e-05,
+       1.94613e-05
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 2
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.0214575529,
+       0.0239616595,
+       0.0269374754,
+       0.0291054212,
+       0.0264520496,
+       0.01672302,
+       0.0074791755,
+       0.0029177235,
+       0.0011438142,
+       0.0004751821
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 3
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.1580705792,
+       0.1135186777,
+       0.0796354264,
+       0.0540952981,
+       0.0343714617,
+       0.0190479271,
+       0.0086280415,
+       0.0032666242,
+       0.0011388162,
+       0.0003986044
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 4
+     }
+    ]
+   },
+   {
+    "c_r": 12.4787092209,
+    "convention": "zero",
+    "convention_e7": "zero",
+    "dp_c_r_star_by_b": [
+     39.99376297,
+     41.121840477,
+     41.9451594353,
+     42.8980588913,
+     43.5293316841,
+     44.2973971367,
+     44.7260737419,
+     45.2990531921,
+     45.5139279366,
+     46.047270298
+    ],
+    "dp_comply_by_b": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "dp_profile_mixed": false,
+    "dp_switch_b": [],
+    "form": "alive",
+    "matches_stored_dp_comply_by_b": true,
+    "mean_agreement_by_b": 1.0,
+    "omega": 4.0,
+    "per_b_agreement_rate": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "per_seed": [
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.002091368,
+       0.0013629989,
+       0.0009002411,
+       0.0006036358,
+       0.0004114583,
+       0.0002853826,
+       0.0002015346,
+       0.0001449504,
+       0.0001061823,
+       7.92068e-05
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 0
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.000449489,
+       0.0003659852,
+       0.0003011295,
+       0.0002503338,
+       0.0002102158,
+       0.0001782652,
+       0.0001526089,
+       0.00013184,
+       0.0001148941,
+       0.0001009615
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 1
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.0031122076,
+       0.0024221207,
+       0.0019052546,
+       0.0015150792,
+       0.0012180799,
+       0.000990042,
+       0.0008133993,
+       0.0006753404,
+       0.000566469,
+       0.0004798509
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 2
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.006534365,
+       0.0045160563,
+       0.0031586599,
+       0.0022400459,
+       0.0016129585,
+       0.0011803221,
+       0.0008782391,
+       0.0006645608,
+       0.000511355,
+       0.0003999796
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 3
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.0091792727,
+       0.0040576104,
+       0.0017980142,
+       0.0008091656,
+       0.00037366,
+       0.0001784005,
+       8.85116e-05,
+       4.577e-05,
+       2.47009e-05,
+       1.39129e-05
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 4
+     }
+    ]
+   },
+   {
+    "c_r": 12.4787092209,
+    "convention": "drive_cost",
+    "convention_e7": "max_drive",
+    "dp_c_r_star_by_b": [
+     6.3195228577,
+     6.5549015999,
+     6.8227052689,
+     7.1074962616,
+     7.3645114899,
+     7.5964331627,
+     7.8058242798,
+     7.9947710037,
+     8.1652402878,
+     8.3191394806
+    ],
+    "dp_comply_by_b": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "dp_profile_mixed": false,
+    "dp_switch_b": [],
+    "form": "alive",
+    "matches_stored_dp_comply_by_b": true,
+    "mean_agreement_by_b": 1.0,
+    "omega": 0.0,
+    "per_b_agreement_rate": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "per_seed": [
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9999712706,
+       0.9999717474,
+       0.9999718666,
+       0.9999712706,
+       0.9999697208,
+       0.999966979,
+       0.9999620914,
+       0.9999535084,
+       0.9999376535,
+       0.9999060631
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 0
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9993233681,
+       0.9993430972,
+       0.9993548989,
+       0.9993559718,
+       0.9993426204,
+       0.9993094206,
+       0.9992473125,
+       0.9991414547,
+       0.9989663363,
+       0.9986746311
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 1
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.999917984,
+       0.9999195337,
+       0.9999190569,
+       0.9999160767,
+       0.9999091625,
+       0.9998962879,
+       0.9998735189,
+       0.9998327494,
+       0.9997571111,
+       0.9996064305
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 2
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9999526739,
+       0.9999550581,
+       0.9999564886,
+       0.999956727,
+       0.9999554157,
+       0.9999518394,
+       0.9999445677,
+       0.999930501,
+       0.9999022484,
+       0.9998399019
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 3
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.9999705553,
+       0.9999712706,
+       0.9999712706,
+       0.9999703169,
+       0.9999678135,
+       0.9999631643,
+       0.9999547005,
+       0.9999393225,
+       0.999909997,
+       0.99985075
+      ],
+      "ppo_comply_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "seed": 4
+     }
+    ]
+   },
+   {
+    "c_r": 12.4787092209,
+    "convention": "drive_cost",
+    "convention_e7": "max_drive",
+    "dp_c_r_star_by_b": [
+     14.6463513374,
+     14.9094462395,
+     15.1414275169,
+     15.3893828392,
+     15.6044363976,
+     15.836417675,
+     16.0337090492,
+     16.2488222122,
+     16.4830684662,
+     16.7947411537
+    ],
+    "dp_comply_by_b": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "dp_profile_mixed": false,
+    "dp_switch_b": [],
+    "form": "alive",
+    "matches_stored_dp_comply_by_b": true,
+    "mean_agreement_by_b": 1.0,
+    "omega": 0.5,
+    "per_b_agreement_rate": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "per_seed": [
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.0434423052,
+       0.0302654672,
+       0.0208283067,
+       0.013746853,
+       0.0083239209,
+       0.0044752425,
+       0.0021628269,
+       0.0009884625,
+       0.0004503775,
+       0.00021194
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 0
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.0474967621,
+       0.0230042972,
+       0.0106900577,
+       0.0050679138,
+       0.0025248372,
+       0.0013383898,
+       0.0007577839,
+       0.0004579732,
+       0.0002944939,
+       0.0002005535
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 1
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.0719065294,
+       0.026042223,
+       0.0092005292,
+       0.003418267,
+       0.0013741996,
+       0.0006038249,
+       0.0002905178,
+       0.0001526383,
+       8.71045e-05,
+       5.36151e-05
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 2
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.0857660174,
+       0.051273793,
+       0.0277284905,
+       0.0143820615,
+       0.0074945753,
+       0.0040335809,
+       0.0022734022,
+       0.0013495405,
+       0.0008447063,
+       0.000556643
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 3
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.0474222824,
+       0.0215840694,
+       0.0093392078,
+       0.0040761712,
+       0.0018543658,
+       0.0008931857,
+       0.0004584041,
+       0.0002509998,
+       0.0001463935,
+       9.06509e-05
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 4
+     }
+    ]
+   },
+   {
+    "c_r": 12.4787092209,
+    "convention": "drive_cost",
+    "convention_e7": "max_drive",
+    "dp_c_r_star_by_b": [
+     24.0520238876,
+     24.4411826134,
+     24.752497673,
+     25.1038074493,
+     25.3729224205,
+     25.6842970848,
+     25.9088873863,
+     26.1780619621,
+     26.4112353325,
+     26.7667770386
+    ],
+    "dp_comply_by_b": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "dp_profile_mixed": false,
+    "dp_switch_b": [],
+    "form": "alive",
+    "matches_stored_dp_comply_by_b": true,
+    "mean_agreement_by_b": 1.0,
+    "omega": 1.0,
+    "per_b_agreement_rate": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "per_seed": [
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.0076766559,
+       0.0049372171,
+       0.0032302025,
+       0.0021529954,
+       0.0014497174,
+       0.0009612042,
+       0.0005993217,
+       0.0003354129,
+       0.0001676438,
+       7.83708e-05
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 0
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.0039862883,
+       0.0032516064,
+       0.0026705593,
+       0.0021875473,
+       0.001755512,
+       0.0013467814,
+       0.0009667305,
+       0.0006464657,
+       0.0004097089,
+       0.0002530457
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 1
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.0084473863,
+       0.0083825709,
+       0.008431592,
+       0.0083370749,
+       0.0074067959,
+       0.0050592786,
+       0.0025134461,
+       0.0010504427,
+       0.0004299646,
+       0.0001847714
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 2
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.0343373567,
+       0.0145109342,
+       0.0056930003,
+       0.0022527552,
+       0.0009346206,
+       0.0004132882,
+       0.0001960416,
+       9.9886e-05,
+       5.45817e-05,
+       3.18797e-05
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 3
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.011081161,
+       0.0077228043,
+       0.0049956935,
+       0.0029449954,
+       0.0016046287,
+       0.0008394361,
+       0.0004381547,
+       0.000234231,
+       0.0001300426,
+       7.54221e-05
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 4
+     }
+    ]
+   },
+   {
+    "c_r": 12.4787092209,
+    "convention": "drive_cost",
+    "convention_e7": "max_drive",
+    "dp_c_r_star_by_b": [
+     80.8194279671,
+     81.9474458694,
+     82.7708244324,
+     83.7236642838,
+     84.3549966812,
+     85.1230025291,
+     85.551738739,
+     86.1246585846,
+     86.339533329,
+     86.8729352951
+    ],
+    "dp_comply_by_b": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "dp_profile_mixed": false,
+    "dp_switch_b": [],
+    "form": "alive",
+    "matches_stored_dp_comply_by_b": true,
+    "mean_agreement_by_b": 1.0,
+    "omega": 4.0,
+    "per_b_agreement_rate": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "per_seed": [
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.0034447664,
+       0.0020648316,
+       0.0012590803,
+       0.0007828776,
+       0.0004972234,
+       0.0003229434,
+       0.0002146333,
+       0.0001460006,
+       0.0001016328,
+       7.23676e-05
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 0
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.002241178,
+       0.002033009,
+       0.0018532549,
+       0.0016975924,
+       0.0015623927,
+       0.0014446136,
+       0.0013416945,
+       0.001251489,
+       0.0011721835,
+       0.0011022546
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 1
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.003640508,
+       0.0027405145,
+       0.0020880392,
+       0.0016107543,
+       0.0012582586,
+       0.00099531,
+       0.0007971337,
+       0.000646215,
+       0.0005300863,
+       0.0004398044
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 2
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.0016376718,
+       0.0013400895,
+       0.0011048805,
+       0.0009180947,
+       0.0007689997,
+       0.0006493317,
+       0.0005527242,
+       0.000474265,
+       0.000410156,
+       0.000357448
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 3
+     },
+     {
+      "agree_by_b": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "agreement_fraction": 1.0,
+      "agrees_at_B": true,
+      "p_comply_by_b": [
+       0.001287454,
+       0.0008305356,
+       0.0005425228,
+       0.000359654,
+       0.000242399,
+       0.0001663118,
+       0.0001162611,
+       8.28435e-05,
+       6.01785e-05,
+       4.45551e-05
+      ],
+      "ppo_comply_by_b": [
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false,
+       false
+      ],
+      "seed": 4
+     }
+    ]
+   }
+  ],
+  "hypothesis_only_pb_drive_cost_0.5": true,
+  "mixed_cells": [
+   {
+    "convention": "drive_cost",
+    "form": "paper",
+    "omega": 0.5
+   }
+  ],
+  "summary_note": "Mixed DP profiles (decision at (b,1) differs across b at c_r = 12.4787092209): paper/drive_cost omega=0.5. Hypothesis 'PB/drive_cost omega = 0.5 is the only mixed cell': confirmed."
+ },
+ "seeds": {
+  "e7_run_seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ "software": {
+  "numpy": "2.5.3",
+  "python": "3.13.16"
+ },
+ "spec_version": "1.1"
+}

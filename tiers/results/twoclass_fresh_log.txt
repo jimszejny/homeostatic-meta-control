@@ -1,0 +1,6 @@
+two classes, p = 0.025 each, W1 = 1, W2 = 2, planner L = 3, h = 10; one perfect tier of latency L_g
+  L_g = 0: hits/100 = 0.0000
+  L_g = 1: hits/100 = 0.0000
+  L_g = 2: hits/100 = 2.4375
+  L_g = 3: hits/100 = 4.9375
+  L_g = 4: hits/100 = 4.9375

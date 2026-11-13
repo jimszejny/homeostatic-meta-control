@@ -1,0 +1,12 @@
+(a) queue initialised with DODGE: start values V
+   C0 planner alone   V(queue WORK)=8.2119  V(queue DODGE)=5.8475
+   C3 gated reflex    V(queue WORK)=14.4440  V(queue DODGE)=11.6366
+(b) RESIST as a separate step (chosen action not executed): c*_r for C0 / C3
+   freeze   c*_r = 7.8013 / 13.1714   V = 8.2119 / 14.0912
+   elapse   c*_r = 7.3591 / 13.1272   V = 8.2119 / 14.0764
+(c) late tier whose true detections take effect one step after the impact
+   eta=1.0 phi=0.02: hits/100=4.9000 work/100=93.1000 V=8.0476 c*_r=8.1919
+   eta=0.0 phi=0.02: hits/100=4.6550 work/100=88.4450 V=7.7611 c*_r=7.8995
+   eta=0.0 phi=0.05: hits/100=4.5125 work/100=85.7375 V=7.5235 c*_r=7.6577
+   eta=0.5 phi=0.02: hits/100=4.7775 work/100=90.7725 V=7.9044 c*_r=8.0457
+saved ../results/variants.json

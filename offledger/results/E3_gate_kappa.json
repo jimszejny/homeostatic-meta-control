@@ -1,0 +1,29 @@
+{
+ "experiment": "E3_gate_kappa",
+ "notes": [
+  "PB form, kappa ledger (entry penalty -50 not scaled by omega), multiplicative gate without OFF zeroing vs no mitigation; c_r* at (B,1) by bisection, repeated game p_sig=0.05, gamma=0.95"
+ ],
+ "rows": [
+  {
+   "c_r_star_gate_excl_off": 50.000011920928955,
+   "c_r_star_unmitigated": 35.17812490463257,
+   "omega": 0
+  },
+  {
+   "c_r_star_gate_excl_off": 50.47500133514404,
+   "c_r_star_unmitigated": 35.433292388916016,
+   "omega": 0.5
+  },
+  {
+   "c_r_star_gate_excl_off": 50.950050354003906,
+   "c_r_star_unmitigated": 35.68845987319946,
+   "omega": 1
+  },
+  {
+   "c_r_star_gate_excl_off": 53.80004644393921,
+   "c_r_star_unmitigated": 37.21940517425537,
+   "omega": 4
+  }
+ ],
+ "spec_version": "1.2"
+}

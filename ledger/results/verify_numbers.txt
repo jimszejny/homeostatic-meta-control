@@ -1,0 +1,150 @@
+sec_deathledger.tex:15: 12.4787 -> param:/c_r
+sec_deathledger.tex:25: 0.2616 -> r3.json/M
+sec_deathledger.tex:37: 0.1 -> param:/p
+sec_deathledger.tex:55: 1.8\times10^{-14} -> r1.json[16]/max_err
+sec_deathledger.tex:75: 0.701486 -> posthoc_r1_scope.json/slope_identity/beta_both_nu0
+sec_deathledger.tex:76: 1.476812 -> r3.json/beta_closed/L2
+sec_deathledger.tex:77: 0.738406 -> r3.json/beta_closed/L3
+sec_deathledger.tex:78: 0.035670 -> r3.json/beta_closed/L4 (negated)
+sec_deathledger.tex:86: 1.4\times10^{-14} -> posthoc_r1_scope.json/planner_d0.2_offpriced_death0[1]/err
+sec_deathledger.tex:86: 0.5 -> param:/G[0]
+sec_deathledger.tex:87: 1.1\times10^{-13} -> posthoc_r1_scope.json/grid_extended[17]/err
+sec_deathledger.tex:108: 12.4787 -> param:/c_r
+sec_deathledger.tex:154: 0.05 -> param:/p
+sec_deathledger.tex:154: 0.2 -> param:/deltas[2]
+sec_deathledger.tex:154: 0.5 -> param:/G[0]
+sec_deathledger.tex:155: 4.1\times10^{-14} -> r4.json/rows[28]/max_err
+sec_deathledger.tex:156: 0.407 -> posthoc_r1_scope.json/grid_extended[55]/adm_gain
+sec_deathledger.tex:157: 0.2 -> param:/deltas[2]
+sec_deathledger.tex:158: 52.631579 -> r4.json/extended[0]/omega_break_closed
+sec_deathledger.tex:158: 1.6\times10^{-14} -> r4.json/rows[4]/values[0]/err
+sec_deathledger.tex:159: 0.26 -> r3.json/M
+sec_deathledger.tex:159: 55.26 -> r4.json/extended[0]/points[23]/omega
+sec_deathledger.tex:160: 0.5 -> param:/G[0]
+sec_deathledger.tex:160: 148.63 -> r4.json/extended[1]/omega_break_closed
+sec_deathledger.tex:167: 0.2 -> param:/deltas[2]
+sec_deathledger.tex:168: 242.71 -> posthoc_r1_scope.json/threshold_offpriced_death0/planner d=0.2
+sec_deathledger.tex:170: 226.95562 -> posthoc_r1_scope.json/planner_d0.2_offpriced_death0[5]/cstar_bisect
+sec_deathledger.tex:171: 226.90626 -> posthoc_r1_scope.json/planner_d0.2_offpriced_death0[5]/closed
+sec_deathledger.tex:171: 1.13 -> posthoc_r1_scope.json/planner_d0.2_offpriced_death0[5]/adm_gain
+sec_deathledger.tex:171: 739.37684 -> posthoc_r1_scope.json/planner_d0.2_offpriced_death0[6]/cstar_bisect
+sec_deathledger.tex:171: 738.62763 -> posthoc_r1_scope.json/planner_d0.2_offpriced_death0[6]/closed
+sec_deathledger.tex:172: 260.03 -> posthoc_r1_scope.json/threshold_offpriced_death0/T1 G=0.5 d=0.2
+sec_deathledger.tex:172: 0.5 -> param:/G[0]
+sec_deathledger.tex:172: 316.23 -> posthoc_r1_scope.json/threshold_offpriced_death0/T1 G=0.8 d=0.2
+sec_deathledger.tex:172: 0.8 -> param:/G[2]
+sec_deathledger.tex:173: 0.2 -> param:/deltas[2]
+sec_deathledger.tex:173: 816.12 -> posthoc_r1_scope.json/threshold_offpriced_death0/planner d=0.05
+sec_deathledger.tex:173: 0.05 -> param:/p
+sec_deathledger.tex:212: 0.05 -> param:/p
+sec_deathledger.tex:212: 8.1499 -> posthoc_r1_scope.json/grid_extended[24]/cstar_bisect
+sec_deathledger.tex:212: 0.02945 -> r4.json/rows[5]/beta_closed (negated)
+sec_deathledger.tex:212: 8.0321 -> posthoc_r1_scope.json/grid_extended[31]/cstar_bisect
+sec_deathledger.tex:212: 0.68015 -> r4.json/rows[7]/beta_closed
+sec_deathledger.tex:212: 10.8705 -> posthoc_r1_scope.json/grid_extended[37]/cstar_bisect
+sec_deathledger.tex:213: 0.2 -> param:/deltas[2]
+sec_deathledger.tex:213: 7.5971 -> posthoc_r1_scope.json/grid_extended[48]/cstar_bisect
+sec_deathledger.tex:213: 0.10730 -> r4.json/rows[9]/beta_closed (negated)
+sec_deathledger.tex:213: 7.1679 -> posthoc_r1_scope.json/grid_extended[55]/cstar_bisect
+sec_deathledger.tex:213: 0.62374 -> r4.json/rows[11]/beta_closed
+sec_deathledger.tex:213: 10.0920 -> posthoc_r1_scope.json/grid_extended[61]/cstar_bisect
+sec_deathledger.tex:214: 0.5 -> param:/G[0]
+sec_deathledger.tex:214: 0.2 -> param:/deltas[2]
+sec_deathledger.tex:214: 10.3887 -> posthoc_r1_scope.json/grid_extended[120]/cstar_bisect
+sec_deathledger.tex:214: 0.05704 -> r4.json/rows[21]/beta_closed (negated)
+sec_deathledger.tex:214: 10.1605 -> posthoc_r1_scope.json/grid_extended[127]/cstar_bisect
+sec_deathledger.tex:214: 0.66015 -> r4.json/rows[23]/beta_closed
+sec_deathledger.tex:214: 13.0293 -> posthoc_r1_scope.json/grid_extended[133]/cstar_bisect
+sec_deathledger.tex:215: 0.8 -> param:/G[2]
+sec_deathledger.tex:215: 0.05 -> param:/p
+sec_deathledger.tex:215: 12.6188 -> posthoc_r1_scope.json/grid_extended[168]/cstar_bisect
+sec_deathledger.tex:215: 0.00605 -> r4.json/rows[29]/beta_closed (negated)
+sec_deathledger.tex:215: 12.5946 -> posthoc_r1_scope.json/grid_extended[175]/cstar_bisect
+sec_deathledger.tex:215: 0.69710 -> r4.json/rows[31]/beta_closed
+sec_deathledger.tex:215: 15.4072 -> posthoc_r1_scope.json/grid_extended[181]/cstar_bisect
+sec_deathledger.tex:216: 0.8 -> param:/G[2]
+sec_deathledger.tex:216: 0.2 -> param:/deltas[2]
+sec_deathledger.tex:216: 12.4078 -> posthoc_r1_scope.json/grid_extended[192]/cstar_bisect
+sec_deathledger.tex:216: 0.02371 -> r4.json/rows[33]/beta_closed (negated)
+sec_deathledger.tex:216: 12.3129 -> posthoc_r1_scope.json/grid_extended[199]/cstar_bisect
+sec_deathledger.tex:216: 0.68430 -> r4.json/rows[35]/beta_closed
+sec_deathledger.tex:216: 15.1450 -> posthoc_r1_scope.json/grid_extended[205]/cstar_bisect
+sec_deathledger.tex:217: 0.95 -> param:/gamma
+sec_deathledger.tex:217: 0.2 -> param:/deltas[2]
+sec_deathledger.tex:217: 13.4782 -> posthoc_r1_scope.json/grid_extended[264]/cstar_bisect
+sec_deathledger.tex:217: 0.00605 -> r4.json/rows[29]/beta_closed (negated)
+sec_deathledger.tex:217: 13.4540 -> posthoc_r1_scope.json/grid_extended[271]/cstar_bisect
+sec_deathledger.tex:217: 0.69710 -> r4.json/rows[31]/beta_closed
+sec_deathledger.tex:217: 16.2666 -> posthoc_r1_scope.json/grid_extended[277]/cstar_bisect
+sec_deathledger.tex:218: 14.1272 -> posthoc_r1_scope.json/grid_extended[288]/cstar_bisect
+sec_deathledger.tex:218: 14.1272 -> posthoc_r1_scope.json/grid_extended[288]/cstar_bisect
+sec_deathledger.tex:218: 0.70149 -> posthoc_r1_scope.json/slope_identity/beta_both_nu0
+sec_deathledger.tex:218: 16.9332 -> posthoc_r1_scope.json/grid_extended[301]/cstar_bisect
+sec_deathledger.tex:222: 0.02 -> param:/psig
+sec_deathledger.tex:222: 12.4787 -> param:/c_r
+sec_deathledger.tex:223: 0.5 -> param:/G[0]
+sec_deathledger.tex:224: 4.1\times10^{-14} -> r4.json/rows[28]/max_err
+sec_deathledger.tex:232: 8.3591 -> posthoc_r1_scope.json/grid_extended[0]/cstar_bisect
+sec_deathledger.tex:232: 8.1499 -> posthoc_r1_scope.json/grid_extended[24]/cstar_bisect
+sec_deathledger.tex:232: 7.5971 -> posthoc_r1_scope.json/grid_extended[48]/cstar_bisect
+sec_deathledger.tex:232: 0.05 -> param:/p
+sec_deathledger.tex:232: 0.2 -> param:/deltas[2]
+sec_deathledger.tex:234: 0.1073 -> r4.json/rows[9]/beta_closed (negated)
+sec_deathledger.tex:235: 0.2 -> param:/deltas[2]
+sec_deathledger.tex:235: 5.6 -> posthoc_r1_scope.json/grid_extended[107]/err
+sec_deathledger.tex:235: 0.02945 -> r4.json/rows[5]/beta_closed (negated)
+sec_deathledger.tex:236: 0.05 -> param:/p
+sec_deathledger.tex:240: 0.6237 -> r4.json/rows[11]/beta_closed
+sec_deathledger.tex:240: 0.7015 -> posthoc_r1_scope.json/slope_identity/beta_both_nu0
+sec_deathledger.tex:241: 0.438 -> posthoc.json/min_beta_L1_death1_square_phi0
+sec_deathledger.tex:242: 0.8 -> param:/G[2]
+sec_deathledger.tex:242: 0.2 -> param:/deltas[2]
+sec_deathledger.tex:243: 12.4078 -> posthoc_r1_scope.json/grid_extended[192]/cstar_bisect
+sec_deathledger.tex:243: 12.4787 -> param:/c_r
+sec_deathledger.tex:243: 0.5 -> param:/G[0]
+sec_deathledger.tex:244: 0.2 -> param:/deltas[2]
+sec_deathledger.tex:244: 7.83 -> posthoc.json/omega_bar_L1_death1_d0.2_planner
+sec_deathledger.tex:262: 0.2 -> param:/deltas[2]
+sec_deathledger.tex:262: 0.05 -> param:/p
+sec_deathledger.tex:263: 0.02 -> param:/psig
+sec_deathledger.tex:263: 12.4787 -> param:/c_r
+sec_deathledger.tex:276: 0.9 -> param:/gamma
+sec_deathledger.tex:281: 0.05 -> param:/p
+sec_deathledger.tex:281: 0.2 -> param:/deltas[2]
+sec_deathledger.tex:282: 7.83 -> posthoc.json/omega_bar_L1_death1_d0.2_planner
+sec_deathledger.tex:282: 0.5 -> param:/G[0]
+sec_deathledger.tex:282: 0.438 -> posthoc.json/min_beta_L1_death1_square_phi0
+app_deathledger.tex:124: 0.2 -> param:/deltas[2]
+app_deathledger.tex:125: 52.631579 -> r4.json/extended[0]/omega_break_closed
+app_deathledger.tex:155: 0.0357 -> r3.json/beta_closed/L4 (negated)
+app_deathledger.tex:160: 0.7015 -> posthoc_r1_scope.json/slope_identity/beta_both_nu0
+app_deathledger.tex:161: 1.4768 -> r3.json/beta_closed/L2
+app_deathledger.tex:161: 0.7384 -> r3.json/beta_closed/L3
+app_deathledger.tex:162: 0.2616 -> r3.json/M
+app_deathledger.tex:163: 0.8 -> param:/G[2]
+app_deathledger.tex:164: 0.95 -> param:/gamma
+app_deathledger.tex:165: 0.8 -> param:/G[2]
+app_deathledger.tex:165: 0.9 -> param:/gamma
+app_deathledger.tex:165: 0.95 -> param:/gamma
+app_deathledger.tex:165: 0.99 -> param:/battery gammas[3]
+app_deathledger.tex:167: 0.95 -> param:/gamma
+app_deathledger.tex:177: 1.1\times10^{-14} -> posthoc_r1_scope.json/grid_extended[220]/margin_xs_at_closed_root
+app_deathledger.tex:178: 0.701486 -> posthoc_r1_scope.json/slope_identity/beta_both_nu0
+app_deathledger.tex:178: 1.476812 -> r3.json/beta_closed/L2
+app_deathledger.tex:178: 0.738406 -> r3.json/beta_closed/L3
+app_deathledger.tex:179: 1.4\times10^{-14} -> posthoc_r1_scope.json/planner_d0.2_offpriced_death0[1]/err
+app_deathledger.tex:183: 0.0015 -> r4.json/rows[41]/beta_closed (negated)
+app_deathledger.tex:183: 0.1073 -> r4.json/rows[9]/beta_closed (negated)
+app_deathledger.tex:184: 1.4\times10^{-14} -> posthoc_r1_scope.json/planner_d0.2_offpriced_death0[1]/err
+app_deathledger.tex:185: 4.1\times10^{-14} -> r4.json/rows[28]/max_err
+app_deathledger.tex:185: 0.035670 -> r3.json/beta_closed/L4 (negated)
+app_deathledger.tex:186: 1.4\times10^{-14} -> posthoc_r1_scope.json/planner_d0.2_offpriced_death0[1]/err
+app_deathledger.tex:187: 0.8 -> param:/G[2]
+app_deathledger.tex:187: 0.9 -> param:/gamma
+app_deathledger.tex:187: 0.95 -> param:/gamma
+app_deathledger.tex:187: 0.99 -> param:/battery gammas[3]
+app_deathledger.tex:188: 0.6237 -> r4.json/rows[11]/beta_closed
+app_deathledger.tex:188: 0.7015 -> posthoc_r1_scope.json/slope_identity/beta_both_nu0
+
+checked 147 numbers; unmatched 0
+
