@@ -5,6 +5,8 @@ type: software
 version: "3.0"
 date-released: 2026-11-13
 repository-code: "https://github.com/jimszejny/homeostatic-meta-control"
+license: MIT
+doi: 10.5281/zenodo.24200346
 authors:
   - family-names: Szejny
     given-names: Bartłomiej

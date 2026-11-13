@@ -52,6 +52,11 @@ The code, the experiments and the paper were produced with AI systems (Claude mo
 author's direction, as stated in the paper's appendix on authorship and AI contribution. The author is responsible
 for all content.
 
+## License
+
+Source code (`*.py`, `Makefile`, shell scripts): MIT License, see `LICENSE`.
+Result files (`*/results/`), figures, specifications (`offledger/SPEC*.md`) and documentation: Creative Commons Attribution 4.0 International (CC BY 4.0), https://creativecommons.org/licenses/by/4.0/.
+
 ## Citing
 
-See `CITATION.cff`.
+See `CITATION.cff`. Archived release: https://doi.org/10.5281/zenodo.24200346 (tag `v3.0`).
